@@ -6,24 +6,49 @@ import "List.fcc" as List
 import "Math.fcc" as Math
 
 graph BigNumberHandler {
-    testNum1 List<int> = List<int>{99999, 2, 10, 0}
-    testNum2 List<int> = List<int>{2, 2, 2, 0}
+    testNum1 List<int> = List<int>{999, 999, 999, 999}
+    testNum2 List<int> = List<int>{2, 2, 2, 0,0,0,0,0,0,0}
+
+    testNum3 List<int> = List<int>{ 0,0,0,0,0,0,0}
+
+    
 
     //Executed when entity is created
     event OnAwake() {
-        
     }
 
     event OnJump() {
-
+        while true {
+            multiplierNumber( testNum1 , 999)
+            LogInfo("test num 1 " + testNum1)
+            WaitForMillisecond(500)
+        }
     }
 
 
-    func shortenNumber(num List<int> ){
+    func shortenNumber(num List<int>){
         for i = 0, List.Length(num), 1 {
             if num[i]> 999 {
-                num[i+1] = num[i+1] + num[i] / 1000
+                if i== List.Length(num) - 1 && num[List.Length(num) - 1 ] >0{
+                    LogInfo("u good")
+                    Append(num,num[i] / 1000)
+                } else {
+                    num[i+1] = num[i+1] + num[i] / 1000
+                }
                 num[i] = num[i] % 1000
+            }
+        }
+    }
+    
+    func cleanNumber(num List<int>){
+        if (List.Length(num) == 0 ){
+            return
+        }
+
+        while num[List.Length(num)-1] == 0{
+            List.RemoveAt(num,List.Length(num)-1)
+            if (List.Length(num) == 0 ){
+                return
             }
         }
     }
@@ -55,6 +80,5 @@ graph BigNumberHandler {
         }
         shortenNumber(num1)
     }
-    
     
 }
