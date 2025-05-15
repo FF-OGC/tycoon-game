@@ -1,0 +1,29 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Player.fcc" as Player
+import "Workflow.fcc" as Workflow
+
+graph Script {
+    //Executed when entity is created
+    isInit bool
+    event OnAwake() {
+    }
+
+    func init(){
+        isInit = true
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MiniMap,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MicroPhone,CommonUISwitchValue.Close)
+
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.TeammatesInfo,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MedicalProps,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.AttackGrenade,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.DefenceGrenade,CommonUISwitchValue.Close)
+    }
+
+    event OnPhaseStart(phase entity<Phase>) {
+        if !isInit{
+            init()
+        }
+
+    }
+}

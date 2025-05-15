@@ -6,31 +6,11 @@ import "List.fcc" as List
 import "Math.fcc" as Math
 
 graph BigNumberHandler {
-    testNum1 List<int> = List<int>{999, 999, 999, 999}
-    testNum2 List<int> = List<int>{2, 2, 2, 0,0,0,0,0,0,0}
-
-    testNum3 List<int> = List<int>{ 0,0,0,0,0,0,0}
-
-    
-
-    //Executed when entity is created
-    event OnAwake() {
-    }
-
-    event OnJump() {
-        while true {
-            multiplierNumber( testNum1 , 999)
-            LogInfo("test num 1 " + testNum1)
-            WaitForMillisecond(500)
-        }
-    }
-
 
     func shortenNumber(num List<int>){
         for i = 0, List.Length(num), 1 {
             if num[i]> 999 {
                 if i== List.Length(num) - 1 && num[List.Length(num) - 1 ] >0{
-                    LogInfo("u good")
                     Append(num,num[i] / 1000)
                 } else {
                     num[i+1] = num[i+1] + num[i] / 1000
@@ -55,7 +35,8 @@ graph BigNumberHandler {
 
     
     func addNumber(num1 List<int>, num2 List<int>) {
-        for i = 0, List.Length(num1), 1 {
+        fixBlankList(num1)
+        for i = 0, getMaxLength2Num(num1,num2), 1 {
             num1[i] = num1[i] + num2[i]
         }
         shortenNumber(num1)
@@ -79,6 +60,20 @@ graph BigNumberHandler {
             num1[i]  = Ceil( num1[i] * multiplier)
         }
         shortenNumber(num1)
+    }
+
+    func fixBlankList (num List<int>){
+        if List.Length(num) == 0 {
+            Append(num,0)
+        }
+    }
+
+    func getMaxLength2Num (num1 List<int>, num2 List<int>) int{
+        if List.Length(num2) > List.Length(num1){
+            return List.Length(num2)
+        } else {
+            return List.Length(num1) 
+        }
     }
     
 }

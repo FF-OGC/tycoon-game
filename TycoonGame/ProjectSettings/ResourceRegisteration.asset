@@ -18,7 +18,19 @@
     },
     "ugcscript": {
       "id": "ugcscript",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "l70q4qemtg-mapdyldw-oqatg3f0ekl",
+            "filePath": "Assets\\Script\\Player\\PlayerHUD\\PlayerDefaultHUD.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "PlayerDefaultHUD"
+        }
+      ]
     },
     "eca": {
       "id": "eca",
@@ -80,6 +92,7 @@
       "id": "material",
       "children": []
     }
-  }
+  },
+  "children": []
 }
-//"{FE:{"v":"0.0.0","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}

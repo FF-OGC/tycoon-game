@@ -66,8 +66,24 @@
   "ecaScript": null,
   "ecaScripts": [
     {
-      "fileId": "uz2j1pkri9-mam8p4vt-g8pizzjmiwr",
-      "filePath": "Assets\\Script\\Economy\\BigNumberHandler.fcg",
+      "fileId": "36oxgt1sqv9-mam8lxfw-uqzg9e9hzkd",
+      "filePath": "Assets\\Script\\Player\\PlayerEconomy\\PlayerEconomy.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "q2x0s5225d-mapdzbct-va3g40555o",
+      "filePath": "Assets\\Script\\Player\\PlayerHUDHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "xczyaqva0l-mapdyv0e-lmmf3yetiyl",
+      "filePath": "Assets\\Script\\Player\\PlayerHandler.fcg",
       "_tag": {
         "type": "GFileRefer"
       },

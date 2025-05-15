@@ -3,6 +3,16 @@
     "type": "EntityTagSetting"
   },
   "_entityId": "RQV6cf1r",
-  "TagSetting": []
+  "TagSetting": [
+    {
+      "id": "entityTag54814334",
+      "label": "siuu"
+    },
+    {
+      "id": "entityTag65129151",
+      "label": "buildingModel"
+    }
+  ],
+  "children": []
 }
-//"{FE:{"v":"0.0.0","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}

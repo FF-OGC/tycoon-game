@@ -4,7 +4,32 @@
   },
   "_entityId": "6kC0jfLv",
   "enumCount": 0,
-  "enumDefines": {},
-  "enumNameMap": {}
+  "enumDefines": {
+    "CustomEnum75552261": {
+      "label": "GetMoneyType",
+      "key": "CustomEnum75552261",
+      "type": "Int",
+      "info": [
+        {
+          "label": "Action",
+          "key": "E68782056",
+          "value": 0,
+          "type": "Int"
+        },
+        {
+          "label": "Idle",
+          "key": "E25068148",
+          "value": 1,
+          "type": "Int"
+        }
+      ],
+      "isCustom": true,
+      "isDirty": false
+    }
+  },
+  "enumNameMap": {
+    "GetMoneyType": "CustomEnum75552261"
+  },
+  "children": []
 }
-//"{FE:{"v":"0.0.0","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}

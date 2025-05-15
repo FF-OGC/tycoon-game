@@ -1,0 +1,37 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+
+graph BuildingButtonTrigger {
+    //Executed when entity is created
+        parentEntity entity
+        modelEntity entity
+
+    event OnAwake() {
+        WaitForMillisecond(5000)
+        parentEntity = GetParent(thisEntity)
+        modelEntity = getChildByTag (parentEntity)
+    }
+
+
+    event OnEntityEnter(target entity<Entity>) {
+        LogInfo("i was here")
+        LogInfo(modelEntity)
+        SetActive(modelEntity, true)
+    }
+
+    event OnEntityExit(target entity<Entity>) {
+        LogInfo("i was not here")
+        LogInfo(modelEntity)
+        SetActive(modelEntity, false)
+    }
+
+
+    func getChildByTag (_parentEntity entity) entity{
+        for key, child in GetChildren(_parentEntity) {
+            if HasTag(child,ETag.buildingModel){
+                return child
+            }
+        }
+    }
+}

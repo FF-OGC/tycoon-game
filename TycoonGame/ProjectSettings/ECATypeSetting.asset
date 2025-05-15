@@ -6,10 +6,74 @@
   "_entityId": "XWrUWMBL",
   "children": [],
   "prefabVariant": null,
-  "activeValue": null,
-  "unlockedValue": null,
+  "activeValue": {
+    "selfValue": true,
+    "valueTag": "activeValue"
+  },
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
   "editorLockValue": false,
   "editorVisibleValue": true,
-  "TypeDefines": {}
+  "TypeDefines": {
+    "CustomComponent45052745": {
+      "label": "BuildingID",
+      "name": "CustomComponent45052745",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100000,
+      "PropDefines": [
+        {
+          "propID": 100001,
+          "name": "PROP_76173386",
+          "label": "type",
+          "type": "Int",
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
+        },
+        {
+          "propID": 100002,
+          "name": "PROP_17350576",
+          "label": "ID",
+          "type": "Int",
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
+        },
+        {
+          "propID": 100003,
+          "name": "PROP_65717891",
+          "label": "Value",
+          "type": "Int",
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
+        },
+        {
+          "propID": 100005,
+          "name": "PROP_69763975",
+          "label": "GetMoneyType",
+          "type": "CustomEnum75552261",
+          "value": null
+        }
+      ]
+    }
+  }
 }
-//"{FE:{"v":"0.0.0","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}

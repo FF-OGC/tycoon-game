@@ -1,0 +1,504 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "fnv",
+        "id": "ITP|^+A@-c:-=|_[AEgt",
+        "x": 1110,
+        "y": 236,
+        "extraState": [
+          {
+            "id": "_arg7127",
+            "name": "entityParent",
+            "type": "Entity",
+            "isOut": false
+          }
+        ],
+        "fields": {
+          "N": "getChildByTag",
+          "R": "Entity",
+          "_arg7127": {
+            "name": "entityParent",
+            "type": "Entity"
+          }
+        },
+        "inputs": {
+          "D": {
+            "block": {
+              "type": "lpe",
+              "id": "ZxI%c,oh`f}`peA?a~B}",
+              "fields": {
+                "X": {
+                  "name": "key",
+                  "type": "Int"
+                },
+                "I": {
+                  "name": "value",
+                  "type": "Entity"
+                }
+              },
+              "inputs": {
+                "RN": {
+                  "shadow": {
+                    "type": "tys",
+                    "id": ":LNb.dh0+A;/AsWEct%}",
+                    "extraState": "List|Map__List and Dictionary"
+                  },
+                  "block": {
+                    "type": "v",
+                    "id": "JiRgVtAW!VFpVJKy_D9)",
+                    "extraState": {
+                      "X": 541,
+                      "L": [
+                        1
+                      ],
+                      "T": "GetChildren",
+                      "OT": null
+                    },
+                    "inputs": {
+                      "P1": {
+                        "shadow": {
+                          "type": "tys",
+                          "id": "|I1S3GNflTGnL)Vs$B8#",
+                          "extraState": "Entity"
+                        },
+                        "block": {
+                          "type": "lcg",
+                          "id": "4TmUs-Gfb%MLBWZGC1-q",
+                          "extraState": "ITP|^+A@-c:-=|_[AEgt_arg7127",
+                          "fields": {
+                            "VR": "entityParent"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "D": {
+                  "block": {
+                    "type": "ife1",
+                    "id": "{J?9=WmxqHs6Y4l!3FbS",
+                    "extraState": {
+                      "X": 1,
+                      "CIDS": []
+                    },
+                    "inputs": {
+                      "C": {
+                        "shadow": {
+                          "type": "tys",
+                          "id": "q#?^ussyW]1e_[LQ{jN}",
+                          "extraState": "bool"
+                        },
+                        "block": {
+                          "type": "v",
+                          "id": "o03rR6w|tU$_+%Vgkl2.",
+                          "extraState": {
+                            "X": 352,
+                            "L": [
+                              1,
+                              2
+                            ],
+                            "T": "HasTag",
+                            "OT": null
+                          },
+                          "inputs": {
+                            "P1": {
+                              "shadow": {
+                                "type": "tys",
+                                "id": "dnz~j2,x+J~}fCUAB}Jz",
+                                "extraState": "entity"
+                              },
+                              "block": {
+                                "type": "lcg",
+                                "id": "Tsh$}RwKPL9R?)jX?o:m",
+                                "extraState": "ZxI%c,oh`f}`peA?a~B}I",
+                                "fields": {
+                                  "VR": "value"
+                                }
+                              }
+                            },
+                            "P2": {
+                              "shadow": {
+                                "type": "iptag",
+                                "id": "bi|{Ol7~AR5-=%aQ84to",
+                                "fields": {
+                                  "P2": "entityTag54814334"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "D": {
+                        "block": {
+                          "type": "fnr",
+                          "id": "4}XF$*H8#@?R2oV$A5ka",
+                          "extraState": {
+                            "rt": "Entity"
+                          },
+                          "inputs": {
+                            "R": {
+                              "shadow": {
+                                "type": "tys",
+                                "id": "n[P[vq1i%vKk~u(_z*|L",
+                                "extraState": "Entity"
+                              },
+                              "block": {
+                                "type": "lcg",
+                                "id": "rbc}(n;wCy.Z4!Z4/uS[",
+                                "extraState": "ZxI%c,oh`f}`peA?a~B}I",
+                                "fields": {
+                                  "VR": "value"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "e",
+        "id": "rB$Ab8WN.L}YgLlqj.H,",
+        "x": 461,
+        "y": 236,
+        "extraState": {
+          "X": 143,
+          "L": [
+            1
+          ],
+          "T": "OnTriggerEnter",
+          "OT": "CustomizeTrigger"
+        },
+        "fields": {
+          "P1": {
+            "name": "Target",
+            "type": "Entity"
+          }
+        },
+        "next": {
+          "block": {
+            "type": "lcd",
+            "id": "p-=E:|V@K(Pf^I)[;(3l",
+            "fields": {
+              "VD": {
+                "name": "parent",
+                "type": "Entity"
+              },
+              "T": "$Auto"
+            },
+            "inputs": {
+              "V": {
+                "shadow": {
+                  "type": "tyd",
+                  "id": "L+uzE#}6/Aq1y4m,:H+X",
+                  "extraState": "$Auto"
+                },
+                "block": {
+                  "type": "v",
+                  "id": "c7qsn.8b]@B=$RZG8TaV",
+                  "extraState": {
+                    "X": 542,
+                    "L": [
+                      1
+                    ],
+                    "T": "GetParent",
+                    "OT": null
+                  },
+                  "inputs": {
+                    "P1": {
+                      "shadow": {
+                        "type": "tys",
+                        "id": "R!`wBnn1xE7b++CH?)rK",
+                        "extraState": "Entity"
+                      },
+                      "block": {
+                        "type": "ent",
+                        "id": "IE.!w.q#Z,k#wGfxkR,y"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "lcd",
+                "id": "_=pEo+Ep3N!),Xo;NCt[",
+                "fields": {
+                  "VD": {
+                    "name": "model",
+                    "type": "Entity"
+                  },
+                  "T": "$Auto"
+                },
+                "inputs": {
+                  "V": {
+                    "shadow": {
+                      "type": "tyd",
+                      "id": "_lvDU,TbSBI(jbUKI2pS",
+                      "extraState": "$Auto"
+                    },
+                    "block": {
+                      "type": "fcv",
+                      "id": "+U$oeG3JEN~cWkraA.{K",
+                      "extraState": {
+                        "id": "ITP|^+A@-c:-=|_[AEgt",
+                        "name": "getChildByTag",
+                        "params": [
+                          {
+                            "id": "_arg7127",
+                            "name": "entityParent",
+                            "type": "Entity",
+                            "isOut": false
+                          }
+                        ],
+                        "returnType": "Entity"
+                      },
+                      "inputs": {
+                        "_arg7127": {
+                          "shadow": {
+                            "type": "tys",
+                            "id": "xT~Ge@L*z{XJgFZx.0XI",
+                            "extraState": "Entity"
+                          },
+                          "block": {
+                            "type": "lcg",
+                            "id": "qV$==aLjod;j;tZCRQlA",
+                            "extraState": "p-=E:|V@K(Pf^I)[;(3lVD",
+                            "fields": {
+                              "VR": "parent"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "next": {
+                  "block": {
+                    "type": "a",
+                    "id": "REG_}vbCnn3e]e]b8u/;",
+                    "extraState": {
+                      "X": 413,
+                      "L": [
+                        1,
+                        2
+                      ],
+                      "T": "SetActive",
+                      "OT": null
+                    },
+                    "inputs": {
+                      "P1": {
+                        "shadow": {
+                          "type": "tys",
+                          "id": ":=yy+_+ZqdBo@EF;Ep5f",
+                          "extraState": "Entity"
+                        },
+                        "block": {
+                          "type": "lcg",
+                          "id": ".#obC!S+Mh~OYvJ|CPqL",
+                          "extraState": "_=pEo+Ep3N!),Xo;NCt[VD",
+                          "fields": {
+                            "VR": "model"
+                          }
+                        }
+                      },
+                      "P2": {
+                        "shadow": {
+                          "type": "ipb",
+                          "id": "sltCGe9@l$C!}#HEHy~4",
+                          "fields": {
+                            "V": "T"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "e",
+        "id": "MMR],{~=2yk0gsg~UFoB",
+        "x": 463,
+        "y": 409,
+        "extraState": {
+          "X": 144,
+          "L": [
+            1
+          ],
+          "T": "OnTriggerLeave",
+          "OT": "CustomizeTrigger"
+        },
+        "fields": {
+          "P1": {
+            "name": "Target",
+            "type": "Entity"
+          }
+        },
+        "next": {
+          "block": {
+            "type": "lcd",
+            "id": "+)Sb)zS@*Tt5D!R-w]^X",
+            "fields": {
+              "VD": {
+                "name": "parent",
+                "type": "Entity"
+              },
+              "T": "$Auto"
+            },
+            "inputs": {
+              "V": {
+                "shadow": {
+                  "type": "tyd",
+                  "id": "9LGe^pl8(}hF`61rT8*}",
+                  "extraState": "$Auto"
+                },
+                "block": {
+                  "type": "v",
+                  "id": "0OVK/okExcqHbk!{SUr?",
+                  "extraState": {
+                    "X": 542,
+                    "L": [
+                      1
+                    ],
+                    "T": "GetParent",
+                    "OT": null
+                  },
+                  "inputs": {
+                    "P1": {
+                      "shadow": {
+                        "type": "tys",
+                        "id": "R!`wBnn1xE7b++CH?)rK",
+                        "extraState": "Entity"
+                      },
+                      "block": {
+                        "type": "ent",
+                        "id": "t%8jJ3w4aI[BAt%:M.oO"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "lcd",
+                "id": "?CeBoykBL4,+X-a~@xFs",
+                "fields": {
+                  "VD": {
+                    "name": "model",
+                    "type": "Entity"
+                  },
+                  "T": "$Auto"
+                },
+                "inputs": {
+                  "V": {
+                    "shadow": {
+                      "type": "tyd",
+                      "id": "wR0|mr:0H+cpx8e=^3Vp",
+                      "extraState": "$Auto"
+                    },
+                    "block": {
+                      "type": "fcv",
+                      "id": "2]~2:cr/OpRs5_jQi|3~",
+                      "extraState": {
+                        "id": "ITP|^+A@-c:-=|_[AEgt",
+                        "name": "getChildByTag",
+                        "params": [
+                          {
+                            "id": "_arg7127",
+                            "name": "entityParent",
+                            "type": "Entity",
+                            "isOut": false
+                          }
+                        ],
+                        "returnType": "Entity"
+                      },
+                      "inputs": {
+                        "_arg7127": {
+                          "shadow": {
+                            "type": "tys",
+                            "id": "%{3Idb])X9_k4L*W3vnz",
+                            "extraState": "Entity"
+                          },
+                          "block": {
+                            "type": "lcg",
+                            "id": "C~%PQ7DNN4I{}5Q83,4x",
+                            "extraState": "+)Sb)zS@*Tt5D!R-w]^XVD",
+                            "fields": {
+                              "VR": "parent"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "next": {
+                  "block": {
+                    "type": "a",
+                    "id": "0U~1WANG+A~~~A:;iR,Y",
+                    "extraState": {
+                      "X": 413,
+                      "L": [
+                        1,
+                        2
+                      ],
+                      "T": "SetActive",
+                      "OT": null
+                    },
+                    "inputs": {
+                      "P1": {
+                        "shadow": {
+                          "type": "tys",
+                          "id": ":=yy+_+ZqdBo@EF;Ep5f",
+                          "extraState": "Entity"
+                        },
+                        "block": {
+                          "type": "lcg",
+                          "id": "2N3WG@X}Ah_e;H.`b31c",
+                          "extraState": "?CeBoykBL4,+X-a~@xFsVD",
+                          "fields": {
+                            "VR": "model"
+                          }
+                        }
+                      },
+                      "P2": {
+                        "shadow": {
+                          "type": "ipb",
+                          "id": "KCO.naZ)e=@MjXDc2{4f",
+                          "fields": {
+                            "V": "F"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "graphData": {
+    "ownerType": "Entity",
+    "componentTypes": "CustomLevelObject&MeshRender&ColliderShape&Collider",
+    "isStatic": false,
+    "platform": 2
+  }
+}
+//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
