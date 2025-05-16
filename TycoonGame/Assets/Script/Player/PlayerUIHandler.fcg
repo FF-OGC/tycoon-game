@@ -1,0 +1,11 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+graph PlayerHUDHandler {
+    //Executed when entity is created
+    event OnAwake() {
+        AddScript(thisEntity<Player>,EResFCG.PlayerDefaultHUD)
+
+        AddScript(thisEntity<Player>,EResFCG.PlayerCustomUI)
+    }
+}

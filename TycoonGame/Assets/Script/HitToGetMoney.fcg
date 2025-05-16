@@ -7,16 +7,24 @@ import "../Script/Economy/BigNumberHandler.fcg" as BigNumberHandler
 graph Script {
     //Executed when entity is created
     isCooldown bool
+    parentEntity entity<Entity>
     event OnAwake() {
 
     }
 
     event OnHitByBullet(weapon entity<Weapon>, hitPosition Vector3) {
+        if parentEntity == nil {
+            parentEntity = GetParent(GetParent(thisEntity))
+        }
+
+
         if !isCooldown {
         isCooldown = true
         var _playerHit = weapon<Weapon>.Owner
-        _playerHit<PlayerEconomy>.addAmount(thisEntity<BuildingID>.Value)
-        WaitForMillisecond(1000)
+        var _parentEntity = GetParent(GetParent(thisEntity))
+        _playerHit<PlayerEconomy>.addAmount(_parentEntity<Building>.Value)
+        WaitForMillisecond(_parentEntity<Building>.CooldownTime * 1000)
+        DispatchEvent(PLAY_SFX,_playerHit,List<object>{"thamngan"})
         isCooldown = false
         }
     }

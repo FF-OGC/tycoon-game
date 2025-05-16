@@ -23,8 +23,9 @@
                 "type": "SceneEditEntity",
                 "resourceId": "Primitive/Empty"
               },
-              "_entityId": "dJGeIeQk",
+              "_entityId": "jvVL2iXz",
               "children": [],
+              "prefabVariant": null,
               "activeValue": {
                 "selfValue": true,
                 "valueTag": "activeValue"
@@ -35,12 +36,12 @@
               "position": {
                 "x": 0,
                 "y": 0,
-                "z": 0
+                "z": -5.201421737670898
               },
               "scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
+                "x": 10,
+                "y": 10,
+                "z": 10
               },
               "rotation": {
                 "x": 0,
@@ -69,29 +70,59 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 31,
-              "itemID": 148,
+              "tempIndex": 36,
+              "itemID": 384,
               "seParent": null,
               "ecaScripts": [
                 null
               ],
               "ecaProps": {
-                "DummyLevelObject": {},
+                "BasicCylinderItem": {},
                 "LevelObject": {},
                 "Transform": {},
                 "Entity": {},
                 "Visibility": {},
+                "Appearance": {},
                 "Collider": {}
               },
-              "_entityName": "Bush",
-              "prefabVariant": null
+              "_entityName": "Torus",
+              "objColor": {
+                "surfaceColor": {
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "a": 1
+                }
+              },
+              "objTex": {
+                "surfaceTexRef": {
+                  "fileId": "387b17e837dcbb606c2e6c6bdde6c3e3",
+                  "filePath": "lib://fftextures/WorkshopItemTexture/SceneEdit_Cube_frame_Texture_01.png",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "texture"
+                }
+              },
+              "propsData": {
+                "DiffuseColor": {
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "a": 1
+                },
+                "DiffuseTexture": "SceneEdit_Cube_Texture_Bricks"
+              }
             }
           ],
           "activeValue": {
-            "selfValue": true,
+            "selfValue": false,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "editorLockValue": false,
           "editorVisibleValue": true,
           "position": {
@@ -159,7 +190,8 @@
             "LevelObject": {},
             "Transform": {},
             "Entity": {},
-            "Visibility": {}
+            "Visibility": {},
+            "MeshRender": {}
           },
           "propsData": {},
           "entityVersion": 3,
@@ -177,13 +209,16 @@
             "selfValue": true,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "editorLockValue": false,
           "editorVisibleValue": true,
           "position": {
-            "x": 0,
-            "y": 0,
-            "z": -5
+            "x": 3.9878089427948,
+            "y": -0.30000001192092896,
+            "z": -1.8034892082214355
           },
           "scale": {
             "x": 1,
@@ -290,7 +325,10 @@
             "CustomComponent45052745": {
               "PROP_76173386": 0,
               "PROP_17350576": 0,
-              "PROP_65717891": 10
+              "PROP_65717891": 10,
+              "PROP_55253157": null,
+              "PROP_68039595": 0,
+              "PROP_20670648": 0
             }
           },
           "propsData": {},
@@ -305,19 +343,205 @@
           },
           "_entityName": "Trigger",
           "prefabVariant": null
+        },
+        {
+          "_tag": {
+            "type": "UGCSceneEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "9FjEIznT",
+          "children": [
+            {
+              "_tag": {
+                "type": "SceneEditEntity",
+                "resourceId": "Primitive/Empty"
+              },
+              "_entityId": "FOvT3PEx",
+              "children": [],
+              "prefabVariant": null,
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": null,
+              "editorLockValue": false,
+              "editorVisibleValue": true,
+              "position": {
+                "x": 0,
+                "y": 0.8860127329826355,
+                "z": -0.02200031280517578
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": false,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [],
+              "_filters": [
+                "node.withscript"
+              ],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "tempIndex": 38,
+              "itemID": 222,
+              "seParent": null,
+              "ecaScripts": [
+                {
+                  "fileId": "v6vrk3naj9g-maqidomu-auj5quuzzjp",
+                  "filePath": "Assets\\Script\\Script.fcg",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "ugcscript"
+                }
+              ],
+              "ecaProps": {
+                "TextEntity": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {}
+              },
+              "_entityName": "Text object",
+              "propsData": {
+                "TextKey": "MONEY HERE",
+                "fontColor": {
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "a": 1
+                },
+                "IsBillboard": true,
+                "fontStyleRef": {
+                  "bold": true,
+                  "italic": false,
+                  "underline": false
+                },
+                "FontSize": 48,
+                "IgnoreDepth": false,
+                "AlwaysInScreen": false,
+                "Depth": 0,
+                "fontType": "UIFONT_LATIN",
+                "fontStyle": 1,
+                "_levelObjectID": 3,
+                "TextDisplay": "MONEY HERE",
+                "fontTypeRef": "UIFONT_LATIN"
+              }
+            }
+          ],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": -3.9878089427948,
+            "y": 0.30000001192092896,
+            "z": 0.14408229291439056
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "physicalMaterial": null,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "_filters": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "materials": [
+            null
+          ],
+          "colliders": [],
+          "IsNPC": false,
+          "Rigidbody": {
+            "Type": 1,
+            "Mass": 1,
+            "CenterOfMass": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "UseGravity": true,
+            "Drag": 0.05,
+            "AngularDrag": 0.05
+          },
+          "isCreateAsEmpty": true,
+          "ecaScripts": [],
+          "ecaProps": {
+            "CustomLevelObject": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {}
+          },
+          "propsData": {},
+          "entityVersion": 3,
+          "_entityName": "UpgradeButton"
         }
       ],
       "activeValue": {
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": null,
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
       "editorLockValue": false,
       "editorVisibleValue": true,
       "position": {
-        "x": 0,
-        "y": 0,
-        "z": 0
+        "x": 0.9878090023994446,
+        "y": -0.30000001192092896,
+        "z": -0.14408229291439056
       },
       "scale": {
         "x": 1,
@@ -379,12 +603,21 @@
         "Entity": {},
         "Visibility": {},
         "CustomComponent45052745": {
-          "PROP_76173386": 0
-        }
+          "PROP_76173386": 0,
+          "PROP_17350576": 0,
+          "PROP_55253157": {
+            "type": "CustomEnum75552261",
+            "value": "E96535437"
+          },
+          "PROP_65717891": 0,
+          "PROP_68039595": 0,
+          "PROP_20670648": 5
+        },
+        "MeshRender": {}
       },
       "propsData": {},
       "entityVersion": 3,
-      "_entityName": "Building",
+      "_entityName": "Fence",
       "prefabVariant": null
     }
   ],
@@ -393,7 +626,10 @@
     "selfValue": true,
     "valueTag": "activeValue"
   },
-  "unlockedValue": null,
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
   "editorLockValue": false,
   "editorVisibleValue": true,
   "discriminator": "ISceneLike",

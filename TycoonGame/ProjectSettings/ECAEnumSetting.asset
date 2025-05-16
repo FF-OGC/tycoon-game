@@ -6,20 +6,26 @@
   "enumCount": 0,
   "enumDefines": {
     "CustomEnum75552261": {
-      "label": "GetMoneyType",
+      "label": "BuildingTypeEnum",
       "key": "CustomEnum75552261",
       "type": "Int",
       "info": [
         {
+          "label": "Decoration",
+          "key": "E96535437",
+          "value": 0,
+          "type": "Int"
+        },
+        {
           "label": "Action",
           "key": "E68782056",
-          "value": 0,
+          "value": 1,
           "type": "Int"
         },
         {
           "label": "Idle",
           "key": "E25068148",
-          "value": 1,
+          "value": 2,
           "type": "Int"
         }
       ],
@@ -28,7 +34,7 @@
     }
   },
   "enumNameMap": {
-    "GetMoneyType": "CustomEnum75552261"
+    "BuildingTypeEnum": "CustomEnum75552261"
   },
   "children": []
 }

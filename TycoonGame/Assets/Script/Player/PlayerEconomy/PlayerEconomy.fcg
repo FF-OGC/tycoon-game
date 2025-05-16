@@ -3,6 +3,7 @@ import "EditorGenLib.fcc" as EditorLib
 
 
 import "../../Economy/BigNumberHandler.fcg" as BigNumberHandler
+import "../PlayerUI/PlayerMoneyUI.fcg" as PlayerMoneyUI
 
 graph Script {
     //Executed when entity is created
@@ -14,15 +15,18 @@ graph Script {
 
     func addAmount (amount int){
         globalEntity<BigNumberHandler>.addNumber(playerMoney, List<int>{amount} )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
         LogInfo("_playerMoney" + playerMoney)
     }
 
     func subtractAmount(amount int){
         globalEntity<BigNumberHandler>.subtractNumber(playerMoney, List<int>{amount} )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
         LogInfo("_playerMoney" + playerMoney)
     }
 
     func multiplyAmount (amount float){
         globalEntity<BigNumberHandler>.multiplierNumber(playerMoney, amount )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
     }
 }

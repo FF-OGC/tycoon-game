@@ -3,7 +3,115 @@
     "type": "ecaEventDesc"
   },
   "_entityId": "BmvZz8ma",
-  "customEventDefines": {},
-  "customName": {}
+  "customEventDefines": {
+    "signal_32584593": {
+      "name": "SHOW_CUSTOMUI",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100000,
+      "props": [
+        {
+          "name": "ereskey",
+          "value": "any",
+          "key": 1
+        }
+      ],
+      "propCount": 2,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_32584593"
+    },
+    "signal_39464200": {
+      "name": "PLAY_SFX",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100001,
+      "props": [
+        {
+          "name": "ereskey",
+          "value": "any",
+          "key": 1
+        }
+      ],
+      "propCount": 1,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_39464200"
+    },
+    "signal_12921341": {
+      "name": "PLAY_SFX_DURATION",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100002,
+      "props": [
+        {
+          "name": "ereskey",
+          "value": "any",
+          "key": 1
+        },
+        {
+          "name": "duration",
+          "value": "any",
+          "key": 2
+        }
+      ],
+      "propCount": 2,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_12921341"
+    },
+    "signal_42513067": {
+      "name": "PLAY_BG_MUSIC",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100003,
+      "props": [
+        {
+          "name": "ereskey",
+          "value": "any",
+          "key": 1
+        }
+      ],
+      "propCount": 1,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_42513067"
+    },
+    "signal_87245577": {
+      "name": "PLAY_SFX_VOLUME_DURATION",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100004,
+      "props": [
+        {
+          "name": "Parameter1",
+          "value": "any",
+          "key": 1
+        },
+        {
+          "name": "Parameter2",
+          "value": "any",
+          "key": 2
+        },
+        {
+          "name": "Parameter3",
+          "value": "any",
+          "key": 3
+        }
+      ],
+      "propCount": 3,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_87245577"
+    }
+  },
+  "customName": {
+    "SHOW_CUSTOMUI": "signal_32584593",
+    "PLAY_SFX": "signal_39464200",
+    "PLAY_SFX_DURATION": "signal_12921341",
+    "PLAY_BG_MUSIC": "signal_42513067",
+    "PLAY_SFX_VOLUME_DURATION": "signal_87245577"
+  },
+  "children": []
 }
-//"{FE:{"v":"0.0.0","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}

@@ -88,6 +88,30 @@
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "4ke4bb4yd6y-maq92e6h-nypglfrtsxl",
+      "filePath": "Assets\\Script\\Player\\PlayerUI\\PlayerMoneyUI.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "m80cuyn8l9-maqj8mzo-ocl8byrlkg",
+      "filePath": "Assets\\Script\\Player\\PlayerEventHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "fmvwp9xqijq-maqlz04m-lrzcvzyxjq",
+      "filePath": "Assets\\Script\\Player\\PlayerSFXHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "avatarInfo": null,

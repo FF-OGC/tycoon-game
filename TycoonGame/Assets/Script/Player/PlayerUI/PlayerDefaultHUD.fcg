@@ -3,7 +3,7 @@ import "EditorGenLib.fcc" as EditorLib
 import "Player.fcc" as Player
 import "Workflow.fcc" as Workflow
 
-graph Script {
+graph PlayerDefaultHUD {
     //Executed when entity is created
     isInit bool
     event OnAwake() {
@@ -24,6 +24,7 @@ graph Script {
         if !isInit{
             init()
         }
+
 
     }
 }

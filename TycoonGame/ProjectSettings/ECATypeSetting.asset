@@ -18,7 +18,7 @@
   "editorVisibleValue": true,
   "TypeDefines": {
     "CustomComponent45052745": {
-      "label": "BuildingID",
+      "label": "Building",
       "name": "CustomComponent45052745",
       "bases": [
         "Component"
@@ -26,19 +26,6 @@
       "ecaScripts": [],
       "typeID": 100000,
       "PropDefines": [
-        {
-          "propID": 100001,
-          "name": "PROP_76173386",
-          "label": "type",
-          "type": "Int",
-          "value": 0,
-          "disabledType": true,
-          "param": {
-            "precision": 0,
-            "min": -2147483648,
-            "max": 2147483647
-          }
-        },
         {
           "propID": 100002,
           "name": "PROP_17350576",
@@ -50,6 +37,18 @@
             "precision": 0,
             "min": -2147483648,
             "max": 2147483647
+          }
+        },
+        {
+          "propID": 100006,
+          "name": "PROP_55253157",
+          "label": "Type",
+          "type": "CustomEnum75552261",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
           }
         },
         {
@@ -66,11 +65,55 @@
           }
         },
         {
-          "propID": 100005,
-          "name": "PROP_69763975",
-          "label": "GetMoneyType",
-          "type": "CustomEnum75552261",
-          "value": null
+          "propID": 100007,
+          "name": "PROP_68039595",
+          "label": "CooldownTime",
+          "type": "Int",
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
+        },
+        {
+          "propID": 100008,
+          "name": "PROP_20670648",
+          "label": "Cost",
+          "type": "Int",
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
+        }
+      ]
+    },
+    "CustomComponent88242448": {
+      "label": "Tool",
+      "name": "CustomComponent88242448",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100004,
+      "PropDefines": [
+        {
+          "propID": 100009,
+          "name": "PROP_99192963",
+          "label": "ID",
+          "type": "Int",
+          "value": 0
+        },
+        {
+          "propID": 100010,
+          "name": "PROP_24227126",
+          "label": "Proficiency",
+          "type": "Int",
+          "value": 0
         }
       ]
     }

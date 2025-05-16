@@ -4,19 +4,14 @@ import "Physics.fcc" as Physics
 import "../Script/Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
 import "../Script/Economy/BigNumberHandler.fcg" as BigNumberHandler
 
-import Res from "EditorGenLib.fcc"
-
 graph UpgradeButtonTrigger {
     //Executed when entity is created
-        isUnlocked bool = false
         parentEntity entity
         modelEntity entity
 
     event OnEntityEnter(target entity<Entity>) {
         if parentEntity == nil {
             parentEntity = GetParent(GetParent(thisEntity))
-            modelEntity = getChildByTag(parentEntity, ETag.buildingModel)
-            LogInfo( "modelEntity " + modelEntity)
         }
 
         var _playerEnter = target<Player>
@@ -27,13 +22,11 @@ graph UpgradeButtonTrigger {
             parentEntity<Building>.Cost += 10
             parentEntity<Building>.Value +=1
 
-            SetActive(modelEntity, true) 
-
             DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"})
 
             DispatchEvent(PLAY_SFX,_playerEnter,List<object>{"kepngan"})
 
-            LogInfo("ulock")
+            LogInfo("upgrade success")
         } else{
             DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"NotEnoughMoneyUI"})
         }
@@ -44,9 +37,9 @@ graph UpgradeButtonTrigger {
     }
 
 
-    func getChildByTag (_parentEntity entity, tagkey string) entity{
+    func getChildByTag (_parentEntity entity) entity{
         for key, child in GetChildren(_parentEntity) {
-            if HasTag(child,  tagkey){
+            if HasTag(child,ETag.buildingModel){
                 return child
             }
         }

@@ -6,7 +6,49 @@
   "Resource": {
     "ui": {
       "id": "ui",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "39xzcens0xc-mapewzq6-hn9qat3dsw",
+            "filePath": "Assets\\UI\\PlayerMoneyUI.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerMoneyUI",
+          "children": [
+            {
+              "id": "8GH05RZu",
+              "scriptName": "DisplayAmount"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "05thxk300ghe-maqikuc7-00x5vm276rgs",
+            "filePath": "Assets\\UI\\NotEnoughMoneyUI.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "NotEnoughMoneyUI",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "ts5bmedjb9-maqjwski-n842hhj4bal",
+            "filePath": "Assets\\UI\\UpgradeSuccessFully.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "UpgradeSuccessFully",
+          "children": []
+        }
+      ]
     },
     "scene": {
       "id": "scene",
@@ -22,13 +64,24 @@
         {
           "refer": {
             "fileId": "l70q4qemtg-mapdyldw-oqatg3f0ekl",
-            "filePath": "Assets\\Script\\Player\\PlayerHUD\\PlayerDefaultHUD.fcg",
+            "filePath": "Assets\\Script\\Player\\PlayerUI\\PlayerDefaultHUD.fcg",
             "_tag": {
               "type": "GFileRefer"
             },
             "fileType": "ugcscript"
           },
           "scriptName": "PlayerDefaultHUD"
+        },
+        {
+          "refer": {
+            "fileId": "7ixxuifxbu4-maqjcbbc-5kj1bl1cfrr",
+            "filePath": "Assets\\Script\\Player\\PlayerUI\\PlayerCustomUI.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "PlayerCustomUI"
         }
       ]
     },
@@ -46,7 +99,30 @@
     },
     "sound": {
       "id": "sound",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "ht7be8b0auf-maqlxrgy-41dfpllgkpe",
+            "filePath": "Assets\\SFX\\thamngan.mp3",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "sound"
+          },
+          "scriptName": "thamngan"
+        },
+        {
+          "refer": {
+            "fileId": "ntjcg1c9e7-maqlxqjs-fw5us7jk3fl",
+            "filePath": "Assets\\SFX\\kepngan.mp3",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "sound"
+          },
+          "scriptName": "kepngan"
+        }
+      ]
     },
     "fitem": {
       "id": "fitem",

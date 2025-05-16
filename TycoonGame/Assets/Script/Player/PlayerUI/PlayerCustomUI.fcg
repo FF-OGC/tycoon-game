@@ -1,0 +1,20 @@
+import "Hud.fcc" as Hud
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import Res from "EditorGenLib.fcc"
+
+graph PlayerCustomUI {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event SHOW_CUSTOMUI(ereskey object) {
+        LogInfo("reeraearsa")
+        CreateCustomUI(out var _customUI,thisEntity<Player>,Res.UI[ereskey as EResKeyUI])
+        _customUI<CustomUI>.IsVisible = true
+        WaitForMillisecond(3000)
+        Destroy(_customUI)
+    }
+}

@@ -27,7 +27,7 @@
     "z": 1
   },
   "CameraBlockMode": 0,
-  "CameraProjectionMode": 1,
+  "CameraProjectionMode": 0,
   "TwoDimensionCamEnableZAxis": true,
   "CameraViewingAngleRestrictionType": 0,
   "FPPResource": false,
