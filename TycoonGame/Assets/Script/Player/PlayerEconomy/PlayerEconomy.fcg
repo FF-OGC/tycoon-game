@@ -10,7 +10,7 @@ graph Script {
     playerMoney List<int> = List<int>{}
 
     event OnAwake() {
-        playerMoney = List<int>{0}
+        playerMoney = List<int>{999}
     }
 
     func addAmount (amount int){

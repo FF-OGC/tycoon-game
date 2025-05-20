@@ -18,7 +18,7 @@ static graph CSVReadingHandler {
 
     func GetValueByLevel(keyCSV CsvID, level int) int{
         var _list = GetInformation(keyCSV as CsvID, 1, level )
-        if _list == nil {
+        if  _list[0] == nil {
             _list = GetInformation(keyCSV as CsvID, 1, level-1 )
         }
         
@@ -28,7 +28,7 @@ static graph CSVReadingHandler {
 
     func GetUpgradeCostByLevel (keyCSV CsvID, level int) int{
         var _list = GetInformation(keyCSV as CsvID, 1, level )
-        if _list == nil {
+        if _list[0] == nil {
              _list = GetInformation(keyCSV as CsvID, 1, level-1 )
         }
 
@@ -38,7 +38,7 @@ static graph CSVReadingHandler {
 
     func GetCooldownByLevel (keyCSV CsvID, level int) int{
         var _list = GetInformation(keyCSV as CsvID, 1, level )
-        if _list == nil {
+        if _list[0] == nil {
                 _list = GetInformation(keyCSV as CsvID, 1, level-1 )
         }
 

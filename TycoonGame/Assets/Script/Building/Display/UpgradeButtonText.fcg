@@ -8,16 +8,38 @@ graph UpgradeButtonText {
     isInit bool
     UpgradeCostDisplay int
     LastUpdateLevel int
+
+
     _parent entity
     _parentCurrentLevel int
     _parentConfigFile CsvID
 
     //Executed when entity is created
     event OnAwake() {
+        init()
+    }
 
+    event DISPLAY_TEXT_INIT() {
+        init2()
+    }
+
+    event UPDATE_DISPLAY_TEXT() {
+        if _parent == nil {
+            _parent = GetParent(GetParent(thisEntity))
+            _parentConfigFile = _parent<BuildingConfig>.ConfigFile
+        }
+
+        _parentCurrentLevel = _parent<Building>.CurrentLevel
+        UpgradeCostDisplay = CSVReadingHandler.GetUpgradeCostByLevel(_parentConfigFile,_parentCurrentLevel)
+        thisEntity<Text>.Content =  "UPGRADE COST: " + UpgradeCostDisplay
+    }
+
+    async func init (){
+        
         LastUpdateLevel = 0 
 
         while true{
+            LogInfo("Im' guid")
             if _parent == nil {
                 _parent = GetParent(GetParent(thisEntity))
                 _parentCurrentLevel = _parent<Building>.CurrentLevel
@@ -27,16 +49,37 @@ graph UpgradeButtonText {
             _parentCurrentLevel = _parent<Building>.CurrentLevel 
 
             if _parentCurrentLevel != LastUpdateLevel {
-
                 LastUpdateLevel = _parentCurrentLevel
-
                 UpgradeCostDisplay = CSVReadingHandler.GetUpgradeCostByLevel(_parentConfigFile,_parentCurrentLevel)
                 thisEntity<Text>.Content =  "UPGRADE COST: " + UpgradeCostDisplay
-                
             }
             WaitForMillisecond(2000)
-
         }
     }
+
+    async func init2 (){
+        LastUpdateLevel = 0 
+
+        while true{
+            LogInfo("super test")
+            if _parent == nil {
+                _parent = GetParent(GetParent(thisEntity))
+                _parentCurrentLevel = _parent<Building>.CurrentLevel
+                _parentConfigFile = _parent<BuildingConfig>.ConfigFile
+            }
+
+            _parentCurrentLevel = _parent<Building>.CurrentLevel 
+
+            if _parentCurrentLevel != LastUpdateLevel {
+                LastUpdateLevel = _parentCurrentLevel
+                UpgradeCostDisplay = CSVReadingHandler.GetUpgradeCostByLevel(_parentConfigFile,_parentCurrentLevel)
+                thisEntity<Text>.Content =  "UPGRADE COST: " + UpgradeCostDisplay
+            }
+
+            WaitForMillisecond(2000)
+        }
+    }
+
+
 
 }

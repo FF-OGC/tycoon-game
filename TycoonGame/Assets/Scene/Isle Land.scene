@@ -166,7 +166,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 1,
+              "tempIndex": 11,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -273,7 +273,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 2,
+              "tempIndex": 12,
               "itemID": 289,
               "seParent": null,
               "ecaScripts": [
@@ -457,7 +457,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 3,
+              "tempIndex": 13,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -832,8 +832,8 @@
       "_entityName": "GoldMine",
       "prefabVariant": {
         "prefabFile": {
-          "fileId": "n73hd4zfj5-map8t7bp-6sqzn3nyrqj",
-          "filePath": "Assets\\Prefabs\\Resources.prefab",
+          "fileId": "yelalxx2ds9-mawe4z1w-kbd39s4cbj",
+          "filePath": "Assets\\Prefabs\\Action.prefab",
           "_tag": {
             "type": "GFileRefer"
           },
@@ -841,7 +841,7 @@
         },
         "snapShots": {
           "IqJnGYXP": {
-            "_entityId": "aoPTK0Py",
+            "_entityId": "zh4nmhI4",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -933,7 +933,7 @@
             "entityVersion": 3
           },
           "o2L5loDH": {
-            "_entityId": "xyaCsAxG",
+            "_entityId": "FbbVZfoG",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -1029,83 +1029,8 @@
             "entityVersion": 3,
             "_entityName": "ModelGroup"
           },
-          "B0CAHAkX": {
-            "_entityId": "s6ppljhf",
-            "activeValue": {
-              "selfValue": true,
-              "valueTag": "activeValue"
-            },
-            "unlockedValue": {
-              "selfValue": true,
-              "valueTag": "unlockedValue"
-            },
-            "editorLockValue": false,
-            "editorVisibleValue": true,
-            "position": {
-              "x": 0,
-              "y": 0.9229999780654907,
-              "z": 0
-            },
-            "scale": {
-              "x": 10,
-              "y": 10,
-              "z": 10
-            },
-            "rotation": {
-              "x": 45.00000762939453,
-              "y": 45,
-              "z": 45
-            },
-            "BTPath": [
-              null
-            ],
-            "visible": true,
-            "VisibilityLayer": 0,
-            "modelOptimization": 0,
-            "streamingLayer": "",
-            "attributes": [
-              2,
-              4
-            ],
-            "isTrigger": false,
-            "collidable": true,
-            "physicalLayer": 0,
-            "physicalMaterial": null,
-            "aoiSetting": 0,
-            "initialTypes": {},
-            "componentList": [
-              "AimableEntity",
-              "AimAssistEntity"
-            ],
-            "_filters": [
-              "node.withscript"
-            ],
-            "entityTagData": {
-              "tagPointers": []
-            },
-            "itemID": 289,
-            "seParent": null,
-            "ecaScripts": [
-              {
-                "fileId": "zyydyv325f-map80fmg-jzlbmnxcg7",
-                "filePath": "Assets\\Script\\HitToGetMoney.fcg",
-                "fileType": "ugcscript"
-              }
-            ],
-            "ecaProps": {
-              "DummyLevelObject": {},
-              "LevelObject": {},
-              "Transform": {},
-              "Entity": {},
-              "Visibility": {},
-              "Collider": {},
-              "AimableEntity": {},
-              "AimAssistEntity": {}
-            },
-            "_entityName": "Gold Coin"
-          },
           "obf5HjGE": {
-            "_entityId": "ONpQv7hk",
+            "_entityId": "xdPN0i2t",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -1197,8 +1122,83 @@
             "editorLockValue": false,
             "editorVisibleValue": true
           },
+          "B0CAHAkX": {
+            "_entityId": "brpEwJ85",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true,
+            "position": {
+              "x": 0,
+              "y": 0.9229999780654907,
+              "z": 0
+            },
+            "scale": {
+              "x": 10,
+              "y": 10,
+              "z": 10
+            },
+            "rotation": {
+              "x": 45.00000762939453,
+              "y": 45,
+              "z": 45
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [
+              "AimableEntity",
+              "AimAssistEntity"
+            ],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 289,
+            "seParent": null,
+            "ecaScripts": [
+              {
+                "fileId": "zyydyv325f-map80fmg-jzlbmnxcg7",
+                "filePath": "Assets\\Script\\HitToGetMoney.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "DummyLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "Collider": {},
+              "AimableEntity": {},
+              "AimAssistEntity": {}
+            },
+            "_entityName": "Gold Coin"
+          },
           "t5wLq2v8": {
-            "_entityId": "D6EwNQLs",
+            "_entityId": "IHqlqPuR",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -1278,7 +1278,7 @@
             "_entityName": "UpgradeButton"
           },
           "pQnRZS6X": {
-            "_entityId": "a1Ug6pJL",
+            "_entityId": "W0kqDW6E",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -1371,7 +1371,7 @@
             }
           },
           "1tSAa7sx": {
-            "_entityId": "lwH3aiQq",
+            "_entityId": "GKhxQKS2",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -1574,7 +1574,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 4,
+              "tempIndex": 14,
               "itemID": 384,
               "seParent": null,
               "ecaScripts": [
@@ -1625,7 +1625,6 @@
               },
               "_entityId": "FBYz6nKi",
               "children": [],
-              "prefabVariant": null,
               "activeValue": {
                 "selfValue": true,
                 "valueTag": "activeValue"
@@ -1673,7 +1672,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 5,
+              "tempIndex": 15,
               "itemID": 84,
               "seParent": null,
               "ecaScripts": [
@@ -1833,7 +1832,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 7,
+              "tempIndex": 16,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -2317,7 +2316,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 6,
+              "tempIndex": 17,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -2544,8 +2543,8 @@
       "_entityName": "Fence",
       "prefabVariant": {
         "prefabFile": {
-          "fileId": "7tm0fthjqlm-mapdc3z6-dmpn5n42rqw",
-          "filePath": "Assets\\Prefabs\\Building.prefab",
+          "fileId": "jp8crjo69v-mawez6i8-hogpltai9yr",
+          "filePath": "Assets\\Prefabs\\Idle.prefab",
           "_tag": {
             "type": "GFileRefer"
           },
@@ -2553,7 +2552,7 @@
         },
         "snapShots": {
           "dP2dRWE6": {
-            "_entityId": "tohXwFOd",
+            "_entityId": "yTe34lbr",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -2620,14 +2619,17 @@
               "Visibility": {},
               "CustomComponent45052745": {
                 "PROP_76173386": 0,
-                "PROP_17350576": 0,
+                "PROP_17350576": 2,
                 "PROP_55253157": {
                   "type": "CustomEnum75552261",
                   "value": "E96535437"
                 },
                 "PROP_65717891": 0,
                 "PROP_68039595": 0,
-                "PROP_20670648": 5
+                "PROP_20670648": 5,
+                "PROP_66735044": "Fence",
+                "PROP_40070020": 0,
+                "PROP_14176655": 5
               },
               "MeshRender": {}
             },
@@ -2635,7 +2637,7 @@
             "entityVersion": 3
           },
           "mQJdkhti": {
-            "_entityId": "W3TVCB62",
+            "_entityId": "8CY6JL34",
             "activeValue": {
               "selfValue": false,
               "valueTag": "activeValue"
@@ -2718,8 +2720,97 @@
             "entityVersion": 3,
             "_entityName": "Model"
           },
-          "Fzn9H5iU": {
-            "_entityId": "dJGeIeQk",
+          "yhOxwhnQ": {
+            "_entityId": "Y4G5uNi2",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": -5.201421737670898
+            },
+            "scale": {
+              "x": 10,
+              "y": 10,
+              "z": 10
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 384,
+            "seParent": null,
+            "ecaScripts": [
+              null
+            ],
+            "ecaProps": {
+              "BasicCylinderItem": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "Appearance": {},
+              "Collider": {}
+            },
+            "_entityName": "Torus",
+            "objColor": {
+              "surfaceColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            },
+            "objTex": {
+              "surfaceTexRef": {
+                "fileId": "387b17e837dcbb606c2e6c6bdde6c3e3",
+                "filePath": "lib://fftextures/WorkshopItemTexture/SceneEdit_Cube_frame_Texture_01.png",
+                "fileType": "texture"
+              }
+            },
+            "propsData": {
+              "DiffuseColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "DiffuseTexture": "SceneEdit_Cube_Texture_Bricks"
+            }
+          },
+          "FBYz6nKi": {
+            "_entityId": "wpxMNUvn",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -2767,7 +2858,7 @@
             "entityTagData": {
               "tagPointers": []
             },
-            "itemID": 148,
+            "itemID": 84,
             "seParent": null,
             "ecaScripts": [
               null
@@ -2780,10 +2871,404 @@
               "Visibility": {},
               "Collider": {}
             },
-            "_entityName": "Bush"
+            "_entityName": "Pillar"
+          },
+          "DXbE4zQz": {
+            "_entityId": "ZAeQoLDV",
+            "activeValue": {
+              "selfValue": false,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 1.0871708393096924,
+              "y": 0.30000001192092896,
+              "z": -4.783603668212891
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "entityTag67687367"
+            ],
+            "entityTagData": {
+              "tagPointers": [
+                "entityTag67687367"
+              ]
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": true,
+            "ecaScripts": [],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {}
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "_entityName": "UpgradeButton",
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "tYWSoGit": {
+            "_entityId": "a36YToJG",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 0,
+              "y": 0.8859999775886536,
+              "z": -0.021999835968017578
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 222,
+            "seParent": null,
+            "ecaScripts": [
+              {
+                "fileId": "v6vrk3naj9g-maqidomu-auj5quuzzjp",
+                "filePath": "Assets\\Script\\Script.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "TextEntity": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {}
+            },
+            "_entityName": "Text object",
+            "propsData": {
+              "TextKey": "Display Upgrade",
+              "fontColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "IsBillboard": true,
+              "fontStyleRef": {
+                "bold": true,
+                "italic": false,
+                "underline": false
+              },
+              "FontSize": 48,
+              "IgnoreDepth": false,
+              "AlwaysInScreen": false,
+              "Depth": 0,
+              "fontType": "UIFONT_LATIN",
+              "fontStyle": 1,
+              "_levelObjectID": 4,
+              "TextDisplay": "Display Upgrade",
+              "fontTypeRef": "UIFONT_LATIN"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "ko9C00fu": {
+            "_entityId": "5k2WDfVp",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": true,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [
+              "MeshRender",
+              "ColliderShape",
+              "Collider"
+            ],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [
+              {
+                "enable": true,
+                "colliderType": "Box",
+                "meshUUID": null,
+                "position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "size": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "isTrigger": false,
+                "radius": 0.5,
+                "height": 1,
+                "physicalMaterialUUID": null,
+                "isConvexIfMesh": false
+              }
+            ],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": false,
+            "ecaScripts": [
+              {
+                "fileId": "6tlnerog0sw-maqheflt-lwrx2g2esdb",
+                "filePath": "Assets\\Script\\UpgradeButtonTrigger.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {},
+              "ColliderShape": {},
+              "Collider": {},
+              "CustomComponent45052745": {
+                "PROP_76173386": 0,
+                "PROP_17350576": 0,
+                "PROP_65717891": 10,
+                "PROP_55253157": null,
+                "PROP_68039595": 0,
+                "PROP_20670648": 0
+              }
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "mesh": {
+              "fileId": "wehss29x://7d9977d6-d297-4a69-970c-c4d88446bf3b-Box001.~@FFFUB",
+              "filePath": "wehss29x://Meshes/cube.fbx/Box001",
+              "fileType": "mesh"
+            },
+            "_entityName": "Trigger",
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "1LPYZVsW": {
+            "_entityId": "mddh43En",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 3.9260001182556152,
+              "y": 0.30000001192092896,
+              "z": -5.109000205993652
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "entityTag84254792"
+            ],
+            "entityTagData": {
+              "tagPointers": [
+                "entityTag84254792"
+              ]
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": true,
+            "ecaScripts": [],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {}
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "_entityName": "UnlockButton",
+            "editorLockValue": false,
+            "editorVisibleValue": true
           },
           "WBBn5tc0": {
-            "_entityId": "gjxvlhGH",
+            "_entityId": "9c2CMUo1",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
@@ -2795,9 +3280,9 @@
             "editorLockValue": false,
             "editorVisibleValue": true,
             "position": {
-              "x": 3.9878089427948,
-              "y": -0.30000001192092896,
-              "z": -1.8034892082214355
+              "x": 0,
+              "y": 0,
+              "z": 0
             },
             "scale": {
               "x": 1,
@@ -2904,7 +3389,10 @@
                 "PROP_65717891": 10,
                 "PROP_55253157": null,
                 "PROP_68039595": 0,
-                "PROP_20670648": 0
+                "PROP_20670648": 0,
+                "PROP_66735044": "",
+                "PROP_40070020": 0,
+                "PROP_14176655": 0
               }
             },
             "propsData": {},
@@ -2916,13 +3404,2022 @@
             },
             "_entityName": "Trigger"
           },
-          "yhOxwhnQ": {
-            "_entityId": "jvVL2iXz",
+          "Nqr6SbuE": {
+            "_entityId": "L7WeXh4e",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
             },
-            "unlockedValue": null,
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 0,
+              "y": 0.9999999403953552,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 222,
+            "seParent": null,
+            "ecaScripts": [
+              {
+                "fileId": "wgaxkg63vsc-mawaq5r8-5e0mq04wded",
+                "filePath": "Assets\\Script\\Building\\Display\\UnlockButtonText.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "TextEntity": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {}
+            },
+            "_entityName": "Text object",
+            "propsData": {
+              "TextKey": "MONEY HERE",
+              "fontColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "IsBillboard": true,
+              "fontStyleRef": {
+                "bold": true,
+                "italic": false,
+                "underline": false
+              },
+              "FontSize": 48,
+              "IgnoreDepth": false,
+              "AlwaysInScreen": false,
+              "Depth": 0,
+              "fontType": "UIFONT_LATIN",
+              "fontStyle": 1,
+              "_levelObjectID": 3,
+              "TextDisplay": "MONEY HERE",
+              "fontTypeRef": "UIFONT_LATIN"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          }
+        }
+      }
+    },
+    {
+      "_tag": {
+        "type": "UGCSceneEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "QR7KvNbr",
+      "children": [
+        {
+          "_tag": {
+            "type": "UGCSceneEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "LidBXSOp",
+          "children": [
+            {
+              "_tag": {
+                "type": "UGCSceneEntity",
+                "resourceId": ""
+              },
+              "_entityId": "aImXFq6u",
+              "children": [],
+              "prefabVariant": null,
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
+              "editorLockValue": false,
+              "editorVisibleValue": true,
+              "position": {
+                "x": 0,
+                "y": -0.30000001192092896,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": false,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [
+                "AvatarAble",
+                "AnimationControllerAble",
+                "Collider",
+                "ColliderShape"
+              ],
+              "_filters": [],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "materials": [
+                null
+              ],
+              "colliders": [
+                {
+                  "enable": true,
+                  "colliderType": "Capsule",
+                  "meshUUID": null,
+                  "position": {
+                    "x": 0,
+                    "y": 0.7,
+                    "z": 0
+                  },
+                  "size": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "isTrigger": false,
+                  "radius": 0.25,
+                  "height": 1.4,
+                  "physicalMaterialUUID": null,
+                  "isConvexIfMesh": false
+                }
+              ],
+              "IsNPC": true,
+              "Rigidbody": {
+                "Type": 1,
+                "Mass": 1,
+                "CenterOfMass": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "UseGravity": true,
+                "Drag": 0.05,
+                "AngularDrag": 0.05
+              },
+              "isCreateAsEmpty": false,
+              "ecaScripts": [],
+              "ecaProps": {
+                "AnimationControllerAble": {
+                  "acRef": {
+                    "fileId": "NPC_AC_UMA-1",
+                    "filePath": "Assets\\BuiltInAnim\\FemaleDefault.ac",
+                    "_tag": {
+                      "type": "GFileRefer"
+                    },
+                    "fileType": "ac"
+                  }
+                },
+                "NPC": {},
+                "CustomLevelObject": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {},
+                "AvatarAble": {},
+                "Collider": {},
+                "ColliderShape": {},
+                "MeshRender": {}
+              },
+              "propsData": {},
+              "entityVersion": 3,
+              "_entityName": "NPC",
+              "skeleton": {
+                "fileId": "UMA_101000006",
+                "filePath": "lib://ffuma/101000006",
+                "_tag": {
+                  "type": "GFileRefer"
+                },
+                "fileType": "uma"
+              },
+              "boneEntity": {
+                "_tag": {
+                  "type": "BoneContentEntity"
+                },
+                "_entityId": "gPtP0xL2",
+                "children": [
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "WfUK1AzT",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "7ZxGz68T",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 1,
+                        "causeAnimationTypeChange": false,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 0
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag50320028",
+                    "enable": true,
+                    "_entityName": "head"
+                  },
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "OzuU5yy0",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "Ry6FMpwK",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 1,
+                        "causeAnimationTypeChange": false,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 0
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag34903933",
+                    "enable": true,
+                    "_entityName": "top"
+                  },
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "MT68AR01",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "FJpGfQN2",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 1,
+                        "causeAnimationTypeChange": false,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 0
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag74721730",
+                    "enable": true,
+                    "_entityName": "buttom"
+                  },
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "Sz4HpvuE",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "3XDLRSxy",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 1,
+                        "causeAnimationTypeChange": false,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 0
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag81020176",
+                    "enable": true,
+                    "_entityName": "hair"
+                  },
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "DoKaQW08",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "frd9fq4S",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 1,
+                        "causeAnimationTypeChange": false,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 0
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag21234458",
+                    "enable": true,
+                    "_entityName": "shoe"
+                  },
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "7Rh0Em7M",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "kjN70Kep",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 1,
+                        "causeAnimationTypeChange": false,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 0
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag39054755",
+                    "enable": true,
+                    "_entityName": "mask"
+                  },
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "eHsxrLn5",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "IpFDdtj8",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 1,
+                        "causeAnimationTypeChange": false,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 0
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag32883213",
+                    "enable": true,
+                    "_entityName": "onesie"
+                  },
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "GgJhPbWz",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "omymrHoS",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 2,
+                        "causeAnimationTypeChange": true,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 1
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag35568987",
+                    "enable": true,
+                    "_entityName": "weapon"
+                  },
+                  {
+                    "_tag": {
+                      "type": "BoneMeshGroupEntity"
+                    },
+                    "_entityId": "AYtiW8Ii",
+                    "children": [
+                      {
+                        "_tag": {
+                          "type": "BoneMeshEntity"
+                        },
+                        "_entityId": "jD6QBmRJ",
+                        "children": [],
+                        "prefabVariant": null,
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true,
+                        "_mesh": null,
+                        "_cloth": null,
+                        "partType": 3,
+                        "causeAnimationTypeChange": false,
+                        "outwardType": 1,
+                        "materials": [
+                          null
+                        ],
+                        "avatarPartInfo": {
+                          "bone": "",
+                          "bindType": 0
+                        },
+                        "position": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "rotation": {
+                          "x": 0,
+                          "y": 0,
+                          "z": 0
+                        },
+                        "_entityName": "Appearance"
+                      }
+                    ],
+                    "prefabVariant": null,
+                    "activeValue": null,
+                    "unlockedValue": null,
+                    "editorLockValue": false,
+                    "editorVisibleValue": true,
+                    "groupId": "entityTag72256492",
+                    "enable": true,
+                    "_entityName": "bag"
+                  }
+                ],
+                "prefabVariant": null,
+                "activeValue": {
+                  "selfValue": true,
+                  "valueTag": "activeValue"
+                },
+                "unlockedValue": {
+                  "selfValue": true,
+                  "valueTag": "unlockedValue"
+                },
+                "editorLockValue": false,
+                "editorVisibleValue": true,
+                "position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "scale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "BTPath": [
+                  null
+                ],
+                "visible": true,
+                "VisibilityLayer": 0,
+                "modelOptimization": 0,
+                "streamingLayer": "",
+                "attributes": [
+                  2,
+                  4
+                ],
+                "isTrigger": false,
+                "collidable": true,
+                "physicalLayer": 0,
+                "physicalMaterial": null,
+                "aoiSetting": 0,
+                "initialTypes": {},
+                "componentList": [],
+                "_filters": [],
+                "_entityName": "NPC"
+              }
+            },
+            {
+              "_tag": {
+                "type": "SceneEditEntity",
+                "resourceId": "Primitive/Empty"
+              },
+              "_entityId": "BgtcQEH8",
+              "children": [],
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
+              "position": {
+                "x": 0,
+                "y": 1.9830000400543213,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": false,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [],
+              "_filters": [
+                "node.withscript"
+              ],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "tempIndex": 18,
+              "itemID": 222,
+              "seParent": null,
+              "ecaScripts": [
+                {
+                  "fileId": "qv66c409wml-maqjvnmz-fhltnkxegf9",
+                  "filePath": "Assets\\Script\\Script.fcg",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "ugcscript"
+                }
+              ],
+              "ecaProps": {
+                "TextEntity": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {}
+              },
+              "_entityName": "DisplayValue",
+              "propsData": {
+                "TextKey": "Display Value",
+                "fontColor": {
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "a": 1
+                },
+                "IsBillboard": true,
+                "fontStyleRef": {
+                  "bold": true,
+                  "italic": false,
+                  "underline": false
+                },
+                "FontSize": 48,
+                "IgnoreDepth": false,
+                "AlwaysInScreen": false,
+                "Depth": 0,
+                "fontType": "UIFONT_LATIN",
+                "fontStyle": 1,
+                "_levelObjectID": 7,
+                "TextDisplay": "Display Value",
+                "fontTypeRef": "UIFONT_LATIN"
+              },
+              "editorLockValue": false,
+              "editorVisibleValue": true
+            }
+          ],
+          "activeValue": {
+            "selfValue": false,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": -1.6696581840515137,
+            "y": 0,
+            "z": -4.894437789916992
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "physicalMaterial": null,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "_filters": [
+            "entityTag65129151"
+          ],
+          "entityTagData": {
+            "tagPointers": [
+              "entityTag65129151"
+            ]
+          },
+          "materials": [
+            null
+          ],
+          "colliders": [],
+          "IsNPC": false,
+          "Rigidbody": {
+            "Type": 1,
+            "Mass": 1,
+            "CenterOfMass": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "UseGravity": true,
+            "Drag": 0.05,
+            "AngularDrag": 0.05
+          },
+          "isCreateAsEmpty": true,
+          "ecaScripts": [],
+          "ecaProps": {
+            "CustomLevelObject": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {},
+            "MeshRender": {}
+          },
+          "propsData": {},
+          "entityVersion": 3,
+          "_entityName": "Model"
+        },
+        {
+          "_tag": {
+            "type": "UGCSceneEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "gtBMznJV",
+          "children": [
+            {
+              "_tag": {
+                "type": "SceneEditEntity",
+                "resourceId": "Primitive/Empty"
+              },
+              "_entityId": "xn3gadZT",
+              "children": [],
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
+              "position": {
+                "x": 0,
+                "y": 0.8859999775886536,
+                "z": -0.021999835968017578
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": false,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [],
+              "_filters": [
+                "node.withscript"
+              ],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "tempIndex": 19,
+              "itemID": 222,
+              "seParent": null,
+              "ecaScripts": [
+                {
+                  "fileId": "v6vrk3naj9g-maqidomu-auj5quuzzjp",
+                  "filePath": "Assets\\Script\\Script.fcg",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "ugcscript"
+                }
+              ],
+              "ecaProps": {
+                "TextEntity": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {}
+              },
+              "_entityName": "DisplayTextUpgrade",
+              "propsData": {
+                "TextKey": "Display Upgrade",
+                "fontColor": {
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "a": 1
+                },
+                "IsBillboard": true,
+                "fontStyleRef": {
+                  "bold": true,
+                  "italic": false,
+                  "underline": false
+                },
+                "FontSize": 48,
+                "IgnoreDepth": false,
+                "AlwaysInScreen": false,
+                "Depth": 0,
+                "fontType": "UIFONT_LATIN",
+                "fontStyle": 1,
+                "_levelObjectID": 5,
+                "TextDisplay": "Display Upgrade",
+                "fontTypeRef": "UIFONT_LATIN"
+              },
+              "editorLockValue": false,
+              "editorVisibleValue": true
+            },
+            {
+              "_tag": {
+                "type": "UGCSceneEntity",
+                "resourceId": ""
+              },
+              "_entityId": "S6nlZJLk",
+              "children": [],
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": true,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [
+                "MeshRender",
+                "ColliderShape",
+                "Collider"
+              ],
+              "_filters": [
+                "node.withscript"
+              ],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "materials": [
+                null
+              ],
+              "colliders": [
+                {
+                  "enable": true,
+                  "colliderType": "Box",
+                  "meshUUID": null,
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "size": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "isTrigger": false,
+                  "radius": 0.5,
+                  "height": 1,
+                  "physicalMaterialUUID": null,
+                  "isConvexIfMesh": false
+                }
+              ],
+              "IsNPC": false,
+              "Rigidbody": {
+                "Type": 1,
+                "Mass": 1,
+                "CenterOfMass": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "UseGravity": true,
+                "Drag": 0.05,
+                "AngularDrag": 0.05
+              },
+              "isCreateAsEmpty": false,
+              "ecaScripts": [
+                {
+                  "fileId": "6tlnerog0sw-maqheflt-lwrx2g2esdb",
+                  "filePath": "Assets\\Script\\UpgradeButtonTrigger.fcg",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "ugcscript"
+                }
+              ],
+              "ecaProps": {
+                "CustomLevelObject": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {},
+                "MeshRender": {},
+                "ColliderShape": {},
+                "Collider": {},
+                "CustomComponent45052745": {
+                  "PROP_76173386": 0,
+                  "PROP_17350576": 0,
+                  "PROP_65717891": 10,
+                  "PROP_55253157": null,
+                  "PROP_68039595": 0,
+                  "PROP_20670648": 0
+                }
+              },
+              "propsData": {},
+              "entityVersion": 3,
+              "mesh": {
+                "fileId": "wehss29x://7d9977d6-d297-4a69-970c-c4d88446bf3b-Box001.~@FFFUB",
+                "filePath": "wehss29x://Meshes/cube.fbx/Box001",
+                "_tag": {
+                  "type": "GFileRefer"
+                },
+                "fileType": "mesh"
+              },
+              "_entityName": "Trigger",
+              "editorLockValue": false,
+              "editorVisibleValue": true
+            }
+          ],
+          "activeValue": {
+            "selfValue": false,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
+          "position": {
+            "x": 1.0871708393096924,
+            "y": 0.30000001192092896,
+            "z": -4.783603668212891
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "physicalMaterial": null,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "_filters": [
+            "entityTag67687367"
+          ],
+          "entityTagData": {
+            "tagPointers": [
+              "entityTag67687367"
+            ]
+          },
+          "materials": [
+            null
+          ],
+          "colliders": [],
+          "IsNPC": false,
+          "Rigidbody": {
+            "Type": 1,
+            "Mass": 1,
+            "CenterOfMass": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "UseGravity": true,
+            "Drag": 0.05,
+            "AngularDrag": 0.05
+          },
+          "isCreateAsEmpty": true,
+          "ecaScripts": [],
+          "ecaProps": {
+            "CustomLevelObject": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {},
+            "MeshRender": {}
+          },
+          "propsData": {},
+          "entityVersion": 3,
+          "_entityName": "UpgradeButton",
+          "editorLockValue": false,
+          "editorVisibleValue": true
+        },
+        {
+          "_tag": {
+            "type": "UGCSceneEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "aYjSs6CR",
+          "children": [
+            {
+              "_tag": {
+                "type": "SceneEditEntity",
+                "resourceId": "Primitive/Empty"
+              },
+              "_entityId": "V513qhoF",
+              "children": [],
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
+              "position": {
+                "x": 0,
+                "y": 0.9999999403953552,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": false,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [],
+              "_filters": [
+                "node.withscript"
+              ],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "tempIndex": 20,
+              "itemID": 222,
+              "seParent": null,
+              "ecaScripts": [
+                {
+                  "fileId": "wgaxkg63vsc-mawaq5r8-5e0mq04wded",
+                  "filePath": "Assets\\Script\\Building\\Display\\UnlockButtonText.fcg",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "ugcscript"
+                }
+              ],
+              "ecaProps": {
+                "TextEntity": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {}
+              },
+              "_entityName": "DisplayTextUnlock",
+              "propsData": {
+                "TextKey": "MONEY HERE",
+                "fontColor": {
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "a": 1
+                },
+                "IsBillboard": true,
+                "fontStyleRef": {
+                  "bold": true,
+                  "italic": false,
+                  "underline": false
+                },
+                "FontSize": 48,
+                "IgnoreDepth": false,
+                "AlwaysInScreen": false,
+                "Depth": 0,
+                "fontType": "UIFONT_LATIN",
+                "fontStyle": 1,
+                "_levelObjectID": 6,
+                "TextDisplay": "MONEY HERE",
+                "fontTypeRef": "UIFONT_LATIN"
+              },
+              "editorLockValue": false,
+              "editorVisibleValue": true
+            },
+            {
+              "_tag": {
+                "type": "UGCSceneEntity",
+                "resourceId": ""
+              },
+              "_entityId": "ZK2VvpPe",
+              "children": [],
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
+              "editorLockValue": false,
+              "editorVisibleValue": true,
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": true,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [
+                "MeshRender",
+                "ColliderShape",
+                "Collider",
+                "CustomComponent45052745"
+              ],
+              "_filters": [
+                "node.withscript"
+              ],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "materials": [
+                null
+              ],
+              "colliders": [
+                {
+                  "enable": true,
+                  "colliderType": "Box",
+                  "meshUUID": null,
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "size": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "isTrigger": false,
+                  "radius": 0.5,
+                  "height": 1,
+                  "physicalMaterialUUID": null,
+                  "isConvexIfMesh": false
+                }
+              ],
+              "IsNPC": false,
+              "Rigidbody": {
+                "Type": 1,
+                "Mass": 1,
+                "CenterOfMass": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "UseGravity": true,
+                "Drag": 0.05,
+                "AngularDrag": 0.05
+              },
+              "isCreateAsEmpty": false,
+              "ecaScripts": [
+                {
+                  "fileId": "wdr0zzw174j-mapdmd7c-ydyzfo97c1",
+                  "filePath": "Assets\\Script\\BuildingButtonTrigger.fcg",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "ugcscript"
+                }
+              ],
+              "ecaProps": {
+                "CustomLevelObject": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {},
+                "MeshRender": {},
+                "ColliderShape": {},
+                "Collider": {},
+                "CustomComponent45052745": {
+                  "PROP_76173386": 0,
+                  "PROP_17350576": 0,
+                  "PROP_65717891": 10,
+                  "PROP_55253157": null,
+                  "PROP_68039595": 0,
+                  "PROP_20670648": 0,
+                  "PROP_66735044": "",
+                  "PROP_40070020": 0,
+                  "PROP_14176655": 0
+                }
+              },
+              "propsData": {},
+              "entityVersion": 3,
+              "mesh": {
+                "fileId": "wehss29x://7d9977d6-d297-4a69-970c-c4d88446bf3b-Box001.~@FFFUB",
+                "filePath": "wehss29x://Meshes/cube.fbx/Box001",
+                "_tag": {
+                  "type": "GFileRefer"
+                },
+                "fileType": "mesh"
+              },
+              "_entityName": "UnlockTrigger"
+            }
+          ],
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
+          "position": {
+            "x": 3.9260001182556152,
+            "y": 0.30000001192092896,
+            "z": -5.109000205993652
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "physicalMaterial": null,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "_filters": [
+            "entityTag84254792"
+          ],
+          "entityTagData": {
+            "tagPointers": [
+              "entityTag84254792"
+            ]
+          },
+          "materials": [
+            null
+          ],
+          "colliders": [],
+          "IsNPC": false,
+          "Rigidbody": {
+            "Type": 1,
+            "Mass": 1,
+            "CenterOfMass": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "UseGravity": true,
+            "Drag": 0.05,
+            "AngularDrag": 0.05
+          },
+          "isCreateAsEmpty": true,
+          "ecaScripts": [],
+          "ecaProps": {
+            "CustomLevelObject": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {},
+            "MeshRender": {}
+          },
+          "propsData": {},
+          "entityVersion": 3,
+          "_entityName": "UnlockButton",
+          "editorLockValue": false,
+          "editorVisibleValue": true
+        }
+      ],
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": -1.51995849609375,
+        "y": -0.3000003397464752,
+        "z": 9.136497497558594
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "physicalMaterial": null,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [
+        "CustomComponent45052745",
+        "CustomComponent20697677"
+      ],
+      "_filters": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "materials": [
+        null
+      ],
+      "colliders": [],
+      "IsNPC": false,
+      "Rigidbody": {
+        "Type": 1,
+        "Mass": 1,
+        "CenterOfMass": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "UseGravity": true,
+        "Drag": 0.05,
+        "AngularDrag": 0.05
+      },
+      "isCreateAsEmpty": true,
+      "ecaScripts": [],
+      "ecaProps": {
+        "CustomLevelObject": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {},
+        "CustomComponent45052745": {
+          "PROP_76173386": 0,
+          "PROP_17350576": 3,
+          "PROP_55253157": {
+            "type": "CustomEnum75552261",
+            "value": "E25068148"
+          },
+          "PROP_65717891": 0,
+          "PROP_68039595": 0,
+          "PROP_20670648": 5,
+          "PROP_66735044": "Woodcutter",
+          "PROP_40070020": 0,
+          "PROP_14176655": 10
+        },
+        "MeshRender": {},
+        "CustomComponent20697677": {
+          "PROP_53930573": {
+            "fileId": "oipmigold8-mawf4ugn-xjpz8h2zn4",
+            "filePath": "Assets\\BuildingConfigCSV\\ID3WoodCutter.csv",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "csv"
+          }
+        }
+      },
+      "propsData": {},
+      "entityVersion": 3,
+      "_entityName": "WoodCutter",
+      "prefabVariant": {
+        "prefabFile": {
+          "fileId": "jp8crjo69v-mawez6i8-hogpltai9yr",
+          "filePath": "Assets\\Prefabs\\Idle.prefab",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "Prefab"
+        },
+        "snapShots": {
+          "QR7KvNbr": {
+            "_entityId": "yTe34lbr",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true,
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [
+              "CustomComponent45052745"
+            ],
+            "_filters": [],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": true,
+            "ecaScripts": [],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "CustomComponent45052745": {
+                "PROP_76173386": 0,
+                "PROP_17350576": 2,
+                "PROP_55253157": {
+                  "type": "CustomEnum75552261",
+                  "value": "E96535437"
+                },
+                "PROP_65717891": 0,
+                "PROP_68039595": 0,
+                "PROP_20670648": 5,
+                "PROP_66735044": "Fence",
+                "PROP_40070020": 0,
+                "PROP_14176655": 5
+              },
+              "MeshRender": {}
+            },
+            "propsData": {},
+            "entityVersion": 3
+          },
+          "LidBXSOp": {
+            "_entityId": "8CY6JL34",
+            "activeValue": {
+              "selfValue": false,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "entityTag65129151"
+            ],
+            "entityTagData": {
+              "tagPointers": [
+                "entityTag65129151"
+              ]
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": true,
+            "ecaScripts": [],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {}
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "_entityName": "Model"
+          },
+          "ZbSei6Q0": {
+            "_entityId": "Y4G5uNi2",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
             "editorLockValue": false,
             "editorVisibleValue": true,
             "position": {
@@ -3002,17 +5499,22 @@
               "DiffuseTexture": "SceneEdit_Cube_Texture_Bricks"
             }
           },
-          "1LPYZVsW": {
-            "_entityId": "9FjEIznT",
+          "CMhs22ED": {
+            "_entityId": "wpxMNUvn",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
             },
-            "unlockedValue": null,
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true,
             "position": {
-              "x": -3.9878089427948,
-              "y": 0.30000001192092896,
-              "z": 0.14408229291439056
+              "x": 0,
+              "y": 0,
+              "z": 0
             },
             "scale": {
               "x": 1,
@@ -3046,6 +5548,72 @@
             "entityTagData": {
               "tagPointers": []
             },
+            "itemID": 84,
+            "seParent": null,
+            "ecaScripts": [
+              null
+            ],
+            "ecaProps": {
+              "DummyLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "Collider": {}
+            },
+            "_entityName": "Pillar"
+          },
+          "gtBMznJV": {
+            "_entityId": "ZAeQoLDV",
+            "activeValue": {
+              "selfValue": false,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 1.0871708393096924,
+              "y": 0.30000001192092896,
+              "z": -4.783603668212891
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "entityTag67687367"
+            ],
+            "entityTagData": {
+              "tagPointers": [
+                "entityTag67687367"
+              ]
+            },
             "materials": [
               null
             ],
@@ -3070,7 +5638,8 @@
               "LevelObject": {},
               "Transform": {},
               "Entity": {},
-              "Visibility": {}
+              "Visibility": {},
+              "MeshRender": {}
             },
             "propsData": {},
             "entityVersion": 3,
@@ -3078,17 +5647,20 @@
             "editorLockValue": false,
             "editorVisibleValue": true
           },
-          "Nqr6SbuE": {
-            "_entityId": "FOvT3PEx",
+          "xn3gadZT": {
+            "_entityId": "a36YToJG",
             "activeValue": {
               "selfValue": true,
               "valueTag": "activeValue"
             },
-            "unlockedValue": null,
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
             "position": {
               "x": 0,
-              "y": 0.8860127329826355,
-              "z": -0.02200031280517578
+              "y": 0.8859999775886536,
+              "z": -0.021999835968017578
             },
             "scale": {
               "x": 1,
@@ -3130,6 +5702,453 @@
               {
                 "fileId": "v6vrk3naj9g-maqidomu-auj5quuzzjp",
                 "filePath": "Assets\\Script\\Script.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "TextEntity": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {}
+            },
+            "_entityName": "Text object",
+            "propsData": {
+              "TextKey": "Display Upgrade",
+              "fontColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "IsBillboard": true,
+              "fontStyleRef": {
+                "bold": true,
+                "italic": false,
+                "underline": false
+              },
+              "FontSize": 48,
+              "IgnoreDepth": false,
+              "AlwaysInScreen": false,
+              "Depth": 0,
+              "fontType": "UIFONT_LATIN",
+              "fontStyle": 1,
+              "_levelObjectID": 4,
+              "TextDisplay": "Display Upgrade",
+              "fontTypeRef": "UIFONT_LATIN"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "S6nlZJLk": {
+            "_entityId": "5k2WDfVp",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": true,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [
+              "MeshRender",
+              "ColliderShape",
+              "Collider"
+            ],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [
+              {
+                "enable": true,
+                "colliderType": "Box",
+                "meshUUID": null,
+                "position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "size": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "isTrigger": false,
+                "radius": 0.5,
+                "height": 1,
+                "physicalMaterialUUID": null,
+                "isConvexIfMesh": false
+              }
+            ],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": false,
+            "ecaScripts": [
+              {
+                "fileId": "6tlnerog0sw-maqheflt-lwrx2g2esdb",
+                "filePath": "Assets\\Script\\UpgradeButtonTrigger.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {},
+              "ColliderShape": {},
+              "Collider": {},
+              "CustomComponent45052745": {
+                "PROP_76173386": 0,
+                "PROP_17350576": 0,
+                "PROP_65717891": 10,
+                "PROP_55253157": null,
+                "PROP_68039595": 0,
+                "PROP_20670648": 0
+              }
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "mesh": {
+              "fileId": "wehss29x://7d9977d6-d297-4a69-970c-c4d88446bf3b-Box001.~@FFFUB",
+              "filePath": "wehss29x://Meshes/cube.fbx/Box001",
+              "fileType": "mesh"
+            },
+            "_entityName": "Trigger",
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "aYjSs6CR": {
+            "_entityId": "mddh43En",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 3.9260001182556152,
+              "y": 0.30000001192092896,
+              "z": -5.109000205993652
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "entityTag84254792"
+            ],
+            "entityTagData": {
+              "tagPointers": [
+                "entityTag84254792"
+              ]
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": true,
+            "ecaScripts": [],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {}
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "_entityName": "UnlockButton",
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "ZK2VvpPe": {
+            "_entityId": "9c2CMUo1",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": true,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [
+              "MeshRender",
+              "ColliderShape",
+              "Collider",
+              "CustomComponent45052745"
+            ],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [
+              {
+                "enable": true,
+                "colliderType": "Box",
+                "meshUUID": null,
+                "position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "size": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "isTrigger": false,
+                "radius": 0.5,
+                "height": 1,
+                "physicalMaterialUUID": null,
+                "isConvexIfMesh": false
+              }
+            ],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": false,
+            "ecaScripts": [
+              {
+                "fileId": "wdr0zzw174j-mapdmd7c-ydyzfo97c1",
+                "filePath": "Assets\\Script\\BuildingButtonTrigger.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {},
+              "ColliderShape": {},
+              "Collider": {},
+              "CustomComponent45052745": {
+                "PROP_76173386": 0,
+                "PROP_17350576": 0,
+                "PROP_65717891": 10,
+                "PROP_55253157": null,
+                "PROP_68039595": 0,
+                "PROP_20670648": 0,
+                "PROP_66735044": "",
+                "PROP_40070020": 0,
+                "PROP_14176655": 0
+              }
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "mesh": {
+              "fileId": "wehss29x://7d9977d6-d297-4a69-970c-c4d88446bf3b-Box001.~@FFFUB",
+              "filePath": "wehss29x://Meshes/cube.fbx/Box001",
+              "fileType": "mesh"
+            },
+            "_entityName": "Trigger"
+          },
+          "V513qhoF": {
+            "_entityId": "L7WeXh4e",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 0,
+              "y": 0.9999999403953552,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 222,
+            "seParent": null,
+            "ecaScripts": [
+              {
+                "fileId": "wgaxkg63vsc-mawaq5r8-5e0mq04wded",
+                "filePath": "Assets\\Script\\Building\\Display\\UnlockButtonText.fcg",
                 "fileType": "ugcscript"
               }
             ],

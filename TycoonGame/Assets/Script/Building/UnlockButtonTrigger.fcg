@@ -6,16 +6,15 @@ import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 
 import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
 
+
 graph UnlockButtonTrigger {
-    //Executed when entity is created
-
-
     _parentEntity entity
     _unlockCost int
     _parentConfigFile CsvID
 
     _modelEntity entity
     _upgradeButtonEntity entity
+    _unlockButtonEntity entity
     
     triggerFlag bool = true
 
@@ -33,6 +32,8 @@ graph UnlockButtonTrigger {
 
                 } else if HasTag(_entity,ETag.UpgradeButton) {
                     _upgradeButtonEntity = _entity
+                } else if HasTag(_entity,ETag.UnlockButton) {
+                    _unlockButtonEntity = _entity
                 }
             }
         }
@@ -52,15 +53,28 @@ graph UnlockButtonTrigger {
 
             //show object model 
             SetActive(_modelEntity, true)
+            var _valueDisplayText = GetChildByName(_modelEntity,"DisplayValue")
+            DispatchEvent(DISPLAY_TEXT_INIT, _valueDisplayText, List<object>{})
+
 
             if _parentEntity<Building>.Type != BuildingTypeEnum.Decoration {
                 SetActive(_upgradeButtonEntity, true)
+                
+                var _upgradeButtonText = GetChildByName(_upgradeButtonEntity,"DisplayTextUpgrade")
+                DispatchEvent(DISPLAY_TEXT_INIT, _upgradeButtonText, List<object>{})
+
+
             }
 
             LogInfo("upgrade success")
-
+            
             triggerFlag = false
-            SetActive(GetParent(thisEntity) , false)
+
+            var _displayTextUnlock = GetChildByName(_unlockButtonEntity, "DisplayTextUnlock")
+            _displayTextUnlock<Visibility>.IsVisible = false
+            var _unlockTrigger = GetChildByName(_unlockButtonEntity, "DisplayTextUnlock")
+            _unlockTrigger<Visibility>.IsVisible = false
+            
         } else{
             DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"NotEnoughMoneyUI"})
         }

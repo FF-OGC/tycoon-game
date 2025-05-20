@@ -14,7 +14,10 @@ graph Script {
 
     //Executed when entity is created
     event OnAwake() {
+        init()
+    }
 
+    async func init(){
         LastUpdateLevel = 0 
 
         while true{
@@ -43,6 +46,16 @@ graph Script {
             WaitForMillisecond(2000)
 
         }
+
+    }
+
+    event DISPLAY_TEXT_INIT() {
+        while true {
+            LogInfo("this is a loop" )
+            WaitForMillisecond(500)
+        }
+        LogInfo("are u here ")
+        init()
     }
 
 }

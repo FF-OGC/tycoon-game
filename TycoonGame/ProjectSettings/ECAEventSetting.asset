@@ -103,6 +103,39 @@
       "apiTargetV2": "both",
       "version": 45,
       "key": "signal_87245577"
+    },
+    "signal_48864762": {
+      "name": "init",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100005,
+      "props": [],
+      "propCount": 0,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_48864762"
+    },
+    "signal_93796132": {
+      "name": "DISPLAY_TEXT_INIT",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100006,
+      "props": [],
+      "propCount": 0,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_93796132"
+    },
+    "signal_93385038": {
+      "name": "UPDATE_DISPLAY_TEXT",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100007,
+      "props": [],
+      "propCount": 0,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_93385038"
     }
   },
   "customName": {
@@ -110,7 +143,10 @@
     "PLAY_SFX": "signal_39464200",
     "PLAY_SFX_DURATION": "signal_12921341",
     "PLAY_BG_MUSIC": "signal_42513067",
-    "PLAY_SFX_VOLUME_DURATION": "signal_87245577"
+    "PLAY_SFX_VOLUME_DURATION": "signal_87245577",
+    "init": "signal_48864762",
+    "DISPLAY_TEXT_INIT": "signal_93796132",
+    "UPDATE_DISPLAY_TEXT": "signal_93385038"
   },
   "children": []
 }

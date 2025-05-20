@@ -14,33 +14,64 @@ graph UpgradeButtonTrigger {
     _parentCurrentLevel int
     _parentConfigFile CsvID
 
+    _upgradeCost int
+
 
     event OnEntityEnter(target entity<Entity>) {
+        //Init 
         if _parentEntity == nil {
             _parentEntity = GetParent(GetParent(thisEntity))
             _parentCurrentLevel = _parentEntity<Building>.CurrentLevel
             _parentConfigFile = _parentEntity<BuildingConfig>.ConfigFile
+            _upgradeCost  = CSVReadingHandler.GetUpgradeCostByLevel(_parentConfigFile,_parentCurrentLevel)
         }
 
-
+        //Get player info
         var _playerEnter = target<Player>
         var _playerMoney = _playerEnter<PlayerEconomy>.playerMoney
 
-        _parentCurrentLevel = _parentEntity<Building>.CurrentLevel
-        var _ungradeCost  = CSVReadingHandler.GetUpgradeCostByLevel(_parentConfigFile,_parentCurrentLevel)
 
-        if _playerMoney[0] >= _ungradeCost {
-            _playerEnter<PlayerEconomy>.subtractAmount(_ungradeCost)
-            _parentEntity<Building>.CurrentLevel += 1 
+        if _playerMoney[0] >= _upgradeCost {
+            //Subtract money
+            _playerEnter<PlayerEconomy>.subtractAmount(_upgradeCost)
 
-            DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"})
+            //Upgrade
+            upgradeParentLevel()
+            updateUpgradeCost()
 
+
+            //sent event to text
+            var _t1parent = GetParent(thisEntity)
+            var _displayTextUpgrade = GetChildByName(_t1parent,"DisplayTextUpgrade")
+
+            //DispatchEvent(UPDATE_DISPLAY_TEXT, _displayTextUpgrade, List<object>{})
+            
+
+            //SFX
             DispatchEvent(PLAY_SFX,_playerEnter,List<object>{"kepngan"})
 
-            LogInfo("upgrade success")
+
+            //Disable upgrade button flag MAX LEVEL
+            if _upgradeCost == -1 {
+                DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"}) // MAX LEVEL REACH UI
+                SetActive(GetParent(thisEntity), false)
+            } else {
+                //UPGRADE UI
+                DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"})
+            }
+
         } else{
             DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"NotEnoughMoneyUI"})
         }
+    }
+
+    func upgradeParentLevel (){
+        _parentEntity<Building>.CurrentLevel += 1 
+        _parentCurrentLevel = _parentEntity<Building>.CurrentLevel
+    }
+
+    func updateUpgradeCost(){
+        _upgradeCost  = CSVReadingHandler.GetUpgradeCostByLevel(_parentConfigFile,_parentCurrentLevel)
     }
 
     event OnEntityExit(target entity<Entity>) {
