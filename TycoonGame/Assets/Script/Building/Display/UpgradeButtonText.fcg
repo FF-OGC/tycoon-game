@@ -1,0 +1,42 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import "../../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+
+
+graph UpgradeButtonText {
+    isInit bool
+    UpgradeCostDisplay int
+    LastUpdateLevel int
+    _parent entity
+    _parentCurrentLevel int
+    _parentConfigFile CsvID
+
+    //Executed when entity is created
+    event OnAwake() {
+
+        LastUpdateLevel = 0 
+
+        while true{
+            if _parent == nil {
+                _parent = GetParent(GetParent(thisEntity))
+                _parentCurrentLevel = _parent<Building>.CurrentLevel
+                _parentConfigFile = _parent<BuildingConfig>.ConfigFile
+            }
+
+            _parentCurrentLevel = _parent<Building>.CurrentLevel 
+
+            if _parentCurrentLevel != LastUpdateLevel {
+
+                LastUpdateLevel = _parentCurrentLevel
+
+                UpgradeCostDisplay = CSVReadingHandler.GetUpgradeCostByLevel(_parentConfigFile,_parentCurrentLevel)
+                thisEntity<Text>.Content =  "UPGRADE COST: " + UpgradeCostDisplay
+                
+            }
+            WaitForMillisecond(2000)
+
+        }
+    }
+
+}

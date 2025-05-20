@@ -112,6 +112,14 @@
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "726g0fpcil-maw1nviz-ls83oft58vs",
+      "filePath": "Assets\\ECA\\Player (2).eca",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "eca"
     }
   ],
   "avatarInfo": null,

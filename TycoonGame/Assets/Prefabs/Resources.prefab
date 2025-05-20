@@ -37,7 +37,7 @@
               "editorVisibleValue": true,
               "position": {
                 "x": 0,
-                "y": 0.9226630926132202,
+                "y": 0.9229999780654907,
                 "z": 0
               },
               "scale": {
@@ -77,7 +77,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 26,
+              "tempIndex": 2,
               "itemID": 289,
               "seParent": null,
               "ecaScripts": [
@@ -115,7 +115,10 @@
                 "selfValue": true,
                 "valueTag": "activeValue"
               },
-              "unlockedValue": null,
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
               "editorLockValue": false,
               "editorVisibleValue": true,
               "position": {
@@ -157,7 +160,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 25,
+              "tempIndex": 1,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -179,7 +182,7 @@
               },
               "_entityName": "Value",
               "propsData": {
-                "TextKey": "MONEY HERE",
+                "TextKey": "Display Value",
                 "fontColor": {
                   "r": 255,
                   "g": 255,
@@ -199,7 +202,7 @@
                 "fontType": "UIFONT_LATIN",
                 "fontStyle": 1,
                 "_levelObjectID": 2,
-                "TextDisplay": "MONEY HERE",
+                "TextDisplay": "Display Value",
                 "fontTypeRef": "UIFONT_LATIN"
               }
             }
@@ -319,7 +322,10 @@
                 "selfValue": true,
                 "valueTag": "activeValue"
               },
-              "unlockedValue": null,
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
               "editorLockValue": false,
               "editorVisibleValue": true,
               "position": {
@@ -361,7 +367,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 27,
+              "tempIndex": 3,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -383,7 +389,7 @@
               },
               "_entityName": "Text object",
               "propsData": {
-                "TextKey": "MONEY HERE",
+                "TextKey": "Display Upgrade",
                 "fontColor": {
                   "r": 255,
                   "g": 255,
@@ -403,7 +409,7 @@
                 "fontType": "UIFONT_LATIN",
                 "fontStyle": 1,
                 "_levelObjectID": 1,
-                "TextDisplay": "MONEY HERE",
+                "TextDisplay": "Display Upgrade",
                 "fontTypeRef": "UIFONT_LATIN"
               }
             },
@@ -558,7 +564,10 @@
             "selfValue": true,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "editorLockValue": false,
           "editorVisibleValue": true,
           "position": {
@@ -622,7 +631,8 @@
             "LevelObject": {},
             "Transform": {},
             "Entity": {},
-            "Visibility": {}
+            "Visibility": {},
+            "MeshRender": {}
           },
           "propsData": {},
           "entityVersion": 3,
@@ -672,7 +682,8 @@
       "aoiSetting": 0,
       "initialTypes": {},
       "componentList": [
-        "CustomComponent45052745"
+        "CustomComponent45052745",
+        "CustomComponent20697677"
       ],
       "_filters": [],
       "entityTagData": {
@@ -705,14 +716,27 @@
         "Visibility": {},
         "MeshRender": {},
         "CustomComponent45052745": {
-          "PROP_17350576": 0,
+          "PROP_17350576": 1,
           "PROP_55253157": {
             "type": "CustomEnum75552261",
             "value": "E68782056"
           },
           "PROP_65717891": 1,
           "PROP_68039595": 0,
-          "PROP_20670648": 10
+          "PROP_20670648": 10,
+          "PROP_66735044": "GoldMine",
+          "PROP_40070020": 1,
+          "PROP_14176655": 0
+        },
+        "CustomComponent20697677": {
+          "PROP_53930573": {
+            "fileId": "2nznoo26o36-maw7kx9i-toibups06cr",
+            "filePath": "Assets\\BuildingConfigCSV\\ID1Forrest.csv",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "csv"
+          }
         }
       },
       "propsData": {},

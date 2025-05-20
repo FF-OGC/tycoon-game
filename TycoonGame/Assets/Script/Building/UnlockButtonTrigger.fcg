@@ -1,0 +1,74 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
+
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+
+graph UnlockButtonTrigger {
+    //Executed when entity is created
+
+
+    _parentEntity entity
+    _unlockCost int
+    _parentConfigFile CsvID
+
+    _modelEntity entity
+    _upgradeButtonEntity entity
+    
+    triggerFlag bool = true
+
+
+    event OnEntityEnter(target entity<Entity>) {
+    if triggerFlag  {
+        
+        if _parentEntity == nil {
+            _parentEntity = GetParent(GetParent(thisEntity))
+            _unlockCost = _parentEntity<Building>.UnlockCost 
+                
+            for key, _entity in GetChildren(_parentEntity) {
+                if HasTag(_entity,ETag.BuildingModel) {
+                    _modelEntity = _entity
+
+                } else if HasTag(_entity,ETag.UpgradeButton) {
+                    _upgradeButtonEntity = _entity
+                }
+            }
+        }
+
+        var _playerEnter = target<Player>
+        var _playerMoney = _playerEnter<PlayerEconomy>.playerMoney
+
+
+
+        if _playerMoney[0] >= _unlockCost {
+            _playerEnter<PlayerEconomy>.subtractAmount(_unlockCost)
+            _parentEntity<Building>.CurrentLevel += 1 
+
+            DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"})
+
+            DispatchEvent(PLAY_SFX,_playerEnter,List<object>{"kepngan"})
+
+            //show object model 
+            SetActive(_modelEntity, true)
+
+            if _parentEntity<Building>.Type != BuildingTypeEnum.Decoration {
+                SetActive(_upgradeButtonEntity, true)
+            }
+
+            LogInfo("upgrade success")
+
+            triggerFlag = false
+            SetActive(GetParent(thisEntity) , false)
+        } else{
+            DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"NotEnoughMoneyUI"})
+        }
+    }
+
+    }
+
+    event OnEntityExit(target entity<Entity>) {
+        LogInfo("i'm leaving byebye")
+    }
+}

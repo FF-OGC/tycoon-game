@@ -1,0 +1,49 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "CSVData.fcc" as CSVData
+
+import Res from "EditorGenLib.fcc"
+
+static graph CSVReadingHandler {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    func GetInformation(keyCSV CsvID, keyROW int, key object) List<object>{
+        var _list  = ReadCSVRowByKey(keyCSV as CsvID, keyROW, key as  int)
+        //var _list  = ReadCSVRowByKey(Res.CSV[keyCSV as EResKeyCSV], keyROW, key as  int)
+        return _list
+    }
+
+    func GetValueByLevel(keyCSV CsvID, level int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, level )
+        if _list == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, level-1 )
+        }
+        
+        var _index = BuildingConfigEnum.Value as int
+        return _list[_index] as int
+    }
+
+    func GetUpgradeCostByLevel (keyCSV CsvID, level int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, level )
+        if _list == nil {
+             _list = GetInformation(keyCSV as CsvID, 1, level-1 )
+        }
+
+        var _index = BuildingConfigEnum.UpgradeCost as int
+        return _list[_index] as int
+    }
+
+    func GetCooldownByLevel (keyCSV CsvID, level int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, level )
+        if _list == nil {
+                _list = GetInformation(keyCSV as CsvID, 1, level-1 )
+        }
+
+        var _index = BuildingConfigEnum.Cooldown as int
+        return _list[_index] as int
+    }
+
+}

@@ -1,4 +1,68 @@
 {
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "v",
+        "id": "#_)I92Skm.JmC4GMR}@=",
+        "x": 320,
+        "y": 376,
+        "extraState": {
+          "X": 745,
+          "L": [
+            1,
+            2,
+            3
+          ],
+          "T": "ReadCSVDataRowByKey",
+          "OT": null
+        },
+        "inputs": {
+          "P1": {
+            "shadow": {
+              "type": "pcv",
+              "id": "b+LFmS#h.~#L}@t,c:=%",
+              "fields": {
+                "V": "2nznoo26o36-maw7kx9i-toibups06cr"
+              }
+            }
+          },
+          "P2": {
+            "shadow": {
+              "type": "ipi",
+              "id": "J-9B(s-3:_Hcn/QMKQU5",
+              "fields": {
+                "V": 2
+              }
+            }
+          },
+          "P3": {
+            "shadow": {
+              "type": "tys",
+              "id": "}}un@5G{DebnU[YHxmSg",
+              "extraState": "Object"
+            },
+            "block": {
+              "type": "ipi",
+              "id": "S3k)A:SaT{;ftOB.yGjK",
+              "fields": {
+                "V": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ipt",
+        "id": "NK3+!fkax^]j?pHtNp+n",
+        "x": 824,
+        "y": 449,
+        "fields": {
+          "V": ""
+        }
+      }
+    ]
+  },
   "graphData": {
     "ownerType": "Entity",
     "componentTypes": "CustomLevelObject",

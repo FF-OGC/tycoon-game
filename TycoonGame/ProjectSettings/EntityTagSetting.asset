@@ -5,12 +5,16 @@
   "_entityId": "RQV6cf1r",
   "TagSetting": [
     {
-      "id": "entityTag54814334",
-      "label": "siuu"
+      "id": "entityTag65129151",
+      "label": "BuildingModel"
     },
     {
-      "id": "entityTag65129151",
-      "label": "buildingModel"
+      "id": "entityTag67687367",
+      "label": "UpgradeButton"
+    },
+    {
+      "id": "entityTag84254792",
+      "label": "UnlockButton"
     }
   ],
   "children": []

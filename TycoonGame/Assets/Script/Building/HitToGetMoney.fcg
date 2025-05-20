@@ -1,8 +1,10 @@
 import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 import "Items.fcc" as Items
-import "../Script/Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
-import "../Script/Economy/BigNumberHandler.fcg" as BigNumberHandler
+import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
+
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
 
 graph Script {
     //Executed when entity is created
@@ -17,13 +19,21 @@ graph Script {
             parentEntity = GetParent(GetParent(thisEntity))
         }
 
-
         if !isCooldown {
         isCooldown = true
+
+        //Get player info
         var _playerHit = weapon<Weapon>.Owner
         var _parentEntity = GetParent(GetParent(thisEntity))
-        _playerHit<PlayerEconomy>.addAmount(_parentEntity<Building>.Value)
-        WaitForMillisecond(_parentEntity<Building>.CooldownTime * 1000)
+
+
+        // Get building info
+        var value = CSVReadingHandler.GetValueByLevel(parentEntity<BuildingConfig>.ConfigFile , parentEntity<Building>.CurrentLevel)
+
+        _playerHit<PlayerEconomy>.addAmount(value)
+
+        var cooldownTime = CSVReadingHandler.GetCooldownByLevel(parentEntity<BuildingConfig>.ConfigFile , parentEntity<Building>.CurrentLevel)
+        WaitForMillisecond(cooldownTime * 1000)
         DispatchEvent(PLAY_SFX,_playerHit,List<object>{"thamngan"})
         isCooldown = false
         }

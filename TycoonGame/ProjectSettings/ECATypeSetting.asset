@@ -40,6 +40,14 @@
           }
         },
         {
+          "propID": 100011,
+          "name": "PROP_66735044",
+          "label": "Name",
+          "type": "String",
+          "value": "",
+          "disabledType": true
+        },
+        {
           "propID": 100006,
           "name": "PROP_55253157",
           "label": "Type",
@@ -52,9 +60,9 @@
           }
         },
         {
-          "propID": 100003,
-          "name": "PROP_65717891",
-          "label": "Value",
+          "propID": 100012,
+          "name": "PROP_40070020",
+          "label": "CurrentLevel",
           "type": "Int",
           "value": 0,
           "disabledType": true,
@@ -65,22 +73,9 @@
           }
         },
         {
-          "propID": 100007,
-          "name": "PROP_68039595",
-          "label": "CooldownTime",
-          "type": "Int",
-          "value": 0,
-          "disabledType": true,
-          "param": {
-            "precision": 0,
-            "min": -2147483648,
-            "max": 2147483647
-          }
-        },
-        {
-          "propID": 100008,
-          "name": "PROP_20670648",
-          "label": "Cost",
+          "propID": 100014,
+          "name": "PROP_14176655",
+          "label": "UnlockCost",
           "type": "Int",
           "value": 0,
           "disabledType": true,
@@ -106,14 +101,44 @@
           "name": "PROP_99192963",
           "label": "ID",
           "type": "Int",
-          "value": 0
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
         },
         {
           "propID": 100010,
           "name": "PROP_24227126",
           "label": "Proficiency",
           "type": "Int",
-          "value": 0
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
+        }
+      ]
+    },
+    "CustomComponent20697677": {
+      "label": "BuildingConfig",
+      "name": "CustomComponent20697677",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100001,
+      "PropDefines": [
+        {
+          "propID": 100016,
+          "name": "PROP_53930573",
+          "label": "ConfigFile",
+          "type": "CsvID",
+          "value": null
         }
       ]
     }

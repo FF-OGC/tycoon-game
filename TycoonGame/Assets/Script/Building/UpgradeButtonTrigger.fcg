@@ -1,0 +1,49 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
+
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+
+graph UpgradeButtonTrigger {
+    //Executed when entity is created
+
+
+    _parentEntity entity
+    _parentCurrentLevel int
+    _parentConfigFile CsvID
+
+
+    event OnEntityEnter(target entity<Entity>) {
+        if _parentEntity == nil {
+            _parentEntity = GetParent(GetParent(thisEntity))
+            _parentCurrentLevel = _parentEntity<Building>.CurrentLevel
+            _parentConfigFile = _parentEntity<BuildingConfig>.ConfigFile
+        }
+
+
+        var _playerEnter = target<Player>
+        var _playerMoney = _playerEnter<PlayerEconomy>.playerMoney
+
+        _parentCurrentLevel = _parentEntity<Building>.CurrentLevel
+        var _ungradeCost  = CSVReadingHandler.GetUpgradeCostByLevel(_parentConfigFile,_parentCurrentLevel)
+
+        if _playerMoney[0] >= _ungradeCost {
+            _playerEnter<PlayerEconomy>.subtractAmount(_ungradeCost)
+            _parentEntity<Building>.CurrentLevel += 1 
+
+            DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"})
+
+            DispatchEvent(PLAY_SFX,_playerEnter,List<object>{"kepngan"})
+
+            LogInfo("upgrade success")
+        } else{
+            DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"NotEnoughMoneyUI"})
+        }
+    }
+
+    event OnEntityExit(target entity<Entity>) {
+        LogInfo("i'm leaving byebye")
+    }
+}

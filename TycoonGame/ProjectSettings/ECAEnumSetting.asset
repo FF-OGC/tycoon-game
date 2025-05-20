@@ -31,10 +31,50 @@
       ],
       "isCustom": true,
       "isDirty": false
+    },
+    "CustomEnum50365264": {
+      "label": "BuildingConfigEnum",
+      "key": "CustomEnum50365264",
+      "type": "Int",
+      "info": [
+        {
+          "label": "lv",
+          "key": "E43750121",
+          "value": 0,
+          "type": "Int"
+        },
+        {
+          "label": "Value",
+          "key": "E92886514",
+          "value": 1,
+          "type": "Int"
+        },
+        {
+          "label": "UpgradeCost",
+          "key": "E13954139",
+          "value": 2,
+          "type": "Int"
+        },
+        {
+          "label": "Cooldown",
+          "key": "E48223951",
+          "value": 3,
+          "type": "Int"
+        },
+        {
+          "label": "SpecialRequirement",
+          "key": "E90137083",
+          "value": 4,
+          "type": "Int"
+        }
+      ],
+      "isCustom": true,
+      "isDirty": false
     }
   },
   "enumNameMap": {
-    "BuildingTypeEnum": "CustomEnum75552261"
+    "BuildingTypeEnum": "CustomEnum75552261",
+    "BuildingConfigEnum": "CustomEnum50365264"
   },
   "children": []
 }

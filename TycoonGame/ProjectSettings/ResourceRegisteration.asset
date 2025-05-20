@@ -82,6 +82,17 @@
             "fileType": "ugcscript"
           },
           "scriptName": "PlayerCustomUI"
+        },
+        {
+          "refer": {
+            "fileId": "cw54wux814-maw6w0gt-uw9a8askbd",
+            "filePath": "Assets\\Script\\Global\\CSVReadingHandler.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "CSVReadingHandler"
         }
       ]
     },
@@ -150,7 +161,30 @@
     },
     "csv": {
       "id": "csv",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "hume3cc3f1k-maw1efpp-3vq6ihqyb3",
+            "filePath": "Assets\\BuildingConfigCSV\\test.csv",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "csv"
+          },
+          "scriptName": "test"
+        },
+        {
+          "refer": {
+            "fileId": "2nznoo26o36-maw7kx9i-toibups06cr",
+            "filePath": "Assets\\BuildingConfigCSV\\ID1Forrest.csv",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "csv"
+          },
+          "scriptName": "ID1Forrest"
+        }
+      ]
     },
     "internalhudtype": {
       "id": "internalhudtype",
