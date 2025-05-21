@@ -20,6 +20,10 @@ graph UpgradeButtonText {
     }
 
     event DISPLAY_TEXT_INIT() {
+        while true {
+            LogInfo("siuuuuu")
+            WaitForMillisecond(2000)
+        }
         init2()
     }
 
@@ -35,11 +39,10 @@ graph UpgradeButtonText {
     }
 
     async func init (){
-        
+        /*
         LastUpdateLevel = 0 
 
         while true{
-            LogInfo("Im' guid")
             if _parent == nil {
                 _parent = GetParent(GetParent(thisEntity))
                 _parentCurrentLevel = _parent<Building>.CurrentLevel
@@ -55,6 +58,7 @@ graph UpgradeButtonText {
             }
             WaitForMillisecond(2000)
         }
+            */
     }
 
     async func init2 (){

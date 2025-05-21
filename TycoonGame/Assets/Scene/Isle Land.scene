@@ -110,6 +110,346 @@
             "type": "UGCSceneEntity",
             "resourceId": "Primitive/Empty"
           },
+          "_entityId": "LHU5Mmdu",
+          "children": [
+            {
+              "_tag": {
+                "type": "SceneEditEntity",
+                "resourceId": "Primitive/Empty"
+              },
+              "_entityId": "lYXQWsIO",
+              "children": [],
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
+              "position": {
+                "x": 0,
+                "y": 0.9999998807907104,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": false,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [],
+              "_filters": [
+                "node.withscript"
+              ],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "tempIndex": 11,
+              "itemID": 222,
+              "seParent": null,
+              "ecaScripts": [
+                {
+                  "fileId": "wgaxkg63vsc-mawaq5r8-5e0mq04wded",
+                  "filePath": "Assets\\Script\\Building\\Display\\UnlockButtonText.fcg",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "ugcscript"
+                }
+              ],
+              "ecaProps": {
+                "TextEntity": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {}
+              },
+              "_entityName": "DisplayTextUnlock",
+              "propsData": {
+                "TextKey": "MONEY HERE",
+                "fontColor": {
+                  "r": 255,
+                  "g": 255,
+                  "b": 255,
+                  "a": 1
+                },
+                "IsBillboard": true,
+                "fontStyleRef": {
+                  "bold": true,
+                  "italic": false,
+                  "underline": false
+                },
+                "FontSize": 48,
+                "IgnoreDepth": false,
+                "AlwaysInScreen": false,
+                "Depth": 0,
+                "fontType": "UIFONT_LATIN",
+                "fontStyle": 1,
+                "_levelObjectID": 8,
+                "TextDisplay": "MONEY HERE",
+                "fontTypeRef": "UIFONT_LATIN"
+              },
+              "editorLockValue": false,
+              "editorVisibleValue": true
+            },
+            {
+              "_tag": {
+                "type": "UGCSceneEntity",
+                "resourceId": ""
+              },
+              "_entityId": "myf5r28H",
+              "children": [],
+              "activeValue": {
+                "selfValue": true,
+                "valueTag": "activeValue"
+              },
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "BTPath": [
+                null
+              ],
+              "visible": true,
+              "VisibilityLayer": 0,
+              "modelOptimization": 0,
+              "streamingLayer": "",
+              "attributes": [
+                2,
+                4
+              ],
+              "isTrigger": true,
+              "collidable": true,
+              "physicalLayer": 0,
+              "physicalMaterial": null,
+              "aoiSetting": 0,
+              "initialTypes": {},
+              "componentList": [
+                "MeshRender",
+                "ColliderShape",
+                "Collider",
+                "CustomComponent45052745"
+              ],
+              "_filters": [
+                "node.withscript"
+              ],
+              "entityTagData": {
+                "tagPointers": []
+              },
+              "materials": [
+                null
+              ],
+              "colliders": [
+                {
+                  "enable": true,
+                  "colliderType": "Box",
+                  "meshUUID": null,
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "size": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "isTrigger": false,
+                  "radius": 0.5,
+                  "height": 1,
+                  "physicalMaterialUUID": null,
+                  "isConvexIfMesh": false
+                }
+              ],
+              "IsNPC": false,
+              "Rigidbody": {
+                "Type": 1,
+                "Mass": 1,
+                "CenterOfMass": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "UseGravity": true,
+                "Drag": 0.05,
+                "AngularDrag": 0.05
+              },
+              "isCreateAsEmpty": false,
+              "ecaScripts": [
+                {
+                  "fileId": "wdr0zzw174j-mapdmd7c-ydyzfo97c1",
+                  "filePath": "Assets\\Script\\BuildingButtonTrigger.fcg",
+                  "_tag": {
+                    "type": "GFileRefer"
+                  },
+                  "fileType": "ugcscript"
+                }
+              ],
+              "ecaProps": {
+                "CustomLevelObject": {},
+                "LevelObject": {},
+                "Transform": {},
+                "Entity": {},
+                "Visibility": {},
+                "MeshRender": {},
+                "ColliderShape": {},
+                "Collider": {},
+                "CustomComponent45052745": {
+                  "PROP_76173386": 0,
+                  "PROP_17350576": 0,
+                  "PROP_65717891": 10,
+                  "PROP_55253157": null,
+                  "PROP_68039595": 0,
+                  "PROP_20670648": 0,
+                  "PROP_66735044": "",
+                  "PROP_40070020": 0,
+                  "PROP_14176655": 0
+                }
+              },
+              "propsData": {},
+              "entityVersion": 3,
+              "mesh": {
+                "fileId": "wehss29x://7d9977d6-d297-4a69-970c-c4d88446bf3b-Box001.~@FFFUB",
+                "filePath": "wehss29x://Meshes/cube.fbx/Box001",
+                "_tag": {
+                  "type": "GFileRefer"
+                },
+                "fileType": "mesh"
+              },
+              "_entityName": "UnlockTrigger",
+              "editorLockValue": false,
+              "editorVisibleValue": true
+            }
+          ],
+          "activeValue": {
+            "selfValue": false,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
+          "position": {
+            "x": -1.4396177530288696,
+            "y": 0.6000000238418579,
+            "z": -4.159014701843262
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "physicalMaterial": null,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "_filters": [
+            "entityTag84254792"
+          ],
+          "entityTagData": {
+            "tagPointers": [
+              "entityTag84254792"
+            ]
+          },
+          "materials": [
+            null
+          ],
+          "colliders": [],
+          "IsNPC": false,
+          "Rigidbody": {
+            "Type": 1,
+            "Mass": 1,
+            "CenterOfMass": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "UseGravity": true,
+            "Drag": 0.05,
+            "AngularDrag": 0.05
+          },
+          "isCreateAsEmpty": true,
+          "ecaScripts": [],
+          "ecaProps": {
+            "CustomLevelObject": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {},
+            "MeshRender": {}
+          },
+          "propsData": {},
+          "entityVersion": 3,
+          "_entityName": "UnlockButton",
+          "editorLockValue": false,
+          "editorVisibleValue": true
+        },
+        {
+          "_tag": {
+            "type": "UGCSceneEntity",
+            "resourceId": "Primitive/Empty"
+          },
           "_entityId": "o2L5loDH",
           "children": [
             {
@@ -166,7 +506,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 11,
+              "tempIndex": 1,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -273,7 +613,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 12,
+              "tempIndex": 2,
               "itemID": 289,
               "seParent": null,
               "ecaScripts": [
@@ -457,7 +797,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 13,
+              "tempIndex": 3,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -1502,6 +1842,320 @@
               "fileType": "mesh"
             },
             "_entityName": "Trigger"
+          },
+          "LHU5Mmdu": {
+            "_entityId": "YXEt7KM6",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 2.747000217437744,
+              "y": 0.6000000238418579,
+              "z": 5.347999572753906
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "entityTag84254792"
+            ],
+            "entityTagData": {
+              "tagPointers": [
+                "entityTag84254792"
+              ]
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": true,
+            "ecaScripts": [],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {}
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "_entityName": "UnlockButton",
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "lYXQWsIO": {
+            "_entityId": "zmBqF78j",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 0,
+              "y": 0.9999999403953552,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 222,
+            "seParent": null,
+            "ecaScripts": [
+              {
+                "fileId": "wgaxkg63vsc-mawaq5r8-5e0mq04wded",
+                "filePath": "Assets\\Script\\Building\\Display\\UnlockButtonText.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "TextEntity": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {}
+            },
+            "_entityName": "DisplayTextUnlock",
+            "propsData": {
+              "TextKey": "MONEY HERE",
+              "fontColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "IsBillboard": true,
+              "fontStyleRef": {
+                "bold": true,
+                "italic": false,
+                "underline": false
+              },
+              "FontSize": 48,
+              "IgnoreDepth": false,
+              "AlwaysInScreen": false,
+              "Depth": 0,
+              "fontType": "UIFONT_LATIN",
+              "fontStyle": 1,
+              "_levelObjectID": 8,
+              "TextDisplay": "MONEY HERE",
+              "fontTypeRef": "UIFONT_LATIN"
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "myf5r28H": {
+            "_entityId": "mS1iH296",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": {
+              "selfValue": true,
+              "valueTag": "unlockedValue"
+            },
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": true,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [
+              "MeshRender",
+              "ColliderShape",
+              "Collider",
+              "CustomComponent45052745"
+            ],
+            "_filters": [
+              "node.withscript"
+            ],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [
+              {
+                "enable": true,
+                "colliderType": "Box",
+                "meshUUID": null,
+                "position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "size": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "isTrigger": false,
+                "radius": 0.5,
+                "height": 1,
+                "physicalMaterialUUID": null,
+                "isConvexIfMesh": false
+              }
+            ],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05
+            },
+            "isCreateAsEmpty": false,
+            "ecaScripts": [
+              {
+                "fileId": "wdr0zzw174j-mapdmd7c-ydyzfo97c1",
+                "filePath": "Assets\\Script\\BuildingButtonTrigger.fcg",
+                "fileType": "ugcscript"
+              }
+            ],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {},
+              "MeshRender": {},
+              "ColliderShape": {},
+              "Collider": {},
+              "CustomComponent45052745": {
+                "PROP_76173386": 0,
+                "PROP_17350576": 0,
+                "PROP_65717891": 10,
+                "PROP_55253157": null,
+                "PROP_68039595": 0,
+                "PROP_20670648": 0,
+                "PROP_66735044": "",
+                "PROP_40070020": 0,
+                "PROP_14176655": 0
+              }
+            },
+            "propsData": {},
+            "entityVersion": 3,
+            "mesh": {
+              "fileId": "wehss29x://7d9977d6-d297-4a69-970c-c4d88446bf3b-Box001.~@FFFUB",
+              "filePath": "wehss29x://Meshes/cube.fbx/Box001",
+              "fileType": "mesh"
+            },
+            "_entityName": "UnlockTrigger",
+            "editorLockValue": false,
+            "editorVisibleValue": true
           }
         }
       }
@@ -1574,7 +2228,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 14,
+              "tempIndex": 4,
               "itemID": 384,
               "seParent": null,
               "ecaScripts": [
@@ -1672,7 +2326,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 15,
+              "tempIndex": 5,
               "itemID": 84,
               "seParent": null,
               "ecaScripts": [
@@ -1832,7 +2486,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 16,
+              "tempIndex": 6,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -2316,7 +2970,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 17,
+              "tempIndex": 7,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -3643,7 +4297,7 @@
               },
               "propsData": {},
               "entityVersion": 3,
-              "_entityName": "NPC",
+              "_entityName": "WoodCutterModel",
               "skeleton": {
                 "fileId": "UMA_101000006",
                 "filePath": "lib://ffuma/101000006",
@@ -4313,25 +4967,14 @@
               "aoiSetting": 0,
               "initialTypes": {},
               "componentList": [],
-              "_filters": [
-                "node.withscript"
-              ],
+              "_filters": [],
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 18,
+              "tempIndex": 8,
               "itemID": 222,
               "seParent": null,
-              "ecaScripts": [
-                {
-                  "fileId": "qv66c409wml-maqjvnmz-fhltnkxegf9",
-                  "filePath": "Assets\\Script\\Script.fcg",
-                  "_tag": {
-                    "type": "GFileRefer"
-                  },
-                  "fileType": "ugcscript"
-                }
-              ],
+              "ecaScripts": [],
               "ecaProps": {
                 "TextEntity": {},
                 "LevelObject": {},
@@ -4339,7 +4982,7 @@
                 "Entity": {},
                 "Visibility": {}
               },
-              "_entityName": "DisplayValue",
+              "_entityName": "WoodCutterDisplayValue",
               "propsData": {
                 "TextKey": "Display Value",
                 "fontColor": {
@@ -4505,25 +5148,14 @@
               "aoiSetting": 0,
               "initialTypes": {},
               "componentList": [],
-              "_filters": [
-                "node.withscript"
-              ],
+              "_filters": [],
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 19,
+              "tempIndex": 9,
               "itemID": 222,
               "seParent": null,
-              "ecaScripts": [
-                {
-                  "fileId": "v6vrk3naj9g-maqidomu-auj5quuzzjp",
-                  "filePath": "Assets\\Script\\Script.fcg",
-                  "_tag": {
-                    "type": "GFileRefer"
-                  },
-                  "fileType": "ugcscript"
-                }
-              ],
+              "ecaScripts": [],
               "ecaProps": {
                 "TextEntity": {},
                 "LevelObject": {},
@@ -4531,7 +5163,7 @@
                 "Entity": {},
                 "Visibility": {}
               },
-              "_entityName": "DisplayTextUpgrade",
+              "_entityName": "WoodCutterDisplayUpgrade",
               "propsData": {
                 "TextKey": "Display Upgrade",
                 "fontColor": {
@@ -4611,9 +5243,7 @@
                 "ColliderShape",
                 "Collider"
               ],
-              "_filters": [
-                "node.withscript"
-              ],
+              "_filters": [],
               "entityTagData": {
                 "tagPointers": []
               },
@@ -4661,16 +5291,7 @@
                 "AngularDrag": 0.05
               },
               "isCreateAsEmpty": false,
-              "ecaScripts": [
-                {
-                  "fileId": "6tlnerog0sw-maqheflt-lwrx2g2esdb",
-                  "filePath": "Assets\\Script\\UpgradeButtonTrigger.fcg",
-                  "_tag": {
-                    "type": "GFileRefer"
-                  },
-                  "fileType": "ugcscript"
-                }
-              ],
+              "ecaScripts": [],
               "ecaProps": {
                 "CustomLevelObject": {},
                 "LevelObject": {},
@@ -4699,7 +5320,7 @@
                 },
                 "fileType": "mesh"
               },
-              "_entityName": "Trigger",
+              "_entityName": "WoodCutterUpgrade",
               "editorLockValue": false,
               "editorVisibleValue": true
             }
@@ -4810,7 +5431,7 @@
               },
               "position": {
                 "x": 0,
-                "y": 0.9999999403953552,
+                "y": 1.0000004768371582,
                 "z": 0
               },
               "scale": {
@@ -4841,25 +5462,14 @@
               "aoiSetting": 0,
               "initialTypes": {},
               "componentList": [],
-              "_filters": [
-                "node.withscript"
-              ],
+              "_filters": [],
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 20,
+              "tempIndex": 10,
               "itemID": 222,
               "seParent": null,
-              "ecaScripts": [
-                {
-                  "fileId": "wgaxkg63vsc-mawaq5r8-5e0mq04wded",
-                  "filePath": "Assets\\Script\\Building\\Display\\UnlockButtonText.fcg",
-                  "_tag": {
-                    "type": "GFileRefer"
-                  },
-                  "fileType": "ugcscript"
-                }
-              ],
+              "ecaScripts": [],
               "ecaProps": {
                 "TextEntity": {},
                 "LevelObject": {},
@@ -4867,7 +5477,7 @@
                 "Entity": {},
                 "Visibility": {}
               },
-              "_entityName": "DisplayTextUnlock",
+              "_entityName": "WoodCutterDisplayUnlock",
               "propsData": {
                 "TextKey": "MONEY HERE",
                 "fontColor": {
@@ -4947,8 +5557,7 @@
               "componentList": [
                 "MeshRender",
                 "ColliderShape",
-                "Collider",
-                "CustomComponent45052745"
+                "Collider"
               ],
               "_filters": [
                 "node.withscript"
@@ -5002,8 +5611,8 @@
               "isCreateAsEmpty": false,
               "ecaScripts": [
                 {
-                  "fileId": "wdr0zzw174j-mapdmd7c-ydyzfo97c1",
-                  "filePath": "Assets\\Script\\BuildingButtonTrigger.fcg",
+                  "fileId": "kfuo1yh6oj-maxeyck7-hdn3b7hqtk6",
+                  "filePath": "Assets\\Script\\Building\\UnlockButtonTriggerVersion2.fcg",
                   "_tag": {
                     "type": "GFileRefer"
                   },
@@ -5041,7 +5650,7 @@
                 },
                 "fileType": "mesh"
               },
-              "_entityName": "UnlockTrigger"
+              "_entityName": "WoodCutterUnlock"
             }
           ],
           "activeValue": {
@@ -5054,7 +5663,7 @@
           },
           "position": {
             "x": 3.9260001182556152,
-            "y": 0.30000001192092896,
+            "y": 0.2999999523162842,
             "z": -5.109000205993652
           },
           "scale": {
@@ -5171,9 +5780,12 @@
       "initialTypes": {},
       "componentList": [
         "CustomComponent45052745",
-        "CustomComponent20697677"
+        "CustomComponent20697677",
+        "CustomComponent28719277"
       ],
-      "_filters": [],
+      "_filters": [
+        "node.withscript"
+      ],
       "entityTagData": {
         "tagPointers": []
       },
@@ -5195,7 +5807,16 @@
         "AngularDrag": 0.05
       },
       "isCreateAsEmpty": true,
-      "ecaScripts": [],
+      "ecaScripts": [
+        {
+          "fileId": "mf54mya5kkl-maxcq47l-ufbtwdwsjw",
+          "filePath": "Assets\\Script\\Script.fcg",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
       "ecaProps": {
         "CustomLevelObject": {},
         "LevelObject": {},
@@ -5225,6 +5846,44 @@
               "type": "GFileRefer"
             },
             "fileType": "csv"
+          }
+        },
+        "CustomComponent28719277": {
+          "PROP_83680017": {
+            "entityId": "aImXFq6u",
+            "_tag": {
+              "type": "EntityRefer"
+            }
+          },
+          "PROP_59410639": {
+            "entityId": "BgtcQEH8",
+            "_tag": {
+              "type": "EntityRefer"
+            }
+          },
+          "PROP_77196415": {
+            "entityId": "ZK2VvpPe",
+            "_tag": {
+              "type": "EntityRefer"
+            }
+          },
+          "PROP_95283686": {
+            "entityId": "V513qhoF",
+            "_tag": {
+              "type": "EntityRefer"
+            }
+          },
+          "PROP_55133413": {
+            "entityId": "S6nlZJLk",
+            "_tag": {
+              "type": "EntityRefer"
+            }
+          },
+          "PROP_30108253": {
+            "entityId": "xn3gadZT",
+            "_tag": {
+              "type": "EntityRefer"
+            }
           }
         }
       },

@@ -141,6 +141,59 @@
           "value": null
         }
       ]
+    },
+    "CustomComponent28719277": {
+      "label": "BuildingChildren",
+      "name": "CustomComponent28719277",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100003,
+      "PropDefines": [
+        {
+          "propID": 100005,
+          "name": "PROP_83680017",
+          "label": "Model",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100007,
+          "name": "PROP_59410639",
+          "label": "ModelDisplayText",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100008,
+          "name": "PROP_77196415",
+          "label": "UnlockButton",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100013,
+          "name": "PROP_95283686",
+          "label": "UnlockButtonDisplayText",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100015,
+          "name": "PROP_55133413",
+          "label": "UpgradeButton",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100017,
+          "name": "PROP_30108253",
+          "label": "UpgradeButtonDisplayText",
+          "type": "Entity",
+          "value": null
+        }
+      ]
     }
   }
 }

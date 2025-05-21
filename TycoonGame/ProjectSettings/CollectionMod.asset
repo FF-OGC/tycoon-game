@@ -1,0 +1,17 @@
+{
+  "_tag": {
+    "type": "ff.collection",
+    "resourceId": "Collection"
+  },
+  "_entityId": "ZxwaNVEn",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modId": 17,
+  "modOpen": true,
+  "_entityName": "Collection模组"
+}
+//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}

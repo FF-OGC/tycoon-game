@@ -1,0 +1,144 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "Physics.fcc" as Physics
+import "Economy.fcc" as Economy
+
+graph Script {
+    //Executed when entity is created
+    configFile CsvID
+
+    currentLevel int 
+    unlockCost int
+    buildingType BuildingTypeEnum
+
+    model entity
+    modelDisplay entity
+    unlockButton entity
+    unlockDisplay entity
+    upgradeButton entity
+    upgradeDisplay entity
+
+    
+    value int
+    upgradeCost int 
+    cooldown int
+
+    event OnAwake() {
+        while model == nil {
+            init()
+        }
+    }
+
+    async func init (){
+        currentLevel = thisEntity<Building>.CurrentLevel
+        unlockCost = thisEntity<Building>.UnlockCost
+        buildingType = thisEntity<Building>.Type
+
+        configFile = thisEntity<BuildingConfig>.ConfigFile
+
+        model = thisEntity<BuildingChildren>.Model
+        modelDisplay = thisEntity<BuildingChildren>.ModelDisplayText
+        unlockButton = thisEntity<BuildingChildren>.UnlockButton
+        unlockDisplay = thisEntity<BuildingChildren>.UnlockButtonDisplayText
+        upgradeButton = thisEntity<BuildingChildren>.UpgradeButton
+        upgradeDisplay = thisEntity<BuildingChildren>.UpgradeButtonDisplayText
+
+        if currentLevel == 0 {
+            updateUnlockDisplay()
+        }
+    }
+
+
+    func updateCurrentLevel(){
+        currentLevel = thisEntity<Building>.CurrentLevel
+    }
+
+    func updateValue(){
+        value = CSVReadingHandler.GetValueByLevel(configFile, currentLevel)
+    }
+
+    func updateUpgradeCost(){
+        upgradeCost = CSVReadingHandler.GetUpgradeCostByLevel(configFile, currentLevel)
+    }
+
+    func updateCooldown(){
+        cooldown = CSVReadingHandler.GetCooldownByLevel(configFile, currentLevel)
+    }
+
+    async func updateUnlockDisplay (){
+
+        var _displayString =  "UNLOCK: " +  unlockCost
+        unlockDisplay<Text>.Content = _displayString
+        while true {
+            LogInfo("111")
+            WaitForMillisecond(1000)
+        }
+    }
+
+    func updateUpgradeDisplay (){
+        var _displayString = "UPGRADE COST: " + upgradeCost
+        upgradeDisplay<Text>.Content = _displayString
+    }
+
+    func updateModelDisplay(){
+        var _displayString string
+
+        if buildingType == BuildingTypeEnum.Action {
+            _displayString =  value + " Per hit"
+        } else if buildingType == BuildingTypeEnum.Idle{
+            _displayString =  value + " Per span" + cooldown + "/s"
+        }
+
+        modelDisplay<Text>.Content = _displayString
+    }
+
+    func setActiveUpgrade(input bool){
+    }
+
+    func levelUp(){
+        thisEntity<Building>.CurrentLevel += 1
+        updateCurrentLevel()
+    }
+
+    func unlockBuilding(){
+        levelUp()
+
+        //Enable Model
+        SetActive(GetParent(model), true)
+        SetActive(model,true)
+        SetActive(modelDisplay,true)
+
+        updateValue()
+        updateModelDisplay()
+
+        if buildingType != BuildingTypeEnum.Decoration {
+            SetActive(GetParent(upgradeButton), true)
+            SetActive(upgradeButton,true)
+            SetActive(upgradeDisplay,true)
+
+            updateUpgradeCost()
+            updateUpgradeDisplay()
+        }
+        
+
+        SetActive(unlockButton,false)
+        SetActive(unlockDisplay,false)
+    }
+
+    func upgradeBuilding(){
+        levelUp()
+
+        updateUpgradeCost()
+
+        if upgradeCost == -1 {
+            SetActive(upgradeButton, false)
+            SetActive(upgradeDisplay, false)
+        } else {
+            updateUpgradeDisplay()
+        }
+
+    }
+
+}

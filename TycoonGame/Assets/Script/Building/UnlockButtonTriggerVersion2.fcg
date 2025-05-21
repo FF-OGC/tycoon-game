@@ -5,6 +5,7 @@ import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
 import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 
 import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "../Building/BuildingHandler.fcg" as BuildingHandler
 
 
 graph UnlockButtonTrigger {
@@ -24,18 +25,6 @@ graph UnlockButtonTrigger {
         
         if _parentEntity == nil {
             _parentEntity = GetParent(GetParent(thisEntity))
-            _unlockCost = _parentEntity<Building>.UnlockCost 
-                
-            for key, _entity in GetChildren(_parentEntity) {
-                if HasTag(_entity,ETag.BuildingModel) {
-                    _modelEntity = _entity
-
-                } else if HasTag(_entity,ETag.UpgradeButton) {
-                    _upgradeButtonEntity = _entity
-                } else if HasTag(_entity,ETag.UnlockButton) {
-                    _unlockButtonEntity = _entity
-                }
-            }
         }
 
         var _playerEnter = target<Player>
@@ -50,29 +39,9 @@ graph UnlockButtonTrigger {
             DispatchEvent(PLAY_SFX,_playerEnter,List<object>{"kepngan"})
 
             //show object model 
-            SetActive(_modelEntity, true)
-            var _valueDisplayText = GetChildByName(_modelEntity,"DisplayValue")
-            DispatchEvent(DISPLAY_TEXT_INIT, _valueDisplayText, List<object>{})
-
-
-            if _parentEntity<Building>.Type != BuildingTypeEnum.Decoration {
-                SetActive(_upgradeButtonEntity, true)
-                
-                var _upgradeButtonText = GetChildByName(_upgradeButtonEntity,"DisplayTextUpgrade")
-                DispatchEvent(DISPLAY_TEXT_INIT, _upgradeButtonText, List<object>{})
-
-
-            }
-
-            LogInfo("upgrade success")
+            _parentEntity<BuildingHandler>.unlockBuilding()
             
-            triggerFlag = false
-
-            var _displayTextUnlock = GetChildByName(_unlockButtonEntity, "DisplayTextUnlock")
-            _displayTextUnlock<Visibility>.IsVisible = false
-            var _unlockTrigger = GetChildByName(_unlockButtonEntity, "DisplayTextUnlock")
-            _unlockTrigger<Visibility>.IsVisible = false
-            
+            triggerFlag = false            
         } else{
             DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"NotEnoughMoneyUI"})
         }

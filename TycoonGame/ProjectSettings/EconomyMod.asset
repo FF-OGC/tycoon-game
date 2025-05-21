@@ -1,0 +1,19 @@
+{
+  "_tag": {
+    "type": "ff.economy",
+    "resourceId": "Economy"
+  },
+  "_entityId": "NeDWWOl4",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modId": 25,
+  "modOpen": true,
+  "_entityName": "Economy模组",
+  "customEconomyTypes": [],
+  "customEconomyShops": []
+}
+//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
