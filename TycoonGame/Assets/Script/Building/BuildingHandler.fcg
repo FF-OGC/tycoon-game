@@ -4,6 +4,7 @@ import "EditorGenLib.fcc" as EditorLib
 import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
 import "Physics.fcc" as Physics
 import "Economy.fcc" as Economy
+import "Workflow.fcc" as Workflow
 
 graph Script {
     //Executed when entity is created
@@ -14,7 +15,7 @@ graph Script {
     buildingType BuildingTypeEnum
 
     model entity
-    modelDisplay entity
+    valueDisplay entity
     unlockButton entity
     unlockDisplay entity
     upgradeButton entity
@@ -26,9 +27,12 @@ graph Script {
     cooldown int
 
     event OnAwake() {
-        while model == nil {
-            init()
-        }
+        init ()
+    }
+
+
+    event OnPhaseStart(phase entity<Phase>) {
+        LogInfo("currentLevel" + currentLevel )
     }
 
     async func init (){
@@ -39,15 +43,30 @@ graph Script {
         configFile = thisEntity<BuildingConfig>.ConfigFile
 
         model = thisEntity<BuildingChildren>.Model
-        modelDisplay = thisEntity<BuildingChildren>.ModelDisplayText
+        valueDisplay = thisEntity<BuildingChildren>.ValueDisplayText
         unlockButton = thisEntity<BuildingChildren>.UnlockButton
         unlockDisplay = thisEntity<BuildingChildren>.UnlockButtonDisplayText
         upgradeButton = thisEntity<BuildingChildren>.UpgradeButton
         upgradeDisplay = thisEntity<BuildingChildren>.UpgradeButtonDisplayText
 
-        if currentLevel == 0 {
-            updateUnlockDisplay()
-        }
+        WaitForNextFrame()
+        updateUnlockDisplay()
+    }
+
+
+
+    func logtest (){
+        LogInfo("currentLevel" + currentLevel )
+        LogInfo("unlockCost" + unlockCost )
+        LogInfo("buildingType" + buildingType )
+        LogInfo("configFile" + configFile )
+        LogInfo("model" + model )
+        LogInfo("modelDisplay" + valueDisplay )
+        LogInfo("unlockButton" + unlockButton )
+        LogInfo("unlockDisplay" + unlockDisplay )
+        LogInfo("upgradeButton" + upgradeButton )
+        LogInfo("upgradeDisplay" + upgradeDisplay )
+
     }
 
 
@@ -67,14 +86,9 @@ graph Script {
         cooldown = CSVReadingHandler.GetCooldownByLevel(configFile, currentLevel)
     }
 
-    async func updateUnlockDisplay (){
-
+    func updateUnlockDisplay (){
         var _displayString =  "UNLOCK: " +  unlockCost
         unlockDisplay<Text>.Content = _displayString
-        while true {
-            LogInfo("111")
-            WaitForMillisecond(1000)
-        }
     }
 
     func updateUpgradeDisplay (){
@@ -82,7 +96,7 @@ graph Script {
         upgradeDisplay<Text>.Content = _displayString
     }
 
-    func updateModelDisplay(){
+    func updateValueDisplay(){
         var _displayString string
 
         if buildingType == BuildingTypeEnum.Action {
@@ -91,15 +105,17 @@ graph Script {
             _displayString =  value + " Per span" + cooldown + "/s"
         }
 
-        modelDisplay<Text>.Content = _displayString
+        valueDisplay<Text>.Content = _displayString
     }
 
     func setActiveUpgrade(input bool){
     }
 
     func levelUp(){
+        LogInfo("before " + thisEntity<Building>.CurrentLevel)
         thisEntity<Building>.CurrentLevel += 1
         updateCurrentLevel()
+        LogInfo("thisEntity<Building>.CurrentLevel " + thisEntity<Building>.CurrentLevel)
     }
 
     func unlockBuilding(){
@@ -108,10 +124,10 @@ graph Script {
         //Enable Model
         SetActive(GetParent(model), true)
         SetActive(model,true)
-        SetActive(modelDisplay,true)
+        SetActive(valueDisplay,true)
 
         updateValue()
-        updateModelDisplay()
+        updateValueDisplay()
 
         if buildingType != BuildingTypeEnum.Decoration {
             SetActive(GetParent(upgradeButton), true)
@@ -130,14 +146,20 @@ graph Script {
     func upgradeBuilding(){
         levelUp()
 
-        updateUpgradeCost()
+        updateValue()
+        updateValueDisplay()
 
+
+        updateUpgradeCost()
+        //Off upgrade option if max level
         if upgradeCost == -1 {
             SetActive(upgradeButton, false)
             SetActive(upgradeDisplay, false)
         } else {
             updateUpgradeDisplay()
         }
+
+
 
     }
 

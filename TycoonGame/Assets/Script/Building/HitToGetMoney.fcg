@@ -5,6 +5,7 @@ import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
 import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 
 import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "../Building/BuildingHandler.fcg" as BuildingHandler
 
 graph Script {
     //Executed when entity is created
@@ -20,22 +21,22 @@ graph Script {
         }
 
         if !isCooldown {
-        isCooldown = true
+            isCooldown = true
 
-        //Get player info
-        var _playerHit = weapon<Weapon>.Owner
-        var _parentEntity = GetParent(GetParent(thisEntity))
+            //Get player info
+            var _playerHit = weapon<Weapon>.Owner
+            var _parentEntity = GetParent(GetParent(thisEntity))
 
 
-        // Get building info
-        var value = CSVReadingHandler.GetValueByLevel(parentEntity<BuildingConfig>.ConfigFile , parentEntity<Building>.CurrentLevel)
+            // Get building info
+            var value = _parentEntity<BuildingHandler>.value
 
-        _playerHit<PlayerEconomy>.addAmount(value)
+            _playerHit<PlayerEconomy>.addAmount(value)
 
-        var cooldownTime = CSVReadingHandler.GetCooldownByLevel(parentEntity<BuildingConfig>.ConfigFile , parentEntity<Building>.CurrentLevel)
-        WaitForMillisecond(cooldownTime * 1000)
-        DispatchEvent(PLAY_SFX,_playerHit,List<object>{"thamngan"})
-        isCooldown = false
+            var cooldownTime = _parentEntity<BuildingHandler>.cooldown
+            WaitForMillisecond(cooldownTime * 1000)
+            DispatchEvent(PLAY_SFX,_playerHit,List<object>{"thamngan"})
+            isCooldown = false
         }
     }
 }

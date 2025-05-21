@@ -138,7 +138,12 @@
           "name": "PROP_53930573",
           "label": "ConfigFile",
           "type": "CsvID",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
         }
       ]
     },
@@ -156,45 +161,75 @@
           "name": "PROP_83680017",
           "label": "Model",
           "type": "Entity",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "type": "SceneEditEntity",
+            "disabled": true
+          }
         },
         {
           "propID": 100007,
           "name": "PROP_59410639",
-          "label": "ModelDisplayText",
+          "label": "ValueDisplayText",
           "type": "Entity",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "type": "SceneEditEntity",
+            "disabled": true
+          }
         },
         {
           "propID": 100008,
           "name": "PROP_77196415",
           "label": "UnlockButton",
           "type": "Entity",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "type": "SceneEditEntity",
+            "disabled": true
+          }
         },
         {
           "propID": 100013,
           "name": "PROP_95283686",
           "label": "UnlockButtonDisplayText",
           "type": "Entity",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "type": "SceneEditEntity",
+            "disabled": true
+          }
         },
         {
           "propID": 100015,
           "name": "PROP_55133413",
           "label": "UpgradeButton",
           "type": "Entity",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "type": "SceneEditEntity",
+            "disabled": true
+          }
         },
         {
           "propID": 100017,
           "name": "PROP_30108253",
           "label": "UpgradeButtonDisplayText",
           "type": "Entity",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "type": "SceneEditEntity",
+            "disabled": true
+          }
         }
       ]
     }
   }
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}

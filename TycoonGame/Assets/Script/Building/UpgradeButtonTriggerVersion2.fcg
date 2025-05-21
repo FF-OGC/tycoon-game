@@ -4,51 +4,56 @@ import "Physics.fcc" as Physics
 import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
 import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 
-import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler 
 import "../Building/BuildingHandler.fcg" as BuildingHandler
 
+graph UpgradeButtonTrigger {
+    //Executed when entity is created
 
-graph UnlockButtonTrigger {
+
     _parentEntity entity
+    _parentCurrentLevel int
     _parentConfigFile CsvID
-
-    _modelEntity entity
-    _upgradeButtonEntity entity
-    _unlockButtonEntity entity
-    
-    triggerFlag bool = true
 
 
     event OnEntityEnter(target entity<Entity>) {
-    if triggerFlag  {
-        
+        //Init 
         if _parentEntity == nil {
             _parentEntity = GetParent(GetParent(thisEntity))
         }
 
+        //Get player info
         var _playerEnter = target<Player>
         var _playerMoney = _playerEnter<PlayerEconomy>.playerMoney
 
-        var _unlockCost = _parentEntity<BuildingHandler>.unlockCost
-        
-        if _playerMoney[0] >= _unlockCost {
+        var _upgradeCost = _parentEntity<BuildingHandler>.upgradeCost
+
+
+        if _playerMoney[0] >= _upgradeCost {
             //Subtract money
-            _playerEnter<PlayerEconomy>.subtractAmount(_unlockCost)
+            _playerEnter<PlayerEconomy>.subtractAmount(_upgradeCost)
 
-            DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"})
+            //Upgrade
+            _parentEntity<BuildingHandler>.upgradeBuilding()
 
+            
+
+            //SFX
             DispatchEvent(PLAY_SFX,_playerEnter,List<object>{"kepngan"})
 
-            //Logic running
-            _parentEntity<BuildingHandler>.unlockBuilding()
-            
-            triggerFlag = false            
+
+            //UPGRADE UI
+            if _upgradeCost == -1 {
+                DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"}) // MAX LEVEL REACH UI  
+            } else {
+                DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"})
+            }
+
         } else{
             DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"NotEnoughMoneyUI"})
         }
     }
 
-    }
 
     event OnEntityExit(target entity<Entity>) {
         LogInfo("i'm leaving byebye")
