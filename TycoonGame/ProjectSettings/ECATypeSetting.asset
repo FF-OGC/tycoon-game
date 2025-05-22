@@ -157,30 +157,6 @@
       "typeID": 100003,
       "PropDefines": [
         {
-          "propID": 100005,
-          "name": "PROP_83680017",
-          "label": "Model",
-          "type": "Entity",
-          "value": null,
-          "disabledType": true,
-          "param": {
-            "type": "SceneEditEntity",
-            "disabled": true
-          }
-        },
-        {
-          "propID": 100007,
-          "name": "PROP_59410639",
-          "label": "ValueDisplayText",
-          "type": "Entity",
-          "value": null,
-          "disabledType": true,
-          "param": {
-            "type": "SceneEditEntity",
-            "disabled": true
-          }
-        },
-        {
           "propID": 100008,
           "name": "PROP_77196415",
           "label": "UnlockButton",
@@ -227,8 +203,42 @@
             "type": "SceneEditEntity",
             "disabled": true
           }
+        },
+        {
+          "propID": 100005,
+          "name": "PROP_83680017",
+          "label": "Model",
+          "type": "Entity",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "type": "SceneEditEntity",
+            "disabled": true
+          }
+        },
+        {
+          "propID": 100007,
+          "name": "PROP_59410639",
+          "label": "ValueDisplayText",
+          "type": "Entity",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "type": "SceneEditEntity",
+            "disabled": true
+          }
         }
       ]
+    },
+    "CustomComponent86559839": {
+      "label": "ChildrenScriptAdd",
+      "name": "CustomComponent86559839",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100018,
+      "PropDefines": []
     }
   }
 }

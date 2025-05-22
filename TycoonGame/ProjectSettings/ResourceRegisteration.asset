@@ -70,7 +70,8 @@
             },
             "fileType": "ugcscript"
           },
-          "scriptName": "PlayerDefaultHUD"
+          "scriptName": "PlayerDefaultHUD",
+          "children": []
         },
         {
           "refer": {
@@ -81,7 +82,8 @@
             },
             "fileType": "ugcscript"
           },
-          "scriptName": "PlayerCustomUI"
+          "scriptName": "PlayerCustomUI",
+          "children": []
         },
         {
           "refer": {
@@ -92,7 +94,20 @@
             },
             "fileType": "ugcscript"
           },
-          "scriptName": "CSVReadingHandler"
+          "scriptName": "CSVReadingHandler",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "x7x5tz4pcs-mayukpmo-chr3msohbca",
+            "filePath": "Assets\\Script\\Building\\RewardLogic\\HitToGetMoney.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "HitToGetMoney",
+          "children": []
         }
       ]
     },
@@ -120,7 +135,8 @@
             },
             "fileType": "sound"
           },
-          "scriptName": "thamngan"
+          "scriptName": "thamngan",
+          "children": []
         },
         {
           "refer": {
@@ -131,7 +147,8 @@
             },
             "fileType": "sound"
           },
-          "scriptName": "kepngan"
+          "scriptName": "kepngan",
+          "children": []
         }
       ]
     },
@@ -171,7 +188,8 @@
             },
             "fileType": "csv"
           },
-          "scriptName": "test"
+          "scriptName": "test",
+          "children": []
         },
         {
           "refer": {
@@ -182,7 +200,8 @@
             },
             "fileType": "csv"
           },
-          "scriptName": "ID1Forrest"
+          "scriptName": "ID1Forrest",
+          "children": []
         }
       ]
     },
@@ -205,4 +224,4 @@
   },
   "children": []
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
