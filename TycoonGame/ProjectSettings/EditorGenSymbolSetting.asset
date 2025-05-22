@@ -4,11 +4,16 @@
   },
   "_entityId": "d18tdDBW",
   "GenSymbol": {
-    "Components": {},
+    "Components": {
+      "CustomComponent36346074": {
+        "label": "BuildingUnlock",
+        "props": {}
+      }
+    },
     "Events": {},
     "Graphs": {},
     "Enums": {}
   },
   "children": []
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}

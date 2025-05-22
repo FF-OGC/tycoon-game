@@ -239,6 +239,42 @@
       "ecaScripts": [],
       "typeID": 100018,
       "PropDefines": []
+    },
+    "CustomComponent36346074": {
+      "label": "BuildingUnlock",
+      "name": "CustomComponent36346074",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100019,
+      "PropDefines": [
+        {
+          "propID": 100022,
+          "name": "PROP_41702014",
+          "label": "ListLevelUnlock",
+          "type": "ListT_Int",
+          "value": {
+            "type": "ListT_Int",
+            "value": []
+          },
+          "disabledType": true,
+          "param": {
+            "compType": "InputNumberEditor",
+            "widgetParam": {
+              "min": -2147483648,
+              "max": 2147483647
+            }
+          }
+        },
+        {
+          "propID": 100023,
+          "name": "PROP_17317274",
+          "label": "ListBuildingUnlock",
+          "type": "ListT_Entity",
+          "value": null
+        }
+      ]
     }
   }
 }

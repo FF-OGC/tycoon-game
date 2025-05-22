@@ -114,8 +114,8 @@
       "fileType": "ugcscript"
     },
     {
-      "fileId": "726g0fpcil-maw1nviz-ls83oft58vs",
-      "filePath": "Assets\\ECA\\Player (2).eca",
+      "fileId": "1ybz886zj-maz9lhlh-y2nl101e6p",
+      "filePath": "Assets\\ECA\\Player (3).eca",
       "_tag": {
         "type": "GFileRefer"
       },
@@ -320,7 +320,10 @@
     "EnableAOIFilter": false,
     "playerskill_autopathbomb_cd_percent": 100,
     "CameraViewingAngleRestrictionType": 0,
-    "receive_damage": 100
+    "receive_damage": 100,
+    "playerskill_cityhero_cd_percent": 100,
+    "playerskill_electricgirl_cd_percent": 100,
+    "playerskill_auroraboy_cd_percent": 100
   },
   "physicsData": {
     "ECCTParam_Gravity": {
@@ -349,4 +352,4 @@
   "modOpen": true,
   "showSwitch": false
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}

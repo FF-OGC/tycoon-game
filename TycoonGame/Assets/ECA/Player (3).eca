@@ -1,0 +1,51 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "v",
+        "id": "bHZPX4dbd?ND,Wamgxc#",
+        "x": -696,
+        "y": 248,
+        "extraState": {
+          "X": 751,
+          "L": [
+            1,
+            2
+          ],
+          "O": [
+            "",
+            ""
+          ],
+          "T": "HasComponent",
+          "OT": null
+        },
+        "inputs": {
+          "P1": {
+            "shadow": {
+              "type": "tys",
+              "id": "#uGbL:L@Q%o8+5C}/Rz{",
+              "extraState": "entity"
+            }
+          },
+          "P2": {
+            "shadow": {
+              "type": "tyc",
+              "id": "Cnlh^G58-4HaXKv$^Hec",
+              "fields": {
+                "T": "Component"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "graphData": {
+    "ownerType": "Entity",
+    "componentTypes": "Player",
+    "isStatic": false,
+    "platform": 2
+  }
+}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
