@@ -303,9 +303,34 @@
           "name": "PROP_92770521",
           "label": "Script",
           "type": "GraphID",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
         }
       ]
+    },
+    "CustomComponent81469950": {
+      "label": "SpecialEventAfterUpgraded",
+      "name": "CustomComponent81469950",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100025,
+      "PropDefines": []
+    },
+    "CustomComponent78352977": {
+      "label": "SpecialEventAfterAvailable",
+      "name": "CustomComponent78352977",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100026,
+      "PropDefines": []
     }
   }
 }

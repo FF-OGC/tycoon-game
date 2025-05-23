@@ -1,0 +1,39 @@
+
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Workflow.fcc" as Workflow
+import "Avatar.fcc" as Avatar
+import "Playable.fcc" as Playable
+import "Physics.fcc" as Physics
+import "Math.fcc" as Math
+import "Hud.fcc" as Hud
+import "Player.fcc" as Player
+
+import "../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
+
+graph Hint {
+    targetX float
+    targetZ float
+    _followEntity entity
+
+    event OnAwake(){
+        SetActive( thisEntity, false)
+    }
+
+    event OnUpdate() {
+        var entityPosition =  thisEntity<Transform>.Position
+        thisEntity<Transform>.Rotation =  Vector3{90, ATan2(targetX- entityPosition.X ,targetZ -  entityPosition.Z ),0 } 
+    }
+
+
+    func SetHintTarget(x float, z float) {
+        if _followEntity == nil {
+            CreateFollow(thisEntity<Entity>, PlayerStaticInformation.playerHost ,Vector3{0, 0.3, 0},CoordinateSystemType.WorldPosition, out var followEntity,true)
+            _followEntity = followEntity
+        }
+
+        targetX = x 
+        targetZ = z
+    }
+
+}

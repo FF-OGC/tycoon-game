@@ -1,0 +1,39 @@
+
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Workflow.fcc" as Workflow
+import "Avatar.fcc" as Avatar
+import "Playable.fcc" as Playable
+import "Physics.fcc" as Physics
+import "Math.fcc" as Math
+import "Hud.fcc" as Hud
+import "Player.fcc" as Player
+
+import "../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
+import "../Hint/Hint.fcg" as Hint
+
+
+static graph HintHandler {
+    hintBlock entity
+
+   
+
+    func showHintAt (x float, z float){
+        LogInfo("is init ?")
+        if hintBlock == nil {
+            hintBlock = EResSceneNewScene.Hint
+        } 
+        SetActive(hintBlock<Entity>, true)
+        LogInfo("hintBlock" + hintBlock)
+
+        hintBlock<Hint>.SetHintTarget(x,z)
+    }
+
+    func offHint (){
+        if hintBlock == nil {
+            hintBlock = EResSceneNewScene.Hint
+        } 
+        SetActive(hintBlock<Entity>, false)
+    }
+
+}

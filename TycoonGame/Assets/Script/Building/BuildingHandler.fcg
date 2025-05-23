@@ -173,11 +173,8 @@ graph Script {
 
 
     func levelUp(){
-        LogInfo("before " + thisEntity<Building>.CurrentLevel)
         thisEntity<Building>.CurrentLevel += 1
         updateCurrentLevel()
-        LogInfo("thisEntity<Building>.CurrentLevel " + thisEntity<Building>.CurrentLevel)
-
     }
 
     func unlockBuilding(){
@@ -227,12 +224,17 @@ graph Script {
 
         
         if HasComponent(thisEntity,typeof(BuildingUnlock)) {
-            checkBuildingUnlock()
+            checkBuildingAvailable()
         }
+
+        if HasComponent(thisEntity,typeof(SpecialEventAfterUpgraded)) {
+            DispatchEvent(UPGRADE_EVENT,thisEntity,List<object>{})
+        }
+
 
     }
 
-    func checkBuildingUnlock(){
+    func checkBuildingAvailable(){
             if List.Contain(buildingUnlockLevelList,currentLevel){
                 var index = IndexOf(buildingUnlockLevelList, currentLevel)
                 var _unlockedBuilding = buildingUnlockBuildingList[index]

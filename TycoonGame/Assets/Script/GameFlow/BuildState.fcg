@@ -11,8 +11,7 @@ graph BuildState {
    
     event OnPhaseStart(phase entity<Phase>) {
         if phase<Phase>.Index == EPhase.Build {
-            LogInfo("super")
-            GlobalBuildingManager.gameBuilt()
+            //GlobalBuildingManager.gameBuilt()
         }
     }
 }
