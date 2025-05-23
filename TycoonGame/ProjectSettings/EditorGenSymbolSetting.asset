@@ -8,6 +8,10 @@
       "CustomComponent36346074": {
         "label": "BuildingUnlock",
         "props": {}
+      },
+      "CustomComponent14113027": {
+        "label": "SpecialEventAfterUnlocked",
+        "props": {}
       }
     },
     "Events": {},

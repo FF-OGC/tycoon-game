@@ -60,6 +60,8 @@ graph Script {
         GlobalBuildingManager.BuildingLevelList[buildingID] = currentLevel 
 
         initBuildingUnlock()
+
+        setActiveGameStart()
     }
 
     func initBuildingUnlock (){
@@ -197,7 +199,11 @@ graph Script {
             updateUpgradeCost()
             updateUpgradeDisplay()
         }
-        
+
+        if HasComponent(thisEntity,typeof(SpecialEventAfterUnlocked)) {
+            LogInfo(" super")
+            DispatchEvent(UNLOCK_EVENT,thisEntity,List<object>{})
+        }
 
         SetActive(unlockButton,false)
         SetActive(unlockDisplay,false)

@@ -238,7 +238,20 @@
       ],
       "ecaScripts": [],
       "typeID": 100018,
-      "PropDefines": []
+      "PropDefines": [
+        {
+          "propID": 100020,
+          "name": "PROP_42917750",
+          "label": "SDA",
+          "type": "GraphID",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
+        }
+      ]
     },
     "CustomComponent36346074": {
       "label": "BuildingUnlock",
@@ -272,6 +285,24 @@
           "name": "PROP_17317274",
           "label": "ListBuildingUnlock",
           "type": "ListT_Entity",
+          "value": null
+        }
+      ]
+    },
+    "CustomComponent14113027": {
+      "label": "SpecialEventAfterUnlocked",
+      "name": "CustomComponent14113027",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100021,
+      "PropDefines": [
+        {
+          "propID": 100024,
+          "name": "PROP_92770521",
+          "label": "Script",
+          "type": "GraphID",
           "value": null
         }
       ]

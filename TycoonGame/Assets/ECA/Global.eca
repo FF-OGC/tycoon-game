@@ -1,7 +1,7 @@
 {
   "graphData": {
     "ownerType": "Entity",
-    "componentTypes": "Player",
+    "componentTypes": "Global",
     "isStatic": false,
     "platform": 2
   }

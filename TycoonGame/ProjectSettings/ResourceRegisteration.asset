@@ -52,7 +52,25 @@
     },
     "scene": {
       "id": "scene",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "0nc7oibb2mk9-mazd06lx-7qeji5y6aj8",
+            "filePath": "Assets\\Scene\\New Scene.scene",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "scene"
+          },
+          "scriptName": "NewScene",
+          "children": [
+            {
+              "id": "Uj4GhrDp",
+              "scriptName": "Wall1BrokenSet"
+            }
+          ]
+        }
+      ]
     },
     "prefab": {
       "id": "prefab",
