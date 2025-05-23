@@ -47,12 +47,54 @@
           },
           "scriptName": "UpgradeSuccessFully",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "y15qy55wo8-mb0lucdv-lfosd6i76dd",
+            "filePath": "Assets\\UI\\Hint\\HintDirection.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "HintDirection",
+          "children": []
         }
       ]
     },
     "scene": {
       "id": "scene",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "0nc7oibb2mk9-mazd06lx-7qeji5y6aj8",
+            "filePath": "Assets\\Scene\\New Scene.scene",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "scene"
+          },
+          "scriptName": "NewScene",
+          "children": [
+            {
+              "id": "Uj4GhrDp",
+              "scriptName": "Wall1BrokenSet"
+            },
+            {
+              "id": "v53eZgHt",
+              "scriptName": "ID1Wood"
+            },
+            {
+              "id": "a1nq93uF",
+              "scriptName": "ID2Fence"
+            },
+            {
+              "id": "vHdJ0tDa",
+              "scriptName": "Hint"
+            }
+          ]
+        }
+      ]
     },
     "prefab": {
       "id": "prefab",
@@ -174,7 +216,20 @@
     },
     "emoteskin": {
       "id": "emoteskin",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "Emote_909000008",
+            "filePath": "lib://ffSkin/ffEmote/909000008",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "emoteskin"
+          },
+          "scriptName": "shoot",
+          "children": []
+        }
+      ]
     },
     "csv": {
       "id": "csv",

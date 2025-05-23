@@ -104,38 +104,38 @@
       "version": 45,
       "key": "signal_87245577"
     },
-    "signal_48864762": {
-      "name": "init",
+    "signal_46975352": {
+      "name": "UNLOCK_EVENT",
       "eventType": 0,
       "enitityType": "Entity",
-      "typeID": 100005,
+      "typeID": 100008,
       "props": [],
-      "propCount": 0,
+      "propCount": 1,
       "apiTargetV2": "both",
       "version": 45,
-      "key": "signal_48864762"
+      "key": "signal_46975352"
     },
-    "signal_93796132": {
-      "name": "DISPLAY_TEXT_INIT",
+    "signal_23581014": {
+      "name": "UPGRADE_EVENT",
       "eventType": 0,
       "enitityType": "Entity",
-      "typeID": 100006,
+      "typeID": 100010,
       "props": [],
       "propCount": 0,
       "apiTargetV2": "both",
       "version": 45,
-      "key": "signal_93796132"
+      "key": "signal_23581014"
     },
-    "signal_93385038": {
-      "name": "UPDATE_DISPLAY_TEXT",
+    "signal_46575364": {
+      "name": "AVAILABLE_EVENT",
       "eventType": 0,
       "enitityType": "Entity",
-      "typeID": 100007,
+      "typeID": 100009,
       "props": [],
       "propCount": 0,
       "apiTargetV2": "both",
       "version": 45,
-      "key": "signal_93385038"
+      "key": "signal_46575364"
     }
   },
   "customName": {
@@ -144,10 +144,10 @@
     "PLAY_SFX_DURATION": "signal_12921341",
     "PLAY_BG_MUSIC": "signal_42513067",
     "PLAY_SFX_VOLUME_DURATION": "signal_87245577",
-    "init": "signal_48864762",
-    "DISPLAY_TEXT_INIT": "signal_93796132",
-    "UPDATE_DISPLAY_TEXT": "signal_93385038"
+    "UNLOCK_EVENT": "signal_46975352",
+    "UPGRADE_EVENT": "signal_23581014",
+    "AVAILABLE_EVENT": "signal_46575364"
   },
   "children": []
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}

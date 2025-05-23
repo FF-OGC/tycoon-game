@@ -1,0 +1,20 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import "../BuildingHandler.fcg" as BuildingHandler
+import "../../Hint/HintHandler.fcg" as HintHandler
+graph UEID2 {
+    //Executed when entity is created
+
+    event UNLOCK_EVENT() {
+        var brokenwall = EResSceneNewScene.Wall1BrokenSet
+        LogInfo("entity " + brokenwall)
+        SetActive(brokenwall<Entity>,false)
+
+        var id1 = EResSceneNewScene.ID1Wood
+        id1<BuildingHandler>.setActiveUpgrade(true)
+
+        HintHandler.offHint()
+
+    }
+}

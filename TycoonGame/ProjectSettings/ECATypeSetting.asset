@@ -238,6 +238,98 @@
       ],
       "ecaScripts": [],
       "typeID": 100018,
+      "PropDefines": [
+        {
+          "propID": 100020,
+          "name": "PROP_42917750",
+          "label": "SDA",
+          "type": "GraphID",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
+        }
+      ]
+    },
+    "CustomComponent36346074": {
+      "label": "BuildingUnlock",
+      "name": "CustomComponent36346074",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100019,
+      "PropDefines": [
+        {
+          "propID": 100022,
+          "name": "PROP_41702014",
+          "label": "ListLevelUnlock",
+          "type": "ListT_Int",
+          "value": {
+            "type": "ListT_Int",
+            "value": []
+          },
+          "disabledType": true,
+          "param": {
+            "compType": "InputNumberEditor",
+            "widgetParam": {
+              "min": -2147483648,
+              "max": 2147483647
+            }
+          }
+        },
+        {
+          "propID": 100023,
+          "name": "PROP_17317274",
+          "label": "ListBuildingUnlock",
+          "type": "ListT_Entity",
+          "value": null
+        }
+      ]
+    },
+    "CustomComponent14113027": {
+      "label": "SpecialEventAfterUnlocked",
+      "name": "CustomComponent14113027",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100021,
+      "PropDefines": [
+        {
+          "propID": 100024,
+          "name": "PROP_92770521",
+          "label": "Script",
+          "type": "GraphID",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
+        }
+      ]
+    },
+    "CustomComponent81469950": {
+      "label": "SpecialEventAfterUpgraded",
+      "name": "CustomComponent81469950",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100025,
+      "PropDefines": []
+    },
+    "CustomComponent78352977": {
+      "label": "SpecialEventAfterAvailable",
+      "name": "CustomComponent78352977",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100026,
       "PropDefines": []
     }
   }

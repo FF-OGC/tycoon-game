@@ -1,0 +1,19 @@
+{
+  "_tag": {
+    "type": "UGCPlayerEntity"
+  },
+  "_entityId": "NRF1Mhi6",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "gender": 0,
+  "avatarRef": null,
+  "disableOtherAnimation": false,
+  "scale": 1.5,
+  "_preAnimClip": null,
+  "playerActionMap": {}
+}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}

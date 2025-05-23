@@ -1,0 +1,20 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+graph UEID1 {
+    //Executed when entity is created
+    count int
+    event OnAwake() {
+        count = 0 
+    }
+
+
+    event UNLOCK_EVENT() {
+        count ++
+        LogInfo(count)
+        while true {
+            WaitForMillisecond(2000)
+            LogInfo("I'M still here")
+        }
+    }
+}

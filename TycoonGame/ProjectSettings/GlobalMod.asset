@@ -71,9 +71,33 @@
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "l7w7by2ih1q-maz6uqx5-m4tma4zc4u",
+      "filePath": "Assets\\Script\\Building\\GlobalBuildingManager.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "jes2s62jwpq-maz883xq-cgkseiev7xb",
+      "filePath": "Assets\\Script\\GameFlow\\BuildState.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "p065vkubqr8-mb07llaq-yj7wda6mq8",
+      "filePath": "Assets\\ECA\\Global.eca",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "eca"
     }
   ],
   "_entityName": "T_43_YU_WS_MODULE_GLOBAL",
   "showSwitch": false
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
