@@ -16,8 +16,6 @@ graph Script {
     }
 
     event OnHitByBullet(weapon entity<Weapon>, hitPosition Vector3) {
-
-        LogInfo("siuuu")
         if parentEntity == nil {
             parentEntity = GetParent(GetParent(GetParent(thisEntity)))
         }

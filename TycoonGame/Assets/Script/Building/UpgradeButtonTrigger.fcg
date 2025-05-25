@@ -56,6 +56,5 @@ graph UpgradeButtonTrigger {
 
 
     event OnEntityExit(target entity<Entity>) {
-        LogInfo("i'm leaving byebye")
     }
 }

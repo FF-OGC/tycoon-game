@@ -9,24 +9,29 @@ graph Script {
     //Executed when entity is created
     playerMoney List<int> = List<int>{}
 
+    
+
     event OnAwake() {
+        WaitForNextFrame()
         playerMoney = List<int>{999}
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
+
     }
 
     func addAmount (amount int){
-        globalEntity<BigNumberHandler>.addNumber(playerMoney, List<int>{amount} )
-        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
+        playerMoney = BigNumberHandler.addNumber(playerMoney, List<int>{amount} )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
         LogInfo("_playerMoney" + playerMoney)
     }
 
     func subtractAmount(amount int){
-        globalEntity<BigNumberHandler>.subtractNumber(playerMoney, List<int>{amount} )
-        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
+        playerMoney = BigNumberHandler.subtractNumber(playerMoney, List<int>{amount} )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
         LogInfo("_playerMoney" + playerMoney)
     }
 
     func multiplyAmount (amount float){
-        globalEntity<BigNumberHandler>.multiplierNumber(playerMoney, amount )
-        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
+        BigNumberHandler.multiplierNumber(playerMoney, amount )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
     }
 }

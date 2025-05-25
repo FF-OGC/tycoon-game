@@ -1,4 +1,32 @@
 {
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "n2s",
+        "id": ";PT%)[TXKx1!HTY7`HYk",
+        "x": -432,
+        "y": -137,
+        "extraState": {
+          "TO": "G"
+        },
+        "fields": {
+          "TO": "G"
+        },
+        "inputs": {
+          "V": {
+            "shadow": {
+              "type": "ipn",
+              "id": "NUoQqtiOs#=+n^n.3j*T",
+              "fields": {
+                "V": "0"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "graphData": {
     "ownerType": "Entity",
     "componentTypes": "Player",

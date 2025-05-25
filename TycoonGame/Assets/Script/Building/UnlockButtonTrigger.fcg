@@ -51,6 +51,5 @@ graph UnlockButtonTrigger {
     }
 
     event OnEntityExit(target entity<Entity>) {
-        LogInfo("i'm leaving byebye")
     }
 }

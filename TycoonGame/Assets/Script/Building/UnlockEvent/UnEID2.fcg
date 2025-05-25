@@ -8,7 +8,6 @@ graph UEID2 {
 
     event UNLOCK_EVENT() {
         var brokenwall = EResSceneNewScene.Wall1BrokenSet
-        LogInfo("entity " + brokenwall)
         SetActive(brokenwall<Entity>,false)
 
         var id1 = EResSceneNewScene.ID1Wood

@@ -2,6 +2,10 @@ import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 import "Hud.fcc" as Hud
 import "Workflow.fcc" as Workflow
+import "Strings.fcc" as Strings
+import "List.fcc" as List
+import "Convert.fcc" as Convert
+
 
 graph PlayerMoneyUI {
     //Executed when entity is created
@@ -11,19 +15,54 @@ graph PlayerMoneyUI {
 
     
     event OnPhaseStart(phase entity<Phase>) {
-        if !isInit{
+        if moneyUI == nil {
             init()
         }
     }
 
-    func init (){
-        isInit = true
-        CreateCustomUI(out var _moneyUI, thisEntity<Player>, EResUI.PlayerMoneyUI)
-        displayAmountUI = GetWidgetFromCustomUI(thisEntity<Player>,_moneyUI,EResUIPlayerMoneyUI.DisplayAmount)
-        displayAmountUI<UIWidgetLabel>.Content = ""
+    event OnAwake() {
+        WaitForNextFrame()
+        init()
     }
 
-    func UISetDisplayMoney(amount int){
-        displayAmountUI<UIWidgetLabel>.Content = amount 
+    func init (){
+        if moneyUI == nil {       
+        CreateCustomUI(out var _moneyUI, thisEntity<Player>, EResUI.PlayerMoneyUI)
+        moneyUI = _moneyUI
+        displayAmountUI = GetWidgetFromCustomUI(thisEntity<Player>,_moneyUI,EResUIPlayerMoneyUI.DisplayAmount)
+        displayAmountUI<UIWidgetLabel>.Content = ""
+        }
     }
+
+    func UISetDisplayMoney(amount List<int>){
+        if moneyUI == nil {
+            init()
+        }
+        var display  = ConvertListNumToString(amount) 
+        displayAmountUI<UIWidgetLabel>.Content = display
+    }
+
+    func ConvertListNumToString(num List<int>) string {
+        LogInfo("input =" +num )
+        if List.Length(num) == 0 {
+            return "0"
+        }
+        var result string = NumToString(num[0],"") // first chunk as-is
+
+        for i = 1, List.Length(num), 1 {
+            var chunk int = num[i]
+
+            // Convert chunk to string with leading zeros if necessary
+            if chunk < 10 {
+                result = result + "00" + NumToString(chunk ,"")
+            } else if chunk < 100 {
+                result = result + "0" + NumToString(chunk ,"")
+
+            } else {
+                result = result + NumToString(chunk ,"")
+            }
+        }
+        return result
+    }
+
 }

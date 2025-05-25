@@ -4,55 +4,87 @@ import "Strings.fcc" as Strings
 import "Player.fcc" as Player
 import "List.fcc" as List
 import "Math.fcc" as Math
+import "Convert.fcc" as Convert
 
-graph BigNumberHandler {
+static graph BigNumberHandler {
 
-    func shortenNumber(num List<int>){
+// Converts an integer into a list of 3-digit chunks (e.g. 123456789 -> {123, 456, 789})
+    func convertIntToList(num int) List<int> {
+        var result List<int> = List<int>{}
+
+        while num > 0 {
+            var chunk int = num % 1000
+            Append(result, chunk)
+            num = num / 1000
+        }
+
+        List.Reverse(result)
+        return result
+    }
+
+// Ensures each element in the list is less than 1000, carrying over overflow to the next index
+    func shortenNumber(num List<int>) {
+
+        Reverse(num)
         for i = 0, List.Length(num), 1 {
-            if num[i]> 999 {
-                if i== List.Length(num) - 1 && num[List.Length(num) - 1 ] >0{
-                    Append(num,num[i] / 1000)
-                } else {
-                    num[i+1] = num[i+1] + num[i] / 1000
-                }
+            if num[i] > 999 {
+                var carry int = num[i] / 1000
                 num[i] = num[i] % 1000
+
+                if i == List.Length(num) - 1 {
+                    Append(num, carry)
+                } else {
+                    num[i + 1] = num[i + 1] + carry
+                }
             }
         }
+        Reverse(num)
     }
-    
-    func cleanNumber(num List<int>){
-        if (List.Length(num) == 0 ){
-            return
-        }
 
-        while num[List.Length(num)-1] == 0{
-            List.RemoveAt(num,List.Length(num)-1)
-            if (List.Length(num) == 0 ){
-                return
-            }
+// Removes trailing zeros from the list (e.g. {123, 0, 0} -> {123})
+    func cleanNumber(num List<int>) {
+        while List.Length(num) > 0 && num[List.Length(num) - 1] == 0 {
+            List.RemoveAt(num, List.Length(num) - 1)
         }
     }
 
-    
-    func addNumber(num1 List<int>, num2 List<int>) {
+    func addNumber(num1 List<int>, num2 List<int>) List<int>{
+        var result List<int> = List<int>{}
+        //Reverse for calculation
+        Reverse(num1)
+        Reverse(num2)
         fixBlankList(num1)
         for i = 0, getMaxLength2Num(num1,num2), 1 {
-            num1[i] = num1[i] + num2[i]
+            Append(result,num1[i] + num2[i] )
         }
-        shortenNumber(num1)
+        //Reverse finish
+        Reverse(num1)
+        Reverse(num2)
+        Reverse(result)
+        shortenNumber(result)
+        return result
     }   
 
+    func subtractNumber(num1 List<int>, num2 List<int>) List<int>{
+        var result List<int> = List<int>{}
+        //Reverse for calculation
+        var n1 List<int> = List.Clone(num1) as List<int>
+        var n2 List<int> = List.Clone(num2) as List<int>
+        Reverse(n1)
+        Reverse(n2)
 
-    func subtractNumber(num1 List<int>, num2 List<int>) {
-        for i = 0, List.Length(num1), 1 {
-            if num1[i] < num2[i]{
-                num1[i] =  1000 - num2[i] + num1[i]
-                num1[i+1] = num1[i+1]- 1
+        for i = 0, List.Length(n1), 1 {
+            if n1[i] < n2[i]{
+                n1[i] =  1000 - n2[i] + n1[i]
+                n1[i+1] = n1[i+1]- 1
             } else {
-                num1[i] = num1[i] - num2[i]
+                n1[i] = n1[i] - n2[i]
             }
         }
-        shortenNumber(num1)
+        Reverse(n1)
+
+        shortenNumber(n1)
+        return n1
     }
 
     func multiplierNumber (num1 List<int>, multiplier float) {
@@ -75,5 +107,5 @@ graph BigNumberHandler {
             return List.Length(num1) 
         }
     }
-    
+
 }

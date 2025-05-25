@@ -120,6 +120,14 @@
         "type": "GFileRefer"
       },
       "fileType": "eca"
+    },
+    {
+      "fileId": "crw2rhtpee5-mb3flfzi-i461kfztp7",
+      "filePath": "Assets\\Script\\Script.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "avatarInfo": null,

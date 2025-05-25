@@ -11,7 +11,6 @@ graph PlayerCustomUI {
     }
 
     event SHOW_CUSTOMUI(ereskey object) {
-        LogInfo("reeraearsa")
         CreateCustomUI(out var _customUI,thisEntity<Player>,Res.UI[ereskey as EResKeyUI])
         _customUI<CustomUI>.IsVisible = true
         WaitForMillisecond(3000)

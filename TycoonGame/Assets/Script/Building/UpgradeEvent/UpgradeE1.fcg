@@ -12,7 +12,6 @@ graph UpE1 {
 
     event UPGRADE_EVENT() {
         if thisEntity<BuildingHandler>.currentLevel == 2 {
-            LogInfo("this is it")
             thisEntity<BuildingHandler>.setActiveUpgrade(false)
             var id2 = EResSceneNewScene.ID2Fence
 

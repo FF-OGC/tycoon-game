@@ -1,0 +1,24 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import "./Economy/BigNumberHandler.fcg" as BigNumberHandler
+import "Player.fcc" as Player
+import "Convert.fcc" as Convert
+
+graph Script {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event OnJump() {
+        var string1 string = "23213"
+        var string2 string = "23"
+        var constr = string1 + string2
+        LogInfo("connect = " +constr )
+        var test int = 123
+        LogInfo("NumToString(test,)" + ToString(test))
+    }
+
+
+}

@@ -11,10 +11,8 @@ graph UEID1 {
 
     event UNLOCK_EVENT() {
         count ++
-        LogInfo(count)
         while true {
             WaitForMillisecond(2000)
-            LogInfo("I'M still here")
         }
     }
 }
