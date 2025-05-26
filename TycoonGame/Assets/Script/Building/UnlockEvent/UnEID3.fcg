@@ -2,18 +2,20 @@ import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 import "../BuildingHandler.fcg" as BuildingHandler
 import "Collection.fcc" as Collection
+import "../../Hint/HintHandler.fcg" as HintHandler
 
 graph UEID3 {
     //Executed when entity is created
 
     event UNLOCK_EVENT() {
+        HintHandler.offHint()
         var modelList = thisEntity<BuildingHandler>.model
+        DispatchEvent(START_IDLE, thisEntity, List<object>{})
         while true{
             for key, child in GetChildren(modelList){
                 PlayEmote(child<NPC>, EResEmote.shoot)
             }
             WaitForMillisecond(5000)
-
         }
     }
 }

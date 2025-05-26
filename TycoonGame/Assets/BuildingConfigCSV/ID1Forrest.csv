@@ -1,5 +1,5 @@
 LV,Value,UpgradeCost,Cooldown,SpecialRequirement
-int,int,int,int,string
+int,string,string,int,string
 1,1,10,0,none
 2,2,20,0,none
 3,3,30,0,none

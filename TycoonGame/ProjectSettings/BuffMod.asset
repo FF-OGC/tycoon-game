@@ -1,0 +1,17 @@
+{
+  "_tag": {
+    "type": "ff.buff",
+    "resourceId": "Buff"
+  },
+  "_entityId": "HSoNluzj",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "modOpen": true,
+  "modId": 12,
+  "_entityName": "Buff模组"
+}
+//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}

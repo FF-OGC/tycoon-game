@@ -17,11 +17,11 @@ graph UpE1 {
 
             var id2UnlockButton = id2<BuildingChildren>.UnlockButton
             var id2UnlockButtonPosition = id2UnlockButton<Transform>.Position
-            var x = id2UnlockButtonPosition.X
 
             HintHandler.showHintAt(id2UnlockButtonPosition.X,id2UnlockButtonPosition.Z)
 
-        } else if thisEntity<BuildingHandler>.currentLevel == 5{
+        } else if thisEntity<BuildingHandler>.currentLevel == 3{
+            HintHandler.offHint()
         }
 
 

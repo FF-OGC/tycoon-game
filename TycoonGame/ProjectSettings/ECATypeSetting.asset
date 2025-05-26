@@ -73,16 +73,13 @@
           }
         },
         {
-          "propID": 100014,
-          "name": "PROP_14176655",
+          "propID": 100027,
+          "name": "PROP_86206148",
           "label": "UnlockCost",
-          "type": "Int",
-          "value": 0,
-          "disabledType": true,
-          "param": {
-            "precision": 0,
-            "min": -2147483648,
-            "max": 2147483647
+          "type": "ListT_Int",
+          "value": {
+            "type": "ListT_Int",
+            "value": []
           }
         }
       ]

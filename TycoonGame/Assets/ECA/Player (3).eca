@@ -24,6 +24,98 @@
             }
           }
         }
+      },
+      {
+        "type": "v",
+        "id": "D`v9WUhrSzN1Xd{]X[8l",
+        "x": -227,
+        "y": -162,
+        "extraState": {
+          "X": 233,
+          "L": [
+            1,
+            2,
+            3
+          ],
+          "O": [
+            "",
+            "",
+            ""
+          ],
+          "T": "StrSub",
+          "OT": null
+        },
+        "inputs": {
+          "P1": {
+            "shadow": {
+              "type": "ipt",
+              "id": "FF)oOTtXydwb?W-~Sd,V",
+              "fields": {
+                "V": ""
+              }
+            }
+          },
+          "P2": {
+            "shadow": {
+              "type": "ipi",
+              "id": "jT-xx@@_]V^ce;GgQ]tk",
+              "fields": {
+                "V": 0
+              }
+            }
+          },
+          "P3": {
+            "shadow": {
+              "type": "ipi",
+              "id": "N+}%_|DQ*03KeXo:S1Xx",
+              "fields": {
+                "V": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "a",
+        "id": "H$RV(Ld!eZfC{^u*Y35K",
+        "x": -407,
+        "y": -73,
+        "extraState": {
+          "X": 532,
+          "L": [
+            1,
+            2,
+            3
+          ],
+          "O": [
+            "",
+            "o",
+            "o"
+          ],
+          "T": "String2Int",
+          "OT": null
+        },
+        "fields": {
+          "P2": {
+            "name": "Result",
+            "type": "Int"
+          },
+          "P3": {
+            "name": "Is Success",
+            "type": "Bool"
+          }
+        },
+        "inputs": {
+          "P1": {
+            "shadow": {
+              "type": "ipt",
+              "id": "P[?-B}(0#$IGMgp6B58Y",
+              "fields": {
+                "V": "123231"
+              }
+            }
+          }
+        }
       }
     ]
   },

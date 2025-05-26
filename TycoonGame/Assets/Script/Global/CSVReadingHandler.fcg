@@ -3,6 +3,7 @@ import "EditorGenLib.fcc" as EditorLib
 import "CSVData.fcc" as CSVData
 
 import Res from "EditorGenLib.fcc"
+import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 
 static graph CSVReadingHandler {
     //Executed when entity is created
@@ -16,24 +17,26 @@ static graph CSVReadingHandler {
         return _list
     }
 
-    func GetValueByLevel(keyCSV CsvID, level int) int{
+    func GetValueByLevel(keyCSV CsvID, level int) List<int>{
         var _list = GetInformation(keyCSV as CsvID, 1, level )
         if  _list[0] == nil {
             _list = GetInformation(keyCSV as CsvID, 1, level-1 )
         }
         
         var _index = BuildingConfigEnum.Value as int
-        return _list[_index] as int
+        var _result = BigNumberHandler.convertStringToList(_list[_index] as string)
+        return _result
     }
 
-    func GetUpgradeCostByLevel (keyCSV CsvID, level int) int{
+    func GetUpgradeCostByLevel (keyCSV CsvID, level int) List<int>{
         var _list = GetInformation(keyCSV as CsvID, 1, level )
         if _list[0] == nil {
              _list = GetInformation(keyCSV as CsvID, 1, level-1 )
         }
 
         var _index = BuildingConfigEnum.UpgradeCost as int
-        return _list[_index] as int
+        var _result = BigNumberHandler.convertStringToList(_list[_index] as string)
+        return _result
     }
 
     func GetCooldownByLevel (keyCSV CsvID, level int) int{

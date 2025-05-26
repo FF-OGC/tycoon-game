@@ -1,0 +1,21 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import "../../Hint/HintHandler.fcg" as HintHandler
+
+
+
+import "../BuildingHandler.fcg" as BuildingHandler
+
+
+graph AEID3 {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event AVAILABLE_EVENT() {
+        var pos = thisEntity<BuildingHandler>.unlockButton<Transform>.Position
+        HintHandler.showHintAt(pos.X,pos.Z)
+    }
+}

@@ -24,7 +24,5 @@ graph PlayerDefaultHUD {
         if !isInit{
             init()
         }
-
-
     }
 }

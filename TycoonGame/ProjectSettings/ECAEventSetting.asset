@@ -136,6 +136,17 @@
       "apiTargetV2": "both",
       "version": 45,
       "key": "signal_46575364"
+    },
+    "signal_24565928": {
+      "name": "START_IDLE",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100005,
+      "props": [],
+      "propCount": 0,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_24565928"
     }
   },
   "customName": {
@@ -146,7 +157,8 @@
     "PLAY_SFX_VOLUME_DURATION": "signal_87245577",
     "UNLOCK_EVENT": "signal_46975352",
     "UPGRADE_EVENT": "signal_23581014",
-    "AVAILABLE_EVENT": "signal_46575364"
+    "AVAILABLE_EVENT": "signal_46575364",
+    "START_IDLE": "signal_24565928"
   },
   "children": []
 }

@@ -1,0 +1,29 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import "../../Hint/HintHandler.fcg" as HintHandler
+import "../../Building/BuildingHandler.fcg" as BuildingHandler
+import "../PlayerStaticInformation.fcg" as PlayerStaticInformation
+import "../PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+import "../../Economy/BigNumberHandler.fcg" as BigNumberHandler
+
+
+graph HitTree {
+    isRun bool
+    //Executed when entity is created
+    event OnAwake() {
+        WaitForNextFrame()
+        isRun = true
+        var _player = PlayerStaticInformation.playerHost
+        var id1 = EResSceneNewScene.ID1Wood
+        var id1ModelPos = id1<BuildingHandler>.model<Transform>.Position
+        HintHandler.showHintAt(id1ModelPos.X,id1ModelPos.Z)
+
+        while true {
+            WaitForMillisecond(3000)
+            if BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney, List<int>{2}) ==1 {
+                HintHandler.offHint()
+            }  
+        }
+    }
+}

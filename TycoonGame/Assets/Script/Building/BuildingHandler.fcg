@@ -8,6 +8,7 @@ import "Workflow.fcc" as Workflow
 
 import "../Building/GlobalBuildingManager.fcg" as GlobalBuildingManager
 import "../Building/BuildingHandler.fcg" as BuildingHandler
+import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 
 import "List.fcc" as List
 
@@ -17,7 +18,7 @@ graph Script {
 
     buildingID int
     currentLevel int 
-    unlockCost int
+    unlockCost List<int>
     buildingType BuildingTypeEnum
 
     model entity
@@ -30,8 +31,8 @@ graph Script {
     buildingUnlockLevelList List<int> 
     buildingUnlockBuildingList List<entity> 
     
-    value int
-    upgradeCost int 
+    value List<int> 
+    upgradeCost List<int> 
     cooldown int
 
     event OnAwake() {
@@ -41,7 +42,7 @@ graph Script {
     async func init (){
         buildingID = thisEntity<Building>.ID
         currentLevel = thisEntity<Building>.CurrentLevel
-        unlockCost = thisEntity<Building>.UnlockCost
+        unlockCost = thisEntity<Building>.UnlockCost as List<int>
         buildingType = thisEntity<Building>.Type
 
         configFile = thisEntity<BuildingConfig>.ConfigFile
@@ -132,13 +133,13 @@ graph Script {
     }
 
     func updateUnlockDisplay (){
-        var _displayString =  "UNLOCK: " +  unlockCost
+        var _displayString =  "UNLOCK: " +  BigNumberHandler.ConvertListNumToString(unlockCost)
         unlockDisplay<Text>.Content = _displayString
     }
 
     func updateUpgradeDisplay (){
         updateUpgradeCost()
-        var _displayString = "UPGRADE COST: " + upgradeCost
+        var _displayString = "UPGRADE COST: " +  BigNumberHandler.ConvertListNumToString(upgradeCost)
         upgradeDisplay<Text>.Content = _displayString
     }
 
@@ -147,9 +148,9 @@ graph Script {
         var _displayString string
 
         if buildingType == BuildingTypeEnum.Action {
-            _displayString =  value + " Per hit"
+            _displayString = BigNumberHandler.ConvertListNumToString(value)   + " Per hit"
         } else if buildingType == BuildingTypeEnum.Idle{
-            _displayString =  value + " Per span" + cooldown + "/s"
+            _displayString =  BigNumberHandler.ConvertListNumToString(value)  + " Per : "+"5/s"
         }
 
         valueDisplay<Text>.Content = _displayString
@@ -198,7 +199,6 @@ graph Script {
         }
 
         if HasComponent(thisEntity,typeof(SpecialEventAfterUnlocked)) {
-            LogInfo(" super")
             DispatchEvent(UNLOCK_EVENT,thisEntity,List<object>{})
         }
 
@@ -215,7 +215,7 @@ graph Script {
 
         updateUpgradeCost()
         //Off upgrade option if max level
-        if upgradeCost == -1 {
+        if upgradeCost[0] == -1 {
             SetActive(upgradeButton, false)
             SetActive(upgradeDisplay, false)
         } else {
@@ -240,7 +240,11 @@ graph Script {
                 var _unlockedBuilding = buildingUnlockBuildingList[index]
                 _unlockedBuilding<BuildingHandler>.levelUp()
                 _unlockedBuilding<BuildingHandler>.setActiveGameStart()
+
+            if HasComponent(_unlockedBuilding,typeof(SpecialEventAfterAvailable)) {
+                DispatchEvent(AVAILABLE_EVENT, _unlockedBuilding, List<object>{})
             }
+        }
     }
 
 }

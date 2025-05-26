@@ -18,14 +18,14 @@ graph Script {
 
     }
 
-    func addAmount (amount int){
-        playerMoney = BigNumberHandler.addNumber(playerMoney, List<int>{amount} )
+    func addAmount (amount List<int>){
+        playerMoney = BigNumberHandler.addNumber(playerMoney, amount )
         thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
         LogInfo("_playerMoney" + playerMoney)
     }
 
-    func subtractAmount(amount int){
-        playerMoney = BigNumberHandler.subtractNumber(playerMoney, List<int>{amount} )
+    func subtractAmount(amount List<int>){
+        playerMoney = BigNumberHandler.subtractNumber(playerMoney, amount )
         thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
         LogInfo("_playerMoney" + playerMoney)
     }

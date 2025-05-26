@@ -24,7 +24,6 @@ static graph BigNumberHandler {
 
 // Ensures each element in the list is less than 1000, carrying over overflow to the next index
     func shortenNumber(num List<int>) {
-
         Reverse(num)
         for i = 0, List.Length(num), 1 {
             if num[i] > 999 {
@@ -43,9 +42,12 @@ static graph BigNumberHandler {
 
 // Removes trailing zeros from the list (e.g. {123, 0, 0} -> {123})
     func cleanNumber(num List<int>) {
+        Reverse(num)
         while List.Length(num) > 0 && num[List.Length(num) - 1] == 0 {
             List.RemoveAt(num, List.Length(num) - 1)
         }
+        Reverse(num)
+
     }
 
     func addNumber(num1 List<int>, num2 List<int>) List<int>{
@@ -62,12 +64,15 @@ static graph BigNumberHandler {
         Reverse(num2)
         Reverse(result)
         shortenNumber(result)
+        cleanNumber(result)
         return result
     }   
 
     func subtractNumber(num1 List<int>, num2 List<int>) List<int>{
         var result List<int> = List<int>{}
         //Reverse for calculation
+        fixBlankList(num1)
+        fixBlankList(num2)
         var n1 List<int> = List.Clone(num1) as List<int>
         var n2 List<int> = List.Clone(num2) as List<int>
         Reverse(n1)
@@ -84,6 +89,7 @@ static graph BigNumberHandler {
         Reverse(n1)
 
         shortenNumber(n1)
+        cleanNumber(n1)
         return n1
     }
 
@@ -107,5 +113,89 @@ static graph BigNumberHandler {
             return List.Length(num1) 
         }
     }
+
+    func compareListNumbers(a List<int>, b List<int>) int {
+        // Clean leading zeros (optional but recommended)
+        /* -1 if a < b
+        0 if a == b
+        1 if a > b
+        */
+        cleanNumber(a)
+        cleanNumber(b)
+
+        // Compare lengths first
+        if List.Length(a) < List.Length(b) {
+            return -1
+        }
+        if List.Length(a) > List.Length(b) {
+            return 1
+        }
+
+        // Same length — compare digit by digit from left (most significant)
+        for i = 0, List.Length(a), 1 {
+            if a[i] < b[i] {
+                return -1
+            }
+            if a[i] > b[i] {
+                return 1
+            }
+        }
+
+        return 0 // All digits equal
+    }
+
+    func convertStringToList(s string) List<int> {
+        var result List<int> = List<int>{}
+        var slength int = Strings.Length(s)
+
+        // Get length of the first chunk
+        var firstChunkSize int = slength % 3
+        if firstChunkSize == 0 {
+            firstChunkSize = 3
+        }
+
+        // Add the first chunk
+        var index int = 0
+        var chunk string = Sub(s, index, firstChunkSize)
+
+        StringToInt(chunk, out var chunkInt, out var isSuccess)
+        Append(result, chunkInt)
+        index = firstChunkSize
+
+        // Add remaining 3-digit chunks
+        while index < slength {
+            chunk = Sub(s, index, 3)
+            StringToInt(chunk, out var chunkInt, out var isSuccess)
+            Append(result, chunkInt)
+            index = index + 3
+        }
+
+        return result
+    }
+
+    func ConvertListNumToString(num List<int>) string {
+        LogInfo("input =" + num )
+        if List.Length(num) == 0 {
+            return "0"
+        }
+        var result string = NumToString(num[0],"") // first chunk as-is
+
+        for i = 1, List.Length(num), 1 {
+            var chunk int = num[i]
+
+            // Convert chunk to string with leading zeros if necessary
+            if chunk < 10 {
+                result = result + "00" + NumToString(chunk ,"")
+            } else if chunk < 100 {
+                result = result + "0" + NumToString(chunk ,"")
+
+            } else {
+                result = result + NumToString(chunk ,"")
+            }
+        }
+        return result
+    }
+
+
 
 }

@@ -29,7 +29,7 @@ graph UpgradeButtonTrigger {
         var _upgradeCost = _parentEntity<BuildingHandler>.upgradeCost
 
 
-        if _playerMoney[0] >= _upgradeCost {
+        if BigNumberHandler.compareListNumbers(_playerMoney, _upgradeCost) == 1 ||BigNumberHandler.compareListNumbers(_playerMoney, _upgradeCost) == 0 {
             //Subtract money
             _playerEnter<PlayerEconomy>.subtractAmount(_upgradeCost)
 
@@ -43,7 +43,7 @@ graph UpgradeButtonTrigger {
 
 
             //UPGRADE UI
-            if _upgradeCost == -1 {
+            if _upgradeCost[0] == -1 {
                 DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"}) // MAX LEVEL REACH UI  
             } else {
                 DispatchEventWithPlatform(SHOW_CUSTOMUI,_playerEnter, PlatformType.Local, List<object>{"UpgradeSuccessFully"})

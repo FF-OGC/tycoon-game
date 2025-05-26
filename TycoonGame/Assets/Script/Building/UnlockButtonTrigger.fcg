@@ -31,7 +31,7 @@ graph UnlockButtonTrigger {
 
         var _unlockCost = _parentEntity<BuildingHandler>.unlockCost
         
-        if _playerMoney[0] >= _unlockCost {
+        if BigNumberHandler.compareListNumbers(_playerMoney,_unlockCost) == 1 ||  BigNumberHandler.compareListNumbers(_playerMoney,_unlockCost) == 0 {
             //Subtract money
             _playerEnter<PlayerEconomy>.subtractAmount(_unlockCost)
 

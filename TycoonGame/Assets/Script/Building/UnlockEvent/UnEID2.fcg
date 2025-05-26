@@ -9,11 +9,11 @@ graph UEID2 {
     event UNLOCK_EVENT() {
         var brokenwall = EResSceneNewScene.Wall1BrokenSet
         SetActive(brokenwall<Entity>,false)
-
+        HintHandler.offHint()
         var id1 = EResSceneNewScene.ID1Wood
         id1<BuildingHandler>.setActiveUpgrade(true)
-
-        HintHandler.offHint()
-
+        var id1UpgradeButton = id1<BuildingChildren>.UpgradeButton
+        var id1UpgradeButtonPosition = id1UpgradeButton<Transform>.Position
+        HintHandler.showHintAt(id1UpgradeButtonPosition.X,id1UpgradeButtonPosition.Z)
     }
 }

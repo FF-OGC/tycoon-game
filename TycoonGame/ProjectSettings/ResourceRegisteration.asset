@@ -59,6 +59,18 @@
           },
           "scriptName": "HintDirection",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "jpr68yzuxws-mb40je7f-exgg7fag3p",
+            "filePath": "Assets\\UI\\DangerouseOutside.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "DangerouseOutside",
+          "children": []
         }
       ]
     },
