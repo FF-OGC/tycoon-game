@@ -181,6 +181,23 @@
       "apiTargetV2": "both",
       "version": 45,
       "key": "signal_94745751"
+    },
+    "signal_63235039": {
+      "name": "SHOW_MONEY_DOWN",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100011,
+      "props": [
+        {
+          "name": "Amount",
+          "value": "any",
+          "key": 1
+        }
+      ],
+      "propCount": 1,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_63235039"
     }
   },
   "customName": {
@@ -194,7 +211,8 @@
     "AVAILABLE_EVENT": "signal_46575364",
     "START_IDLE": "signal_24565928",
     "SHOW_CUSTOM_HUD": "signal_81652738",
-    "SHOW_MONEY_UP": "signal_94745751"
+    "SHOW_MONEY_UP": "signal_94745751",
+    "SHOW_MONEY_DOWN": "signal_63235039"
   },
   "children": []
 }

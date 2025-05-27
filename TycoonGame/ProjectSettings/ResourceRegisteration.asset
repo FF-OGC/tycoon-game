@@ -88,6 +88,23 @@
               "scriptName": "Amount"
             }
           ]
+        },
+        {
+          "refer": {
+            "fileId": "9o9ajrrswrf-mb60bdcj-aavp3rs9uqm",
+            "filePath": "Assets\\UI\\MoneyDown.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "MoneyDown",
+          "children": [
+            {
+              "id": "66RfM9Uo",
+              "scriptName": "Amount"
+            }
+          ]
         }
       ]
     },

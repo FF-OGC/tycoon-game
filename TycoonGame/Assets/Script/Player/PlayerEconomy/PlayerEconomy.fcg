@@ -29,6 +29,7 @@ graph Script {
         playerMoney = BigNumberHandler.subtractNumber(playerMoney, amount )
         thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
         LogInfo("_playerMoney" + playerMoney)
+        DispatchEvent(SHOW_MONEY_DOWN, thisEntity<Player>,List<object>{BigNumberHandler.ConvertListNumToString(amount)})
     }
 
     func multiplyAmount (amount float){

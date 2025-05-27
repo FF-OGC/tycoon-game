@@ -18,4 +18,11 @@ graph PlayerMoneyUPUI {
         var widget = GetWidgetFromCustomUI(thisEntity<Player>,createdMoneyUPUI,EResUIMoneyUp.Amount)
         widget<UIWidgetLabel>.Content = Amount
     }
+
+    event SHOW_MONEY_DOWN(Amount object) {
+        CreateCustomUI(out var createdMoneyDOWNUI,thisEntity<Player>,EResUI.MoneyDown)
+        var widget = GetWidgetFromCustomUI(thisEntity<Player>,createdMoneyDOWNUI,EResUIMoneyDown.Amount)
+        widget<UIWidgetLabel>.Content = Amount
+    }
+
 }
