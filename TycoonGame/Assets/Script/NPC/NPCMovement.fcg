@@ -10,8 +10,6 @@ import "Workflow.fcc" as Workflow
 
 graph NPCMovement {
     //Executed when entity is created
-
-
     currentTween entity<Tween>
 
     func setTweenMovement(_currentTween entity<Tween>){
@@ -50,8 +48,8 @@ graph NPCMovement {
 
 
     func getWaitTime(moveDistance float) int{
-        //var TimeFor1Mile float = 260 / globalEntity<PlayerConfig>.THIEF_RUN_SPEED// Lower -> Run Faster, DONT CHANGE!!! ALREADY TESTED, NEARLY SAME SPEED AS PLAYER, 
-        //return Round(moveDistance * TimeFor1Mile)
+        var TimeFor1Mile float = 260 / 1// Lower -> Run Faster, DONT CHANGE!!! ALREADY TESTED, NEARLY SAME SPEED AS PLAYER, 
+        return Round(moveDistance * TimeFor1Mile)
         return 0 
     }
 
@@ -106,7 +104,7 @@ graph NPCMovement {
         //Current pos
 
         //Check if can go ?
-        var currentPosition = thisEntity<Transform>.LocalPosition
+        var currentPosition = thisEntity<Transform>.Position
         var currentX = currentPosition.X
         var currentZ = currentPosition.Z
 

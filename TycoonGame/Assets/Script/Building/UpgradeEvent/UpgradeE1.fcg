@@ -22,6 +22,9 @@ graph UpE1 {
 
         } else if thisEntity<BuildingHandler>.currentLevel == 3{
             HintHandler.offHint()
+            var id3 = EResSceneNewScene.ID3Woodcutter
+            var id3UnlockButtonPos = id3<BuildingHandler>.unlockButton<Transform>.Position
+            HintHandler.showHintAt(id3UnlockButtonPos.X,id3UnlockButtonPos.Z)
         }
 
 

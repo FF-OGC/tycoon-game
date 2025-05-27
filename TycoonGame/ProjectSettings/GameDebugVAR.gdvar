@@ -1,5 +1,25 @@
 {
-  "ecaVarMap": {},
-  "varMap": {}
+  "ecaVarMap": {
+    "1ybz886zj-maz9lhlh-y2nl101e6p": [
+      "1ybz886zj-maz9lhlh-y2nl101e6pvh=3PzNktEW@[/.ljBHu",
+      "1ybz886zj-maz9lhlh-y2nl101e6pxvjiL|vFw`ZwD(Sc3ky."
+    ]
+  },
+  "varMap": {
+    "1ybz886zj-maz9lhlh-y2nl101e6pvh=3PzNktEW@[/.ljBHu": {
+      "id": "[yDM[OPl)$#j1VFq.DXI{P1]Created Entity",
+      "name": "Created Entity",
+      "blockId": "vh=3PzNktEW@[/.ljBHu",
+      "ecaId": "1ybz886zj-maz9lhlh-y2nl101e6p",
+      "type": "CustomHud"
+    },
+    "1ybz886zj-maz9lhlh-y2nl101e6pxvjiL|vFw`ZwD(Sc3ky.": {
+      "id": "[yDM[OPl)$#j1VFq.DXI{P1]Created Entity",
+      "name": "Created Entity",
+      "blockId": "xvjiL|vFw`ZwD(Sc3ky.",
+      "ecaId": "1ybz886zj-maz9lhlh-y2nl101e6p",
+      "type": "CustomHud"
+    }
+  }
 }
 //"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}

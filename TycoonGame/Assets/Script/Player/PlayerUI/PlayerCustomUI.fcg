@@ -21,4 +21,9 @@ graph PlayerCustomUI {
         WaitForMillisecond(3000)
         Destroy(_customUI)
     }
+
+    event SHOW_CUSTOM_HUD(ereskey object) {
+        CreateCustomUI(out var _customUI,thisEntity<Player>,Res.UI[ereskey as EResKeyUI])
+        _customUI<CustomUI>.IsVisible = true
+    }
 }

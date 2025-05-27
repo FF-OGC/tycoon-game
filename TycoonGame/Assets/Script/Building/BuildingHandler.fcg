@@ -17,6 +17,7 @@ graph Script {
     configFile CsvID
 
     buildingID int
+    buildingName string
     currentLevel int 
     unlockCost List<int>
     buildingType BuildingTypeEnum
@@ -41,6 +42,7 @@ graph Script {
 
     async func init (){
         buildingID = thisEntity<Building>.ID
+        buildingName = thisEntity<Building>.Name
         currentLevel = thisEntity<Building>.CurrentLevel
         unlockCost = thisEntity<Building>.UnlockCost as List<int>
         buildingType = thisEntity<Building>.Type
@@ -133,13 +135,13 @@ graph Script {
     }
 
     func updateUnlockDisplay (){
-        var _displayString =  "UNLOCK: " +  BigNumberHandler.ConvertListNumToString(unlockCost)
+        var _displayString =  "UNLOCK "  + buildingName+": " +  BigNumberHandler.ConvertListNumToString(unlockCost)
         unlockDisplay<Text>.Content = _displayString
     }
 
     func updateUpgradeDisplay (){
         updateUpgradeCost()
-        var _displayString = "UPGRADE COST: " +  BigNumberHandler.ConvertListNumToString(upgradeCost)
+        var _displayString = "UPGRADE " + buildingName+ ": " +  BigNumberHandler.ConvertListNumToString(upgradeCost)
         upgradeDisplay<Text>.Content = _displayString
     }
 
@@ -150,7 +152,7 @@ graph Script {
         if buildingType == BuildingTypeEnum.Action {
             _displayString = BigNumberHandler.ConvertListNumToString(value)   + " Per hit"
         } else if buildingType == BuildingTypeEnum.Idle{
-            _displayString =  BigNumberHandler.ConvertListNumToString(value)  + " Per : "+"5/s"
+            _displayString =  BigNumberHandler.ConvertListNumToString(value)  + " Per : "+"3/s"
         }
 
         valueDisplay<Text>.Content = _displayString

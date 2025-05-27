@@ -128,6 +128,14 @@
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "ma0c3fxgesq-mb5vmo5h-9gv6tdesd3",
+      "filePath": "Assets\\Script\\Script.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "avatarInfo": null,

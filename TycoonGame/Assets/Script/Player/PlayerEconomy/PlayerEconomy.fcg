@@ -13,7 +13,7 @@ graph Script {
 
     event OnAwake() {
         WaitForNextFrame()
-        playerMoney = List<int>{999}
+        playerMoney = List<int>{0}
         thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
 
     }

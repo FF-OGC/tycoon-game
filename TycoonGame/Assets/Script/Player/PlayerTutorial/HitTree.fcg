@@ -17,12 +17,17 @@ graph HitTree {
         var _player = PlayerStaticInformation.playerHost
         var id1 = EResSceneNewScene.ID1Wood
         var id1ModelPos = id1<BuildingHandler>.model<Transform>.Position
-        HintHandler.showHintAt(id1ModelPos.X,id1ModelPos.Z)
+        var id1UpgradePos = id1<BuildingHandler>.upgradeButton<Transform>.Position
 
+
+        HintHandler.showHintAt(id1ModelPos.X,id1ModelPos.Z)
+    
         while true {
             WaitForMillisecond(3000)
-            if BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney, List<int>{2}) ==1 {
+            if BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney, List<int>{10}) ==1 {
                 HintHandler.offHint()
+                HintHandler.showHintAt(id1UpgradePos.X,id1UpgradePos.Z)
+                break
             }  
         }
     }

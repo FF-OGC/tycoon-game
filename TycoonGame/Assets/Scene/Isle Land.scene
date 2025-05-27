@@ -164,7 +164,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 221,
+              "tempIndex": 322,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -468,7 +468,10 @@
                     "selfValue": true,
                     "valueTag": "activeValue"
                   },
-                  "unlockedValue": null,
+                  "unlockedValue": {
+                    "selfValue": true,
+                    "valueTag": "unlockedValue"
+                  },
                   "editorLockValue": false,
                   "editorVisibleValue": true,
                   "position": {
@@ -508,7 +511,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 222,
+                  "tempIndex": 323,
                   "itemID": 146,
                   "seParent": null,
                   "ecaScripts": [
@@ -536,7 +539,10 @@
                     "selfValue": true,
                     "valueTag": "activeValue"
                   },
-                  "unlockedValue": null,
+                  "unlockedValue": {
+                    "selfValue": true,
+                    "valueTag": "unlockedValue"
+                  },
                   "editorLockValue": false,
                   "editorVisibleValue": true,
                   "position": {
@@ -576,7 +582,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 223,
+                  "tempIndex": 324,
                   "itemID": 146,
                   "seParent": null,
                   "ecaScripts": [
@@ -604,7 +610,10 @@
                     "selfValue": true,
                     "valueTag": "activeValue"
                   },
-                  "unlockedValue": null,
+                  "unlockedValue": {
+                    "selfValue": true,
+                    "valueTag": "unlockedValue"
+                  },
                   "position": {
                     "x": 1,
                     "y": -2.1372694969177246,
@@ -642,7 +651,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 224,
+                  "tempIndex": 325,
                   "itemID": 146,
                   "seParent": null,
                   "ecaScripts": [
@@ -817,7 +826,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 225,
+              "tempIndex": 326,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -2307,7 +2316,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 226,
+              "tempIndex": 327,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -2657,7 +2666,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 227,
+                  "tempIndex": 328,
                   "itemID": 384,
                   "seParent": null,
                   "ecaScripts": [
@@ -2982,7 +2991,8 @@
           "PROP_20670648": 5,
           "PROP_66735044": "FENCE",
           "PROP_40070020": -1,
-          "PROP_14176655": 10
+          "PROP_14176655": 10,
+          "PROP_86206148": []
         },
         "MeshRender": {},
         "CustomComponent20697677": {
@@ -4820,7 +4830,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 228,
+              "tempIndex": 329,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -5160,7 +5170,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 229,
+              "tempIndex": 330,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -6234,7 +6244,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 230,
+              "tempIndex": 331,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -6468,7 +6478,8 @@
           "PROP_20670648": 5,
           "PROP_66735044": "TEST",
           "PROP_40070020": -1,
-          "PROP_14176655": 10
+          "PROP_14176655": 10,
+          "PROP_86206148": []
         },
         "MeshRender": {},
         "CustomComponent20697677": {
@@ -8723,7 +8734,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 231,
+      "tempIndex": 332,
       "itemID": 143,
       "seParent": null,
       "ecaScripts": [
@@ -8751,6 +8762,697 @@
         "_levelObjectID": 1,
         "teamIDStr": "All teams"
       }
+    },
+    {
+      "_tag": {
+        "type": "UGCSceneEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "4gUPORDE",
+      "children": [
+        {
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "rpHyhUer",
+          "children": [],
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": 0,
+            "y": -0.30000001192092896,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "physicalMaterial": null,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "_filters": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 333,
+          "itemID": 223,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {
+            "IconEntity": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {}
+          },
+          "_entityName": "Icon object",
+          "propsData": {
+            "iconColor": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 1
+            },
+            "IsBillboard": true,
+            "IgnoreDepth": false,
+            "AlwaysInScreen": false,
+            "Width": 100,
+            "Height": 100,
+            "Depth": 0,
+            "iconType": "43mo8l46psa-mb3cpbvq-kx6uhznwcii",
+            "_levelObjectID": 1,
+            "renderType": 0,
+            "iconTypeRef": {
+              "fileId": "43mo8l46psa-mb3cpbvq-kx6uhznwcii",
+              "filePath": "Assets\\Sprite\\cash.png",
+              "_tag": {
+                "type": "GFileRefer"
+              },
+              "fileType": "texture"
+            }
+          }
+        },
+        {
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "yowRKtSG",
+          "children": [],
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "position": {
+            "x": 0,
+            "y": 0.699999988079071,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "physicalMaterial": null,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "_filters": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 335,
+          "itemID": 223,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {
+            "IconEntity": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {}
+          },
+          "_entityName": "Icon object (1)",
+          "propsData": {
+            "iconColor": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 1
+            },
+            "IsBillboard": true,
+            "IgnoreDepth": false,
+            "AlwaysInScreen": false,
+            "Width": 100,
+            "Height": 100,
+            "Depth": 0,
+            "iconType": "T_34_M_WS_ICON_CROSS",
+            "_levelObjectID": 2,
+            "renderType": 0,
+            "iconTypeRef": {
+              "fileId": "8ce9a0ef21a2569b0b7d2af9308a26c2",
+              "filePath": "lib://fftextures/WorkshopIconLibrary/T_34_M_WS_ICON_CROSS.png",
+              "_tag": {
+                "type": "GFileRefer"
+              },
+              "fileType": "texture"
+            }
+          },
+          "editorLockValue": false,
+          "editorVisibleValue": true
+        },
+        {
+          "_tag": {
+            "type": "SceneEditEntity",
+            "resourceId": "Primitive/Empty"
+          },
+          "_entityId": "ZyLsB34p",
+          "children": [],
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": null,
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "position": {
+            "x": 0,
+            "y": 3,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "BTPath": [
+            null
+          ],
+          "visible": true,
+          "VisibilityLayer": 0,
+          "modelOptimization": 0,
+          "streamingLayer": "",
+          "attributes": [
+            2,
+            4
+          ],
+          "isTrigger": false,
+          "collidable": true,
+          "physicalLayer": 0,
+          "physicalMaterial": null,
+          "aoiSetting": 0,
+          "initialTypes": {},
+          "componentList": [],
+          "_filters": [],
+          "entityTagData": {
+            "tagPointers": []
+          },
+          "tempIndex": 336,
+          "itemID": 222,
+          "seParent": null,
+          "ecaScripts": [
+            null
+          ],
+          "ecaProps": {
+            "TextEntity": {},
+            "LevelObject": {},
+            "Transform": {},
+            "Entity": {},
+            "Visibility": {}
+          },
+          "_entityName": "Text object",
+          "propsData": {
+            "TextKey": "dsaasd",
+            "fontColor": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 1
+            },
+            "IsBillboard": true,
+            "fontStyleRef": {
+              "bold": false,
+              "italic": false,
+              "underline": false
+            },
+            "FontSize": 48,
+            "IgnoreDepth": false,
+            "AlwaysInScreen": false,
+            "Depth": 0,
+            "fontType": "UIFONT_LATIN",
+            "fontStyle": 0,
+            "_levelObjectID": 13,
+            "TextDisplay": "dsaasd",
+            "fontTypeRef": "UIFONT_LATIN"
+          }
+        }
+      ],
+      "prefabVariant": {
+        "prefabFile": {
+          "fileId": "96kqxti4btd-mb5y7bxl-y0xgmr7ju3m",
+          "filePath": "Assets\\Prefabs\\Empty.prefab",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "Prefab"
+        },
+        "snapShots": {
+          "4gUPORDE": {
+            "_entityId": "RMS7sKgk",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": null,
+            "editorLockValue": false,
+            "editorVisibleValue": true,
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "materials": [
+              null
+            ],
+            "colliders": [],
+            "IsNPC": false,
+            "Rigidbody": {
+              "Type": 1,
+              "Mass": 1,
+              "CenterOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "UseGravity": true,
+              "Drag": 0.05,
+              "AngularDrag": 0.05,
+              "FreezePosX": false,
+              "FreezeRotX": false,
+              "FreezePosY": false,
+              "FreezeRotY": false,
+              "FreezePosZ": false,
+              "FreezeRotZ": false
+            },
+            "isCreateAsEmpty": true,
+            "ecaScripts": [],
+            "ecaProps": {
+              "CustomLevelObject": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {}
+            },
+            "propsData": {},
+            "entityVersion": 3
+          },
+          "rpHyhUer": {
+            "_entityId": "LjzI3AAt",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": null,
+            "editorLockValue": false,
+            "editorVisibleValue": true,
+            "position": {
+              "x": 0,
+              "y": -0.30000001192092896,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 223,
+            "seParent": null,
+            "ecaScripts": [
+              null
+            ],
+            "ecaProps": {
+              "IconEntity": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {}
+            },
+            "_entityName": "Icon object",
+            "propsData": {
+              "iconColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "IsBillboard": true,
+              "IgnoreDepth": false,
+              "AlwaysInScreen": false,
+              "Width": 100,
+              "Height": 100,
+              "Depth": 0,
+              "iconType": "43mo8l46psa-mb3cpbvq-kx6uhznwcii",
+              "_levelObjectID": 1,
+              "renderType": 0,
+              "iconTypeRef": {
+                "fileId": "43mo8l46psa-mb3cpbvq-kx6uhznwcii",
+                "filePath": "Assets\\Sprite\\cash.png",
+                "fileType": "texture"
+              }
+            }
+          },
+          "yowRKtSG": {
+            "_entityId": "Yim4FdkV",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": null,
+            "position": {
+              "x": 0,
+              "y": 0.699999988079071,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 223,
+            "seParent": null,
+            "ecaScripts": [
+              null
+            ],
+            "ecaProps": {
+              "IconEntity": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {}
+            },
+            "_entityName": "Icon object (1)",
+            "propsData": {
+              "iconColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "IsBillboard": true,
+              "IgnoreDepth": false,
+              "AlwaysInScreen": false,
+              "Width": 100,
+              "Height": 100,
+              "Depth": 0,
+              "iconType": "T_34_M_WS_ICON_CROSS",
+              "_levelObjectID": 2,
+              "renderType": 0,
+              "iconTypeRef": {
+                "fileId": "8ce9a0ef21a2569b0b7d2af9308a26c2",
+                "filePath": "lib://fftextures/WorkshopIconLibrary/T_34_M_WS_ICON_CROSS.png",
+                "fileType": "texture"
+              }
+            },
+            "editorLockValue": false,
+            "editorVisibleValue": true
+          },
+          "ZyLsB34p": {
+            "_entityId": "Am9DERjG",
+            "activeValue": {
+              "selfValue": true,
+              "valueTag": "activeValue"
+            },
+            "unlockedValue": null,
+            "editorLockValue": false,
+            "editorVisibleValue": true,
+            "position": {
+              "x": 0,
+              "y": 3,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "BTPath": [
+              null
+            ],
+            "visible": true,
+            "VisibilityLayer": 0,
+            "modelOptimization": 0,
+            "streamingLayer": "",
+            "attributes": [
+              2,
+              4
+            ],
+            "isTrigger": false,
+            "collidable": true,
+            "physicalLayer": 0,
+            "physicalMaterial": null,
+            "aoiSetting": 0,
+            "initialTypes": {},
+            "componentList": [],
+            "_filters": [],
+            "entityTagData": {
+              "tagPointers": []
+            },
+            "itemID": 222,
+            "seParent": null,
+            "ecaScripts": [
+              null
+            ],
+            "ecaProps": {
+              "TextEntity": {},
+              "LevelObject": {},
+              "Transform": {},
+              "Entity": {},
+              "Visibility": {}
+            },
+            "_entityName": "Text object",
+            "propsData": {
+              "TextKey": "dsaasd",
+              "fontColor": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "IsBillboard": true,
+              "fontStyleRef": {
+                "bold": false,
+                "italic": false,
+                "underline": false
+              },
+              "FontSize": 48,
+              "IgnoreDepth": false,
+              "AlwaysInScreen": false,
+              "Depth": 0,
+              "fontType": "UIFONT_LATIN",
+              "fontStyle": 0,
+              "_levelObjectID": 13,
+              "TextDisplay": "dsaasd",
+              "fontTypeRef": "UIFONT_LATIN"
+            }
+          }
+        }
+      },
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": -12.031594276428223,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "physicalMaterial": null,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "_filters": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "materials": [
+        null
+      ],
+      "colliders": [],
+      "IsNPC": false,
+      "Rigidbody": {
+        "Type": 1,
+        "Mass": 1,
+        "CenterOfMass": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "UseGravity": true,
+        "Drag": 0.05,
+        "AngularDrag": 0.05,
+        "FreezePosX": false,
+        "FreezeRotX": false,
+        "FreezePosY": false,
+        "FreezeRotY": false,
+        "FreezePosZ": false,
+        "FreezeRotZ": false
+      },
+      "isCreateAsEmpty": true,
+      "ecaScripts": [],
+      "ecaProps": {
+        "CustomLevelObject": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {}
+      },
+      "propsData": {},
+      "entityVersion": 3,
+      "_entityName": "Empty"
     }
   ],
   "properties": {},

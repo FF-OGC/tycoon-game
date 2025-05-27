@@ -11,5 +11,7 @@ graph PlayerHUDHandler {
         AddScript(thisEntity<Player>,EResFCG.PlayerDefaultHUD)
 
         AddScript(thisEntity<Player>,EResFCG.PlayerCustomUI)
+    
+        
     }
 }

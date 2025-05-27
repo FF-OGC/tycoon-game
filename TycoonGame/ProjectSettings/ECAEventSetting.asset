@@ -147,6 +147,23 @@
       "apiTargetV2": "both",
       "version": 45,
       "key": "signal_24565928"
+    },
+    "signal_81652738": {
+      "name": "SHOW_CUSTOM_HUD",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100006,
+      "props": [
+        {
+          "name": "ereskey",
+          "value": "any",
+          "key": 1
+        }
+      ],
+      "propCount": 1,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_81652738"
     }
   },
   "customName": {
@@ -158,7 +175,8 @@
     "UNLOCK_EVENT": "signal_46975352",
     "UPGRADE_EVENT": "signal_23581014",
     "AVAILABLE_EVENT": "signal_46575364",
-    "START_IDLE": "signal_24565928"
+    "START_IDLE": "signal_24565928",
+    "SHOW_CUSTOM_HUD": "signal_81652738"
   },
   "children": []
 }

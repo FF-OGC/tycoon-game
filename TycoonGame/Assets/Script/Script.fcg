@@ -1,0 +1,13 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+
+import "../Script/Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+
+graph Script {
+    //Executed when entity is created
+    
+    event OnTapped(player entity<Player>) {
+        player<PlayerEconomy>.addAmount(List<int>{100})
+    }
+}

@@ -50,18 +50,6 @@
         },
         {
           "refer": {
-            "fileId": "y15qy55wo8-mb0lucdv-lfosd6i76dd",
-            "filePath": "Assets\\UI\\Hint\\HintDirection.ui",
-            "_tag": {
-              "type": "GFileRefer"
-            },
-            "fileType": "ui"
-          },
-          "scriptName": "HintDirection",
-          "children": []
-        },
-        {
-          "refer": {
             "fileId": "jpr68yzuxws-mb40je7f-exgg7fag3p",
             "filePath": "Assets\\UI\\DangerouseOutside.ui",
             "_tag": {
@@ -70,6 +58,18 @@
             "fileType": "ui"
           },
           "scriptName": "DangerouseOutside",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "x9k9ux2dgg-mb43bb2p-gldwek2regd",
+            "filePath": "Assets\\UI\\DebugAddMoney.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "DebugAddMoney",
           "children": []
         }
       ]
@@ -103,6 +103,26 @@
             {
               "id": "vHdJ0tDa",
               "scriptName": "Hint"
+            },
+            {
+              "id": "JtE2jSFP",
+              "scriptName": "npc1"
+            },
+            {
+              "id": "Sv43do1w",
+              "scriptName": "CameraCutscene1"
+            },
+            {
+              "id": "nKCosscg",
+              "scriptName": "CameraCutscene2"
+            },
+            {
+              "id": "fObA3G00",
+              "scriptName": "CameraCutscene3"
+            },
+            {
+              "id": "4P8B43FR",
+              "scriptName": "ID3Woodcutter"
             }
           ]
         }

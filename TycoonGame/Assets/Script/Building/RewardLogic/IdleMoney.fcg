@@ -21,7 +21,7 @@ graph Script {
     event START_IDLE() {
         _player = PlayerStaticInformation.playerHost
         while true {
-            WaitForMillisecond(5000)
+            WaitForMillisecond(3000)
             _player<PlayerEconomy>.addAmount(thisEntity<BuildingHandler>.value)
         }
     }

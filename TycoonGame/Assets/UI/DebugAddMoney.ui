@@ -31,7 +31,10 @@
                 "selfValue": true,
                 "valueTag": "activeValue"
               },
-              "unlockedValue": null,
+              "unlockedValue": {
+                "selfValue": true,
+                "valueTag": "unlockedValue"
+              },
               "editorLockValue": false,
               "editorVisibleValue": true,
               "propsData": {
@@ -113,7 +116,10 @@
             "selfValue": true,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "editorLockValue": false,
           "editorVisibleValue": true,
           "propsData": {
@@ -197,7 +203,24 @@
               }
             }
           },
-          "ecaScripts": [],
+          "ecaScripts": [
+            {
+              "fileId": "eyfloa9r229-mb5x475s-qz3xr5sqn3o",
+              "filePath": "Assets\\Script\\Script.fcg",
+              "_tag": {
+                "type": "GFileRefer"
+              },
+              "fileType": "ugcscript"
+            },
+            {
+              "fileId": "bqimon00b9k-mb5x4mkr-73lp18fbcm2",
+              "filePath": "Assets\\ECA\\Button.eca",
+              "_tag": {
+                "type": "GFileRefer"
+              },
+              "fileType": "eca"
+            }
+          ],
           "ecaProps": {
             "HudButtonWidget": {},
             "HudWidget": {},
@@ -216,7 +239,10 @@
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": null,
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
       "editorLockValue": false,
       "editorVisibleValue": true,
       "propsData": {
