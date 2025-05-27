@@ -8,7 +8,6 @@ import "Camera.fcc" as Camera
 graph Script {
     //Executed when entity is created
     playerDefaultCam entity
-    /*
     event OnAwake() { 
         thisEntity<Visibility>.IsVisible = false
         
@@ -25,5 +24,4 @@ graph Script {
         Destroy(npcActor)
         SwitchCamera(thisEntity<Player>,playerDefaultCam as entity<Camera>,CameraTransitionType.Default,0)
     }
-        */
 }

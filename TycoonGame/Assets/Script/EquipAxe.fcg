@@ -1,0 +1,24 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+import "Items.fcc" as Items
+import "Hud.fcc" as Hud
+
+graph Script_1_ {
+    //Executed when entity is created
+    weap entity
+    event OnAwake() {
+
+    }
+    event OnEntityEnter(target entity<Entity>) {
+        AddItem(target<Player>, ItemIDType.Machete,1, out var _weap)
+        weap = _weap[0]
+        weap<Weapon>.FiringInterval = 0.8
+        LogInfo("weap" + weap)
+        LogInfo("weap<Weapon>.AttackInterval"+weap<Weapon>.AttackInterval)
+        
+    }
+    event OnEntityExit(target entity<Entity>) {
+    Destroy(weap)   
+ }
+}

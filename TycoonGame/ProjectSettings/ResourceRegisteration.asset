@@ -105,6 +105,69 @@
               "scriptName": "Amount"
             }
           ]
+        },
+        {
+          "refer": {
+            "fileId": "n7xrhv4jxy-mb696hpv-6urdmo3w4rx",
+            "filePath": "Assets\\UI\\Rock\\PlayerRockUI.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerRockUI",
+          "children": [
+            {
+              "id": "8GH05RZu",
+              "scriptName": "DisplayAmount"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "yqfcnt933wk-mb696hr9-uhn02nrk2ll",
+            "filePath": "Assets\\UI\\Rock\\RockUp.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "RockUp",
+          "children": [
+            {
+              "id": "66RfM9Uo",
+              "scriptName": "Amount"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "91odjczdxhn-mb696hst-kkhk00auw1h",
+            "filePath": "Assets\\UI\\Rock\\RockDown.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "RockDown",
+          "children": [
+            {
+              "id": "66RfM9Uo",
+              "scriptName": "Amount"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "c49bigi714j-mb69z2rj-6ia485r519j",
+            "filePath": "Assets\\UI\\YOUWIN.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "YOUWIN",
+          "children": []
         }
       ]
     },
@@ -157,6 +220,10 @@
             {
               "id": "4P8B43FR",
               "scriptName": "ID3Woodcutter"
+            },
+            {
+              "id": "PRYCaajB",
+              "scriptName": "ID4Rock"
             }
           ]
         }
@@ -215,6 +282,30 @@
             "fileType": "ugcscript"
           },
           "scriptName": "HitToGetMoney",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "yoeq4jvnkde-mb69bmll-0ukq7gug2ql",
+            "filePath": "Assets\\Script\\Player\\PlayerUI\\PlayerRockUI.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "PlayerRockUI",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "fx7odsvmep8-mb69bmna-daj0b6ib63h",
+            "filePath": "Assets\\Script\\Player\\PlayerUI\\PlayerRockUPUI .fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "PlayerRockUPUI",
           "children": []
         }
       ]

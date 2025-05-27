@@ -9,9 +9,8 @@ graph PlayerHUDHandler {
     
     event OnAwake() {
         AddScript(thisEntity<Player>,EResFCG.PlayerDefaultHUD)
-
         AddScript(thisEntity<Player>,EResFCG.PlayerCustomUI)
-    
-        
+        AddScript(thisEntity<Player>,EResFCG.PlayerRockUI)
+        AddScript(thisEntity<Player>,EResFCG.PlayerRockUPUI)
     }
 }

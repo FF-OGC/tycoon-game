@@ -12,22 +12,22 @@ import "../PlayerUIHandler.fcg" as PlayerUIHandler
 
 graph PlayerMoneyUI {
     //Executed when entity is created
-    moneyUI entity<CustomUI>
+    rockUI entity<CustomUI>
     displayAmountUI entity<UIWidget>
     isInit bool
 
 
     func init (){
-        if moneyUI == nil {       
-        CreateCustomUI(out var _moneyUI, thisEntity<Player>, EResUI.PlayerMoneyUI)
-        moneyUI = _moneyUI
-        displayAmountUI = GetWidgetFromCustomUI(thisEntity<Player>,_moneyUI,EResUIPlayerMoneyUI.DisplayAmount)
+        if rockUI == nil {       
+        CreateCustomUI(out var _rockUI, thisEntity<Player>, EResUI.PlayerRockUI)
+        rockUI = _rockUI
+        displayAmountUI = GetWidgetFromCustomUI(thisEntity<Player>,_rockUI,EResUIPlayerRockUI.DisplayAmount)
         displayAmountUI<UIWidgetLabel>.Content = ""
         }
     }
 
-    func UISetDisplayMoney(amount List<int>){
-        if moneyUI == nil {
+    func UISetDisplayRock(amount List<int>){
+        if rockUI == nil {
             init()
         }
         var display  = BigNumberHandler.ConvertListNumToString(amount) 

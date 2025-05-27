@@ -164,7 +164,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 322,
+              "tempIndex": 68,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -511,7 +511,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 323,
+                  "tempIndex": 69,
                   "itemID": 146,
                   "seParent": null,
                   "ecaScripts": [
@@ -582,7 +582,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 324,
+                  "tempIndex": 70,
                   "itemID": 146,
                   "seParent": null,
                   "ecaScripts": [
@@ -651,7 +651,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 325,
+                  "tempIndex": 71,
                   "itemID": 146,
                   "seParent": null,
                   "ecaScripts": [
@@ -826,7 +826,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 326,
+              "tempIndex": 72,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -2316,7 +2316,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 327,
+              "tempIndex": 73,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -2666,7 +2666,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 328,
+                  "tempIndex": 74,
                   "itemID": 384,
                   "seParent": null,
                   "ecaScripts": [
@@ -4830,7 +4830,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 329,
+              "tempIndex": 75,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -5170,7 +5170,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 330,
+              "tempIndex": 76,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -6244,7 +6244,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 331,
+              "tempIndex": 77,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -8734,7 +8734,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 332,
+      "tempIndex": 78,
       "itemID": 143,
       "seParent": null,
       "ecaScripts": [
@@ -8781,12 +8781,15 @@
             "selfValue": true,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "editorLockValue": false,
           "editorVisibleValue": true,
           "position": {
             "x": 0,
-            "y": -0.30000001192092896,
+            "y": 0,
             "z": 0
           },
           "scale": {
@@ -8821,7 +8824,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 333,
+          "tempIndex": 79,
           "itemID": 223,
           "seParent": null,
           "ecaScripts": [
@@ -8842,7 +8845,7 @@
               "b": 255,
               "a": 1
             },
-            "IsBillboard": true,
+            "IsBillboard": false,
             "IgnoreDepth": false,
             "AlwaysInScreen": false,
             "Width": 100,
@@ -8872,10 +8875,13 @@
             "selfValue": true,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "position": {
-            "x": 0,
-            "y": 0.699999988079071,
+            "x": 1,
+            "y": 0,
             "z": 0
           },
           "scale": {
@@ -8910,7 +8916,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 335,
+          "tempIndex": 80,
           "itemID": 223,
           "seParent": null,
           "ecaScripts": [
@@ -8931,9 +8937,9 @@
               "b": 255,
               "a": 1
             },
-            "IsBillboard": true,
+            "IsBillboard": false,
             "IgnoreDepth": false,
-            "AlwaysInScreen": false,
+            "AlwaysInScreen": true,
             "Width": 100,
             "Height": 100,
             "Depth": 0,
@@ -8963,12 +8969,15 @@
             "selfValue": true,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "editorLockValue": false,
           "editorVisibleValue": true,
           "position": {
-            "x": 0,
-            "y": 3,
+            "x": 2,
+            "y": 0,
             "z": 0
           },
           "scale": {
@@ -9003,7 +9012,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 336,
+          "tempIndex": 81,
           "itemID": 222,
           "seParent": null,
           "ecaScripts": [
@@ -9046,7 +9055,7 @@
       "prefabVariant": {
         "prefabFile": {
           "fileId": "96kqxti4btd-mb5y7bxl-y0xgmr7ju3m",
-          "filePath": "Assets\\Prefabs\\Empty.prefab",
+          "filePath": "Assets\\Prefabs\\PopUpMoney.prefab",
           "_tag": {
             "type": "GFileRefer"
           },
@@ -9135,7 +9144,7 @@
             "editorVisibleValue": true,
             "position": {
               "x": 0,
-              "y": -0.30000001192092896,
+              "y": 0,
               "z": 0
             },
             "scale": {
@@ -9190,7 +9199,7 @@
                 "b": 255,
                 "a": 1
               },
-              "IsBillboard": true,
+              "IsBillboard": false,
               "IgnoreDepth": false,
               "AlwaysInScreen": false,
               "Width": 100,
@@ -9214,8 +9223,8 @@
             },
             "unlockedValue": null,
             "position": {
-              "x": 0,
-              "y": 0.699999988079071,
+              "x": 1,
+              "y": 0,
               "z": 0
             },
             "scale": {
@@ -9270,9 +9279,9 @@
                 "b": 255,
                 "a": 1
               },
-              "IsBillboard": true,
+              "IsBillboard": false,
               "IgnoreDepth": false,
-              "AlwaysInScreen": false,
+              "AlwaysInScreen": true,
               "Width": 100,
               "Height": 100,
               "Depth": 0,
@@ -9298,8 +9307,8 @@
             "editorLockValue": false,
             "editorVisibleValue": true,
             "position": {
-              "x": 0,
-              "y": 3,
+              "x": 2,
+              "y": 0,
               "z": 0
             },
             "scale": {
@@ -9378,7 +9387,10 @@
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": null,
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
       "editorLockValue": false,
       "editorVisibleValue": true,
       "position": {
@@ -9448,11 +9460,80 @@
         "LevelObject": {},
         "Transform": {},
         "Entity": {},
-        "Visibility": {}
+        "Visibility": {},
+        "MeshRender": {}
       },
       "propsData": {},
       "entityVersion": 3,
       "_entityName": "Empty"
+    },
+    {
+      "_tag": {
+        "type": "SceneEditEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "JN84JGyN",
+      "children": [],
+      "prefabVariant": null,
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": null,
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": -13.189000129699707,
+        "y": -0.30000001192092896,
+        "z": 7.0279998779296875
+      },
+      "scale": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "physicalMaterial": null,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "_filters": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "tempIndex": 82,
+      "itemID": 348,
+      "seParent": null,
+      "ecaScripts": [
+        null
+      ],
+      "ecaProps": {
+        "DummyLevelObject": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {},
+        "Collider": {}
+      },
+      "_entityName": "Stone E"
     }
   ],
   "properties": {},

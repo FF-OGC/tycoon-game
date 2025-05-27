@@ -59,8 +59,8 @@
             "priority": 0,
             "image": {
               "source": {
-                "fileId": "rdcgxdqi5v8-mb68wkbr-9px687aus1g",
-                "filePath": "Assets\\Sprite\\wood.png",
+                "fileId": "poui5kise-mb68wk7e-vx54t2bvw77",
+                "filePath": "Assets\\Sprite\\rock.png",
                 "_tag": {
                   "type": "GFileRefer"
                 },
@@ -342,7 +342,7 @@
             "y": 0.5
           },
           "anchoredPosition": {
-            "x": 60,
+            "x": 360,
             "y": -60
           },
           "sizeDelta": {
@@ -422,7 +422,7 @@
   },
   "componentList": [],
   "_filters": [],
-  "_entityName": "MoneyUp",
+  "_entityName": "RockDown",
   "entityTagData": {
     "tagPointers": []
   },

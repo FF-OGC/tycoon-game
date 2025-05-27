@@ -59,8 +59,8 @@
             "priority": 0,
             "image": {
               "source": {
-                "fileId": "rdcgxdqi5v8-mb68wkbr-9px687aus1g",
-                "filePath": "Assets\\Sprite\\wood.png",
+                "fileId": "poui5kise-mb68wk7e-vx54t2bvw77",
+                "filePath": "Assets\\Sprite\\rock.png",
                 "_tag": {
                   "type": "GFileRefer"
                 },
@@ -152,26 +152,26 @@
                 "y": 0.5
               },
               "anchoredPosition": {
-                "x": -65,
+                "x": -70,
                 "y": 0
               },
               "sizeDelta": {
-                "x": 10,
-                "y": 4
+                "x": 20,
+                "y": 20
               }
             },
             "alpha": 100,
             "priority": 0,
             "image": {
               "source": {
-                "fileId": "b063b0439839b3d97a8fd2aa6a57ef8b",
-                "filePath": "lib://fftextures/WorkshopIconLibrary/T_34_M_WS_ICON_SQUARE.png",
+                "fileId": "488447e1be143b5c4ecb252b2870ab3b",
+                "filePath": "lib://fftextures/WorkshopIconLibrary/T_34_M_WS_ICON_PLUS.png",
                 "_tag": {
                   "type": "GFileRefer"
                 },
                 "fileType": "texture"
               },
-              "color": "#FF0000",
+              "color": "#33FF00",
               "reverse": {
                 "x": false,
                 "y": false
@@ -257,7 +257,7 @@
                 "y": 0.5
               },
               "anchoredPosition": {
-                "x": -10,
+                "x": -13,
                 "y": 0
               },
               "sizeDelta": {
@@ -277,7 +277,7 @@
                 "italic": false,
                 "underline": false
               },
-              "color": "#FF0000",
+              "color": "#33FF00",
               "alignment": {
                 "h": "left",
                 "v": "middle"
@@ -342,21 +342,21 @@
             "y": 0.5
           },
           "anchoredPosition": {
-            "x": 60,
-            "y": -60
+            "x": 360,
+            "y": -100
           },
           "sizeDelta": {
             "x": 82,
             "y": 64
           }
         },
-        "alpha": 99.7,
+        "alpha": 100,
         "priority": 0
       },
       "ecaScripts": [
         {
-          "fileId": "wuzja7fkek-mb60e5lc-ztxfoptgp7f",
-          "filePath": "Assets\\Script\\etc\\MoneyDownFloating.fcg",
+          "fileId": "330mdflx4ba-mb5yprc9-qj4lslf98qn",
+          "filePath": "Assets\\Script\\Script (1).fcg",
           "_tag": {
             "type": "GFileRefer"
           },
@@ -370,7 +370,7 @@
       },
       "componentList": [],
       "_filters": [],
-      "_entityName": "test",
+      "_entityName": "Empty",
       "entityTagData": {
         "tagPointers": []
       }
@@ -422,11 +422,11 @@
   },
   "componentList": [],
   "_filters": [],
-  "_entityName": "MoneyUp",
+  "_entityName": "RockUp",
   "entityTagData": {
     "tagPointers": []
   },
-  "layer": 7,
+  "layer": 8,
   "discriminator": "ISceneLike",
   "version": 3
 }
