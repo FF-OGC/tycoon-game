@@ -164,6 +164,23 @@
       "apiTargetV2": "both",
       "version": 45,
       "key": "signal_81652738"
+    },
+    "signal_94745751": {
+      "name": "SHOW_MONEY_UP",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100007,
+      "props": [
+        {
+          "name": "Amount",
+          "value": "any",
+          "key": 1
+        }
+      ],
+      "propCount": 1,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_94745751"
     }
   },
   "customName": {
@@ -176,7 +193,8 @@
     "UPGRADE_EVENT": "signal_23581014",
     "AVAILABLE_EVENT": "signal_46575364",
     "START_IDLE": "signal_24565928",
-    "SHOW_CUSTOM_HUD": "signal_81652738"
+    "SHOW_CUSTOM_HUD": "signal_81652738",
+    "SHOW_MONEY_UP": "signal_94745751"
   },
   "children": []
 }

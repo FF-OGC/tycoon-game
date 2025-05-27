@@ -1,0 +1,21 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+import "Workflow.fcc" as Workflow
+import "Strings.fcc" as Strings
+import "List.fcc" as List
+import "Convert.fcc" as Convert
+
+import "../../Economy/BigNumberHandler.fcg" as BigNumberHandler
+import "../PlayerUIHandler.fcg" as PlayerUIHandler
+
+
+graph PlayerMoneyUPUI {
+    //Executed when entity is created
+
+    event SHOW_MONEY_UP(Amount object) {
+        CreateCustomUI(out var createdMoneyUPUI,thisEntity<Player>,EResUI.MoneyUp)
+        var widget = GetWidgetFromCustomUI(thisEntity<Player>,createdMoneyUPUI,EResUIMoneyUp.Amount)
+        widget<UIWidgetLabel>.Content = Amount
+    }
+}

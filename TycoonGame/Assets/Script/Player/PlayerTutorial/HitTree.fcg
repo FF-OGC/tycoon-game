@@ -21,12 +21,13 @@ graph HitTree {
 
 
         HintHandler.showHintAt(id1ModelPos.X,id1ModelPos.Z)
-    
         while true {
             WaitForMillisecond(3000)
-            if BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney, List<int>{10}) ==1 {
-                HintHandler.offHint()
-                HintHandler.showHintAt(id1UpgradePos.X,id1UpgradePos.Z)
+            if BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney, List<int>{10}) ==1  || BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney, List<int>{10}) ==0{
+                if id1<BuildingHandler>.currentLevel < 2{
+                    HintHandler.offHint()
+                    HintHandler.showHintAt(id1UpgradePos.X,id1UpgradePos.Z)
+                }
                 break
             }  
         }

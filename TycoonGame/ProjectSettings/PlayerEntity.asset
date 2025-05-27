@@ -136,6 +136,14 @@
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "4oh7xneqrv9-mb5z6053-kpuvty2kz8r",
+      "filePath": "Assets\\Script\\Player\\PlayerUI\\PlayerMoneyUPUI.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "avatarInfo": null,

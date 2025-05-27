@@ -44,12 +44,12 @@
                 "y": 0.5
               },
               "anchoredPosition": {
-                "x": -158,
-                "y": 10
+                "x": -100,
+                "y": 0
               },
               "sizeDelta": {
-                "x": 264,
-                "y": 150
+                "x": 50,
+                "y": 25
               }
             },
             "alpha": 100,
@@ -146,12 +146,12 @@
                 "y": 0.5
               },
               "anchoredPosition": {
-                "x": 49.999996185302734,
-                "y": 11
+                "x": -70,
+                "y": 0
               },
               "sizeDelta": {
-                "x": 150,
-                "y": 150
+                "x": 20,
+                "y": 20
               }
             },
             "alpha": 100,
@@ -248,12 +248,12 @@
                 "y": 0.5
               },
               "anchoredPosition": {
-                "x": 221.00001525878906,
-                "y": 4
+                "x": -13,
+                "y": 0
               },
               "sizeDelta": {
-                "x": 200,
-                "y": 100
+                "x": 100,
+                "y": 50
               }
             },
             "alpha": 100,
@@ -262,7 +262,7 @@
               "value": "New Text",
               "key": "",
               "font": "Default",
-              "fontSize": 50,
+              "fontSize": 20,
               "fontStyle": {
                 "bold": false,
                 "italic": false,
@@ -270,7 +270,7 @@
               },
               "color": "#ffffff",
               "alignment": {
-                "h": "center",
+                "h": "left",
                 "v": "middle"
               },
               "lineSpacing": 0,
@@ -299,7 +299,7 @@
           },
           "componentList": [],
           "_filters": [],
-          "_entityName": "Text",
+          "_entityName": "Amount",
           "entityTagData": {
             "tagPointers": []
           }
@@ -319,29 +319,38 @@
           "rotate": 0,
           "anchorMin": {
             "x": 0.5,
-            "y": 0.5
+            "y": 1
           },
           "anchorMax": {
             "x": 0.5,
-            "y": 0.5
+            "y": 1
           },
           "pivot": {
             "x": 0.5,
             "y": 0.5
           },
           "anchoredPosition": {
-            "x": -26,
-            "y": -44
+            "x": 60,
+            "y": -100
           },
           "sizeDelta": {
-            "x": 90,
-            "y": 41
+            "x": 82,
+            "y": 64
           }
         },
-        "alpha": 100,
+        "alpha": 99.7,
         "priority": 0
       },
-      "ecaScripts": [],
+      "ecaScripts": [
+        {
+          "fileId": "330mdflx4ba-mb5yprc9-qj4lslf98qn",
+          "filePath": "Assets\\Script\\Script (1).fcg",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
       "ecaProps": {
         "HudEmptyWidget": {},
         "HudWidget": {},
@@ -398,7 +407,7 @@
   },
   "componentList": [],
   "_filters": [],
-  "_entityName": "Root",
+  "_entityName": "MoneyUp",
   "entityTagData": {
     "tagPointers": []
   },

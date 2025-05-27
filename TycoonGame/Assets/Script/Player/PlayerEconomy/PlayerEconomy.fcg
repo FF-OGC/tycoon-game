@@ -22,6 +22,7 @@ graph Script {
         playerMoney = BigNumberHandler.addNumber(playerMoney, amount )
         thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
         LogInfo("_playerMoney" + playerMoney)
+        DispatchEvent(SHOW_MONEY_UP, thisEntity<Player>,List<object>{BigNumberHandler.ConvertListNumToString(amount)})
     }
 
     func subtractAmount(amount List<int>){

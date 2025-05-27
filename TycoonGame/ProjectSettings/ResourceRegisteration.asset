@@ -71,6 +71,23 @@
           },
           "scriptName": "DebugAddMoney",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "4slbv2zxm0n-mb5xyt6n-juqd9qforjf",
+            "filePath": "Assets\\UI\\MoneyUp.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "MoneyUp",
+          "children": [
+            {
+              "id": "66RfM9Uo",
+              "scriptName": "Amount"
+            }
+          ]
         }
       ]
     },

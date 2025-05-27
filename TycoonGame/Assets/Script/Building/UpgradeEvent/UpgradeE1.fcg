@@ -3,6 +3,8 @@ import "EditorGenLib.fcc" as EditorLib
 
 import "../BuildingHandler.fcg" as BuildingHandler
 import "../../Hint/HintHandler.fcg" as HintHandler
+import "../../Player/PlayerTutorial/HitTree.fcg" as HitTree
+import "../../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
 
 graph UpE1 {
     //Executed when entity is created

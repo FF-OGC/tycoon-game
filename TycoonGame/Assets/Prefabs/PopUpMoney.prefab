@@ -27,7 +27,7 @@
           "editorVisibleValue": true,
           "position": {
             "x": 0,
-            "y": -0.30000001192092896,
+            "y": 0,
             "z": 0
           },
           "scale": {
@@ -62,7 +62,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 333,
+          "tempIndex": 426,
           "itemID": 223,
           "seParent": null,
           "ecaScripts": [
@@ -83,7 +83,7 @@
               "b": 255,
               "a": 1
             },
-            "IsBillboard": true,
+            "IsBillboard": false,
             "IgnoreDepth": false,
             "AlwaysInScreen": false,
             "Width": 100,
@@ -116,8 +116,8 @@
           },
           "unlockedValue": null,
           "position": {
-            "x": 0,
-            "y": 0.699999988079071,
+            "x": 1,
+            "y": 0,
             "z": 0
           },
           "scale": {
@@ -152,7 +152,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 335,
+          "tempIndex": 427,
           "itemID": 223,
           "seParent": null,
           "ecaScripts": [
@@ -173,9 +173,9 @@
               "b": 255,
               "a": 1
             },
-            "IsBillboard": true,
+            "IsBillboard": false,
             "IgnoreDepth": false,
-            "AlwaysInScreen": false,
+            "AlwaysInScreen": true,
             "Width": 100,
             "Height": 100,
             "Depth": 0,
@@ -210,8 +210,8 @@
           "editorLockValue": false,
           "editorVisibleValue": true,
           "position": {
-            "x": 0,
-            "y": 3,
+            "x": 2,
+            "y": 0,
             "z": 0
           },
           "scale": {
@@ -246,7 +246,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 336,
+          "tempIndex": 428,
           "itemID": 222,
           "seParent": null,
           "ecaScripts": [
@@ -370,11 +370,14 @@
     }
   ],
   "prefabVariant": null,
-  "activeValue": null,
+  "activeValue": {
+    "selfValue": true,
+    "valueTag": "activeValue"
+  },
   "unlockedValue": null,
   "editorLockValue": false,
   "editorVisibleValue": true,
   "discriminator": "ISceneLike",
-  "_entityName": "Empty"
+  "_entityName": "PopUpMoney"
 }
 //"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
