@@ -16652,98 +16652,6 @@
         "Height": 2,
         "_levelObjectID": 1
       }
-    },
-    {
-      "_tag": {
-        "type": "SceneEditEntity",
-        "resourceId": "Primitive/Empty"
-      },
-      "_entityId": "CtT75CTX",
-      "children": [],
-      "prefabVariant": null,
-      "activeValue": {
-        "selfValue": true,
-        "valueTag": "activeValue"
-      },
-      "unlockedValue": null,
-      "editorLockValue": false,
-      "editorVisibleValue": true,
-      "position": {
-        "x": -7.6570000648498535,
-        "y": 0.9036893844604492,
-        "z": 3.7730000019073486
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "BTPath": [
-        null
-      ],
-      "visible": true,
-      "VisibilityLayer": 0,
-      "modelOptimization": 0,
-      "streamingLayer": "",
-      "attributes": [
-        2,
-        4
-      ],
-      "isTrigger": false,
-      "collidable": true,
-      "physicalLayer": 0,
-      "physicalMaterial": null,
-      "aoiSetting": 0,
-      "initialTypes": {},
-      "componentList": [],
-      "_filters": [],
-      "entityTagData": {
-        "tagPointers": []
-      },
-      "tempIndex": 64,
-      "itemID": 223,
-      "seParent": null,
-      "ecaScripts": [
-        null
-      ],
-      "ecaProps": {
-        "IconEntity": {},
-        "LevelObject": {},
-        "Transform": {},
-        "Entity": {},
-        "Visibility": {}
-      },
-      "_entityName": "Icon object",
-      "propsData": {
-        "iconColor": {
-          "r": 255,
-          "g": 255,
-          "b": 255,
-          "a": 1
-        },
-        "IsBillboard": true,
-        "IgnoreDepth": false,
-        "AlwaysInScreen": false,
-        "Width": 100,
-        "Height": 100,
-        "Depth": 0,
-        "iconType": "T_34_M_WS_ICON_REFRESH",
-        "_levelObjectID": 2,
-        "renderType": 0,
-        "iconTypeRef": {
-          "fileId": "e8cb4d04069536c9d4dabc5c52dd5f67",
-          "filePath": "lib://fftextures/WorkshopIconLibrary/T_34_M_WS_ICON_REFRESH.png",
-          "_tag": {
-            "type": "GFileRefer"
-          },
-          "fileType": "texture"
-        }
-      }
     }
   ],
   "prefabVariant": null,
@@ -16773,4 +16681,4 @@
     ]
   }
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3693570","c":{"FF":4901},"s":100}
