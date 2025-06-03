@@ -4,20 +4,16 @@ import "EditorGenLib.fcc" as EditorLib
 
 import "../../Economy/BigNumberHandler.fcg" as BigNumberHandler
 import "../PlayerUI/PlayerMoneyUI.fcg" as PlayerMoneyUI
-import "../PlayerUI/PlayerRockUI.fcg" as PlayerRockUI
 
 graph Script {
     //Executed when entity is created
     playerMoney List<int> = List<int>{}
-    playerRock List<int> = List<int>{}
     
 
     event OnAwake() {
         WaitForNextFrame()
-        playerMoney = List<int>{0}
-        playerRock = List<int>{0}
+        playerMoney = List<int>{100}
         thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
-
     }
 
     func addAmount (amount List<int>){
@@ -40,16 +36,5 @@ graph Script {
     }
 
     
-    func addAmountRock (amount List<int> ){
-        playerRock = BigNumberHandler.addNumber(playerRock, amount )
-        thisEntity<PlayerRockUI>.UISetDisplayRock(playerRock)
-        DispatchEvent(SHOW_ROCK_UP, thisEntity<Player>,List<object>{BigNumberHandler.ConvertListNumToString(amount)})
-    }
-
-    func subtractAmountRock( amount List<int>){
-        playerRock = BigNumberHandler.subtractNumber(playerRock, amount )
-        thisEntity<PlayerRockUI>.UISetDisplayRock(playerRock)
-        DispatchEvent(SHOW_ROCK_DOWN, thisEntity<Player>,List<object>{BigNumberHandler.ConvertListNumToString(amount)})
-    }
 
 }

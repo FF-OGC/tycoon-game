@@ -17,36 +17,16 @@ static graph CSVReadingHandler {
         return _list
     }
 
-    func GetValueByLevel(keyCSV CsvID, level int) List<int>{
+
+    func GetNameByIDBuilding(keyCSV CsvID, level int) List<int>{
         var _list = GetInformation(keyCSV as CsvID, 1, level )
         if  _list[0] == nil {
             _list = GetInformation(keyCSV as CsvID, 1, level-1 )
         }
         
-        var _index = BuildingConfigEnum.Value as int
+        var _index = BuildingConfigEnum.Name as int
         var _result = BigNumberHandler.convertStringToList(_list[_index] as string)
         return _result
-    }
-
-    func GetUpgradeCostByLevel (keyCSV CsvID, level int) List<int>{
-        var _list = GetInformation(keyCSV as CsvID, 1, level )
-        if _list[0] == nil {
-             _list = GetInformation(keyCSV as CsvID, 1, level-1 )
-        }
-
-        var _index = BuildingConfigEnum.UpgradeCost as int
-        var _result = BigNumberHandler.convertStringToList(_list[_index] as string)
-        return _result
-    }
-
-    func GetCooldownByLevel (keyCSV CsvID, level int) int{
-        var _list = GetInformation(keyCSV as CsvID, 1, level )
-        if _list[0] == nil {
-                _list = GetInformation(keyCSV as CsvID, 1, level-1 )
-        }
-
-        var _index = BuildingConfigEnum.Cooldown as int
-        return _list[_index] as int
     }
 
 }

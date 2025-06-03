@@ -1,0 +1,26 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
+
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler 
+import "../Building/BuildingHandler.fcg" as BuildingHandler
+
+graph UpgradeButtonTrigger {
+    //Executed when entity is created
+
+
+    _parentEntity entity
+    _parentCurrentLevel int
+    _parentConfigFile CsvID
+
+
+    event OnEntityEnter(target entity<Entity>) {
+        //Init 
+    }
+
+
+    event OnEntityExit(target entity<Entity>) {
+    }
+}

@@ -52,15 +52,15 @@
               },
               "sizeDelta": {
                 "x": 50,
-                "y": 50
+                "y": 25
               }
             },
             "alpha": 100,
             "priority": 0,
             "image": {
               "source": {
-                "fileId": "rdcgxdqi5v8-mb68wkbr-9px687aus1g",
-                "filePath": "Assets\\Sprite\\wood.png",
+                "fileId": "43mo8l46psa-mb3cpbvq-kx6uhznwcii",
+                "filePath": "Assets\\Sprite\\cash.png",
                 "_tag": {
                   "type": "GFileRefer"
                 },
@@ -430,4 +430,4 @@
   "discriminator": "ISceneLike",
   "version": 3
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

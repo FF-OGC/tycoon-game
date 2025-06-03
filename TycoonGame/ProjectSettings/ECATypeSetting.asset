@@ -40,29 +40,9 @@
           }
         },
         {
-          "propID": 100011,
-          "name": "PROP_66735044",
-          "label": "Name",
-          "type": "String",
-          "value": "",
-          "disabledType": true
-        },
-        {
-          "propID": 100006,
-          "name": "PROP_55253157",
-          "label": "Type",
-          "type": "CustomEnum75552261",
-          "value": null,
-          "disabledType": true,
-          "param": {
-            "compType": "InputEditor",
-            "disabled": true
-          }
-        },
-        {
           "propID": 100012,
           "name": "PROP_40070020",
-          "label": "CurrentLevel",
+          "label": "State",
           "type": "Int",
           "value": 0,
           "disabledType": true,
@@ -80,6 +60,14 @@
           "value": {
             "type": "ListT_Int",
             "value": []
+          },
+          "disabledType": true,
+          "param": {
+            "compType": "InputNumberEditor",
+            "widgetParam": {
+              "min": -2147483648,
+              "max": 2147483647
+            }
           }
         }
       ]
@@ -121,29 +109,6 @@
         }
       ]
     },
-    "CustomComponent20697677": {
-      "label": "BuildingConfig",
-      "name": "CustomComponent20697677",
-      "bases": [
-        "Component"
-      ],
-      "ecaScripts": [],
-      "typeID": 100001,
-      "PropDefines": [
-        {
-          "propID": 100016,
-          "name": "PROP_53930573",
-          "label": "ConfigFile",
-          "type": "CsvID",
-          "value": null,
-          "disabledType": true,
-          "param": {
-            "compType": "InputEditor",
-            "disabled": true
-          }
-        }
-      ]
-    },
     "CustomComponent28719277": {
       "label": "BuildingChildren",
       "name": "CustomComponent28719277",
@@ -180,7 +145,7 @@
         {
           "propID": 100015,
           "name": "PROP_55133413",
-          "label": "UpgradeButton",
+          "label": "RefillButton",
           "type": "Entity",
           "value": null,
           "disabledType": true,
@@ -192,7 +157,7 @@
         {
           "propID": 100017,
           "name": "PROP_30108253",
-          "label": "UpgradeButtonDisplayText",
+          "label": "RefillButtonDisplayText",
           "type": "Entity",
           "value": null,
           "disabledType": true,
@@ -226,109 +191,7 @@
           }
         }
       ]
-    },
-    "CustomComponent86559839": {
-      "label": "ChildrenScriptAdd",
-      "name": "CustomComponent86559839",
-      "bases": [
-        "Component"
-      ],
-      "ecaScripts": [],
-      "typeID": 100018,
-      "PropDefines": [
-        {
-          "propID": 100020,
-          "name": "PROP_42917750",
-          "label": "SDA",
-          "type": "GraphID",
-          "value": null,
-          "disabledType": true,
-          "param": {
-            "compType": "InputEditor",
-            "disabled": true
-          }
-        }
-      ]
-    },
-    "CustomComponent36346074": {
-      "label": "BuildingUnlock",
-      "name": "CustomComponent36346074",
-      "bases": [
-        "Component"
-      ],
-      "ecaScripts": [],
-      "typeID": 100019,
-      "PropDefines": [
-        {
-          "propID": 100022,
-          "name": "PROP_41702014",
-          "label": "ListLevelUnlock",
-          "type": "ListT_Int",
-          "value": {
-            "type": "ListT_Int",
-            "value": []
-          },
-          "disabledType": true,
-          "param": {
-            "compType": "InputNumberEditor",
-            "widgetParam": {
-              "min": -2147483648,
-              "max": 2147483647
-            }
-          }
-        },
-        {
-          "propID": 100023,
-          "name": "PROP_17317274",
-          "label": "ListBuildingUnlock",
-          "type": "ListT_Entity",
-          "value": null
-        }
-      ]
-    },
-    "CustomComponent14113027": {
-      "label": "SpecialEventAfterUnlocked",
-      "name": "CustomComponent14113027",
-      "bases": [
-        "Component"
-      ],
-      "ecaScripts": [],
-      "typeID": 100021,
-      "PropDefines": [
-        {
-          "propID": 100024,
-          "name": "PROP_92770521",
-          "label": "Script",
-          "type": "GraphID",
-          "value": null,
-          "disabledType": true,
-          "param": {
-            "compType": "InputEditor",
-            "disabled": true
-          }
-        }
-      ]
-    },
-    "CustomComponent81469950": {
-      "label": "SpecialEventAfterUpgraded",
-      "name": "CustomComponent81469950",
-      "bases": [
-        "Component"
-      ],
-      "ecaScripts": [],
-      "typeID": 100025,
-      "PropDefines": []
-    },
-    "CustomComponent78352977": {
-      "label": "SpecialEventAfterAvailable",
-      "name": "CustomComponent78352977",
-      "bases": [
-        "Component"
-      ],
-      "ecaScripts": [],
-      "typeID": 100026,
-      "PropDefines": []
     }
   }
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

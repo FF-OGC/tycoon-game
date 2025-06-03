@@ -114,30 +114,6 @@
       "fileType": "ugcscript"
     },
     {
-      "fileId": "1ybz886zj-maz9lhlh-y2nl101e6p",
-      "filePath": "Assets\\ECA\\Player (3).eca",
-      "_tag": {
-        "type": "GFileRefer"
-      },
-      "fileType": "eca"
-    },
-    {
-      "fileId": "q7gn3ny7aci-mb4s6bog-mwcz2035ggi",
-      "filePath": "Assets\\Script\\Player\\PlayerTutorial\\HitTree.fcg",
-      "_tag": {
-        "type": "GFileRefer"
-      },
-      "fileType": "ugcscript"
-    },
-    {
-      "fileId": "ma0c3fxgesq-mb5vmo5h-9gv6tdesd3",
-      "filePath": "Assets\\Script\\Script.fcg",
-      "_tag": {
-        "type": "GFileRefer"
-      },
-      "fileType": "ugcscript"
-    },
-    {
       "fileId": "4oh7xneqrv9-mb5z6053-kpuvty2kz8r",
       "filePath": "Assets\\Script\\Player\\PlayerUI\\PlayerMoneyUPUI.fcg",
       "_tag": {
@@ -376,4 +352,4 @@
   "modOpen": true,
   "showSwitch": false
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

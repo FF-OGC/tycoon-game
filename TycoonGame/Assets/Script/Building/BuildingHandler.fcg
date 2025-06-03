@@ -17,8 +17,7 @@ graph Script {
     configFile CsvID
 
     buildingID int
-    buildingName string
-    currentLevel int 
+    buildingUnlockState int
     unlockCost List<int>
     buildingType BuildingTypeEnum
 
@@ -26,8 +25,8 @@ graph Script {
     valueDisplay entity
     unlockButton entity
     unlockDisplay entity
-    upgradeButton entity
-    upgradeDisplay entity
+    refillButton entity
+    refillDisplay entity
 
     buildingUnlockLevelList List<int> 
     buildingUnlockBuildingList List<entity> 
@@ -42,49 +41,37 @@ graph Script {
 
     async func init (){
         buildingID = thisEntity<Building>.ID
-        buildingName = thisEntity<Building>.Name
-        currentLevel = thisEntity<Building>.CurrentLevel
+        buildingUnlockState = thisEntity<Building>.State
         unlockCost = thisEntity<Building>.UnlockCost as List<int>
-        buildingType = thisEntity<Building>.Type
-
-        configFile = thisEntity<BuildingConfig>.ConfigFile
 
         model = thisEntity<BuildingChildren>.Model
         valueDisplay = thisEntity<BuildingChildren>.ValueDisplayText
         unlockButton = thisEntity<BuildingChildren>.UnlockButton
         unlockDisplay = thisEntity<BuildingChildren>.UnlockButtonDisplayText
-        upgradeButton = thisEntity<BuildingChildren>.UpgradeButton
-        upgradeDisplay = thisEntity<BuildingChildren>.UpgradeButtonDisplayText
+        refillButton = thisEntity<BuildingChildren>.RefillButton
+        refillDisplay = thisEntity<BuildingChildren>.RefillButtonDisplayText
 
         WaitForNextFrame()
         initDisplay()
         
         GlobalBuildingManager.BuildingList[buildingID] = thisEntity
-        GlobalBuildingManager.BuildingLevelList[buildingID] = currentLevel 
-
-        initBuildingUnlock()
+        GlobalBuildingManager.BuildingStateList[buildingID] = buildingUnlockState 
 
         setActiveGameStart()
     }
 
-    func initBuildingUnlock (){
-        if HasComponent(thisEntity,typeof(BuildingUnlock)) {
-            buildingUnlockLevelList = thisEntity<BuildingUnlock>.ListLevelUnlock
-            buildingUnlockBuildingList = thisEntity<BuildingUnlock>.ListBuildingUnlock
-        }
-    }
 
     func setActiveGameStart(){
         SetActive(thisEntity, true)
-        if currentLevel == -1 {
+        if buildingUnlockState == -1 {
             setActiveUnlock(false)
             setActiveUpgrade(false)
             setActiveModel(false)
-        } else if currentLevel == 0 {
+        } else if buildingUnlockState == 0 {
             setActiveUnlock(true)
             setActiveUpgrade(false)
             setActiveModel(false)
-        } else if currentLevel >0 {
+        } else if buildingUnlockState >0 {
             setActiveUnlock(false)
             setActiveUpgrade(true)
             setActiveModel(true)
@@ -93,56 +80,33 @@ graph Script {
         initDisplay()
     }
 
-
-
-    func logtest (){
-        LogInfo("currentLevel" + currentLevel )
-        LogInfo("unlockCost" + unlockCost )
-        LogInfo("buildingType" + buildingType )
-        LogInfo("configFile" + configFile )
-        LogInfo("model" + model )
-        LogInfo("modelDisplay" + valueDisplay )
-        LogInfo("unlockButton" + unlockButton )
-        LogInfo("unlockDisplay" + unlockDisplay )
-        LogInfo("upgradeButton" + upgradeButton )
-        LogInfo("upgradeDisplay" + upgradeDisplay )
-    }
-
-
-    func updateCurrentLevel(){
-        currentLevel = thisEntity<Building>.CurrentLevel
-    }
-
     func updateValue(){
-        value = CSVReadingHandler.GetValueByLevel(configFile, currentLevel)
     }
 
     func updateUpgradeCost(){
-        upgradeCost = CSVReadingHandler.GetUpgradeCostByLevel(configFile, currentLevel)
     }
 
     func updateCooldown(){
-        cooldown = CSVReadingHandler.GetCooldownByLevel(configFile, currentLevel)
     }
 
     func initDisplay(){
-        if currentLevel == 0 {
-            updateUnlockDisplay()
-        } else if currentLevel > 0 {
-            updateUpgradeDisplay()
-            updateValueDisplay()
-        }
+        // if currentLevel == 0 {
+        //     updateUnlockDisplay()
+        // } else if currentLevel > 0 {
+        //     updaterefillDisplay()
+        //     updateValueDisplay()
+        // }
     }
 
     func updateUnlockDisplay (){
-        var _displayString =  "UNLOCK "  + buildingName+": " +  BigNumberHandler.ConvertListNumToString(unlockCost)
-        unlockDisplay<Text>.Content = _displayString
+        // var _displayString =  "UNLOCK "  + buildingName+": " +  BigNumberHandler.ConvertListNumToString(unlockCost)
+        // unlockDisplay<Text>.Content = _displayString
     }
 
-    func updateUpgradeDisplay (){
-        updateUpgradeCost()
-        var _displayString = "UPGRADE " + buildingName+ ": " +  BigNumberHandler.ConvertListNumToString(upgradeCost)
-        upgradeDisplay<Text>.Content = _displayString
+    func updaterefillDisplay (){
+        // updateUpgradeCost()
+        // var _displayString = "UPGRADE " + buildingName+ ": " +  BigNumberHandler.ConvertListNumToString(upgradeCost)
+        // refillDisplay<Text>.Content = _displayString
     }
 
     func updateValueDisplay(){
@@ -165,8 +129,8 @@ graph Script {
 
 
     func setActiveUpgrade(isActive bool){
-        SetActive(upgradeButton, isActive)
-        SetActive(upgradeDisplay, isActive)
+        SetActive(refillButton, isActive)
+        SetActive(refillDisplay, isActive)
     }
 
     func setActiveModel(isActive bool){
@@ -176,13 +140,14 @@ graph Script {
 
 
     func levelUp(){
+        /*
         thisEntity<Building>.CurrentLevel += 1
         updateCurrentLevel()
+        */
     }
 
     func unlockBuilding(){
         levelUp()
-
         //Enable Model
         SetActive(GetParent(model), true)
         SetActive(model,true)
@@ -192,16 +157,12 @@ graph Script {
         updateValueDisplay()
 
         if buildingType != BuildingTypeEnum.Decoration {
-            SetActive(GetParent(upgradeButton), true)
-            SetActive(upgradeButton,true)
-            SetActive(upgradeDisplay,true)
+            SetActive(GetParent(refillButton), true)
+            SetActive(refillButton,true)
+            SetActive(refillDisplay,true)
 
             updateUpgradeCost()
-            updateUpgradeDisplay()
-        }
-
-        if HasComponent(thisEntity,typeof(SpecialEventAfterUnlocked)) {
-            DispatchEvent(UNLOCK_EVENT,thisEntity,List<object>{})
+            updaterefillDisplay()
         }
 
         SetActive(unlockButton,false)
@@ -218,35 +179,13 @@ graph Script {
         updateUpgradeCost()
         //Off upgrade option if max level
         if upgradeCost[0] == -1 {
-            SetActive(upgradeButton, false)
-            SetActive(upgradeDisplay, false)
+            SetActive(refillButton, false)
+            SetActive(refillDisplay, false)
         } else {
-            updateUpgradeDisplay()
+            updaterefillDisplay()
         }
 
         
-        if HasComponent(thisEntity,typeof(BuildingUnlock)) {
-            checkBuildingAvailable()
-        }
-
-        if HasComponent(thisEntity,typeof(SpecialEventAfterUpgraded)) {
-            DispatchEvent(UPGRADE_EVENT,thisEntity,List<object>{})
-        }
-
-
-    }
-
-    func checkBuildingAvailable(){
-            if List.Contain(buildingUnlockLevelList,currentLevel){
-                var index = IndexOf(buildingUnlockLevelList, currentLevel)
-                var _unlockedBuilding = buildingUnlockBuildingList[index]
-                _unlockedBuilding<BuildingHandler>.levelUp()
-                _unlockedBuilding<BuildingHandler>.setActiveGameStart()
-
-            if HasComponent(_unlockedBuilding,typeof(SpecialEventAfterAvailable)) {
-                DispatchEvent(AVAILABLE_EVENT, _unlockedBuilding, List<object>{})
-            }
-        }
     }
 
 }
