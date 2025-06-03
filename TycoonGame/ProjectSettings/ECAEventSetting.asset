@@ -232,6 +232,23 @@
       "apiTargetV2": "both",
       "version": 45,
       "key": "signal_47431495"
+    },
+    "signal_25627617": {
+      "name": "COOK",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100014,
+      "props": [
+        {
+          "name": "amount",
+          "value": "any",
+          "key": 1
+        }
+      ],
+      "propCount": 1,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_25627617"
     }
   },
   "customName": {
@@ -248,8 +265,9 @@
     "SHOW_MONEY_UP": "signal_94745751",
     "SHOW_MONEY_DOWN": "signal_63235039",
     "SHOW_ROCK_UP": "signal_44600301",
-    "SHOW_ROCK_DOWN": "signal_47431495"
+    "SHOW_ROCK_DOWN": "signal_47431495",
+    "COOK": "signal_25627617"
   },
   "children": []
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

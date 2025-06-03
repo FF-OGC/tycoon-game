@@ -282,26 +282,14 @@
       "children": [
         {
           "refer": {
-            "fileId": "hume3cc3f1k-maw1efpp-3vq6ihqyb3",
-            "filePath": "Assets\\BuildingConfigCSV\\test.csv",
+            "fileId": "o25t1nv06a-mbfyys7v-vpxjhhzh71b",
+            "filePath": "Assets\\CSV\\Building.csv",
             "_tag": {
               "type": "GFileRefer"
             },
             "fileType": "csv"
           },
-          "scriptName": "test",
-          "children": []
-        },
-        {
-          "refer": {
-            "fileId": "2nznoo26o36-maw7kx9i-toibups06cr",
-            "filePath": "Assets\\BuildingConfigCSV\\ID1Forrest.csv",
-            "_tag": {
-              "type": "GFileRefer"
-            },
-            "fileType": "csv"
-          },
-          "scriptName": "ID1Forrest",
+          "scriptName": "Building",
           "children": []
         }
       ]

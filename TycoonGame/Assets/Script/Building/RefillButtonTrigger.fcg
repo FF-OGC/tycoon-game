@@ -6,18 +6,26 @@ import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 
 import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler 
 import "../Building/BuildingHandler.fcg" as BuildingHandler
+import "../Player/PlayerInventory/PlayerInventory.fcg" as PlayerInventory
 
 graph UpgradeButtonTrigger {
     //Executed when entity is created
 
 
     _parentEntity entity
-    _parentCurrentLevel int
-    _parentConfigFile CsvID
 
 
     event OnEntityEnter(target entity<Entity>) {
-        //Init 
+        if _parentEntity == nil {
+            _parentEntity = GetParent(GetParent(thisEntity))
+        }
+        var _player = target as entity<Player>
+        var _inputID = _parentEntity<BuildingHandler>.inputID
+
+        if _player<PlayerInventory>.inventory[_inputID] > 0 {
+            DispatchEvent(COOK,_parentEntity,List<object>{_player<PlayerInventory>.inventory[_inputID]})
+            _player<PlayerInventory>.inventory[_inputID] = 0 
+        }
     }
 
 

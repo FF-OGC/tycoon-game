@@ -1,0 +1,27 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "e",
+        "id": "s*y{}R1of%J`pA5W?/1K",
+        "x": 491,
+        "y": 210,
+        "extraState": {
+          "X": 384,
+          "L": [],
+          "O": [],
+          "T": "OnPlayerJump",
+          "OT": "Player"
+        }
+      }
+    ]
+  },
+  "graphData": {
+    "ownerType": "Entity",
+    "componentTypes": "Player",
+    "isStatic": false,
+    "platform": 2
+  }
+}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

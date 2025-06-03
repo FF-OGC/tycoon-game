@@ -8,13 +8,16 @@ static graph GlobalBuildingManager {
     //Executed when entity is created
     BuildingList List<entity>
     BuildingStateList List<int>
-    BuildingLevelList List<int>
+    BuildingInputList List<int>
+    BuildingOutputList List<int>
+
     UnlockList List<entity>
 
     event OnAwake() {
         BuildingList = New(100,100)
         BuildingStateList = New(100,100)
-        BuildingLevelList = New(100,100)
+        BuildingInputList = New(100,100)
+        BuildingOutputList = New(100,100)
     }
 
     func gameBuilt(){

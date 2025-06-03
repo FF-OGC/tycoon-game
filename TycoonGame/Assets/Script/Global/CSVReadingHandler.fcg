@@ -4,6 +4,7 @@ import "CSVData.fcc" as CSVData
 
 import Res from "EditorGenLib.fcc"
 import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
+import "Buff.fcc" as Buff
 
 static graph CSVReadingHandler {
     //Executed when entity is created
@@ -13,20 +14,78 @@ static graph CSVReadingHandler {
 
     func GetInformation(keyCSV CsvID, keyROW int, key object) List<object>{
         var _list  = ReadCSVRowByKey(keyCSV as CsvID, keyROW, key as  int)
-        //var _list  = ReadCSVRowByKey(Res.CSV[keyCSV as EResKeyCSV], keyROW, key as  int)
         return _list
     }
 
-
-    func GetNameByIDBuilding(keyCSV CsvID, level int) List<int>{
-        var _list = GetInformation(keyCSV as CsvID, 1, level )
+    func GetNameByBuildingID(keyCSV CsvID, id int) string{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
         if  _list[0] == nil {
-            _list = GetInformation(keyCSV as CsvID, 1, level-1 )
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
         }
         
         var _index = BuildingConfigEnum.Name as int
-        var _result = BigNumberHandler.convertStringToList(_list[_index] as string)
-        return _result
+        return _list[_index] as string
     }
 
+    func GetUnlockCostByBuildingID(keyCSV CsvID, id int) List<int>{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = BuildingConfigEnum.Name as int
+        var result = BigNumberHandler.convertStringToList(_list[_index] as string)
+        return result
+    }
+
+
+    func GetInputIDByBuildingID(keyCSV CsvID, id int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = BuildingConfigEnum.Input as int
+        return _list[_index] as int
+    }
+
+    func GetOutputIDByBuildingID(keyCSV CsvID, id int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = BuildingConfigEnum.Output as int
+        return _list[_index] as int
+    }
+
+    
+    func GetCooldownByBuildingID(keyCSV CsvID, id int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = BuildingConfigEnum.Cooldown as int
+        return _list[_index] as int
+    }
+
+
+    func getItemNameByID(keyCSV CsvID, id int) string{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        var _index = ItemConfigEnum.Name as int
+        return _list[_index] as string
+    }
+
+    func getItemIDByItemName(keyCSV CsvID, name string)int {
+        var _list = GetInformation(keyCSV as CsvID, ItemConfigEnum.Name, name )
+        if  _list[0] == nil {
+            return 0
+        }
+        var _index = ItemConfigEnum.ID as int
+        return _list[_index] as int
+    }
 }

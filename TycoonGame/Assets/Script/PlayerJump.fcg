@@ -2,11 +2,15 @@ import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 import "Player.fcc" as Player
 
-static graph PlayerStaticInformation {
-    //Executed when entity is created
-    playerHost entity<Player>
+import "../Script/Global/CSVReadingHandler.fcg" as CSVReadingHandler
 
-    event OnPlayerJoin(player entity<Player>) {
-        playerHost = player
+graph Script_1_ {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event OnJump() {
     }
 }
+

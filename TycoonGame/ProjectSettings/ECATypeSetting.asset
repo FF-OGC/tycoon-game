@@ -191,6 +191,36 @@
           }
         }
       ]
+    },
+    "CustomComponent31585200": {
+      "label": "img",
+      "name": "CustomComponent31585200",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100014,
+      "PropDefines": [
+        {
+          "propID": 100028,
+          "name": "PROP_68965329",
+          "label": "dsa",
+          "type": "HudImageWidget",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
+        },
+        {
+          "propID": 100029,
+          "name": "PROP_69443475",
+          "label": "sprite",
+          "type": "SpriteID",
+          "value": null
+        }
+      ]
     }
   }
 }

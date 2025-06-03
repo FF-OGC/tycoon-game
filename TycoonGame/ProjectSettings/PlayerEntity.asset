@@ -120,6 +120,30 @@
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "fknei9vfbfs-mbg0p1qw-nozdzz3b23m",
+      "filePath": "Assets\\Script\\Script (1).fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "qx083wvwbp-mbg6q4dx-u27brwpbsog",
+      "filePath": "Assets\\ECA\\Player (4).eca",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "eca"
+    },
+    {
+      "fileId": "ybjey0n5loc-mbg782oh-zjw3egzmyfn",
+      "filePath": "Assets\\Script\\Player\\PlayerInventory\\PlayerInventory.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "avatarInfo": null,

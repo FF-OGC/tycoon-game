@@ -9,6 +9,8 @@ import "Workflow.fcc" as Workflow
 import "../Building/GlobalBuildingManager.fcg" as GlobalBuildingManager
 import "../Building/BuildingHandler.fcg" as BuildingHandler
 import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
+import "../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
+import "../Player/PlayerInventory/PlayerInventory.fcg" as PlayerInventory
 
 import "List.fcc" as List
 
@@ -18,8 +20,13 @@ graph Script {
 
     buildingID int
     buildingUnlockState int
+    buildingName string
     unlockCost List<int>
     buildingType BuildingTypeEnum
+
+    inputID int
+    outputID int
+    cooldown int
 
     model entity
     valueDisplay entity
@@ -31,17 +38,20 @@ graph Script {
     buildingUnlockLevelList List<int> 
     buildingUnlockBuildingList List<entity> 
     
-    value List<int> 
-    upgradeCost List<int> 
-    cooldown int
+    cookingCount int
+    isCooking bool
+
+    owner entity<Player>
 
     event OnAwake() {
         init ()
     }
 
     async func init (){
+        WaitForNextFrame()
         buildingID = thisEntity<Building>.ID
         buildingUnlockState = thisEntity<Building>.State
+        buildingName = CSVReadingHandler.GetNameByBuildingID(EResCSV.Building,buildingID)
         unlockCost = thisEntity<Building>.UnlockCost as List<int>
 
         model = thisEntity<BuildingChildren>.Model
@@ -51,6 +61,14 @@ graph Script {
         refillButton = thisEntity<BuildingChildren>.RefillButton
         refillDisplay = thisEntity<BuildingChildren>.RefillButtonDisplayText
 
+        inputID = CSVReadingHandler.GetInputIDByBuildingID(EResCSV.Building,buildingID)
+        outputID = CSVReadingHandler.GetOutputIDByBuildingID(EResCSV.Building,buildingID)
+        cooldown = CSVReadingHandler.GetCooldownByBuildingID(EResCSV.Building,buildingID)
+
+        cookingCount = 0
+
+        owner = PlayerStaticInformation.playerHost
+
         WaitForNextFrame()
         initDisplay()
         
@@ -58,6 +76,23 @@ graph Script {
         GlobalBuildingManager.BuildingStateList[buildingID] = buildingUnlockState 
 
         setActiveGameStart()
+    }
+
+
+    event COOK(amount object) {
+        cookingCount += amount as int
+        if isCooking == false {
+            isCooking = true
+            while cookingCount >0 {
+                WaitForMillisecond(5000)
+                LogInfo("get + count: " + cookingCount)
+                if owner == nil {
+                    owner = PlayerStaticInformation.playerHost
+                }
+                owner<PlayerInventory>.inventoryAddItem(outputID, 1)
+                cookingCount --
+            }
+        }
     }
 
 
@@ -88,45 +123,31 @@ graph Script {
 
     func updateCooldown(){
     }
-
     func initDisplay(){
-        // if currentLevel == 0 {
-        //     updateUnlockDisplay()
-        // } else if currentLevel > 0 {
-        //     updaterefillDisplay()
-        //     updateValueDisplay()
-        // }
+        if buildingUnlockState == 0 {
+            updateUnlockDisplay()
+        } else if buildingUnlockState > 0 {
+            updateRefillDisplay()
+            updateValueDisplay()
+        }
     }
 
     func updateUnlockDisplay (){
-        // var _displayString =  "UNLOCK "  + buildingName+": " +  BigNumberHandler.ConvertListNumToString(unlockCost)
-        // unlockDisplay<Text>.Content = _displayString
+        var _displayString =  "UNLOCK "  + buildingName+": " +  BigNumberHandler.ConvertListNumToString(unlockCost)
+        unlockDisplay<Text>.Content = _displayString
     }
 
-    func updaterefillDisplay (){
-        // updateUpgradeCost()
-        // var _displayString = "UPGRADE " + buildingName+ ": " +  BigNumberHandler.ConvertListNumToString(upgradeCost)
-        // refillDisplay<Text>.Content = _displayString
+    func updateRefillDisplay (){
     }
 
     func updateValueDisplay(){
-        updateValue()
-        var _displayString string
-
-        if buildingType == BuildingTypeEnum.Action {
-            _displayString = BigNumberHandler.ConvertListNumToString(value)   + " Per hit"
-        } else if buildingType == BuildingTypeEnum.Idle{
-            _displayString =  BigNumberHandler.ConvertListNumToString(value)  + " Per : "+"3/s"
-        }
-
-        valueDisplay<Text>.Content = _displayString
+    
     }
 
     func setActiveUnlock(isActive bool){
         SetActive(unlockButton, isActive)
         SetActive(unlockDisplay, isActive)
     }
-
 
     func setActiveUpgrade(isActive bool){
         SetActive(refillButton, isActive)
@@ -139,15 +160,7 @@ graph Script {
     }
 
 
-    func levelUp(){
-        /*
-        thisEntity<Building>.CurrentLevel += 1
-        updateCurrentLevel()
-        */
-    }
-
     func unlockBuilding(){
-        levelUp()
         //Enable Model
         SetActive(GetParent(model), true)
         SetActive(model,true)
@@ -162,30 +175,12 @@ graph Script {
             SetActive(refillDisplay,true)
 
             updateUpgradeCost()
-            updaterefillDisplay()
+            updateRefillDisplay()
         }
 
         SetActive(unlockButton,false)
         SetActive(unlockDisplay,false)
     }
 
-    func upgradeBuilding(){
-        levelUp()
-
-        updateValue()
-        updateValueDisplay()
-
-
-        updateUpgradeCost()
-        //Off upgrade option if max level
-        if upgradeCost[0] == -1 {
-            SetActive(refillButton, false)
-            SetActive(refillDisplay, false)
-        } else {
-            updaterefillDisplay()
-        }
-
-        
-    }
 
 }
