@@ -4,7 +4,7 @@ import "Playable.fcc" as Playable
 import "Hud.fcc" as Hud
 import "Convert.fcc" as Convert
 
-graph Script_1_ {
+graph FloatingUI {
     //Executed when entity is created
     event OnAwake() {
         var curve = CreateCurve(List<float> {0,0,1,1})

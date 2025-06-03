@@ -93,6 +93,39 @@
               "scriptName": "Amount"
             }
           ]
+        },
+        {
+          "refer": {
+            "fileId": "y56i3yxf9n-mbg6p2hh-tozl1j5t5q",
+            "filePath": "Assets\\UI\\Inventory.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "Inventory",
+          "children": [
+            {
+              "id": "IsxuZiRd",
+              "scriptName": "ViewIngredient"
+            },
+            {
+              "id": "6o3yK2Pe",
+              "scriptName": "ViewMeal"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "gbxxv0iqh34-mbgdoah5-qmzhzc4nzw",
+            "filePath": "Assets\\UI\\PlayerHUDCustom.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerHUDCustom",
+          "children": []
         }
       ]
     },

@@ -19,4 +19,5 @@ graph PlayerInventory {
     func inventoryRemoveItem(itemID int, number int){
         inventory[itemID] -= number
     }
+
 }

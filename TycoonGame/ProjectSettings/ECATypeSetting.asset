@@ -218,6 +218,64 @@
           "name": "PROP_69443475",
           "label": "sprite",
           "type": "SpriteID",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
+        }
+      ]
+    },
+    "CustomComponent35424335": {
+      "label": "BtnOnOff",
+      "name": "CustomComponent35424335",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100030,
+      "PropDefines": [
+        {
+          "propID": 100033,
+          "name": "PROP_63236349",
+          "label": "On",
+          "type": "HudWidget",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
+        },
+        {
+          "propID": 100034,
+          "name": "PROP_45004039",
+          "label": "Off",
+          "type": "HudWidget",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
+        }
+      ]
+    },
+    "CustomComponent24470086": {
+      "label": "BtnNewUI",
+      "name": "CustomComponent24470086",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100035,
+      "PropDefines": [
+        {
+          "propID": 100037,
+          "name": "PROP_34153231",
+          "label": "CreatedUI",
+          "type": "CustomHudID",
           "value": null
         }
       ]

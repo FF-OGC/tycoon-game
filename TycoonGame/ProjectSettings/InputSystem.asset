@@ -6,8 +6,14 @@
   "_entityId": "tmlQ74R9",
   "children": [],
   "prefabVariant": null,
-  "activeValue": null,
-  "unlockedValue": null,
+  "activeValue": {
+    "selfValue": true,
+    "valueTag": "activeValue"
+  },
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
   "editorLockValue": false,
   "editorVisibleValue": true,
   "modId": 40,
@@ -126,6 +132,7 @@
     }
   ],
   "defaultOpen": true,
-  "_entityName": "FE_42_V_INPUT_SYSTEM"
+  "_entityName": "T_43_YU_WS_MODULE_INPUTSYSTEM",
+  "showSwitch": false
 }
-//"{FE:{"v":"0.0.0","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

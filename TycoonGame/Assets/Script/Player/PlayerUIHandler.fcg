@@ -10,5 +10,8 @@ graph PlayerHUDHandler {
     event OnAwake() {
         AddScript(thisEntity<Player>,EResFCG.PlayerDefaultHUD)
         AddScript(thisEntity<Player>,EResFCG.PlayerCustomUI)
+
+        CreateCustomUI(out var _inventoryBtn,thisEntity<Player>,EResUI.PlayerHUDCustom)
+        _inventoryBtn<CustomUI>.IsVisible = true
     }
 }

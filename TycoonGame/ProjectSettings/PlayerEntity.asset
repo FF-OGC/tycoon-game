@@ -130,20 +130,20 @@
       "fileType": "ugcscript"
     },
     {
-      "fileId": "qx083wvwbp-mbg6q4dx-u27brwpbsog",
-      "filePath": "Assets\\ECA\\Player (4).eca",
-      "_tag": {
-        "type": "GFileRefer"
-      },
-      "fileType": "eca"
-    },
-    {
       "fileId": "ybjey0n5loc-mbg782oh-zjw3egzmyfn",
       "filePath": "Assets\\Script\\Player\\PlayerInventory\\PlayerInventory.fcg",
       "_tag": {
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "lw52u4efza8-mbghvih6-p3epsg9087f",
+      "filePath": "Assets\\ECA\\Player.eca",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "eca"
     }
   ],
   "avatarInfo": null,

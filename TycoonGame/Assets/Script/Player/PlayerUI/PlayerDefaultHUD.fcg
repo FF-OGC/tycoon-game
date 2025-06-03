@@ -17,6 +17,8 @@ graph PlayerDefaultHUD {
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MedicalProps,CommonUISwitchValue.Close)
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.AttackGrenade,CommonUISwitchValue.Close)
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.DefenceGrenade,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.Bag,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.WeaponSlot,CommonUISwitchValue.Close)
     }
 
     event OnPhaseStart(phase entity<Phase>) {
