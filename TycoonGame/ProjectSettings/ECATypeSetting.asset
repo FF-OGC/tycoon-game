@@ -268,7 +268,15 @@
       "bases": [
         "Component"
       ],
-      "ecaScripts": [],
+      "ecaScripts": [
+        {
+          "fileId": "mg8wqj9xc6n-mbgfkwmz-gwo2a8n1qz",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
       "typeID": 100035,
       "PropDefines": [
         {
@@ -276,7 +284,12 @@
           "name": "PROP_34153231",
           "label": "CreatedUI",
           "type": "CustomHudID",
-          "value": null
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
         }
       ]
     }
