@@ -24,5 +24,4 @@ graph PlayerMoneyUPUI {
         var widget = GetWidgetFromCustomUI(thisEntity<Player>,createdMoneyDOWNUI,EResUIMoneyDown.Amount)
         widget<UIWidgetLabel>.Content = Amount
     }
-
 }

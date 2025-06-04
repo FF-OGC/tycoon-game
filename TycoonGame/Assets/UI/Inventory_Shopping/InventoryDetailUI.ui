@@ -128,7 +128,7 @@
           },
           "componentList": [],
           "_filters": [],
-          "_entityName": "Button",
+          "_entityName": "ExitBtn",
           "entityTagData": {
             "tagPointers": []
           }
@@ -755,7 +755,7 @@
                         ]
                       },
                       "editorLockValue": false,
-                      "editorVisibleValue": false
+                      "editorVisibleValue": true
                     },
                     {
                       "_tag": {
@@ -850,7 +850,7 @@
                         ]
                       },
                       "editorLockValue": false,
-                      "editorVisibleValue": false
+                      "editorVisibleValue": true
                     },
                     {
                       "_tag": {
@@ -945,7 +945,7 @@
                         ]
                       },
                       "editorLockValue": false,
-                      "editorVisibleValue": false
+                      "editorVisibleValue": true
                     }
                   ],
                   "prefabVariant": null,
@@ -998,7 +998,7 @@
                     "tagPointers": []
                   },
                   "editorLockValue": false,
-                  "editorVisibleValue": false
+                  "editorVisibleValue": true
                 }
               ],
               "prefabVariant": null,
@@ -1010,7 +1010,7 @@
                 "selfValue": true,
                 "valueTag": "unlockedValue"
               },
-              "editorLockValue": true,
+              "editorLockValue": false,
               "editorVisibleValue": true,
               "propsData": {
                 "activeSelf": true,
@@ -1094,7 +1094,7 @@
             "selfValue": true,
             "valueTag": "unlockedValue"
           },
-          "editorLockValue": true,
+          "editorLockValue": false,
           "editorVisibleValue": true,
           "propsData": {
             "activeSelf": true,
@@ -1306,7 +1306,7 @@
                         ]
                       },
                       "editorLockValue": false,
-                      "editorVisibleValue": false
+                      "editorVisibleValue": true
                     },
                     {
                       "_tag": {
@@ -1401,7 +1401,7 @@
                         ]
                       },
                       "editorLockValue": false,
-                      "editorVisibleValue": false
+                      "editorVisibleValue": true
                     },
                     {
                       "_tag": {
@@ -1496,7 +1496,7 @@
                         ]
                       },
                       "editorLockValue": false,
-                      "editorVisibleValue": false
+                      "editorVisibleValue": true
                     }
                   ],
                   "prefabVariant": null,
@@ -1549,7 +1549,7 @@
                     "tagPointers": []
                   },
                   "editorLockValue": false,
-                  "editorVisibleValue": false
+                  "editorVisibleValue": true
                 }
               ],
               "prefabVariant": null,
@@ -1633,7 +1633,7 @@
                 "tagPointers": []
               },
               "editorLockValue": false,
-              "editorVisibleValue": false
+              "editorVisibleValue": true
             }
           ],
           "prefabVariant": null,
@@ -1727,7 +1727,7 @@
             "tagPointers": []
           },
           "editorLockValue": false,
-          "editorVisibleValue": false
+          "editorVisibleValue": true
         }
       ],
       "prefabVariant": null,
@@ -1780,10 +1780,10 @@
             "fileType": "texture"
           },
           "bgColor": {
-            "r": 255,
-            "g": 255,
-            "b": 255,
-            "a": 0.3
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
           },
           "clippingType": 0,
           "softness": {
@@ -1854,7 +1854,7 @@
   },
   "componentList": [],
   "_filters": [],
-  "_entityName": "Inventory",
+  "_entityName": "InventoryDetailUI",
   "entityTagData": {
     "tagPointers": []
   },
