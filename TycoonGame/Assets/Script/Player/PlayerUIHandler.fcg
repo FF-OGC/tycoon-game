@@ -6,6 +6,7 @@ graph PlayerHUDHandler {
     //Executed when entity is created
 
     currentUI entity<CustomUI>
+    popupUI entity<CustomUI>
     
     event OnAwake() {
         AddScript(thisEntity<Player>,EResFCG.PlayerDefaultHUD)

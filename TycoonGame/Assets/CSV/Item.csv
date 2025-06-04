@@ -1,4 +1,4 @@
-ID,Name
-int,string
-1,Chicken
-2,Fried Chicken
+ID,Name,Price
+int,string,string
+1,Chicken,100
+2,Fried Chicken,100

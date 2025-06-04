@@ -324,6 +324,18 @@
           },
           "scriptName": "Building",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "bt20xpz0u1p-mbfyzec8-r0leyiu5xoc",
+            "filePath": "Assets\\CSV\\Item.csv",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "csv"
+          },
+          "scriptName": "ItemCSV",
+          "children": []
         }
       ]
     },

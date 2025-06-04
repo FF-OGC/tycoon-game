@@ -27,6 +27,10 @@
     {
       "id": "entityTag56737446",
       "label": "Amount"
+    },
+    {
+      "id": "entityTag26771906",
+      "label": "Price"
     }
   ],
   "children": []

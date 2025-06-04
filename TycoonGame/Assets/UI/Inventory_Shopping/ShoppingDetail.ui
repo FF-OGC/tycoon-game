@@ -296,18 +296,18 @@
                             "y": 0.5
                           },
                           "anchoredPosition": {
-                            "x": 0,
-                            "y": 0
+                            "x": -41,
+                            "y": 18
                           },
                           "sizeDelta": {
                             "x": 200,
-                            "y": 100
+                            "y": 40
                           }
                         },
                         "alpha": 100,
                         "priority": 0,
                         "text": {
-                          "value": "Ingridient",
+                          "value": "Chicken Kit",
                           "key": "",
                           "font": "Default",
                           "fontSize": 24,
@@ -318,8 +318,8 @@
                           },
                           "color": "#ffffff",
                           "alignment": {
-                            "h": "center",
-                            "v": "middle"
+                            "h": "left",
+                            "v": "bottom"
                           },
                           "lineSpacing": 0,
                           "background": false,
@@ -391,8 +391,8 @@
                             "y": 0.5
                           },
                           "anchoredPosition": {
-                            "x": 0,
-                            "y": 0
+                            "x": -260,
+                            "y": -21
                           },
                           "sizeDelta": {
                             "x": 200,
@@ -402,7 +402,7 @@
                         "alpha": 100,
                         "priority": 0,
                         "text": {
-                          "value": "Amount",
+                          "value": "100",
                           "key": "",
                           "font": "Default",
                           "fontSize": 24,
@@ -452,6 +452,304 @@
                       },
                       "editorLockValue": false,
                       "editorVisibleValue": true
+                    },
+                    {
+                      "_tag": {
+                        "type": "UIButtonEntity",
+                        "resourceId": ""
+                      },
+                      "_entityId": "ONkHh5MM",
+                      "children": [
+                        {
+                          "_tag": {
+                            "type": "UITextEntity",
+                            "resourceId": ""
+                          },
+                          "_entityId": "YkGdByTE",
+                          "children": [],
+                          "prefabVariant": null,
+                          "activeValue": {
+                            "selfValue": true,
+                            "valueTag": "activeValue"
+                          },
+                          "unlockedValue": null,
+                          "editorLockValue": false,
+                          "editorVisibleValue": true,
+                          "propsData": {
+                            "activeSelf": true,
+                            "transform": {
+                              "rotate": 0,
+                              "anchorMin": {
+                                "x": 0.5,
+                                "y": 0.5
+                              },
+                              "anchorMax": {
+                                "x": 0.5,
+                                "y": 0.5
+                              },
+                              "pivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                              },
+                              "anchoredPosition": {
+                                "x": 0,
+                                "y": 0
+                              },
+                              "sizeDelta": {
+                                "x": 200,
+                                "y": 100
+                              }
+                            },
+                            "alpha": 100,
+                            "priority": 0,
+                            "text": {
+                              "value": "BUY",
+                              "key": "BUY",
+                              "font": "Default",
+                              "fontSize": 24,
+                              "fontStyle": {
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                              },
+                              "color": "#ffffff",
+                              "alignment": {
+                                "h": "center",
+                                "v": "middle"
+                              },
+                              "lineSpacing": 0,
+                              "background": false,
+                              "backgroundColor": "#e7b200",
+                              "overflow": 0,
+                              "backgroundRGBA": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 0,
+                                "a": 0
+                              },
+                              "shadow": false,
+                              "shadowColor": "#000000",
+                              "shadowOffset": {
+                                "x": 1,
+                                "y": 1
+                              }
+                            }
+                          },
+                          "ecaScripts": [],
+                          "ecaProps": {
+                            "HudLabelWidget": {},
+                            "HudWidget": {},
+                            "Entity": {},
+                            "CustomComponent29328018": {
+                              "PROP_79619795": 0
+                            }
+                          },
+                          "componentList": [],
+                          "_filters": [],
+                          "_entityName": "Text",
+                          "entityTagData": {
+                            "tagPointers": []
+                          }
+                        }
+                      ],
+                      "prefabVariant": null,
+                      "activeValue": {
+                        "selfValue": true,
+                        "valueTag": "activeValue"
+                      },
+                      "unlockedValue": null,
+                      "editorLockValue": false,
+                      "editorVisibleValue": true,
+                      "propsData": {
+                        "activeSelf": true,
+                        "transform": {
+                          "rotate": 0,
+                          "anchorMin": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "anchorMax": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "pivot": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "anchoredPosition": {
+                            "x": 165,
+                            "y": 4
+                          },
+                          "sizeDelta": {
+                            "x": 150,
+                            "y": 50
+                          }
+                        },
+                        "alpha": 100,
+                        "priority": 0,
+                        "button": {
+                          "spriteName": {
+                            "fileId": "4fea53c19488f972a3e911c826b1bea7",
+                            "filePath": "lib://fftextures/WorkshopIconLibrary/UGC_Btn_02_Big_Normal.png",
+                            "_tag": {
+                              "type": "GFileRefer"
+                            },
+                            "fileType": "texture"
+                          },
+                          "normal": "#FFFFFF",
+                          "highlight": "#e2a222",
+                          "pressed": "#C5C5C5",
+                          "disabled": "#494949",
+                          "onClicks": [],
+                          "enableBorderImage": true,
+                          "clickHandlers": [],
+                          "disableCollider": false,
+                          "fillType": 1,
+                          "slicedBorder": {
+                            "left": 0,
+                            "right": 0,
+                            "top": 0,
+                            "bottom": 0
+                          },
+                          "tiledBorder": {
+                            "left": 0,
+                            "right": 0,
+                            "top": 0,
+                            "bottom": 0
+                          },
+                          "centerInvisible": false,
+                          "fillDir": 0,
+                          "fillAmount": 0,
+                          "invertFill": false,
+                          "reverse": {
+                            "x": false,
+                            "y": false
+                          },
+                          "flip": 0,
+                          "gradient": 1,
+                          "gradientTop": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255,
+                            "a": 1
+                          },
+                          "gradientBottom": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255,
+                            "a": 1
+                          }
+                        }
+                      },
+                      "ecaScripts": [],
+                      "ecaProps": {
+                        "HudButtonWidget": {},
+                        "HudWidget": {},
+                        "Entity": {},
+                        "CustomComponent29328018": {
+                          "PROP_79619795": 1
+                        }
+                      },
+                      "componentList": [
+                        "CustomComponent29328018"
+                      ],
+                      "_filters": [],
+                      "_entityName": "BuyBtn",
+                      "entityTagData": {
+                        "tagPointers": []
+                      }
+                    },
+                    {
+                      "_tag": {
+                        "type": "UITextEntity",
+                        "resourceId": ""
+                      },
+                      "_entityId": "jtruUWpS",
+                      "children": [],
+                      "prefabVariant": null,
+                      "activeValue": {
+                        "selfValue": true,
+                        "valueTag": "activeValue"
+                      },
+                      "unlockedValue": null,
+                      "editorLockValue": false,
+                      "editorVisibleValue": true,
+                      "propsData": {
+                        "activeSelf": true,
+                        "transform": {
+                          "rotate": 0,
+                          "anchorMin": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "anchorMax": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "pivot": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "anchoredPosition": {
+                            "x": 18,
+                            "y": -10
+                          },
+                          "sizeDelta": {
+                            "x": 126,
+                            "y": 36
+                          }
+                        },
+                        "alpha": 100,
+                        "priority": 0,
+                        "text": {
+                          "value": "PRICE: 100$",
+                          "key": "",
+                          "font": "Default",
+                          "fontSize": 24,
+                          "fontStyle": {
+                            "bold": false,
+                            "italic": false,
+                            "underline": false
+                          },
+                          "color": "#33FF00",
+                          "alignment": {
+                            "h": "left",
+                            "v": "bottom"
+                          },
+                          "lineSpacing": 0,
+                          "background": false,
+                          "backgroundColor": "#e7b200",
+                          "overflow": 0,
+                          "backgroundRGBA": {
+                            "r": 0,
+                            "g": 0,
+                            "b": 0,
+                            "a": 0
+                          },
+                          "shadow": false,
+                          "shadowColor": "#000000",
+                          "shadowOffset": {
+                            "x": 1,
+                            "y": 1
+                          }
+                        }
+                      },
+                      "ecaScripts": [],
+                      "ecaProps": {
+                        "HudLabelWidget": {},
+                        "HudWidget": {},
+                        "Entity": {}
+                      },
+                      "componentList": [],
+                      "_filters": [
+                        "entityTag26771906"
+                      ],
+                      "_entityName": "Pricing",
+                      "entityTagData": {
+                        "tagPointers": [
+                          "entityTag26771906"
+                        ]
+                      }
                     }
                   ],
                   "prefabVariant": null,
@@ -481,11 +779,11 @@
                       },
                       "anchoredPosition": {
                         "x": 0,
-                        "y": 200
+                        "y": 137.5
                       },
                       "sizeDelta": {
                         "x": 500,
-                        "y": 100
+                        "y": 125
                       }
                     },
                     "alpha": 100,
@@ -535,12 +833,12 @@
                     "y": 0.5
                   },
                   "anchoredPosition": {
-                    "x": -1,
-                    "y": -19
+                    "x": 0,
+                    "y": 0
                   },
                   "sizeDelta": {
                     "x": 500,
-                    "y": 500
+                    "y": 400
                   }
                 },
                 "alpha": 100,
@@ -561,7 +859,7 @@
                   },
                   "size": {
                     "x": 500,
-                    "y": 100
+                    "y": 125
                   },
                   "constraint": 2,
                   "direction": 1,
@@ -616,11 +914,11 @@
               },
               "pivot": {
                 "x": 0.5,
-                "y": 0.5
+                "y": 0
               },
               "anchoredPosition": {
                 "x": 0,
-                "y": 214
+                "y": 0
               },
               "sizeDelta": {
                 "x": 500,

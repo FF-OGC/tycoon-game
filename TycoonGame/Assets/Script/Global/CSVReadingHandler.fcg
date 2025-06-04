@@ -88,4 +88,16 @@ static graph CSVReadingHandler {
         var _index = ItemConfigEnum.ID as int
         return _list[_index] as int
     }
+
+    func getItemPriceByItemID(keyCSV CsvID, id int) List<int>{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = ItemConfigEnum.Price as int
+        var result = BigNumberHandler.convertStringToList(_list[_index] as string)
+        return result
+    }
+
 }

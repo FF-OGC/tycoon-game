@@ -1,4 +1,33 @@
 {
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "ipk",
+        "id": "z$;@|j::H6e1.pzY!aE}",
+        "x": 309,
+        "y": 205,
+        "inputs": {
+          "V1": {
+            "shadow": {
+              "type": "kye",
+              "id": "Yu84So)w)}`}%p:9-L@g",
+              "fields": {
+                "I": "GAME_DESCRIPTION"
+              }
+            }
+          },
+          "V2": {
+            "shadow": {
+              "type": "tys",
+              "id": "Y-!b7-ko%h620WR8m*l8",
+              "extraState": "[]"
+            }
+          }
+        }
+      }
+    ]
+  },
   "graphData": {
     "ownerType": "Entity",
     "componentTypes": "Player",

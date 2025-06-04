@@ -3691,7 +3691,10 @@
             "selfValue": true,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "editorLockValue": false,
           "editorVisibleValue": true,
           "position": {
@@ -3776,7 +3779,10 @@
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": null,
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
       "editorLockValue": false,
       "editorVisibleValue": true,
       "position": {
@@ -3814,9 +3820,12 @@
       "componentList": [
         "MeshRender",
         "ColliderShape",
-        "Collider"
+        "Collider",
+        "CustomComponent86393399"
       ],
-      "_filters": [],
+      "_filters": [
+        "node.withscript"
+      ],
       "entityTagData": {
         "tagPointers": []
       },
@@ -3870,7 +3879,16 @@
         "FreezeRotZ": false
       },
       "isCreateAsEmpty": false,
-      "ecaScripts": [],
+      "ecaScripts": [
+        {
+          "fileId": "xw9jwgtys7a-mbhp5yw6-prlx8kxkave",
+          "filePath": "Assets\\Script\\Script (1).fcg",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
       "ecaProps": {
         "CustomLevelObject": {},
         "LevelObject": {},
@@ -3879,7 +3897,17 @@
         "Visibility": {},
         "MeshRender": {},
         "ColliderShape": {},
-        "Collider": {}
+        "Collider": {},
+        "CustomComponent86393399": {
+          "PROP_61373687": {
+            "fileId": "qfq3hk47uf8-mbhgohm0-kh92l7r43bl",
+            "filePath": "Assets\\UI\\Inventory_Shopping\\CartIcon.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          }
+        }
       },
       "propsData": {},
       "entityVersion": 3,

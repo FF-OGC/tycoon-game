@@ -292,6 +292,69 @@
           }
         }
       ]
+    },
+    "CustomComponent29328018": {
+      "label": "BtnBuy",
+      "name": "CustomComponent29328018",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [
+        {
+          "fileId": "u8ow5h8c76q-mbhonz7w-idriioqn9lr",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
+      "typeID": 100001,
+      "PropDefines": [
+        {
+          "propID": 100006,
+          "name": "PROP_79619795",
+          "label": "ItemID",
+          "type": "Int",
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
+        }
+      ]
+    },
+    "CustomComponent86393399": {
+      "label": "TriggerPopUpUI",
+      "name": "CustomComponent86393399",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [
+        {
+          "fileId": "xw9jwgtys7a-mbhp5yw6-prlx8kxkave",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
+      "typeID": 100011,
+      "PropDefines": [
+        {
+          "propID": 100016,
+          "name": "PROP_61373687",
+          "label": "PopUpUI",
+          "type": "CustomHudID",
+          "value": null,
+          "disabledType": true,
+          "param": {
+            "compType": "InputEditor",
+            "disabled": true
+          }
+        }
+      ]
     }
   }
 }
