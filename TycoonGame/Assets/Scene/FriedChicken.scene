@@ -3821,11 +3821,9 @@
         "MeshRender",
         "ColliderShape",
         "Collider",
-        "CustomComponent86393399"
+        "CustomComponent16616051"
       ],
-      "_filters": [
-        "node.withscript"
-      ],
+      "_filters": [],
       "entityTagData": {
         "tagPointers": []
       },
@@ -3879,16 +3877,7 @@
         "FreezeRotZ": false
       },
       "isCreateAsEmpty": false,
-      "ecaScripts": [
-        {
-          "fileId": "xw9jwgtys7a-mbhp5yw6-prlx8kxkave",
-          "filePath": "Assets\\Script\\Script (1).fcg",
-          "_tag": {
-            "type": "GFileRefer"
-          },
-          "fileType": "ugcscript"
-        }
-      ],
+      "ecaScripts": [],
       "ecaProps": {
         "CustomLevelObject": {},
         "LevelObject": {},
@@ -3900,6 +3889,24 @@
         "Collider": {},
         "CustomComponent86393399": {
           "PROP_61373687": {
+            "fileId": "qfq3hk47uf8-mbhgohm0-kh92l7r43bl",
+            "filePath": "Assets\\UI\\Inventory_Shopping\\CartIcon.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "PROP_97186152": {
+            "fileId": "qfq3hk47uf8-mbhgohm0-kh92l7r43bl",
+            "filePath": "Assets\\UI\\Inventory_Shopping\\CartIcon.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          }
+        },
+        "CustomComponent16616051": {
+          "PROP_64942628": {
             "fileId": "qfq3hk47uf8-mbhgohm0-kh92l7r43bl",
             "filePath": "Assets\\UI\\Inventory_Shopping\\CartIcon.ui",
             "_tag": {

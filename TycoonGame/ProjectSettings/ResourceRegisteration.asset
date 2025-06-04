@@ -126,6 +126,18 @@
           },
           "scriptName": "PlayerHUDCustom",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "qfq3hk47uf8-mbhgohm0-kh92l7r43bl",
+            "filePath": "Assets\\UI\\Inventory_Shopping\\CartIcon.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "CartIcon",
+          "children": []
         }
       ]
     },

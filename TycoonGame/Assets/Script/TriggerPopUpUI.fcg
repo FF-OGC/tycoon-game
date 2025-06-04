@@ -13,12 +13,12 @@ graph TriggerPopUpUI {
 
     event OnEntityEnter(target entity<Entity>) {
         var _player = target<Player>
+        var _targetUI = thisEntity<TriggerUI>.PopUpUI
+
         if _player<PlayerUIHandler>.popupUI == nil {
-            var _targetUI = thisEntity<TriggerPopUpUI>.PopUpUI
             CreateCustomUI(out var _popupUI, _player,_targetUI)
             _player<PlayerUIHandler>.popupUI = _popupUI
         }
-    
     }
 
     event OnEntityExit(target entity<Entity>) {
@@ -26,6 +26,5 @@ graph TriggerPopUpUI {
         if _player<PlayerUIHandler>.popupUI != nil {
             Destroy(_player<PlayerUIHandler>.popupUI)
         }
-        
     }
 }

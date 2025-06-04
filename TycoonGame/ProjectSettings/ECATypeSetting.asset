@@ -325,9 +325,9 @@
         }
       ]
     },
-    "CustomComponent86393399": {
-      "label": "TriggerPopUpUI",
-      "name": "CustomComponent86393399",
+    "CustomComponent16616051": {
+      "label": "TriggerUI",
+      "name": "CustomComponent16616051",
       "bases": [
         "Component"
       ],
@@ -340,11 +340,11 @@
           "fileType": "ugcscript"
         }
       ],
-      "typeID": 100011,
+      "typeID": 100019,
       "PropDefines": [
         {
-          "propID": 100016,
-          "name": "PROP_61373687",
+          "propID": 100020,
+          "name": "PROP_64942628",
           "label": "PopUpUI",
           "type": "CustomHudID",
           "value": null,
