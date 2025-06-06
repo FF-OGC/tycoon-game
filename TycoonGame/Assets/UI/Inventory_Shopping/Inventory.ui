@@ -18964,7 +18964,10 @@
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": null,
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
       "editorLockValue": false,
       "editorVisibleValue": true,
       "propsData": {
@@ -18989,7 +18992,7 @@
           },
           "sizeDelta": {
             "x": 150,
-            "y": 50
+            "y": 52
           }
         },
         "alpha": 100,

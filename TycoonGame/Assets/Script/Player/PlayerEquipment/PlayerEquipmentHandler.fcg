@@ -1,9 +1,49 @@
 import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
+import "List.fcc" as List
+
+import "./UI/PlayerEquipmentUIHandler.fcg" as PlayerEquipmentUIHandler
 
 graph PlayerEquipmentHandler {
     //Executed when entity is created
-    event OnAwake() {
+    EquipmentHoldList List<int>
 
+    event OnAwake() {
+        WaitForNextFrame()
+        EquipmentHoldList = New(5,5)
+        
+        EquipmentHoldList[0] = 0
+        EquipmentHoldList[1] = 1
+        EquipmentHoldList[2] = -1
+        EquipmentHoldList[3] = -1
+        EquipmentHoldList[4] = -1
     }
+
+    func helpLog (){
+        LogInfo("helpLog running")
+        for key, value in EquipmentHoldList {
+            LogInfo("value" + value)
+        }
+    }
+
+    func equipBarAt(index int,itemID int){
+        EquipmentHoldList[index] = itemID
+
+        thisEntity<PlayerEquipmentUIHandler>.updateBarUIAt(index)
+    }
+
+    func removeBarAt(index int ){
+        EquipmentHoldList[index] = -1 
+        
+        thisEntity<PlayerEquipmentUIHandler>.updateBarUIAt(index)
+    }
+
+    func removeAllHoldItem (){
+        for key, value in EquipmentHoldList {
+            value = -1
+        }
+
+        thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
+    }
+
 }

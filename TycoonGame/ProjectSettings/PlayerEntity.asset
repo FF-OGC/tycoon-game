@@ -154,8 +154,24 @@
       "fileType": "eca"
     },
     {
+      "fileId": "dbb62uluyp4-mbknvofh-wij4ftp00k",
+      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\UI\\PlayerEquipmentUIHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
       "fileId": "8jnkk5klzvf-mbkhy14j-1xm0tr2mfbp",
       "filePath": "Assets\\Script\\Player\\PlayerInventory\\UI\\PlayerInventoryUIHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "mjnqslvc4ec-mbknwdge-t1axom48vxi",
+      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\PlayerEquipmentHandler.fcg",
       "_tag": {
         "type": "GFileRefer"
       },

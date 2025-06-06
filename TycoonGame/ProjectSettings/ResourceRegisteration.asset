@@ -120,14 +120,31 @@
         },
         {
           "refer": {
-            "fileId": "ib4usmn0o6-mbk9ogak-x5dcafrzngb",
-            "filePath": "Assets\\UI\\Inventory_Shopping\\NewInventory.ui",
+            "fileId": "dyjc8ycvii7-mbk9uprg-b7amn500jj",
+            "filePath": "Assets\\UI\\EquipmentBarUI.ui",
             "_tag": {
               "type": "GFileRefer"
             },
             "fileType": "ui"
           },
-          "scriptName": "NewInventory",
+          "scriptName": "EquipmentBarUI",
+          "children": [
+            {
+              "id": "Yo5vB8JY",
+              "scriptName": "Layout"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "ib4usmn0o6-mbk9ogak-x5dcafrzngb",
+            "filePath": "Assets\\UI\\Inventory_Shopping\\Inventory.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "Inventory",
           "children": [
             {
               "id": "rb666zk8",
@@ -236,6 +253,18 @@
             "fileType": "ugcscript"
           },
           "scriptName": "CSVReadingHandler",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "hf46vsh13mp-mbkn2o80-7wbscl3c45s",
+            "filePath": "Assets\\Script\\Player\\PlayerEquipment\\PlayerEquipmentHandler.fcg",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ugcscript"
+          },
+          "scriptName": "PlayerEquipmentHandler",
           "children": []
         }
       ]

@@ -15,7 +15,7 @@ graph PlayerInventoryUIHandler {
     event OnAwake() {
         UIInventoryItemList = New(64,64)
         UIIventoryItemLabelList = New(64,64)
-        WaitForMillisecond(5000)
+        WaitForMillisecond(8000)
         initUIInformation()
     }
 
@@ -23,7 +23,7 @@ graph PlayerInventoryUIHandler {
 
     func initUIInformation(){
         if UIInventory == nil {
-            CreateCustomUI(out var createdUI , thisEntity<Player>,EResUI.NewInventory)
+            CreateCustomUI(out var createdUI , thisEntity<Player>,EResUI.Inventory)
             UIInventory = createdUI
             createdUI<CustomUI>.IsVisible = false
         }
@@ -31,14 +31,12 @@ graph PlayerInventoryUIHandler {
         if UIInventoryItemList[0] ==nil {
             LogInfo("siuuuu")
             
-            var parentWidget = GetWidgetFromCustomUI(thisEntity<Player>,UIInventory<CustomUI>,EResUINewInventory.SuperLayout)
+            var parentWidget = GetWidgetFromCustomUI(thisEntity<Player>,UIInventory<CustomUI>,EResUIInventory.SuperLayout)
             UIInventoryItemList = GetChildren(parentWidget)
 
             for i = 0, List.Length(UIInventoryItemList), 1 {
                 UIIventoryItemLabelList[i] = GetChildByIndex(UIInventoryItemList[i],1) as entity<UIWidgetLabel>
             }
-
-
         }
     }
 
