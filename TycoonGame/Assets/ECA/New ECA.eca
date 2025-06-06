@@ -1,9 +1,9 @@
 {
   "graphData": {
     "ownerType": "Entity",
-    "componentTypes": "Player",
+    "componentTypes": "Entity",
     "isStatic": false,
-    "platform": 2
+    "platform": 1
   }
 }
 //"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

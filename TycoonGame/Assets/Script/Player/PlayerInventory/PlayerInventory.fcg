@@ -6,9 +6,18 @@ import "List.fcc" as List
 graph PlayerInventory {
     //Executed when entity is created
     inventory List<int>
+
+    inventoryItemID List<int>
+    inventoryItemSize List<float>
+    inventoryItemMutation List<string>
+
+    MAX = 100
+    
     event OnAwake() {
         inventory = New(100,100)
         inventory[1] = 1000
+        inventoryItemID  = New(100,100)
+        inventoryItemSize = New(100,100)
     }
 
     func inventoryAddItem(itemID int, number int){
@@ -19,5 +28,7 @@ graph PlayerInventory {
     func inventoryRemoveItem(itemID int, number int){
         inventory[itemID] -= number
     }
+
+
 
 }

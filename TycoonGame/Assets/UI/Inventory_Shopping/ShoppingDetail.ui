@@ -111,22 +111,24 @@
               }
             }
           },
-          "ecaScripts": [
-            {
-              "fileId": "kdujac5l7h-mbgbldv1-z88k18grvwe",
-              "filePath": "Assets\\Script\\Script (1).fcg",
-              "_tag": {
-                "type": "GFileRefer"
-              },
-              "fileType": "ugcscript"
-            }
-          ],
+          "ecaScripts": [],
           "ecaProps": {
             "HudButtonWidget": {},
             "HudWidget": {},
-            "Entity": {}
+            "Entity": {},
+            "CustomComponent80711408": {
+              "PROP_78620690": {
+                "entityId": "1LXuws8M",
+                "fileId": "r268wikxc9r-mbhgpzr3-j0ibkccnzw8",
+                "_tag": {
+                  "type": "EntityRefer"
+                }
+              }
+            }
           },
-          "componentList": [],
+          "componentList": [
+            "CustomComponent80711408"
+          ],
           "_filters": [],
           "_entityName": "ExitBtn",
           "entityTagData": {
@@ -472,7 +474,10 @@
                             "selfValue": true,
                             "valueTag": "activeValue"
                           },
-                          "unlockedValue": null,
+                          "unlockedValue": {
+                            "selfValue": true,
+                            "valueTag": "unlockedValue"
+                          },
                           "editorLockValue": false,
                           "editorVisibleValue": true,
                           "propsData": {
@@ -557,7 +562,10 @@
                         "selfValue": true,
                         "valueTag": "activeValue"
                       },
-                      "unlockedValue": null,
+                      "unlockedValue": {
+                        "selfValue": true,
+                        "valueTag": "unlockedValue"
+                      },
                       "editorLockValue": false,
                       "editorVisibleValue": true,
                       "propsData": {
@@ -582,7 +590,7 @@
                           },
                           "sizeDelta": {
                             "x": 150,
-                            "y": 50
+                            "y": 52
                           }
                         },
                         "alpha": 100,
@@ -671,7 +679,10 @@
                         "selfValue": true,
                         "valueTag": "activeValue"
                       },
-                      "unlockedValue": null,
+                      "unlockedValue": {
+                        "selfValue": true,
+                        "valueTag": "unlockedValue"
+                      },
                       "editorLockValue": false,
                       "editorVisibleValue": true,
                       "propsData": {
@@ -1111,7 +1122,7 @@
   "entityTagData": {
     "tagPointers": []
   },
-  "layer": 9,
+  "layer": 29,
   "discriminator": "ISceneLike",
   "version": 3
 }

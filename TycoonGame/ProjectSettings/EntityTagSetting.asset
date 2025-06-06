@@ -31,6 +31,10 @@
     {
       "id": "entityTag26771906",
       "label": "Price"
+    },
+    {
+      "id": "entityTag76859829",
+      "label": "Button"
     }
   ],
   "children": []

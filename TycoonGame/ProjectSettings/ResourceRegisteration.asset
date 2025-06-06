@@ -138,6 +138,23 @@
           },
           "scriptName": "CartIcon",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "ib4usmn0o6-mbk9ogak-x5dcafrzngb",
+            "filePath": "Assets\\UI\\Inventory_Shopping\\NewInventory.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "NewInventory",
+          "children": [
+            {
+              "id": "rb666zk8",
+              "scriptName": "SuperLayout"
+            }
+          ]
         }
       ]
     },

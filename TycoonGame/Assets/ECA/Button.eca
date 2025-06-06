@@ -1,0 +1,181 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "e",
+        "id": "d:ZKXt0(d6?8XZl8D,yB",
+        "x": 410,
+        "y": 237,
+        "extraState": {
+          "X": 145,
+          "L": [
+            1
+          ],
+          "O": [
+            "o"
+          ],
+          "T": "OnClick",
+          "OT": "HudButtonWidget"
+        },
+        "fields": {
+          "P1": {
+            "name": "Player",
+            "type": "Player"
+          }
+        },
+        "next": {
+          "block": {
+            "type": "a",
+            "id": "|H=PfxJjMmsH.GFE$e[F",
+            "extraState": {
+              "X": 51,
+              "L": [
+                1
+              ],
+              "O": [
+                ""
+              ],
+              "T": "PrintString",
+              "OT": null
+            },
+            "inputs": {
+              "P1": {
+                "shadow": {
+                  "type": "tys",
+                  "id": "T*PAf$x`}~Yb}g3t=2]8",
+                  "extraState": "Object"
+                },
+                "block": {
+                  "type": "ops",
+                  "id": "|Tm5L~At`S)I$/d|IeYl",
+                  "extraState": {
+                    "X": 2
+                  },
+                  "inputs": {
+                    "P1": {
+                      "shadow": {
+                        "type": "tys",
+                        "id": "U]TStJcCRBUal%(0gt7Z",
+                        "extraState": "Object"
+                      },
+                      "block": {
+                        "type": "ipt",
+                        "id": "Nn}x.|z%I#eqN*Mt7ena",
+                        "fields": {
+                          "V": "me"
+                        }
+                      }
+                    },
+                    "P2": {
+                      "shadow": {
+                        "type": "tys",
+                        "id": "{OU.%34zSONj`E(pK}ls",
+                        "extraState": "Object"
+                      },
+                      "block": {
+                        "type": "ent",
+                        "id": "cl*NINrV`6j|)IMI`SHw"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "a",
+                "id": "wL.zJJ4wXs6rVe`-}FxD",
+                "extraState": {
+                  "X": 51,
+                  "L": [
+                    1
+                  ],
+                  "O": [
+                    ""
+                  ],
+                  "T": "PrintString",
+                  "OT": null
+                },
+                "inputs": {
+                  "P1": {
+                    "shadow": {
+                      "type": "tys",
+                      "id": "T*PAf$x`}~Yb}g3t=2]8",
+                      "extraState": "Object"
+                    },
+                    "block": {
+                      "type": "ops",
+                      "id": "gq)-L^)ca~+Q1Jl#/zdA",
+                      "extraState": {
+                        "X": 2
+                      },
+                      "inputs": {
+                        "P1": {
+                          "shadow": {
+                            "type": "tys",
+                            "id": "U]TStJcCRBUal%(0gt7Z",
+                            "extraState": "Object"
+                          },
+                          "block": {
+                            "type": "ipt",
+                            "id": "`r`xMBf$5$of=1rN4zwB",
+                            "fields": {
+                              "V": "my parent"
+                            }
+                          }
+                        },
+                        "P2": {
+                          "shadow": {
+                            "type": "tys",
+                            "id": "{OU.%34zSONj`E(pK}ls",
+                            "extraState": "Object"
+                          },
+                          "block": {
+                            "type": "v",
+                            "id": "p,k)[f@qql;|`.;:A88W",
+                            "extraState": {
+                              "X": 542,
+                              "L": [
+                                1
+                              ],
+                              "O": [
+                                ""
+                              ],
+                              "T": "GetParent",
+                              "OT": null
+                            },
+                            "inputs": {
+                              "P1": {
+                                "shadow": {
+                                  "type": "tys",
+                                  "id": "T%lr5m;+]6IIkn9w3ir,",
+                                  "extraState": "Entity"
+                                },
+                                "block": {
+                                  "type": "ent",
+                                  "id": ".mB]*?0Se0aZ3:H!6(.,"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "graphData": {
+    "ownerType": "Entity",
+    "componentTypes": "HudButtonWidget",
+    "isStatic": false,
+    "platform": 2
+  }
+}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

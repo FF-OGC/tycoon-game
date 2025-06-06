@@ -2,12 +2,14 @@ import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 import "Hud.fcc" as Hud
 
-graph Script_1_ {
+graph ClickToClose {
     //Executed when entity is created
     event OnAwake() {
 
     }
+
     event OnTapped(player entity<Player>) {
-        Destroy(GetParent(GetParent(thisEntity)))
+        var closeEntity = thisEntity<BtnClickToClose>.superParent
+        Destroy(closeEntity)
     }
 }

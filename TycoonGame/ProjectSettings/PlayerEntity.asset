@@ -144,6 +144,22 @@
         "type": "GFileRefer"
       },
       "fileType": "eca"
+    },
+    {
+      "fileId": "cp6x8dfr39d-mbk8glwh-sncjak0dsnp",
+      "filePath": "Assets\\ECA\\New ECA.eca",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "eca"
+    },
+    {
+      "fileId": "8jnkk5klzvf-mbkhy14j-1xm0tr2mfbp",
+      "filePath": "Assets\\Script\\Player\\PlayerInventory\\UI\\PlayerInventoryUIHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "avatarInfo": null,

@@ -4,6 +4,7 @@ import "Player.fcc" as Player
 
 import "../Script/Global/CSVReadingHandler.fcg" as CSVReadingHandler
 import "Hud.fcc" as Hud
+import "../Script/Player/PlayerInventory/UI/PlayerInventoryUIHandler.fcg" as PlayerInventoryUIHandler
 
 graph Script_1_ {
     //Executed when entity is created
@@ -13,6 +14,9 @@ graph Script_1_ {
     }
 
     event OnJump() {
+        CreateCustomUI(out var createdUI , thisEntity<Player>,EResUI.NewInventory)
+        createdUI<CustomUI>.IsVisible = true
+        thisEntity<PlayerInventoryUIHandler>.initUIInformation(createdUI)
     }
 }
 

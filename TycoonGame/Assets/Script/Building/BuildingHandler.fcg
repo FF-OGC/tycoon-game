@@ -89,8 +89,6 @@ graph Script {
                 if owner == nil {
                     owner = PlayerStaticInformation.playerHost
                 }
-                owner<PlayerInventory>.inventoryAddItem(outputID, 1)
-                cookingCount --
             }
         }
     }

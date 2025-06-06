@@ -16,8 +16,6 @@ graph Script_1_ {
         var _itemPrice = CSVReadingHandler.getItemPriceByItemID(EResCSV.ItemCSV,_itemID)
 
         if BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney,_itemPrice) >=0 {
-            _player<PlayerInventory>.inventoryAddItem(_itemID,1)
-            _player<PlayerEconomy>.subtractAmount(_itemPrice)
         } else {
             LogInfo("Not enough money")
         }

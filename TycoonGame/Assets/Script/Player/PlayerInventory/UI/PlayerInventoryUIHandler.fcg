@@ -1,0 +1,65 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+
+import "../PlayerInventory.fcg" as PlayerInventory
+import "List.fcc" as List
+
+graph PlayerInventoryUIHandler {
+    //Executed when entity is created
+    UIInventoryItemList List<entity<Entity>> 
+    UIIventoryItemLabelList List<entity<UIWidgetLabel>>
+    
+    event OnAwake() {
+        UIInventoryItemList = New(128,128)
+        UIIventoryItemLabelList = New(128,128)
+    }
+
+    
+
+    func initUIInformation(UIEntity entity<Entity>){
+        if UIInventoryItemList[0] ==nil {
+            LogInfo("can run")
+            var parentWidget = GetWidgetFromCustomUI(thisEntity<Player>,UIEntity<CustomUI>,EResUINewInventory.SuperLayout)
+            LogInfo("supper children "+GetChildren(parentWidget))
+            UIInventoryItemList = GetChildren(parentWidget)
+
+            for key, ChildrenF in UIInventoryItemList {
+                for key, value in GetChildren(ChildrenF) {
+                    LogInfo("val" +value )
+                    if HasTag(value,ETag.Description){
+                        Append(UIIventoryItemLabelList, value)
+                    }
+                }
+            }
+        }
+        var size = List.Length(thisEntity<PlayerInventory>.inventoryItemID)
+
+        for i = 1, 5, 1 {
+            var item = UIInventoryItemList[i]
+            LogInfo("item" + item)
+
+            item<UIWidget>.Active = true
+            var label = UIIventoryItemLabelList[i]
+            LogInfo("label" + label)
+
+            label <UIWidgetLabel>.Content= i
+        }
+
+    }
+
+    func getDetailInformation (item entity<Entity>){
+
+    }
+
+    func clearIventoryUIInformation(){
+        for key, UIChild in UIInventoryItemList {
+            var cellDetail = GetChildren(UIChild)
+            UIChild<UIWidget>.Active = false
+        }
+
+        for key, value in UIIventoryItemLabelList {
+            value<UIWidgetLabel>.Content = ""
+        }
+    }
+}

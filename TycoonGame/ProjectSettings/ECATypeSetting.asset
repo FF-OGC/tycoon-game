@@ -355,6 +355,32 @@
           }
         }
       ]
+    },
+    "CustomComponent80711408": {
+      "label": "BtnClickToClose",
+      "name": "CustomComponent80711408",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [
+        {
+          "fileId": "kdujac5l7h-mbgbldv1-z88k18grvwe",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        }
+      ],
+      "typeID": 100011,
+      "PropDefines": [
+        {
+          "propID": 100016,
+          "name": "PROP_78620690",
+          "label": "superParent",
+          "type": "Entity",
+          "value": null
+        }
+      ]
     }
   }
 }

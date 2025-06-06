@@ -7,11 +7,129 @@
   "children": [
     {
       "_tag": {
-        "type": "UIButtonEntity",
+        "type": "UIEmptyEntity",
         "resourceId": ""
       },
-      "_entityId": "QOX1NHfO",
+      "_entityId": "I6WyLDyI",
       "children": [
+        {
+          "_tag": {
+            "type": "UIButtonEntity",
+            "resourceId": ""
+          },
+          "_entityId": "QOX1NHfO",
+          "children": [],
+          "prefabVariant": null,
+          "activeValue": {
+            "selfValue": true,
+            "valueTag": "activeValue"
+          },
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
+          "editorLockValue": false,
+          "editorVisibleValue": true,
+          "propsData": {
+            "activeSelf": true,
+            "transform": {
+              "rotate": 0,
+              "anchorMin": {
+                "x": 1,
+                "y": 1
+              },
+              "anchorMax": {
+                "x": 1,
+                "y": 1
+              },
+              "pivot": {
+                "x": 1,
+                "y": 1
+              },
+              "anchoredPosition": {
+                "x": 0,
+                "y": 0
+              },
+              "sizeDelta": {
+                "x": 100,
+                "y": 100
+              }
+            },
+            "alpha": 100,
+            "priority": 0,
+            "button": {
+              "spriteName": {
+                "fileId": "f83xkgog9fa-mbghnkgm-v93b2flnpim",
+                "filePath": "Assets\\Sprite\\final.png",
+                "_tag": {
+                  "type": "GFileRefer"
+                },
+                "fileType": "texture"
+              },
+              "normal": "#FFFFFF",
+              "highlight": "#e2a222",
+              "pressed": "#C5C5C5",
+              "disabled": "#494949",
+              "onClicks": [],
+              "enableBorderImage": true,
+              "clickHandlers": [],
+              "disableCollider": false,
+              "fillType": 1,
+              "slicedBorder": {
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0
+              },
+              "tiledBorder": {
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0
+              },
+              "centerInvisible": false,
+              "fillDir": 0,
+              "fillAmount": 0,
+              "invertFill": false,
+              "reverse": {
+                "x": false,
+                "y": false
+              },
+              "flip": 0,
+              "gradient": 1,
+              "gradientTop": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              },
+              "gradientBottom": {
+                "r": 255,
+                "g": 255,
+                "b": 255,
+                "a": 1
+              }
+            }
+          },
+          "ecaScripts": [],
+          "ecaProps": {
+            "HudButtonWidget": {},
+            "HudWidget": {},
+            "Entity": {},
+            "CustomComponent24470086": {
+              "PROP_84190666": null,
+              "PROP_34153231": null
+            }
+          },
+          "componentList": [
+            "CustomComponent24470086"
+          ],
+          "_filters": [],
+          "_entityName": "Button",
+          "entityTagData": {
+            "tagPointers": []
+          }
+        },
         {
           "_tag": {
             "type": "UIImageEntity",
@@ -24,7 +142,10 @@
             "selfValue": true,
             "valueTag": "activeValue"
           },
-          "unlockedValue": null,
+          "unlockedValue": {
+            "selfValue": true,
+            "valueTag": "unlockedValue"
+          },
           "editorLockValue": false,
           "editorVisibleValue": true,
           "propsData": {
@@ -120,10 +241,7 @@
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": {
-        "selfValue": true,
-        "valueTag": "unlockedValue"
-      },
+      "unlockedValue": null,
       "editorLockValue": false,
       "editorVisibleValue": true,
       "propsData": {
@@ -131,20 +249,20 @@
         "transform": {
           "rotate": 0,
           "anchorMin": {
-            "x": 1,
-            "y": 1
+            "x": 0.5,
+            "y": 0.5
           },
           "anchorMax": {
-            "x": 1,
-            "y": 1
+            "x": 0.5,
+            "y": 0.5
           },
           "pivot": {
-            "x": 1,
-            "y": 1
+            "x": 0.5,
+            "y": 0.5
           },
           "anchoredPosition": {
-            "x": -325,
-            "y": 0
+            "x": 326,
+            "y": 290
           },
           "sizeDelta": {
             "x": 100,
@@ -152,83 +270,17 @@
           }
         },
         "alpha": 100,
-        "priority": 0,
-        "button": {
-          "spriteName": {
-            "fileId": "f83xkgog9fa-mbghnkgm-v93b2flnpim",
-            "filePath": "Assets\\Sprite\\final.png",
-            "_tag": {
-              "type": "GFileRefer"
-            },
-            "fileType": "texture"
-          },
-          "normal": "#FFFFFF",
-          "highlight": "#e2a222",
-          "pressed": "#C5C5C5",
-          "disabled": "#494949",
-          "onClicks": [],
-          "enableBorderImage": true,
-          "clickHandlers": [],
-          "disableCollider": false,
-          "fillType": 1,
-          "slicedBorder": {
-            "left": 0,
-            "right": 0,
-            "top": 0,
-            "bottom": 0
-          },
-          "tiledBorder": {
-            "left": 0,
-            "right": 0,
-            "top": 0,
-            "bottom": 0
-          },
-          "centerInvisible": false,
-          "fillDir": 0,
-          "fillAmount": 0,
-          "invertFill": false,
-          "reverse": {
-            "x": false,
-            "y": false
-          },
-          "flip": 0,
-          "gradient": 1,
-          "gradientTop": {
-            "r": 255,
-            "g": 255,
-            "b": 255,
-            "a": 1
-          },
-          "gradientBottom": {
-            "r": 255,
-            "g": 255,
-            "b": 255,
-            "a": 1
-          }
-        }
+        "priority": 0
       },
       "ecaScripts": [],
       "ecaProps": {
-        "HudButtonWidget": {},
+        "HudEmptyWidget": {},
         "HudWidget": {},
-        "Entity": {},
-        "CustomComponent24470086": {
-          "PROP_84190666": null,
-          "PROP_34153231": {
-            "fileId": "y56i3yxf9n-mbg6p2hh-tozl1j5t5q",
-            "filePath": "Assets\\UI\\Inventory.ui",
-            "_tag": {
-              "type": "GFileRefer"
-            },
-            "fileType": "ui"
-          }
-        }
+        "Entity": {}
       },
-      "componentList": [
-        "CustomComponent24470086"
-      ],
+      "componentList": [],
       "_filters": [],
-      "_entityName": "Button",
+      "_entityName": "Empty",
       "entityTagData": {
         "tagPointers": []
       }

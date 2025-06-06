@@ -10,11 +10,13 @@ graph Script_1_ {
     }
 
     event OnTapped(player entity<Player>) {
-        if thisUI == nil {
-            var _createdUIID = thisEntity<BtnNewUI>.CreatedUI
-            CreateCustomUI(out var createdUI, player<Player>,_createdUIID)
-            thisUI = createdUI 
-            createdUI<CustomUI>.IsVisible = true
-        } 
+        if thisEntity<BtnNewUI>.CreatedUI != nil{
+            if thisUI == nil {
+                var _createdUIID = thisEntity<BtnNewUI>.CreatedUI
+                CreateCustomUI(out var createdUI, player<Player>,_createdUIID)
+                thisUI = createdUI 
+                createdUI<CustomUI>.IsVisible = true
+            } 
+        }
     }
 }
