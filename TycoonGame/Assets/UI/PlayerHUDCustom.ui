@@ -111,7 +111,16 @@
               }
             }
           },
-          "ecaScripts": [],
+          "ecaScripts": [
+            {
+              "fileId": "zezaurgy7-mbkml38a-rd6jip7u1za",
+              "filePath": "Assets\\Script\\Script (2).fcg",
+              "_tag": {
+                "type": "GFileRefer"
+              },
+              "fileType": "ugcscript"
+            }
+          ],
           "ecaProps": {
             "HudButtonWidget": {},
             "HudWidget": {},
@@ -121,9 +130,7 @@
               "PROP_34153231": null
             }
           },
-          "componentList": [
-            "CustomComponent24470086"
-          ],
+          "componentList": [],
           "_filters": [],
           "_entityName": "Button",
           "entityTagData": {
@@ -241,7 +248,10 @@
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": null,
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
       "editorLockValue": false,
       "editorVisibleValue": true,
       "propsData": {

@@ -202,7 +202,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 1,
+              "tempIndex": 141,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -542,7 +542,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 2,
+              "tempIndex": 142,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -839,103 +839,6 @@
                     "type": "SceneEditEntity",
                     "resourceId": "Primitive/Empty"
                   },
-                  "_entityId": "kgm1qRuh",
-                  "children": [],
-                  "prefabVariant": null,
-                  "activeValue": {
-                    "selfValue": true,
-                    "valueTag": "activeValue"
-                  },
-                  "unlockedValue": {
-                    "selfValue": true,
-                    "valueTag": "unlockedValue"
-                  },
-                  "editorLockValue": false,
-                  "editorVisibleValue": true,
-                  "position": {
-                    "x": -0.09844112396240234,
-                    "y": 0.7849462628364563,
-                    "z": -0.0014939308166503906
-                  },
-                  "scale": {
-                    "x": 1,
-                    "y": 1,
-                    "z": 1
-                  },
-                  "rotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
-                  },
-                  "BTPath": [
-                    null
-                  ],
-                  "visible": true,
-                  "VisibilityLayer": 0,
-                  "modelOptimization": 0,
-                  "streamingLayer": "",
-                  "attributes": [
-                    2,
-                    4
-                  ],
-                  "isTrigger": false,
-                  "collidable": true,
-                  "physicalLayer": 0,
-                  "physicalMaterial": null,
-                  "aoiSetting": 0,
-                  "initialTypes": {},
-                  "componentList": [],
-                  "_filters": [],
-                  "entityTagData": {
-                    "tagPointers": []
-                  },
-                  "tempIndex": 3,
-                  "itemID": 224,
-                  "seParent": null,
-                  "ecaScripts": [
-                    null
-                  ],
-                  "ecaProps": {
-                    "EffectEntityGenerator": {},
-                    "ItemContainerGenerator": {},
-                    "Entity": {},
-                    "EffectEntity": {},
-                    "Playable": {},
-                    "Loopable": {},
-                    "LevelObject": {},
-                    "Transform": {},
-                    "Visibility": {}
-                  },
-                  "_entityName": "Visual effects",
-                  "propsData": {
-                    "effectColor": {
-                      "r": 255,
-                      "g": 255,
-                      "b": 255,
-                      "a": 1
-                    },
-                    "playSpeed": 100,
-                    "autoPlay": true,
-                    "effectTypeResId": "",
-                    "effectTexture": "",
-                    "effectTextureRef": null,
-                    "effectTypeRef": {
-                      "fileId": "EffectType_WS_VFX_THUNDER",
-                      "filePath": "lib://ffEffects/WS_VFX_THUNDER",
-                      "_tag": {
-                        "type": "GFileRefer"
-                      },
-                      "fileType": "effecttype"
-                    },
-                    "effectType": "WS_VFX_THUNDER",
-                    "isLoop": 0
-                  }
-                },
-                {
-                  "_tag": {
-                    "type": "SceneEditEntity",
-                    "resourceId": "Primitive/Empty"
-                  },
                   "_entityId": "Wam43qAN",
                   "children": [],
                   "prefabVariant": null,
@@ -986,7 +889,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 4,
+                  "tempIndex": 144,
                   "itemID": 95,
                   "seParent": null,
                   "ecaScripts": [
@@ -1094,103 +997,7 @@
                 "resourceId": "Primitive/Empty"
               },
               "_entityId": "8kDUaRCE",
-              "children": [
-                {
-                  "_tag": {
-                    "type": "SceneEditEntity",
-                    "resourceId": "Primitive/Empty"
-                  },
-                  "_entityId": "PN4uPZfV",
-                  "children": [],
-                  "prefabVariant": null,
-                  "activeValue": {
-                    "selfValue": true,
-                    "valueTag": "activeValue"
-                  },
-                  "unlockedValue": {
-                    "selfValue": true,
-                    "valueTag": "unlockedValue"
-                  },
-                  "editorLockValue": false,
-                  "editorVisibleValue": true,
-                  "position": {
-                    "x": -0.5408201217651367,
-                    "y": -0.6955345869064331,
-                    "z": 0
-                  },
-                  "scale": {
-                    "x": 1,
-                    "y": 1,
-                    "z": 1
-                  },
-                  "rotation": {
-                    "x": 0,
-                    "y": 90,
-                    "z": 0
-                  },
-                  "BTPath": [
-                    null
-                  ],
-                  "visible": true,
-                  "VisibilityLayer": 0,
-                  "modelOptimization": 0,
-                  "streamingLayer": "",
-                  "attributes": [
-                    2,
-                    4
-                  ],
-                  "isTrigger": false,
-                  "collidable": true,
-                  "physicalLayer": 0,
-                  "physicalMaterial": null,
-                  "aoiSetting": 0,
-                  "initialTypes": {},
-                  "componentList": [],
-                  "_filters": [],
-                  "entityTagData": {
-                    "tagPointers": []
-                  },
-                  "tempIndex": 5,
-                  "itemID": 223,
-                  "seParent": null,
-                  "ecaScripts": [
-                    null
-                  ],
-                  "ecaProps": {
-                    "IconEntity": {},
-                    "LevelObject": {},
-                    "Transform": {},
-                    "Entity": {},
-                    "Visibility": {}
-                  },
-                  "_entityName": "Icon object",
-                  "propsData": {
-                    "iconColor": {
-                      "r": 255,
-                      "g": 255,
-                      "b": 255,
-                      "a": 1
-                    },
-                    "IsBillboard": false,
-                    "IgnoreDepth": false,
-                    "AlwaysInScreen": false,
-                    "Width": 100,
-                    "Height": 100,
-                    "Depth": 0,
-                    "iconType": "cf76sykp1t-mbg9azzl-wqa35mkgw2m",
-                    "_levelObjectID": 1,
-                    "renderType": 0,
-                    "iconTypeRef": {
-                      "fileId": "cf76sykp1t-mbg9azzl-wqa35mkgw2m",
-                      "filePath": "Assets\\Sprite\\Chicken.png",
-                      "_tag": {
-                        "type": "GFileRefer"
-                      },
-                      "fileType": "texture"
-                    }
-                  }
-                }
-              ],
+              "children": [],
               "activeValue": {
                 "selfValue": true,
                 "valueTag": "activeValue"
@@ -1236,7 +1043,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 6,
+              "tempIndex": 146,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -3734,7 +3541,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 7,
+          "tempIndex": 147,
           "itemID": 222,
           "seParent": null,
           "ecaScripts": [

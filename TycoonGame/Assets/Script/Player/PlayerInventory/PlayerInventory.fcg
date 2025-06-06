@@ -16,8 +16,10 @@ graph PlayerInventory {
     event OnAwake() {
         inventory = New(100,100)
         inventory[1] = 1000
-        inventoryItemID  = New(100,100)
-        inventoryItemSize = New(100,100)
+        inventoryItemID  = New(0,100)
+        inventoryItemSize = New(0,100)
+        Append(inventoryItemID,1)
+        Append(inventoryItemID,1)
     }
 
     func inventoryAddItem(itemID int, number int){

@@ -8,12 +8,7 @@ graph InventoryIngredientBtn {
         LogInfo("tapped")
         LogInfo("thisEntity<BtnOnOff>.On" + thisEntity<BtnOnOff>.On)
         LogInfo("thisEntity<BtnOnOff>.off" + thisEntity<BtnOnOff>.Off)
-        var _thisentity = GetParent(GetParent(thisEntity)) as entity<CustomUI>  
-        
-        var test = GetWidgetFromCustomUI(player,_thisentity,EResUIInventory.ViewIngredient)
-        LogInfo("test " + test)
 
-         
         var _on = thisEntity<BtnOnOff>.On 
         var _off = thisEntity<BtnOnOff>.Off 
 

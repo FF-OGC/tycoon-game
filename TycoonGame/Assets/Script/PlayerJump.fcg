@@ -14,9 +14,6 @@ graph Script_1_ {
     }
 
     event OnJump() {
-        CreateCustomUI(out var createdUI , thisEntity<Player>,EResUI.NewInventory)
-        createdUI<CustomUI>.IsVisible = true
-        thisEntity<PlayerInventoryUIHandler>.initUIInformation(createdUI)
     }
 }
 
