@@ -2,4 +2,6 @@ ID,Name,Type,Price,Prefab
 int,string,string,string,string
 1,Chicken,,100,Cactus
 2,Fried Chicken,,100,Item1Chicken
+3,Egg,,100,Cactus
+4,Fried Egg,,100,Cactus
 ,,,,
