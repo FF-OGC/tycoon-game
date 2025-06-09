@@ -7,7 +7,7 @@ import "../Script/Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
 import "../Script/Player/PlayerInventory/PlayerInventory.fcg" as PlayerInventory
 import "../Script/Economy/BigNumberHandler.fcg" as BigNumberHandler
 
-graph Script_1_ {
+graph BuyBtn {
     //Executed when entity is created
 
     event OnTapped(player entity<Player>) {
@@ -16,6 +16,11 @@ graph Script_1_ {
         var _itemPrice = CSVReadingHandler.getItemPriceByItemID(EResCSV.ItemCSV,_itemID)
 
         if BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney,_itemPrice) >=0 {
+            
+
+
+
+
         } else {
             LogInfo("Not enough money")
         }
