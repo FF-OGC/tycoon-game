@@ -202,7 +202,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 141,
+              "tempIndex": 87,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -542,7 +542,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 142,
+              "tempIndex": 88,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -889,7 +889,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 144,
+                  "tempIndex": 89,
                   "itemID": 95,
                   "seParent": null,
                   "ecaScripts": [
@@ -1043,7 +1043,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 146,
+              "tempIndex": 90,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -1253,6 +1253,14 @@
         {
           "fileId": "mf54mya5kkl-maxcq47l-ufbtwdwsjw",
           "filePath": "Assets\\Script\\Script.fcg",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "ugcscript"
+        },
+        {
+          "fileId": "x3o45cb4uvs-mboj3p93-omr1i8id9z",
+          "filePath": "Assets\\Script\\Script (2).fcg",
           "_tag": {
             "type": "GFileRefer"
           },
@@ -3541,7 +3549,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 147,
+          "tempIndex": 91,
           "itemID": 222,
           "seParent": null,
           "ecaScripts": [

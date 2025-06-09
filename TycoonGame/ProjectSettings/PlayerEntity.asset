@@ -176,6 +176,22 @@
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "thlk712kzis-mboim34t-b4u5k0mumoq",
+      "filePath": "Assets\\Script\\Script (2).fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "9afoc83yoto-mbol3bsl-rkmpqcnktz",
+      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\PlayerCustomWeaponClient.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "avatarInfo": null,

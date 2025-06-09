@@ -7,6 +7,8 @@ import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler 
 import "../Building/BuildingHandler.fcg" as BuildingHandler
 import "../Player/PlayerInventory/PlayerInventory.fcg" as PlayerInventory
+import "Hud.fcc" as Hud
+import "Player.fcc" as Player
 
 graph UpgradeButtonTrigger {
     //Executed when entity is created
@@ -22,13 +24,10 @@ graph UpgradeButtonTrigger {
         var _player = target as entity<Player>
         var _inputID = _parentEntity<BuildingHandler>.inputID
 
-        if _player<PlayerInventory>.inventory[_inputID] > 0 {
-            DispatchEvent(COOK,_parentEntity,List<object>{_player<PlayerInventory>.inventory[_inputID]})
-            _player<PlayerInventory>.inventory[_inputID] = 0 
-        }
-    }
-
+     }
 
     event OnEntityExit(target entity<Entity>) {
+        var _player = target as entity<Player>
+        DispatchEvent(EXIT_REFILL_TRIGGER, _player, List<object>{_parentEntity})
     }
 }

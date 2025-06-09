@@ -85,19 +85,31 @@
         {
           "label": "ID",
           "key": "E22999968",
-          "type": "Int",
-          "value": 0
+          "value": 0,
+          "type": "Int"
         },
         {
           "label": "Name",
           "key": "E32203068",
-          "type": "Int",
-          "value": 1
+          "value": 1,
+          "type": "Int"
+        },
+        {
+          "label": "Type",
+          "key": "E75386974",
+          "value": 2,
+          "type": "Int"
         },
         {
           "label": "Price",
           "key": "E79506577",
-          "value": 2,
+          "value": 3,
+          "type": "Int"
+        },
+        {
+          "label": "Prefab",
+          "key": "E96208968",
+          "value": 4,
           "type": "Int"
         }
       ],

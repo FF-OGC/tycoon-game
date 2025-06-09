@@ -26,15 +26,12 @@ graph PlayerEquipmentUIHandler {
     }
 
     func init (){
-        LogInfo("before log")
-        thisEntity<PlayerEquipmentHandler>.helpLog()
 
         if UIEquipmentBar == nil {
             CreateCustomUI(out var createdUI, thisEntity<Player>,EResUI.EquipmentBarUI)
             UIEquipmentBar = createdUI
             createdUI<CustomUI>.IsVisible = true
             var layout = GetWidgetFromCustomUI(thisEntity<Player>,UIEquipmentBar<CustomUI>,EResUIEquipmentBarUI.Layout)
-
             UIEquipmentBarItemList = GetChildren(layout)
             for i = 0, List.Length(UIEquipmentBarItemList), 1 {
                 UIEquipmentBarItemButtonList[i] = GetChildByIndex(UIEquipmentBarItemList[i],0) as entity<UIWidgetButton>
@@ -45,18 +42,16 @@ graph PlayerEquipmentUIHandler {
     }
 
     func updateAllBar (){
-        LogInfo("time")
-        LogInfo("List.Length(UIEquipmentBarItemList)" + List.Length(UIEquipmentBarItemList))
+        if UIEquipmentBar == nil {
+            init()
+        }
         for i = 0, List.Length(UIEquipmentBarItemList), 1 {
-            LogInfo("time")
             updateBarUIAt(i)
         }
     }
 
     func updateBarUIAt(index int){
-        LogInfo("thisEntity<PlayerEquipmentHandler>.EquipmentHoldList[index]" + thisEntity<PlayerEquipmentHandler>.EquipmentHoldList[index])
-
-        if (thisEntity<PlayerEquipmentHandler>.EquipmentHoldList[index]) == -1 {
+        if (thisEntity<PlayerEquipmentHandler>.equipmentItemID[index]) == -1 {
             removeBarItemUIAt(index)
         } else {
             setBarItemUIAt(index)
@@ -64,7 +59,6 @@ graph PlayerEquipmentUIHandler {
     }
 
     func removeBarItemUIAt(index int ){
-        LogInfo("ARE U HERE")
         var button = UIEquipmentBarItemButtonList[index]
         button<UIWidgetButton>.Alpha = 0.1
         var label = UIEquipmentBarItemLabelList[index]
@@ -72,10 +66,9 @@ graph PlayerEquipmentUIHandler {
     }
 
     func setBarItemUIAt(index int ){
-        LogInfo("sadjnkasd")
         var button = UIEquipmentBarItemButtonList[index]
         button<UIWidgetButton>.Alpha = 1
-        var informationString = CSVReadingHandler.getItemNameByID(EResCSV.ItemCSV,thisEntity<PlayerInventory>.inventoryItemID[index])
+        var informationString = CSVReadingHandler.getItemNameByID(EResCSV.ItemCSV,thisEntity<PlayerEquipmentHandler>.equipmentItemID[index])
         var label = UIEquipmentBarItemLabelList[index]
         label<UIWidgetLabel>.Content = informationString
     }

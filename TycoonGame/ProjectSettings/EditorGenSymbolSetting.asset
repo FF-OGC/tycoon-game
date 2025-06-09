@@ -4,7 +4,12 @@
   },
   "_entityId": "d18tdDBW",
   "GenSymbol": {
-    "Components": {},
+    "Components": {
+      "CustomComponent81033965": {
+        "label": "BtnEquip",
+        "props": {}
+      }
+    },
     "Events": {},
     "Graphs": {},
     "Enums": {}

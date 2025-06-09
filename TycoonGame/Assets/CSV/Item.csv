@@ -1,5 +1,5 @@
-ID,Name,Type,Price
-int,string,string,string
-1,Chicken,,100
-2,Fried Chicken,,100
-,,,
+ID,Name,Type,Price,Prefab
+int,string,string,string,string
+1,Chicken,,100,Cactus
+2,Fried Chicken,,100,Item1Chicken
+,,,,

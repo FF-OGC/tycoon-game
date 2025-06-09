@@ -1,0 +1,33 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import "../BuildingHandler.fcg" as BuildingHandler
+import "../../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
+
+graph CookEventB1 {
+    //Executed when entity is created
+    parentEntity entity<Entity>
+    owner entity<Player>
+    
+
+    event COOK(amount object) {
+        /*
+        if parentEntity == nil {
+            parentEntity = thisEntity
+        }
+        
+        parentEntity<BuildingHandler>.cookingCount += amount as int
+        if parentEntity<BuildingHandler> == false {
+            isCooking = true
+            while cookingCount >0 {
+                WaitForMillisecond(5000)
+                LogInfo("get + count: " + cookingCount)
+                if owner == nil {
+                    owner = PlayerStaticInformation.playerHost
+                }
+            }
+        }
+            */
+    }
+
+}

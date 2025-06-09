@@ -1,0 +1,23 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "List.fcc" as List
+
+graph PlayerTriggerEventHandler {
+    //Executed when entity is created
+    isOnTrigger bool
+    triggerEntity entity<Entity>
+    event OnAwake() {
+
+    }
+
+    event ENTER_REFILL_TRIGGER(parentEntity object) {
+        isOnTrigger = true
+        triggerEntity = parentEntity as entity<Entity>
+        LogInfo("You suck")
+    }
+
+    event EXIT_REFILL_TRIGGER() {
+        isOnTrigger = false
+        triggerEntity = nil
+    }
+}

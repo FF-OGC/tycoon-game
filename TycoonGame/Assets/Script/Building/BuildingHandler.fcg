@@ -75,23 +75,12 @@ graph Script {
         GlobalBuildingManager.BuildingList[buildingID] = thisEntity
         GlobalBuildingManager.BuildingStateList[buildingID] = buildingUnlockState 
 
+        owner = PlayerStaticInformation.playerHost
+
         setActiveGameStart()
     }
 
 
-    event COOK(amount object) {
-        cookingCount += amount as int
-        if isCooking == false {
-            isCooking = true
-            while cookingCount >0 {
-                WaitForMillisecond(5000)
-                LogInfo("get + count: " + cookingCount)
-                if owner == nil {
-                    owner = PlayerStaticInformation.playerHost
-                }
-            }
-        }
-    }
 
 
     func setActiveGameStart(){

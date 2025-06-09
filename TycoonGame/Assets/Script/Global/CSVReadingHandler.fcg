@@ -100,4 +100,17 @@ static graph CSVReadingHandler {
         return result
     }
 
+
+    func getItemPrefabByItemID(keyCSV CsvID, id int) string{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = ItemConfigEnum.Prefab as int
+        var result = _list[_index] as string
+        return result
+    }
+
+
 }

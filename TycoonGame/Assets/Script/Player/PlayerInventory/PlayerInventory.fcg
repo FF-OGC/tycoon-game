@@ -2,35 +2,36 @@ import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 import "Items.fcc" as Items
 import "List.fcc" as List
+import "Map.fcc" as Map
 
 graph PlayerInventory {
     //Executed when entity is created
-    inventory List<int>
-
     inventoryItemID List<int>
     inventoryItemSize List<float>
     inventoryItemMutation List<string>
 
-    MAX = 100
+    MAX = 64
     
     event OnAwake() {
-        inventory = New(100,100)
-        inventory[1] = 1000
-        inventoryItemID  = New(0,100)
-        inventoryItemSize = New(0,100)
+        inventoryItemID  = List.New(0,100)
+        inventoryItemSize = List.New(0,100) 
         Append(inventoryItemID,1)
         Append(inventoryItemID,1)
     }
 
-    func inventoryAddItem(itemID int, number int){
-        inventory[itemID] = number + inventory[itemID]
-        LogInfo("item" +  itemID + "count:" +inventory[itemID])
+    func inventoryAddItem(itemID int, itemSize float, itemMutation string){
+        if List.Length(inventoryItemID) < MAX{
+            Append(inventoryItemID, itemID) 
+            Append(inventoryItemSize, itemSize) 
+            Append(inventoryItemMutation, itemMutation) 
+        } else {
+            LogInfo("Inventory is full")
+        }
     }
 
-    func inventoryRemoveItem(itemID int, number int){
-        inventory[itemID] -= number
+    func inventoryRemoveItem(index int){
+        RemoveAt(inventoryItemID, index)
+        RemoveAt(inventoryItemID, index)
+        RemoveAt(inventoryItemID, index)
     }
-
-
-
 }

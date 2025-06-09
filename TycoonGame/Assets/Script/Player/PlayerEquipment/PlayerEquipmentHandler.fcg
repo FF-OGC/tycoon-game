@@ -3,47 +3,60 @@ import "EditorGenLib.fcc" as EditorLib
 import "List.fcc" as List
 
 import "./UI/PlayerEquipmentUIHandler.fcg" as PlayerEquipmentUIHandler
+import "../PlayerInventory/PlayerInventory.fcg" as PlayerInventory
 
 graph PlayerEquipmentHandler {
     //Executed when entity is created
-    EquipmentHoldList List<int>
+    currentEquipIndex int
+
+    equipmentItemID List<int>
+    equipmentItemIDItemSize List<float>
+    equipmentItemIDItemMutation List<string>
+
 
     event OnAwake() {
         WaitForNextFrame()
-        EquipmentHoldList = New(5,5)
+        equipmentItemID  = List.New(5,5)
+        equipmentItemIDItemSize = List.New(5,5) 
+        equipmentItemIDItemMutation = List.New(5,5)
         
-        EquipmentHoldList[0] = 0
-        EquipmentHoldList[1] = 1
-        EquipmentHoldList[2] = -1
-        EquipmentHoldList[3] = -1
-        EquipmentHoldList[4] = -1
-    }
-
-    func helpLog (){
-        LogInfo("helpLog running")
-        for key, value in EquipmentHoldList {
-            LogInfo("value" + value)
+        for i = 0, 5, 1 {
+            equipmentItemID[i] = -1
         }
+
+        equipmentAddItem(2,1,"")
+        equipmentAddItem(2,3,"")
+        equipmentAddItem(2,5,"")
     }
 
-    func equipBarAt(index int,itemID int){
-        EquipmentHoldList[index] = itemID
-
-        thisEntity<PlayerEquipmentUIHandler>.updateBarUIAt(index)
-    }
-
-    func removeBarAt(index int ){
-        EquipmentHoldList[index] = -1 
-        
-        thisEntity<PlayerEquipmentUIHandler>.updateBarUIAt(index)
-    }
-
-    func removeAllHoldItem (){
-        for key, value in EquipmentHoldList {
-            value = -1
+    func equipmentAddItem(itemID int, itemSize float, itemMutation string){
+        if List.Length(equipmentItemID) < 4{
+            Append(equipmentItemID, itemID) 
+            Append(equipmentItemIDItemSize, itemSize) 
+            Append(equipmentItemIDItemMutation, itemMutation) 
+        } else {
+            var tIndex = List.IndexOf(equipmentItemID, -1)
+            if tIndex != -1 {
+                equipmentItemID[tIndex] = itemID
+                equipmentItemIDItemSize[tIndex] = itemSize
+                equipmentItemIDItemMutation[tIndex] = itemMutation
+            } else {
+                LogInfo("Equipment is full")
+            }
         }
 
         thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
     }
 
+    func equipmentSwaetItem(index int,itemID int, itemSize float, itemMutation string){
+        equipmentItemID[index] = itemID
+        equipmentItemIDItemSize[index] = itemSize
+        equipmentItemIDItemMutation[index] = itemMutation
+    }
+
+    func equipmentRemoveItem(index int){
+        equipmentItemID[index] = -1
+        equipmentItemIDItemSize[index] = 0
+        equipmentItemIDItemMutation[index] = nil
+    }
 }

@@ -249,6 +249,93 @@
       "apiTargetV2": "both",
       "version": 45,
       "key": "signal_25627617"
+    },
+    "signal_95792060": {
+      "name": "ENTER_REFILL_TRIGGER",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100015,
+      "props": [
+        {
+          "name": "parentEntity",
+          "value": "any",
+          "key": 1
+        }
+      ],
+      "propCount": 1,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_95792060"
+    },
+    "signal_24820166": {
+      "name": "EXIT_REFILL_TRIGGER",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100016,
+      "props": [],
+      "propCount": 0,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_24820166"
+    },
+    "signal_31275413": {
+      "name": "CREATE_ITEM",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100017,
+      "props": [
+        {
+          "name": "ItemID",
+          "value": "any",
+          "key": 1
+        },
+        {
+          "name": "ItemSize",
+          "value": "any",
+          "key": 2
+        },
+        {
+          "name": "ItemMutation",
+          "value": "any",
+          "key": 3
+        },
+        {
+          "name": "Position",
+          "value": "Vector3",
+          "key": 4
+        }
+      ],
+      "propCount": 4,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_31275413"
+    },
+    "signal_15514033": {
+      "name": "EQUIP_ITEM",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100019,
+      "props": [
+        {
+          "name": "prefabEresKey",
+          "value": "any",
+          "key": 3
+        },
+        {
+          "name": "itemSize",
+          "value": "any",
+          "key": 4
+        },
+        {
+          "name": "itemMutation",
+          "value": "any",
+          "key": 5
+        }
+      ],
+      "propCount": 5,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_15514033"
     }
   },
   "customName": {
@@ -266,7 +353,11 @@
     "SHOW_MONEY_DOWN": "signal_63235039",
     "SHOW_ROCK_UP": "signal_44600301",
     "SHOW_ROCK_DOWN": "signal_47431495",
-    "COOK": "signal_25627617"
+    "COOK": "signal_25627617",
+    "ENTER_REFILL_TRIGGER": "signal_95792060",
+    "EXIT_REFILL_TRIGGER": "signal_24820166",
+    "CREATE_ITEM": "signal_31275413",
+    "EQUIP_ITEM": "signal_15514033"
   },
   "children": []
 }

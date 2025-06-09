@@ -125,12 +125,12 @@
                   },
                   "ecaScripts": [
                     {
-                      "fileId": "yyz8knsk69-mbkc2w2y-u94iu93a6p",
-                      "filePath": "Assets\\ECA\\Button.eca",
+                      "fileId": "xz0qx63jxjd-mbosnqbm-hx43ecnzoci",
+                      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\Equip.fcg",
                       "_tag": {
                         "type": "GFileRefer"
                       },
-                      "fileType": "eca"
+                      "fileType": "ugcscript"
                     }
                   ],
                   "ecaProps": {
@@ -284,9 +284,15 @@
               "ecaProps": {
                 "HudEmptyWidget": {},
                 "HudWidget": {},
-                "Entity": {}
+                "Entity": {},
+                "CustomComponent81033965": {
+                  "PROP_39015964": null,
+                  "PROP_58833175": 0
+                }
               },
-              "componentList": [],
+              "componentList": [
+                "CustomComponent81033965"
+              ],
               "_filters": [],
               "_entityName": "Item (1)",
               "entityTagData": {
@@ -300,14 +306,14 @@
                 "type": "UIEmptyEntity",
                 "resourceId": ""
               },
-              "_entityId": "ggjzoMPY",
+              "_entityId": "uQWk5gMN",
               "children": [
                 {
                   "_tag": {
                     "type": "UIButtonEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "IkgNY6dI",
+                  "_entityId": "lJViCLHl",
                   "children": [],
                   "prefabVariant": null,
                   "activeValue": {
@@ -401,12 +407,12 @@
                   },
                   "ecaScripts": [
                     {
-                      "fileId": "yyz8knsk69-mbkc2w2y-u94iu93a6p",
-                      "filePath": "Assets\\ECA\\Button.eca",
+                      "fileId": "xz0qx63jxjd-mbosnqbm-hx43ecnzoci",
+                      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\Equip.fcg",
                       "_tag": {
                         "type": "GFileRefer"
                       },
-                      "fileType": "eca"
+                      "fileType": "ugcscript"
                     }
                   ],
                   "ecaProps": {
@@ -428,7 +434,7 @@
                     "type": "UITextEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "OzytLULf",
+                  "_entityId": "5sCpQTyy",
                   "children": [],
                   "prefabVariant": null,
                   "activeValue": {
@@ -560,9 +566,15 @@
               "ecaProps": {
                 "HudEmptyWidget": {},
                 "HudWidget": {},
-                "Entity": {}
+                "Entity": {},
+                "CustomComponent81033965": {
+                  "PROP_39015964": null,
+                  "PROP_58833175": 1
+                }
               },
-              "componentList": [],
+              "componentList": [
+                "CustomComponent81033965"
+              ],
               "_filters": [],
               "_entityName": "Item (2)",
               "entityTagData": {
@@ -576,14 +588,14 @@
                 "type": "UIEmptyEntity",
                 "resourceId": ""
               },
-              "_entityId": "uqUPmek3",
+              "_entityId": "1qVteIQf",
               "children": [
                 {
                   "_tag": {
                     "type": "UIButtonEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "sennqeha",
+                  "_entityId": "7ifbAUlL",
                   "children": [],
                   "prefabVariant": null,
                   "activeValue": {
@@ -677,12 +689,12 @@
                   },
                   "ecaScripts": [
                     {
-                      "fileId": "yyz8knsk69-mbkc2w2y-u94iu93a6p",
-                      "filePath": "Assets\\ECA\\Button.eca",
+                      "fileId": "xz0qx63jxjd-mbosnqbm-hx43ecnzoci",
+                      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\Equip.fcg",
                       "_tag": {
                         "type": "GFileRefer"
                       },
-                      "fileType": "eca"
+                      "fileType": "ugcscript"
                     }
                   ],
                   "ecaProps": {
@@ -704,7 +716,7 @@
                     "type": "UITextEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "8s2jeEiN",
+                  "_entityId": "hcNCNgPJ",
                   "children": [],
                   "prefabVariant": null,
                   "activeValue": {
@@ -836,9 +848,15 @@
               "ecaProps": {
                 "HudEmptyWidget": {},
                 "HudWidget": {},
-                "Entity": {}
+                "Entity": {},
+                "CustomComponent81033965": {
+                  "PROP_39015964": null,
+                  "PROP_58833175": 2
+                }
               },
-              "componentList": [],
+              "componentList": [
+                "CustomComponent81033965"
+              ],
               "_filters": [],
               "_entityName": "Item (3)",
               "entityTagData": {
@@ -852,14 +870,14 @@
                 "type": "UIEmptyEntity",
                 "resourceId": ""
               },
-              "_entityId": "uSKZXF6a",
+              "_entityId": "nhvCs8sn",
               "children": [
                 {
                   "_tag": {
                     "type": "UIButtonEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "phVeBIl0",
+                  "_entityId": "1YzokG8N",
                   "children": [],
                   "prefabVariant": null,
                   "activeValue": {
@@ -953,12 +971,12 @@
                   },
                   "ecaScripts": [
                     {
-                      "fileId": "yyz8knsk69-mbkc2w2y-u94iu93a6p",
-                      "filePath": "Assets\\ECA\\Button.eca",
+                      "fileId": "xz0qx63jxjd-mbosnqbm-hx43ecnzoci",
+                      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\Equip.fcg",
                       "_tag": {
                         "type": "GFileRefer"
                       },
-                      "fileType": "eca"
+                      "fileType": "ugcscript"
                     }
                   ],
                   "ecaProps": {
@@ -980,7 +998,7 @@
                     "type": "UITextEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "5RWd8MNN",
+                  "_entityId": "1aFJ1pEr",
                   "children": [],
                   "prefabVariant": null,
                   "activeValue": {
@@ -1112,9 +1130,15 @@
               "ecaProps": {
                 "HudEmptyWidget": {},
                 "HudWidget": {},
-                "Entity": {}
+                "Entity": {},
+                "CustomComponent81033965": {
+                  "PROP_39015964": null,
+                  "PROP_58833175": 3
+                }
               },
-              "componentList": [],
+              "componentList": [
+                "CustomComponent81033965"
+              ],
               "_filters": [],
               "_entityName": "Item (4)",
               "entityTagData": {
@@ -1128,14 +1152,14 @@
                 "type": "UIEmptyEntity",
                 "resourceId": ""
               },
-              "_entityId": "6AALWSxJ",
+              "_entityId": "K7dUdzal",
               "children": [
                 {
                   "_tag": {
                     "type": "UIButtonEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "R5TDeBUn",
+                  "_entityId": "f71Ydkgo",
                   "children": [],
                   "prefabVariant": null,
                   "activeValue": {
@@ -1229,12 +1253,12 @@
                   },
                   "ecaScripts": [
                     {
-                      "fileId": "yyz8knsk69-mbkc2w2y-u94iu93a6p",
-                      "filePath": "Assets\\ECA\\Button.eca",
+                      "fileId": "xz0qx63jxjd-mbosnqbm-hx43ecnzoci",
+                      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\Equip.fcg",
                       "_tag": {
                         "type": "GFileRefer"
                       },
-                      "fileType": "eca"
+                      "fileType": "ugcscript"
                     }
                   ],
                   "ecaProps": {
@@ -1256,7 +1280,7 @@
                     "type": "UITextEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "D8ZHcDA4",
+                  "_entityId": "QOPvS1Fe",
                   "children": [],
                   "prefabVariant": null,
                   "activeValue": {
@@ -1388,9 +1412,15 @@
               "ecaProps": {
                 "HudEmptyWidget": {},
                 "HudWidget": {},
-                "Entity": {}
+                "Entity": {},
+                "CustomComponent81033965": {
+                  "PROP_39015964": null,
+                  "PROP_58833175": 4
+                }
               },
-              "componentList": [],
+              "componentList": [
+                "CustomComponent81033965"
+              ],
               "_filters": [],
               "_entityName": "Item (5)",
               "entityTagData": {

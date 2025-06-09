@@ -111,7 +111,10 @@
               }
             }
           },
-          "ecaScripts": [],
+          "ecaScripts": [
+            null,
+            null
+          ],
           "ecaProps": {
             "HudButtonWidget": {},
             "HudWidget": {},

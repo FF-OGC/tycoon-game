@@ -381,6 +381,67 @@
           "value": null
         }
       ]
+    },
+    "CustomComponent19248191": {
+      "label": "Item",
+      "name": "CustomComponent19248191",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100018,
+      "PropDefines": [
+        {
+          "propID": 100023,
+          "name": "PROP_42012565",
+          "label": "itemID",
+          "type": "Int",
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 0,
+            "min": -2147483648,
+            "max": 2147483647
+          }
+        },
+        {
+          "propID": 100021,
+          "name": "PROP_84906194",
+          "label": "itemSize",
+          "type": "Float",
+          "value": 0,
+          "disabledType": true,
+          "param": {
+            "precision": 2
+          }
+        },
+        {
+          "propID": 100022,
+          "name": "PROP_94262280",
+          "label": "itemMutation",
+          "type": "String",
+          "value": "",
+          "disabledType": true
+        }
+      ]
+    },
+    "CustomComponent81033965": {
+      "label": "BtnEquip",
+      "name": "CustomComponent81033965",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100025,
+      "PropDefines": [
+        {
+          "propID": 100031,
+          "name": "PROP_58833175",
+          "label": "btnID",
+          "type": "Int",
+          "value": 0
+        }
+      ]
     }
   }
 }

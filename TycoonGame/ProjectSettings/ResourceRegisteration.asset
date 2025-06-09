@@ -214,7 +214,32 @@
     },
     "prefab": {
       "id": "prefab",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "bpj0c12hozr-mbok2gdr-1cz8sao5iut",
+            "filePath": "Assets\\Prefabs\\Items\\Cactus.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Cactus",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "xschafvxw7k-mbowt60q-yxxuiy1egbf",
+            "filePath": "Assets\\Prefabs\\Items\\Item1Chicken.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item1Chicken",
+          "children": []
+        }
+      ]
     },
     "ugcscript": {
       "id": "ugcscript",
