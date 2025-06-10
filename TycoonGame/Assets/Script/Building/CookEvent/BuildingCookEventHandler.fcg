@@ -1,0 +1,77 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+import "List.fcc" as List
+
+import "../../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "../../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
+import "Items.fcc" as Items
+import "../../Player/PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+import "Math.fcc" as Math
+
+
+
+graph BuildingCookEventHandler {
+    queueItemID List<int>
+    isCooking bool
+    MAX int = 10
+    
+    //Executed when entity is created
+    event OnAwake() {
+        queueItemID  = List<int>{}
+    }
+    
+    event COOK(itemID object) {
+        var _player = PlayerStaticInformation.playerHost
+
+        DispatchEvent(SHOW_CUSTOMUI, _player, List<object>{"StartCooking"})
+        LogInfo("event cook starting")
+        addCookingQueue(itemID as int)
+        if isCooking == false{
+            isCooking = true
+
+            while isCooking{
+                while List.Length(queueItemID) > 0 {
+                    LogInfo("length + " +List.Length(queueItemID) )
+                    var cookItemID = popCookingQueue()
+                    var cookTimeCooldown = CSVReadingHandler.getItemCookingTimeByItemID(EResCSV.ItemCSV, cookItemID)
+                    WaitForMillisecond(cookTimeCooldown * 1000)
+                    var cookItemOutputID = CSVReadingHandler.getOutputItemByItemID(EResCSV.ItemCSV,cookItemID)
+                    var randomSize = RandomFloat(0.5,2)
+                    _player<PlayerEquipmentHandler>.equipmentAddItem(cookItemOutputID,randomSize,"")
+                    LogInfo("Cook finish - give back : " +cookItemOutputID )
+                }
+                isCooking = false
+            }
+        }
+    
+    }
+
+    func addCookingQueue(itemID int){
+        if checkSlotAvailable(){
+            Append(queueItemID, itemID)
+        } else {
+            LogInfo("full waiting")
+        }
+    }
+
+    func popCookingQueue () int{
+        if List.Length(queueItemID) > 0 {
+            var queueClone = List.Clone(queueItemID) as List<int>
+            var _returnItem = queueClone[0] as int
+            RemoveAt(queueItemID,0)
+            return _returnItem
+        } else {
+            LogInfo("done cooking")
+        }
+    }
+
+    func checkSlotAvailable() bool{
+        if List.Length(queueItemID) < 10 {
+            return true
+        } else {
+            return false
+        }
+    }
+
+}

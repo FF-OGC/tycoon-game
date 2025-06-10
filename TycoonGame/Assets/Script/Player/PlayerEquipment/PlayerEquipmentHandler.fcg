@@ -42,6 +42,14 @@ graph PlayerEquipmentHandler {
         thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
     }
 
+    func checkSlotAvailable() bool{
+        var tIndex = List.IndexOf(equipmentItemID, -1)
+        if tIndex != -1 {
+            return true
+        }
+        return false
+    }
+
     func equipmentSwaetItem(index int,itemID int, itemSize float, itemMutation string){
         equipmentItemID[index] = itemID
         equipmentItemIDItemSize[index] = itemSize
@@ -52,5 +60,17 @@ graph PlayerEquipmentHandler {
         equipmentItemID[index] = -1
         equipmentItemIDItemSize[index] = 0
         equipmentItemIDItemMutation[index] = nil
+        thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
+    }
+
+    func removeHoldingItem (){
+        equipmentItemID[currentEquipIndex] = -1
+        equipmentItemIDItemSize[currentEquipIndex] = 0
+        equipmentItemIDItemMutation[currentEquipIndex] = nil
+        thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
+
+        currentEquipIndex = -1
+        DispatchEventWithPlatform(UNEQUIP_ITEM_CLIENT, thisEntity, PlatformType.Client, List<object>{})
+    
     }
 }

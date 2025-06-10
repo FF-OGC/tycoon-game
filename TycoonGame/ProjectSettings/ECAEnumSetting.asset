@@ -85,17 +85,17 @@
         {
           "label": "ID",
           "key": "E22999968",
-          "value": 0,
-          "type": "Int"
+          "type": "Int",
+          "value": 0
         },
         {
           "label": "Name",
           "key": "E32203068",
-          "value": 1,
-          "type": "Int"
+          "type": "Int",
+          "value": 1
         },
         {
-          "label": "Type",
+          "label": "Output",
           "key": "E75386974",
           "value": 2,
           "type": "Int"
@@ -103,14 +103,20 @@
         {
           "label": "Price",
           "key": "E79506577",
-          "value": 3,
-          "type": "Int"
+          "type": "Int",
+          "value": 3
         },
         {
           "label": "Prefab",
           "key": "E96208968",
-          "value": 4,
-          "type": "Int"
+          "type": "Int",
+          "value": 4
+        },
+        {
+          "label": "CookingTime",
+          "key": "E61226782",
+          "type": "Int",
+          "value": 5
         }
       ],
       "isCustom": true,
@@ -124,4 +130,4 @@
   },
   "children": []
 }
-//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

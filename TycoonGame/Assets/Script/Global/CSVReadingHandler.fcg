@@ -112,5 +112,29 @@ static graph CSVReadingHandler {
         return result
     }
 
+    func getItemCookingTimeByItemID(keyCSV CsvID, id int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = ItemConfigEnum.CookingTime as int
+        var result = _list[_index] as int
+        return result
+    }
+
+    func getOutputItemByItemID(keyCSV CsvID, id int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = ItemConfigEnum.Output as int
+        var result = _list[_index] as int
+        return result
+    }
+
+
+
 
 }

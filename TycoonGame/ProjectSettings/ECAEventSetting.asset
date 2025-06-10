@@ -336,6 +336,17 @@
       "apiTargetV2": "both",
       "version": 45,
       "key": "signal_15514033"
+    },
+    "signal_26394348": {
+      "name": "UNEQUIP_ITEM_CLIENT",
+      "eventType": 0,
+      "enitityType": "Entity",
+      "typeID": 100018,
+      "props": [],
+      "propCount": 0,
+      "apiTargetV2": "both",
+      "version": 45,
+      "key": "signal_26394348"
     }
   },
   "customName": {
@@ -357,8 +368,9 @@
     "ENTER_REFILL_TRIGGER": "signal_95792060",
     "EXIT_REFILL_TRIGGER": "signal_24820166",
     "CREATE_ITEM": "signal_31275413",
-    "EQUIP_ITEM": "signal_15514033"
+    "EQUIP_ITEM": "signal_15514033",
+    "UNEQUIP_ITEM_CLIENT": "signal_26394348"
   },
   "children": []
 }
-//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

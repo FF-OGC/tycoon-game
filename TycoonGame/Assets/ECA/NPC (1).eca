@@ -1,0 +1,92 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "e",
+        "id": "U%8zhW4E,Gz2)BjQ3Nw[",
+        "x": 572,
+        "y": 184,
+        "extraState": {
+          "X": 138,
+          "L": [],
+          "O": [],
+          "T": "OnAwake",
+          "OT": "Entity"
+        },
+        "next": {
+          "block": {
+            "type": "a",
+            "id": "%0~?Lp3:SX_+?Rvry(Uv",
+            "extraState": {
+              "X": 8001,
+              "L": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "O": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "T": "PlayAnimationByController",
+              "OT": null
+            },
+            "inputs": {
+              "P1": {
+                "shadow": {
+                  "type": "tys",
+                  "id": "QB|-}4m?_jR?+Ni~:t9j",
+                  "extraState": "AnimationControllerAble"
+                },
+                "block": {
+                  "type": "ent",
+                  "id": "?_a]@/^Cl;goW7$NWY;l"
+                }
+              },
+              "P2": {
+                "shadow": {
+                  "type": "ipe",
+                  "id": "1]APrSCqx~amk%=J6QBN",
+                  "extraState": "AnimationControllerStates",
+                  "fields": {
+                    "I": "Sitting"
+                  }
+                }
+              },
+              "P3": {
+                "shadow": {
+                  "type": "ipf",
+                  "id": "FBN9[i(c+;F@!$k`E,1$",
+                  "fields": {
+                    "V": 0
+                  }
+                }
+              },
+              "P4": {
+                "shadow": {
+                  "type": "ipe",
+                  "id": "fM8a)52/|.~DC5nY#.;I",
+                  "extraState": "AnimationOverrideLoopType",
+                  "fields": {
+                    "I": "Loop"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "graphData": {
+    "ownerType": "Entity",
+    "componentTypes": "NPC&AvatarAble&AnimationControllerAble&Collider&ColliderShape",
+    "isStatic": false,
+    "platform": 2
+  }
+}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

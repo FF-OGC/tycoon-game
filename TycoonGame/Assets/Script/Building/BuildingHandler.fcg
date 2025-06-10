@@ -7,14 +7,13 @@ import "Economy.fcc" as Economy
 import "Workflow.fcc" as Workflow
 
 import "../Building/GlobalBuildingManager.fcg" as GlobalBuildingManager
-import "../Building/BuildingHandler.fcg" as BuildingHandler
 import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 import "../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
 import "../Player/PlayerInventory/PlayerInventory.fcg" as PlayerInventory
 
 import "List.fcc" as List
 
-graph Script {
+graph BuildingHandler {
     //Executed when entity is created
     configFile CsvID
 
@@ -160,7 +159,6 @@ graph Script {
             SetActive(GetParent(refillButton), true)
             SetActive(refillButton,true)
             SetActive(refillDisplay,true)
-
             updateUpgradeCost()
             updateRefillDisplay()
         }

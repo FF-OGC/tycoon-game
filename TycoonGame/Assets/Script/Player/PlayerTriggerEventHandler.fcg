@@ -10,6 +10,14 @@ graph PlayerTriggerEventHandler {
 
     }
 
+    func setTriggerEntity(trigger entity<Entity>){
+        triggerEntity = trigger as entity<Entity>
+    } 
+
+    func clearTriggerEntity (){
+        triggerEntity = nil
+    }
+
     event ENTER_REFILL_TRIGGER(parentEntity object) {
         isOnTrigger = true
         triggerEntity = parentEntity as entity<Entity>

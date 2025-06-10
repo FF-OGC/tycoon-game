@@ -17,6 +17,12 @@ graph PlayerCustomWeaponClient {
         EquipItemToBone(_item, "")
     }
 
+    event UNEQUIP_ITEM_CLIENT() {
+        RemoveItem()
+    }
+
+
+
 
     func EquipItemToBone(equipEntity entity<Entity>, bone string) {
         // SetParentClient(GetSkeletonPartByName(thisEntity,bone), createdObject as entity<Transform>, false)
@@ -42,8 +48,6 @@ graph PlayerCustomWeaponClient {
         LogInfo("createdEntity" + createdEntity)
         return createdEntity
     }
-
-
 
     func RemoveItem() {
         Destroy(_EquipedItem)

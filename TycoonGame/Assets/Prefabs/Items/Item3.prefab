@@ -2,7 +2,7 @@
   "_tag": {
     "type": "Prefab"
   },
-  "_entityId": "2GvPnliO",
+  "_entityId": "1LOg7loE",
   "children": [
     {
       "_tag": {
@@ -15,7 +15,10 @@
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": null,
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
       "editorLockValue": false,
       "editorVisibleValue": true,
       "position": {
@@ -55,7 +58,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 13,
+      "tempIndex": 27,
       "itemID": 223,
       "seParent": null,
       "ecaScripts": [
@@ -82,12 +85,12 @@
         "Width": 100,
         "Height": 100,
         "Depth": 0,
-        "iconType": "4mea2r7sgvr-mbp0iin5-961tyqwv2wd",
+        "iconType": "2mo8uoukdom-mbhg9xg5-nizbufsxzr",
         "_levelObjectID": 2,
         "renderType": 0,
         "iconTypeRef": {
-          "fileId": "4mea2r7sgvr-mbp0iin5-961tyqwv2wd",
-          "filePath": "Assets\\Sprite\\Ingredient\\egg.png",
+          "fileId": "2mo8uoukdom-mbhg9xg5-nizbufsxzr",
+          "filePath": "Assets\\Sprite\\Ingredient\\re1.png",
           "_tag": {
             "type": "GFileRefer"
           },
@@ -102,10 +105,13 @@
     "selfValue": true,
     "valueTag": "activeValue"
   },
-  "unlockedValue": null,
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
   "editorLockValue": false,
   "editorVisibleValue": true,
   "discriminator": "ISceneLike",
-  "_entityName": "Icon object"
+  "_entityName": "Item1"
 }
 //"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

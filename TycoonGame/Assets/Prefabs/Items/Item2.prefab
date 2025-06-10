@@ -2,7 +2,7 @@
   "_tag": {
     "type": "Prefab"
   },
-  "_entityId": "4te3W2Db",
+  "_entityId": "v3VrvzKZ",
   "children": [
     {
       "_tag": {
@@ -58,7 +58,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 27,
+      "tempIndex": 30,
       "itemID": 223,
       "seParent": null,
       "ecaScripts": [
@@ -85,12 +85,12 @@
         "Width": 100,
         "Height": 100,
         "Depth": 0,
-        "iconType": "wrwnak3ae5j-mbhg9t2t-set6qwc61ea",
+        "iconType": "6p8w4ryh4zd-mbp0iirl-pwl93ea4zea",
         "_levelObjectID": 2,
         "renderType": 0,
         "iconTypeRef": {
-          "fileId": "wrwnak3ae5j-mbhg9t2t-set6qwc61ea",
-          "filePath": "Assets\\Sprite\\Meal\\Chicken.png",
+          "fileId": "6p8w4ryh4zd-mbp0iirl-pwl93ea4zea",
+          "filePath": "Assets\\Sprite\\Ingredient\\fried.png",
           "_tag": {
             "type": "GFileRefer"
           },
@@ -112,6 +112,6 @@
   "editorLockValue": false,
   "editorVisibleValue": true,
   "discriminator": "ISceneLike",
-  "_entityName": "Item2"
+  "_entityName": "Item4"
 }
 //"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

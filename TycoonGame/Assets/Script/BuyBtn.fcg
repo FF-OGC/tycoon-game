@@ -7,6 +7,8 @@ import "../Script/Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
 import "../Script/Player/PlayerInventory/PlayerInventory.fcg" as PlayerInventory
 import "../Script/Economy/BigNumberHandler.fcg" as BigNumberHandler
 
+import "../Script/Player/PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+
 graph BuyBtn {
     //Executed when entity is created
 
@@ -16,13 +18,19 @@ graph BuyBtn {
         var _itemPrice = CSVReadingHandler.getItemPriceByItemID(EResCSV.ItemCSV,_itemID)
 
         if BigNumberHandler.compareListNumbers(_player<PlayerEconomy>.playerMoney,_itemPrice) >=0 {
+            if player<PlayerEquipmentHandler>.checkSlotAvailable() {
+                // Add item
+                player<PlayerEquipmentHandler>.equipmentAddItem(_itemID,1,"")
+
+                //Decrease money
+                player<PlayerEconomy>.subtractAmount(_itemPrice)
+            } else {
+                LogInfo("full slot")
+            }
             
-
-
-
-
         } else {
             LogInfo("Not enough money")
+            DispatchEvent(SHOW_CUSTOMUI, player, List<object>{"NotEnoughMoneyUI"})
         }
     }
 }

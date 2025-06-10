@@ -3,14 +3,14 @@
     "type": "UIRootEntity",
     "resourceId": ""
   },
-  "_entityId": "U5PoIVMY",
+  "_entityId": "EJqUb2sd",
   "children": [
     {
       "_tag": {
-        "type": "UIButtonEntity",
+        "type": "UITextEntity",
         "resourceId": ""
       },
-      "_entityId": "FrFxRzvu",
+      "_entityId": "deTMbLoX",
       "children": [],
       "prefabVariant": null,
       "activeValue": {
@@ -29,99 +29,69 @@
           "rotate": 0,
           "anchorMin": {
             "x": 0.5,
-            "y": 0.5
+            "y": 1
           },
           "anchorMax": {
             "x": 0.5,
-            "y": 0.5
+            "y": 1
           },
           "pivot": {
             "x": 0.5,
             "y": 0.5
           },
           "anchoredPosition": {
-            "x": 424,
-            "y": -142
+            "x": 0,
+            "y": -200
           },
           "sizeDelta": {
-            "x": 180,
-            "y": 180
+            "x": 500,
+            "y": 100
           }
         },
         "alpha": 100,
         "priority": 0,
-        "button": {
-          "spriteName": {
-            "fileId": "m3v0xvik7b-mbojf76v-kyls0ekc6r",
-            "filePath": "Assets\\Sprite\\interactBtn.png",
-            "_tag": {
-              "type": "GFileRefer"
-            },
-            "fileType": "texture"
+        "text": {
+          "value": "START_COOKING",
+          "key": "START_COOKING",
+          "font": "Default",
+          "fontSize": 40,
+          "fontStyle": {
+            "bold": true,
+            "italic": false,
+            "underline": false
           },
-          "normal": "#FFFFFF",
-          "highlight": "#e2a222",
-          "pressed": "#C5C5C5",
-          "disabled": "#494949",
-          "onClicks": [],
-          "enableBorderImage": true,
-          "clickHandlers": [],
-          "disableCollider": false,
-          "fillType": 1,
-          "slicedBorder": {
-            "left": 0,
-            "right": 0,
-            "top": 0,
-            "bottom": 0
+          "color": "#33FF00",
+          "alignment": {
+            "h": "center",
+            "v": "middle"
           },
-          "tiledBorder": {
-            "left": 0,
-            "right": 0,
-            "top": 0,
-            "bottom": 0
+          "lineSpacing": 0,
+          "background": false,
+          "backgroundColor": "#e7b200",
+          "overflow": 0,
+          "backgroundRGBA": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
           },
-          "centerInvisible": false,
-          "fillDir": 0,
-          "fillAmount": 0,
-          "invertFill": false,
-          "reverse": {
-            "x": false,
-            "y": false
-          },
-          "flip": 0,
-          "gradient": 1,
-          "gradientTop": {
-            "r": 255,
-            "g": 255,
-            "b": 255,
-            "a": 1
-          },
-          "gradientBottom": {
-            "r": 255,
-            "g": 255,
-            "b": 255,
-            "a": 1
+          "shadow": false,
+          "shadowColor": "#000000",
+          "shadowOffset": {
+            "x": 1,
+            "y": 1
           }
         }
       },
-      "ecaScripts": [
-        {
-          "fileId": "bw7h06nhlgp-mbq6d9ow-m3phc4aqvzo",
-          "filePath": "Assets\\Script\\Script (2).fcg",
-          "_tag": {
-            "type": "GFileRefer"
-          },
-          "fileType": "ugcscript"
-        }
-      ],
+      "ecaScripts": [],
       "ecaProps": {
-        "HudButtonWidget": {},
+        "HudLabelWidget": {},
         "HudWidget": {},
         "Entity": {}
       },
       "componentList": [],
       "_filters": [],
-      "_entityName": "Button",
+      "_entityName": "Text",
       "entityTagData": {
         "tagPointers": []
       }
@@ -173,11 +143,11 @@
   },
   "componentList": [],
   "_filters": [],
-  "_entityName": "PlayerInteractBtn",
+  "_entityName": "NotEnoughMoneyUI",
   "entityTagData": {
     "tagPointers": []
   },
-  "layer": 40,
+  "layer": 1,
   "discriminator": "ISceneLike",
   "version": 3
 }

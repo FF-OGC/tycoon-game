@@ -151,6 +151,78 @@
               "scriptName": "SuperLayout"
             }
           ]
+        },
+        {
+          "refer": {
+            "fileId": "cdnso8sysfv-mbq5ae04-tzjt5gpi8a",
+            "filePath": "Assets\\UI\\NotEnoughSlot.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "NotEnoughSlot",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "ks2dhiwrowo-mboj82c8-kycxxd2lxm7",
+            "filePath": "Assets\\UI\\PlayerInteractBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerInteractBtn",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "zky1b1jsav-mbq73gbx-bpbbrw6mdnu",
+            "filePath": "Assets\\UI\\PlayerRefillBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerRefillBtn",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "hrb2vrlsil-mbq9gmir-m8loqp972l",
+            "filePath": "Assets\\UI\\NotHoldingUI.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "NotHoldingUI",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "06i9nizeu82-mbq9sroh-h7thlsegq7a",
+            "filePath": "Assets\\UI\\StartCooking.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "StartCooking",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "5feeb5hy0td-mbq9ya7n-in2qa5mnct",
+            "filePath": "Assets\\UI\\SellBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "SellBtn",
+          "children": []
         }
       ]
     },
@@ -241,7 +313,19 @@
         },
         {
           "refer": {
-            "fileId": "3mgbhbxa8nh-mbpy2rn8-fvaxb7hbjv",
+            "fileId": "5fbyv9tjv2v-mbpxzfrc-9x6walx70bl",
+            "filePath": "Assets\\Prefabs\\Items\\Item1.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item1",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "tpxaoxlypd-mbpy2s3d-97rjur92t1h",
             "filePath": "Assets\\Prefabs\\Items\\Item2.prefab",
             "_tag": {
               "type": "GFileRefer"
@@ -253,7 +337,7 @@
         },
         {
           "refer": {
-            "fileId": "5fbyv9tjv2v-mbpxzfrc-9x6walx70bl",
+            "fileId": "v1rhnvc6y2-mbpy4pgk-dwob4m1ykgt",
             "filePath": "Assets\\Prefabs\\Items\\Item3.prefab",
             "_tag": {
               "type": "GFileRefer"
@@ -265,7 +349,7 @@
         },
         {
           "refer": {
-            "fileId": "tpxaoxlypd-mbpy2s3d-97rjur92t1h",
+            "fileId": "3mgbhbxa8nh-mbpy2rn8-fvaxb7hbjv",
             "filePath": "Assets\\Prefabs\\Items\\Item4.prefab",
             "_tag": {
               "type": "GFileRefer"
@@ -273,18 +357,6 @@
             "fileType": "prefab"
           },
           "scriptName": "Item4",
-          "children": []
-        },
-        {
-          "refer": {
-            "fileId": "v1rhnvc6y2-mbpy4pgk-dwob4m1ykgt",
-            "filePath": "Assets\\Prefabs\\Items\\Item1.prefab",
-            "_tag": {
-              "type": "GFileRefer"
-            },
-            "fileType": "prefab"
-          },
-          "scriptName": "Item1",
           "children": []
         }
       ]
@@ -367,18 +439,6 @@
             "fileType": "sound"
           },
           "scriptName": "thamngan",
-          "children": []
-        },
-        {
-          "refer": {
-            "fileId": "ntjcg1c9e7-maqlxqjs-fw5us7jk3fl",
-            "filePath": "Assets\\SFX\\kepngan.mp3",
-            "_tag": {
-              "type": "GFileRefer"
-            },
-            "fileType": "sound"
-          },
-          "scriptName": "kepngan",
           "children": []
         }
       ]
