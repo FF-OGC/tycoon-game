@@ -13,10 +13,10 @@ graph PlayerInventoryUIHandler {
     UIIventoryItemLabelList List<entity<UIWidgetLabel>>
     
     event OnAwake() {
-        UIInventoryItemList = New(64,64)
-        UIIventoryItemLabelList = New(64,64)
-        WaitForMillisecond(8000)
-        initUIInformation()
+        // UIInventoryItemList = New(64,64)
+        // UIIventoryItemLabelList = New(64,64)
+        // WaitForMillisecond(8000)
+        // initUIInformation()
     }
 
     

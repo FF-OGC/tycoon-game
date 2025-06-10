@@ -238,6 +238,54 @@
           },
           "scriptName": "Item1Chicken",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "3mgbhbxa8nh-mbpy2rn8-fvaxb7hbjv",
+            "filePath": "Assets\\Prefabs\\Items\\Item2.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item2",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "5fbyv9tjv2v-mbpxzfrc-9x6walx70bl",
+            "filePath": "Assets\\Prefabs\\Items\\Item3.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item3",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "tpxaoxlypd-mbpy2s3d-97rjur92t1h",
+            "filePath": "Assets\\Prefabs\\Items\\Item4.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item4",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "v1rhnvc6y2-mbpy4pgk-dwob4m1ykgt",
+            "filePath": "Assets\\Prefabs\\Items\\Item1.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item1",
+          "children": []
         }
       ]
     },
@@ -420,4 +468,4 @@
   },
   "children": []
 }
-//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

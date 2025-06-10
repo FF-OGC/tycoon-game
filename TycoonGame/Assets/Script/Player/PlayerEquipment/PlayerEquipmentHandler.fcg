@@ -19,14 +19,9 @@ graph PlayerEquipmentHandler {
         equipmentItemID  = List.New(5,5)
         equipmentItemIDItemSize = List.New(5,5) 
         equipmentItemIDItemMutation = List.New(5,5)
-        
         for i = 0, 5, 1 {
             equipmentItemID[i] = -1
         }
-
-        equipmentAddItem(2,1,"")
-        equipmentAddItem(2,3,"")
-        equipmentAddItem(2,5,"")
     }
 
     func equipmentAddItem(itemID int, itemSize float, itemMutation string){
@@ -44,7 +39,6 @@ graph PlayerEquipmentHandler {
                 LogInfo("Equipment is full")
             }
         }
-
         thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
     }
 

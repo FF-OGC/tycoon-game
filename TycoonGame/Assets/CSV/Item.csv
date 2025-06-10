@@ -1,7 +1,7 @@
-ID,Name,Type,Price,Prefab
-int,string,string,string,string
-1,Chicken,,100,Cactus
-2,Fried Chicken,,100,Item1Chicken
-3,Egg,,100,Cactus
-4,Fried Egg,,100,Cactus
+ID,Name,Output,Price,Prefab
+int,string,int,string,string
+1,ChickenKit,2,100,Item1
+2,FriedChicken,0,100,Item2
+3,Egg,4,100,Item3
+4,FriedEgg,0,100,Item4
 ,,,,

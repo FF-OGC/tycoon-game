@@ -1,0 +1,117 @@
+{
+  "_tag": {
+    "type": "Prefab"
+  },
+  "_entityId": "v3VrvzKZ",
+  "children": [
+    {
+      "_tag": {
+        "type": "SceneEditEntity",
+        "resourceId": "Primitive/Empty"
+      },
+      "_entityId": "ZEKLRKfW",
+      "children": [],
+      "activeValue": {
+        "selfValue": true,
+        "valueTag": "activeValue"
+      },
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
+      "editorLockValue": false,
+      "editorVisibleValue": true,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "BTPath": [
+        null
+      ],
+      "visible": true,
+      "VisibilityLayer": 0,
+      "modelOptimization": 0,
+      "streamingLayer": "",
+      "attributes": [
+        2,
+        4
+      ],
+      "isTrigger": false,
+      "collidable": true,
+      "physicalLayer": 0,
+      "physicalMaterial": null,
+      "aoiSetting": 0,
+      "initialTypes": {},
+      "componentList": [],
+      "_filters": [],
+      "entityTagData": {
+        "tagPointers": []
+      },
+      "tempIndex": 30,
+      "itemID": 223,
+      "seParent": null,
+      "ecaScripts": [
+        null
+      ],
+      "ecaProps": {
+        "IconEntity": {},
+        "LevelObject": {},
+        "Transform": {},
+        "Entity": {},
+        "Visibility": {}
+      },
+      "_entityName": "Icon object",
+      "propsData": {
+        "iconColor": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 1
+        },
+        "IsBillboard": false,
+        "IgnoreDepth": false,
+        "AlwaysInScreen": false,
+        "Width": 100,
+        "Height": 100,
+        "Depth": 0,
+        "iconType": "6p8w4ryh4zd-mbp0iirl-pwl93ea4zea",
+        "_levelObjectID": 2,
+        "renderType": 0,
+        "iconTypeRef": {
+          "fileId": "6p8w4ryh4zd-mbp0iirl-pwl93ea4zea",
+          "filePath": "Assets\\Sprite\\Ingredient\\fried.png",
+          "_tag": {
+            "type": "GFileRefer"
+          },
+          "fileType": "texture"
+        }
+      },
+      "prefabVariant": null
+    }
+  ],
+  "prefabVariant": null,
+  "activeValue": {
+    "selfValue": true,
+    "valueTag": "activeValue"
+  },
+  "unlockedValue": {
+    "selfValue": true,
+    "valueTag": "unlockedValue"
+  },
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "discriminator": "ISceneLike",
+  "_entityName": "Item4"
+}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

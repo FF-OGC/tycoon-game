@@ -13,10 +13,10 @@ graph PlayerInventory {
     MAX = 64
     
     event OnAwake() {
-        inventoryItemID  = List.New(0,100)
-        inventoryItemSize = List.New(0,100) 
-        Append(inventoryItemID,1)
-        Append(inventoryItemID,1)
+        // inventoryItemID  = List.New(0,100)
+        // inventoryItemSize = List.New(0,100) 
+        // Append(inventoryItemID,1)
+        // Append(inventoryItemID,1)
     }
 
     func inventoryAddItem(itemID int, itemSize float, itemMutation string){
