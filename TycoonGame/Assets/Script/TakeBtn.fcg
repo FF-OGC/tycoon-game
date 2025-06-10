@@ -1,0 +1,39 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+
+import "./Player/PlayerTriggerEventHandler.fcg" as PlayerTriggerEventHandler
+import "./Building/CookEvent/BuildingCookEventHandler.fcg" as BuildingCookEventHandler
+import "./Player/PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+import "List.fcc" as List
+import "Items.fcc" as Items
+
+
+graph TakeBtn {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event OnTapped(player entity<Player>) {
+        // player<PlayerTriggerEventHandler>.triggerEntity
+        var triggerBuilding = player<PlayerTriggerEventHandler>.triggerEntity
+        var outputItemID =  triggerBuilding<BuildingCookEventHandler>.outputItemID[0]
+        var outputItemSize = triggerBuilding<BuildingCookEventHandler>.outputItemSize[0]
+        var outputItemMutation = triggerBuilding<BuildingCookEventHandler>.outputItemMutation[0]
+
+        if outputItemID != nil && outputItemID != -1 && outputItemID>0{
+            if player<PlayerEquipmentHandler>.checkSlotAvailable(){
+                player<PlayerEquipmentHandler>.equipmentAddItem(outputItemID,outputItemSize,outputItemMutation)
+    
+                RemoveAt(triggerBuilding<BuildingCookEventHandler>.outputItemID,0)
+                RemoveAt(triggerBuilding<BuildingCookEventHandler>.outputItemSize,0)
+                RemoveAt(triggerBuilding<BuildingCookEventHandler>.outputItemMutation,0)
+                var temp = triggerBuilding<BuildingCookEventHandler>.outputEntity[0]
+                Destroy(temp)
+                RemoveAt(triggerBuilding<BuildingCookEventHandler>.outputEntity,0)
+            }
+    
+        }
+    }
+}

@@ -442,7 +442,46 @@
           "value": 0
         }
       ]
+    },
+    "CustomComponent92545160": {
+      "label": "OutputSlot",
+      "name": "CustomComponent92545160",
+      "bases": [
+        "Component"
+      ],
+      "ecaScripts": [],
+      "typeID": 100024,
+      "PropDefines": [
+        {
+          "propID": 100026,
+          "name": "PROP_42189120",
+          "label": "slot1",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100032,
+          "name": "PROP_28601531",
+          "label": "slot2",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100036,
+          "name": "PROP_38648698",
+          "label": "slot3",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100038,
+          "name": "PROP_64000205",
+          "label": "slot4",
+          "type": "Entity",
+          "value": null
+        }
+      ]
     }
   }
 }
-//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

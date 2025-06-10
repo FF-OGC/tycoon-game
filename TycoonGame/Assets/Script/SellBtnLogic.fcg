@@ -16,6 +16,7 @@ graph SellBtnLogic {
         LogInfo("sell")
         var playerHoldingIndex = player<PlayerEquipmentHandler>.currentEquipIndex
         var playerHoldingItemID = player<PlayerEquipmentHandler>.equipmentItemID[playerHoldingIndex]
+        var playerHoldingItemSize = player<PlayerEquipmentHandler>.equipmentItemIDItemSize[playerHoldingIndex]
 
         if playerHoldingItemID >0  {
             var price = CSVReadingHandler.getItemPriceByItemID(EResCSV.ItemCSV,playerHoldingItemID)

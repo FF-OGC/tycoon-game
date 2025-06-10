@@ -12,7 +12,7 @@ graph PlayerHUDHandler {
         AddScript(thisEntity<Player>,EResFCG.PlayerDefaultHUD)
         AddScript(thisEntity<Player>,EResFCG.PlayerCustomUI)
 
-        CreateCustomUI(out var _sellBtn,thisEntity<Player>,EResUI.SellBtn)
-        _sellBtn<CustomUI>.IsVisible = true
+        // CreateCustomUI(out var _sellBtn,thisEntity<Player>,EResUI.SellBtn)
+        // _sellBtn<CustomUI>.IsVisible = true
     }
 }

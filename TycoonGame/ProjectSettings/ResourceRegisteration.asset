@@ -223,6 +223,30 @@
           },
           "scriptName": "SellBtn",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "c5m0kd9pzl6-mbqan45c-ysc16di1sfe",
+            "filePath": "Assets\\UI\\DoneCooking.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "DoneCooking",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "yaulo6hewlj-mbqc9563-0nxom5hqi01",
+            "filePath": "Assets\\UI\\PlayerTakeBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerTakeBtn",
+          "children": []
         }
       ]
     },

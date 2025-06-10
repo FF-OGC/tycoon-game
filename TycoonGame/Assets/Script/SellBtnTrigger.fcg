@@ -1,0 +1,26 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+import "Hud.fcc" as Hud
+
+graph RefillButtonTrigger {
+    //Executed when entity is created
+    sellBtn entity<CustomUI>
+
+
+    event OnEntityEnter(target entity<Entity>) {
+        var _player = target as entity<Player>
+
+        //Set up UI 
+        if sellBtn == nil {
+            CreateCustomUI(out var sell, _player, EResUI.SellBtn )
+            sellBtn = sell
+        }
+        sellBtn<CustomUI>.IsVisible = true
+
+     }
+
+    event OnEntityExit(target entity<Entity>) {
+        sellBtn<CustomUI>.IsVisible = false
+    }
+}
