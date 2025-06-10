@@ -33,7 +33,6 @@ graph PlayerCustomWeaponClient {
     }
 
     func createItemClient(prefabEresKey object, ItemSize object, ItemMutation object, Position Vector3) entity<Entity>{
-
         LogInfo("CREATE_ITEM event")
         var _itemSize = ItemSize as float
         var _itemMutation = ItemMutation as string
