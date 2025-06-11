@@ -22,6 +22,7 @@ graph PlayerEquipmentHandler {
         for i = 0, 5, 1 {
             equipmentItemID[i] = -1
         }
+        equipmentAddItem(1,1,0)
     }
 
     func equipmentAddItem(itemID int, itemSize float, itemMutation string){

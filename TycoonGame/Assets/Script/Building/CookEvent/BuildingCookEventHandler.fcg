@@ -11,6 +11,8 @@ import "Math.fcc" as Math
  
 import "../../Item/ItemHandler.fcg" as ItemHandler
 
+import "../BuildingHandler.fcg" as BuildingHandler
+
 
 
 graph BuildingCookEventHandler {
@@ -36,11 +38,6 @@ graph BuildingCookEventHandler {
         outputItemID  = List<int>{}
         outputItemSize = List<float>{}
         outputItemMutation = List<string>{}
-
-        Append(output, thisEntity<OutputSlot>.slot1)
-        Append(output, thisEntity<OutputSlot>.slot2)
-        Append(output, thisEntity<OutputSlot>.slot3)
-        Append(output, thisEntity<OutputSlot>.slot4)
     }
 
     func initOutputSlot (){
@@ -81,19 +78,29 @@ graph BuildingCookEventHandler {
     }
 
     func addOutputQueue(itemID int, itemSize float, itemMutation string , player entity<Player>){
-        Append(outputItemID, itemID) 
-        Append(outputItemSize, itemSize) 
-        Append(outputItemMutation, itemMutation) 
+        var t1 = thisEntity<BuildingHandler>.outputItemIDList
+        var t2 = thisEntity<BuildingHandler>.outputItemSizeList
+        var t3 = thisEntity<BuildingHandler>.outputItemMutationList
 
-        var index = List.Length(outputItemID) 
+        var t0 =thisEntity<BuildingHandler>.outputSceneEntityList
+    
+
+        Append(t1, itemID) 
+        Append(t2, itemSize) 
+        Append(t3, itemMutation) 
+
+        
+
+        var index = List.Length(t1) 
         if index >4 {
             player<PlayerEquipmentHandler>.equipmentAddItem(itemID,itemSize,itemMutation)
         } else {
             var outputIndexEntity  = output[index-1]
+            var test = thisEntity<BuildingHandler>.outputChildrenList[index-1]
             LogInfo("output" + output)
             LogInfo("outputIndexEntity" + outputIndexEntity)
-            var outputPos = outputIndexEntity<Transform>.Position
-            Append(outputEntity, globalEntity<ItemHandler>.createItem(itemID, itemSize , itemMutation, outputPos ))
+            var outputPos = test<Transform>.Position
+            Append(t0, globalEntity<ItemHandler>.createItem(itemID, itemSize , itemMutation, outputPos ))
         }
 
         // globalEntity<ItemHandler>.createItem()

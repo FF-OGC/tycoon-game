@@ -1,69 +1,4 @@
 {
-  "blocks": {
-    "languageVersion": 0,
-    "blocks": [
-      {
-        "type": "a",
-        "id": "#+h/vF;NS7ZX[7H.8(+Z",
-        "x": 286,
-        "y": -34,
-        "extraState": {
-          "X": 52,
-          "L": [
-            1,
-            2,
-            3,
-            4
-          ],
-          "O": [
-            "",
-            "",
-            "",
-            "o"
-          ],
-          "T": "AddItemToCharacter",
-          "OT": null
-        },
-        "fields": {
-          "P4": {
-            "name": "Created Entity",
-            "type": "ListT_Entity"
-          }
-        },
-        "inputs": {
-          "P1": {
-            "shadow": {
-              "type": "tys",
-              "id": "Zc0pD!WDzaP`!7h4mx;;",
-              "extraState": "Player"
-            },
-            "block": {
-              "type": "ent",
-              "id": "c(dG;U+a)C-I2S%GnD8]"
-            }
-          },
-          "P2": {
-            "shadow": {
-              "type": "pki",
-              "id": "_AG-n_4jgfh?9nzzn4NX",
-              "fields": {
-                "V": "ffb777bceb363c3ed0265b9c09db715b"
-              }
-            }
-          },
-          "P3": {
-            "shadow": {
-              "type": "ipi",
-              "id": "aBDS2kF)61{KF-a1EH96",
-              "fields": {
-                "V": 1
-              }
-            }
-          }
-        }
-      }
-    ]
-  },
   "graphData": {
     "ownerType": "Entity",
     "componentTypes": "Player",
@@ -71,4 +6,4 @@
     "platform": 2
   }
 }
-//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

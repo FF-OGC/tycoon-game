@@ -305,6 +305,23 @@
               "scriptName": "ID4Rock"
             }
           ]
+        },
+        {
+          "refer": {
+            "fileId": "2jwr1bg58v2-mb7gzz5l-k6wq1ksa0zs",
+            "filePath": "Assets\\Scene\\FriedChicken.scene",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "scene"
+          },
+          "scriptName": "FriedChicken",
+          "children": [
+            {
+              "id": "EjcMjUVY",
+              "scriptName": "Shop"
+            }
+          ]
         }
       ]
     },

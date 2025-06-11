@@ -189,6 +189,20 @@
             "type": "SceneEditEntity",
             "disabled": true
           }
+        },
+        {
+          "propID": 100039,
+          "name": "PROP_19993625",
+          "label": "Input",
+          "type": "Entity",
+          "value": null
+        },
+        {
+          "propID": 100040,
+          "name": "PROP_60007397",
+          "label": "Output",
+          "type": "Entity",
+          "value": null
         }
       ]
     },

@@ -40,6 +40,21 @@ graph BuildingHandler {
     cookingCount int
     isCooking bool
 
+    inputParent entity
+    outputParent entity
+
+    inputChildrenList List<entity>
+    outputChildrenList List<entity>
+
+    inputSceneEntityList List<entity>
+    outputSceneEntityList List<entity>
+
+    inputItemIDList List<int>
+
+    outputItemIDList List<int>
+    outputItemSizeList List<float>
+    outputItemMutationList List<string>
+
     owner entity<Player>
 
     event OnAwake() {
@@ -65,6 +80,21 @@ graph BuildingHandler {
         cooldown = CSVReadingHandler.GetCooldownByBuildingID(EResCSV.Building,buildingID)
 
         cookingCount = 0
+
+        inputParent = thisEntity<BuildingChildren>.Input
+        outputParent = thisEntity<BuildingChildren>.Output
+
+        inputChildrenList = List<entity>{}
+        outputChildrenList  = List<entity>{}
+        inputChildrenList = GetChildren(inputParent)
+        outputChildrenList = GetChildren(outputParent)
+        
+        inputSceneEntityList = List<entity>{}
+        outputSceneEntityList = List<entity>{}
+        outputItemIDList = List<int>{}
+        outputItemSizeList = List<float>{}
+        outputItemMutationList = List<string>{}
+    
 
         owner = PlayerStaticInformation.playerHost
 
