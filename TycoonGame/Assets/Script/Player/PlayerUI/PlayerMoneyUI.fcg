@@ -2,6 +2,13 @@ import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 import "Hud.fcc" as Hud
 import "Workflow.fcc" as Workflow
+import "Strings.fcc" as Strings
+import "List.fcc" as List
+import "Convert.fcc" as Convert
+
+import "../../Economy/BigNumberHandler.fcg" as BigNumberHandler
+import "../PlayerUIHandler.fcg" as PlayerUIHandler
+
 
 graph PlayerMoneyUI {
     //Executed when entity is created
@@ -9,21 +16,23 @@ graph PlayerMoneyUI {
     displayAmountUI entity<UIWidget>
     isInit bool
 
-    
-    event OnPhaseStart(phase entity<Phase>) {
-        if !isInit{
-            init()
+
+    func init (){
+        if moneyUI == nil {       
+        CreateCustomUI(out var _moneyUI, thisEntity<Player>, EResUI.PlayerMoneyUI)
+        moneyUI = _moneyUI
+        displayAmountUI = GetWidgetFromCustomUI(thisEntity<Player>,_moneyUI,EResUIPlayerMoneyUI.DisplayAmount)
+        displayAmountUI<UIWidgetLabel>.Content = ""
         }
     }
 
-    func init (){
-        isInit = true
-        CreateCustomUI(out var _moneyUI, thisEntity<Player>, EResUI.PlayerMoneyUI)
-        displayAmountUI = GetWidgetFromCustomUI(thisEntity<Player>,_moneyUI,EResUIPlayerMoneyUI.DisplayAmount)
-        displayAmountUI<UIWidgetLabel>.Content = ""
+    func UISetDisplayMoney(amount List<int>){
+        if moneyUI == nil {
+            init()
+        }
+        var display  = BigNumberHandler.ConvertListNumToString(amount) 
+        displayAmountUI<UIWidgetLabel>.Content = display
     }
 
-    func UISetDisplayMoney(amount int){
-        displayAmountUI<UIWidgetLabel>.Content = amount 
-    }
+
 }

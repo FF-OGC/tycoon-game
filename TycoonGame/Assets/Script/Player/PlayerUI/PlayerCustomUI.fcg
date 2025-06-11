@@ -3,6 +3,7 @@ import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 
 import Res from "EditorGenLib.fcc"
+import "../PlayerUIHandler.fcg" as PlayerUIHandler
 
 graph PlayerCustomUI {
     //Executed when entity is created
@@ -11,10 +12,18 @@ graph PlayerCustomUI {
     }
 
     event SHOW_CUSTOMUI(ereskey object) {
-        LogInfo("reeraearsa")
+        if thisEntity<PlayerUIHandler>.currentUI != nil {
+            Destroy(thisEntity<PlayerUIHandler>.currentUI)
+        }
         CreateCustomUI(out var _customUI,thisEntity<Player>,Res.UI[ereskey as EResKeyUI])
         _customUI<CustomUI>.IsVisible = true
+        thisEntity<PlayerUIHandler>.currentUI= _customUI
         WaitForMillisecond(3000)
         Destroy(_customUI)
+    }
+
+    event SHOW_CUSTOM_HUD(ereskey object) {
+        CreateCustomUI(out var _customUI,thisEntity<Player>,Res.UI[ereskey as EResKeyUI])
+        _customUI<CustomUI>.IsVisible = true
     }
 }

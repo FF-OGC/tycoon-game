@@ -13,18 +13,38 @@ graph PlayerDefaultHUD {
         isInit = true
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MiniMap,CommonUISwitchValue.Close)
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MicroPhone,CommonUISwitchValue.Close)
-
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.TeammatesInfo,CommonUISwitchValue.Close)
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MedicalProps,CommonUISwitchValue.Close)
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.AttackGrenade,CommonUISwitchValue.Close)
         SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.DefenceGrenade,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.Bag,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.WeaponSlot,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.HP,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.EP,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.ActiveSkill,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.PassiveSkill,CommonUISwitchValue.Close)
     }
 
     event OnPhaseStart(phase entity<Phase>) {
         if !isInit{
             init()
+            DispatchEvent(SHOW_CUSTOM_HUD,thisEntity<Player>,List<object>{"DebugAddMoney"})
         }
+    }
 
+    func offAllUI(){
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MiniMap,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MicroPhone,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.TeammatesInfo,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MedicalProps,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.AttackGrenade,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.DefenceGrenade,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MovingJoystick,CommonUISwitchValue.Close)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.Attack,CommonUISwitchValue.Close)
+    }
 
+    func onDefaultUI(){
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.MovingJoystick,CommonUISwitchValue.Show)
+        SetDefaultUIStatus(thisEntity<Player>,PlayerUISwitchType.Attack,CommonUISwitchValue.Show)
     }
 }

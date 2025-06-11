@@ -5,7 +5,7 @@ graph GlobalHandler {
     //Executed when entity is created
     event OnAwake() {
         AddScript(globalEntity,EResFCG.PlayerDefaultHUD)
-
     }
+
 
 }

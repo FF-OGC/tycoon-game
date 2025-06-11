@@ -3,119 +3,60 @@
     "languageVersion": 0,
     "blocks": [
       {
-        "type": "e",
-        "id": "Y@)EbJq#K?!z)J4B5]a_",
-        "x": 33,
-        "y": 68,
+        "type": "a",
+        "id": "#+h/vF;NS7ZX[7H.8(+Z",
+        "x": 286,
+        "y": -34,
         "extraState": {
-          "X": 138,
-          "L": [],
-          "T": "OnAwake",
-          "OT": "Entity"
+          "X": 52,
+          "L": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "O": [
+            "",
+            "",
+            "",
+            "o"
+          ],
+          "T": "AddItemToCharacter",
+          "OT": null
         },
-        "next": {
-          "block": {
-            "type": "a",
-            "id": "XU70fkmsIW#M*Q(M$,hB",
-            "extraState": {
-              "X": 607,
-              "L": [
-                1,
-                2,
-                3,
-                4
-              ],
-              "T": "GetPlayerEquipments",
-              "OT": null
+        "fields": {
+          "P4": {
+            "name": "Created Entity",
+            "type": "ListT_Entity"
+          }
+        },
+        "inputs": {
+          "P1": {
+            "shadow": {
+              "type": "tys",
+              "id": "Zc0pD!WDzaP`!7h4mx;;",
+              "extraState": "Player"
             },
-            "fields": {
-              "P3": {
-                "name": "Equipments",
-                "type": "Entity"
-              },
-              "P4": {
-                "name": "Attachments",
-                "type": "ListT_Attachment"
+            "block": {
+              "type": "ent",
+              "id": "c(dG;U+a)C-I2S%GnD8]"
+            }
+          },
+          "P2": {
+            "shadow": {
+              "type": "pki",
+              "id": "_AG-n_4jgfh?9nzzn4NX",
+              "fields": {
+                "V": "ffb777bceb363c3ed0265b9c09db715b"
               }
-            },
-            "inputs": {
-              "P1": {
-                "shadow": {
-                  "type": "tys",
-                  "id": "I0:dW8L@-8_lRX}=A]Be",
-                  "extraState": "Player"
-                },
-                "block": {
-                  "type": "ent",
-                  "id": "PV(6{uM,3|9(U;;p_.b{"
-                }
-              },
-              "P2": {
-                "shadow": {
-                  "type": "ipe",
-                  "id": "t2tFH8!9xZHg}tz[TP1b",
-                  "extraState": "EquipmentSlot",
-                  "fields": {
-                    "I": "MeleeWeapon"
-                  }
-                }
-              }
-            },
-            "next": {
-              "block": {
-                "type": "prs",
-                "id": "%7/8teq?_(kQ.Kmu/=rn",
-                "fields": {
-                  "P": "FireInterval:Weapon",
-                  "O": "UK"
-                },
-                "inputs": {
-                  "H": {
-                    "shadow": {
-                      "type": "tys",
-                      "id": "TyAq@K7I@`qI/b:ug5[_",
-                      "extraState": "Component"
-                    },
-                    "block": {
-                      "type": "tya",
-                      "id": "Y^o{}iA6qoAqxOy[,BPt",
-                      "fields": {
-                        "T": "Weapon"
-                      },
-                      "inputs": {
-                        "V": {
-                          "shadow": {
-                            "type": "tys",
-                            "id": "?4JA5@4t%lH.ymNAC@|2",
-                            "extraState": "any"
-                          },
-                          "block": {
-                            "type": "lcg",
-                            "id": "iI_K+;353sPcyzl{3h3%",
-                            "extraState": "XU70fkmsIW#M*Q(M$,hBP3",
-                            "fields": {
-                              "VR": "Equipments"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "V": {
-                    "shadow": {
-                      "type": "tys",
-                      "id": "EIZcDHI.r.Fug1j*D%7k",
-                      "extraState": "Float"
-                    },
-                    "block": {
-                      "type": "ipf",
-                      "id": "Ln,FMlY_KfY{:zi]HN!7",
-                      "fields": {
-                        "V": 5
-                      }
-                    }
-                  }
-                }
+            }
+          },
+          "P3": {
+            "shadow": {
+              "type": "ipi",
+              "id": "aBDS2kF)61{KF-a1EH96",
+              "fields": {
+                "V": 1
               }
             }
           }
@@ -123,14 +64,6 @@
       }
     ]
   },
-  "variables": [
-    {
-      "id": "vq8RXfxUE",
-      "name": "testNum",
-      "type": "Int",
-      "value": 0
-    }
-  ],
   "graphData": {
     "ownerType": "Entity",
     "componentTypes": "Player",
@@ -138,4 +71,4 @@
     "platform": 2
   }
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

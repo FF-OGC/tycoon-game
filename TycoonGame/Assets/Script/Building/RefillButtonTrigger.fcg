@@ -1,0 +1,44 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
+
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler 
+import "../Building/BuildingHandler.fcg" as BuildingHandler
+import "../Player/PlayerInventory/PlayerInventory.fcg" as PlayerInventory
+import "../Player/PlayerTriggerEventHandler.fcg" as PlayerTriggerEventHandler
+
+import "Hud.fcc" as Hud
+import "Player.fcc" as Player
+
+graph UpgradeButtonTrigger {
+    //Executed when entity is created
+
+
+    _parentEntity entity
+    buttonUI entity<CustomUI>
+
+
+    event OnEntityEnter(target entity<Entity>) {
+        if _parentEntity == nil {
+            _parentEntity = GetParent(GetParent(thisEntity))
+        }
+        var _player = target as entity<Player>
+
+        //Set up UI 
+        SetDefaultUIStatus(_player<Player>,PlayerUISwitchType.Attack,CommonUISwitchValue.Close)
+        CreateCustomUI(out var btnUI, _player, EResUI.PlayerRefillBtn )
+        buttonUI = btnUI
+
+        _player<PlayerTriggerEventHandler>.setTriggerEntity(GetParent(GetParent(thisEntity)))
+
+     }
+
+    event OnEntityExit(target entity<Entity>) {
+        var _player = target as entity<Player>
+        SetDefaultUIStatus(_player<Player>,PlayerUISwitchType.Attack,CommonUISwitchValue.Show)
+        _player<PlayerTriggerEventHandler>.clearTriggerEntity()
+        Destroy(buttonUI)
+    }
+}

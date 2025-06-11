@@ -1,0 +1,30 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+
+import "../Script/Player/PlayerUIHandler.fcg" as PlayerUIHandler
+import "Hud.fcc" as Hud
+
+graph TriggerPopUpUI {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event OnEntityEnter(target entity<Entity>) {
+        var _player = target<Player>
+        var _targetUI = thisEntity<TriggerUI>.PopUpUI
+
+        if _player<PlayerUIHandler>.popupUI == nil {
+            CreateCustomUI(out var _popupUI, _player,_targetUI)
+            _player<PlayerUIHandler>.popupUI = _popupUI
+        }
+    }
+
+    event OnEntityExit(target entity<Entity>) {
+        var _player = target<Player>
+        if _player<PlayerUIHandler>.popupUI != nil {
+            Destroy(_player<PlayerUIHandler>.popupUI)
+        }
+    }
+}

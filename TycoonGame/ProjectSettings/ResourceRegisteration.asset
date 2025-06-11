@@ -50,14 +50,202 @@
         },
         {
           "refer": {
-            "fileId": "y15qy55wo8-mb0lucdv-lfosd6i76dd",
-            "filePath": "Assets\\UI\\Hint\\HintDirection.ui",
+            "fileId": "x9k9ux2dgg-mb43bb2p-gldwek2regd",
+            "filePath": "Assets\\UI\\DebugAddMoney.ui",
             "_tag": {
               "type": "GFileRefer"
             },
             "fileType": "ui"
           },
-          "scriptName": "HintDirection",
+          "scriptName": "DebugAddMoney",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "4slbv2zxm0n-mb5xyt6n-juqd9qforjf",
+            "filePath": "Assets\\UI\\MoneyUp.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "MoneyUp",
+          "children": [
+            {
+              "id": "66RfM9Uo",
+              "scriptName": "Amount"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "9o9ajrrswrf-mb60bdcj-aavp3rs9uqm",
+            "filePath": "Assets\\UI\\MoneyDown.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "MoneyDown",
+          "children": [
+            {
+              "id": "66RfM9Uo",
+              "scriptName": "Amount"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "gbxxv0iqh34-mbgdoah5-qmzhzc4nzw",
+            "filePath": "Assets\\UI\\PlayerHUDCustom.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerHUDCustom",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "qfq3hk47uf8-mbhgohm0-kh92l7r43bl",
+            "filePath": "Assets\\UI\\Inventory_Shopping\\CartIcon.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "CartIcon",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "dyjc8ycvii7-mbk9uprg-b7amn500jj",
+            "filePath": "Assets\\UI\\EquipmentBarUI.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "EquipmentBarUI",
+          "children": [
+            {
+              "id": "Yo5vB8JY",
+              "scriptName": "Layout"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "ib4usmn0o6-mbk9ogak-x5dcafrzngb",
+            "filePath": "Assets\\UI\\Inventory_Shopping\\Inventory.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "Inventory",
+          "children": [
+            {
+              "id": "rb666zk8",
+              "scriptName": "SuperLayout"
+            }
+          ]
+        },
+        {
+          "refer": {
+            "fileId": "cdnso8sysfv-mbq5ae04-tzjt5gpi8a",
+            "filePath": "Assets\\UI\\NotEnoughSlot.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "NotEnoughSlot",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "ks2dhiwrowo-mboj82c8-kycxxd2lxm7",
+            "filePath": "Assets\\UI\\PlayerInteractBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerInteractBtn",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "zky1b1jsav-mbq73gbx-bpbbrw6mdnu",
+            "filePath": "Assets\\UI\\PlayerRefillBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerRefillBtn",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "hrb2vrlsil-mbq9gmir-m8loqp972l",
+            "filePath": "Assets\\UI\\NotHoldingUI.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "NotHoldingUI",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "06i9nizeu82-mbq9sroh-h7thlsegq7a",
+            "filePath": "Assets\\UI\\StartCooking.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "StartCooking",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "5feeb5hy0td-mbq9ya7n-in2qa5mnct",
+            "filePath": "Assets\\UI\\SellBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "SellBtn",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "c5m0kd9pzl6-mbqan45c-ysc16di1sfe",
+            "filePath": "Assets\\UI\\DoneCooking.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "DoneCooking",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "yaulo6hewlj-mbqc9563-0nxom5hqi01",
+            "filePath": "Assets\\UI\\PlayerTakeBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "PlayerTakeBtn",
           "children": []
         }
       ]
@@ -91,6 +279,30 @@
             {
               "id": "vHdJ0tDa",
               "scriptName": "Hint"
+            },
+            {
+              "id": "JtE2jSFP",
+              "scriptName": "npc1"
+            },
+            {
+              "id": "Sv43do1w",
+              "scriptName": "CameraCutscene1"
+            },
+            {
+              "id": "nKCosscg",
+              "scriptName": "CameraCutscene2"
+            },
+            {
+              "id": "fObA3G00",
+              "scriptName": "CameraCutscene3"
+            },
+            {
+              "id": "4P8B43FR",
+              "scriptName": "ID3Woodcutter"
+            },
+            {
+              "id": "PRYCaajB",
+              "scriptName": "ID4Rock"
             }
           ]
         }
@@ -98,7 +310,80 @@
     },
     "prefab": {
       "id": "prefab",
-      "children": []
+      "children": [
+        {
+          "refer": {
+            "fileId": "bpj0c12hozr-mbok2gdr-1cz8sao5iut",
+            "filePath": "Assets\\Prefabs\\Items\\Cactus.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Cactus",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "xschafvxw7k-mbowt60q-yxxuiy1egbf",
+            "filePath": "Assets\\Prefabs\\Items\\Item1Chicken.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item1Chicken",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "5fbyv9tjv2v-mbpxzfrc-9x6walx70bl",
+            "filePath": "Assets\\Prefabs\\Items\\Item1.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item1",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "tpxaoxlypd-mbpy2s3d-97rjur92t1h",
+            "filePath": "Assets\\Prefabs\\Items\\Item2.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item2",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "v1rhnvc6y2-mbpy4pgk-dwob4m1ykgt",
+            "filePath": "Assets\\Prefabs\\Items\\Item3.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item3",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "3mgbhbxa8nh-mbpy2rn8-fvaxb7hbjv",
+            "filePath": "Assets\\Prefabs\\Items\\Item4.prefab",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "prefab"
+          },
+          "scriptName": "Item4",
+          "children": []
+        }
+      ]
     },
     "ugcscript": {
       "id": "ugcscript",
@@ -141,14 +426,14 @@
         },
         {
           "refer": {
-            "fileId": "x7x5tz4pcs-mayukpmo-chr3msohbca",
-            "filePath": "Assets\\Script\\Building\\RewardLogic\\HitToGetMoney.fcg",
+            "fileId": "hf46vsh13mp-mbkn2o80-7wbscl3c45s",
+            "filePath": "Assets\\Script\\Player\\PlayerEquipment\\PlayerEquipmentHandler.fcg",
             "_tag": {
               "type": "GFileRefer"
             },
             "fileType": "ugcscript"
           },
-          "scriptName": "HitToGetMoney",
+          "scriptName": "PlayerEquipmentHandler",
           "children": []
         }
       ]
@@ -178,18 +463,6 @@
             "fileType": "sound"
           },
           "scriptName": "thamngan",
-          "children": []
-        },
-        {
-          "refer": {
-            "fileId": "ntjcg1c9e7-maqlxqjs-fw5us7jk3fl",
-            "filePath": "Assets\\SFX\\kepngan.mp3",
-            "_tag": {
-              "type": "GFileRefer"
-            },
-            "fileType": "sound"
-          },
-          "scriptName": "kepngan",
           "children": []
         }
       ]
@@ -236,26 +509,26 @@
       "children": [
         {
           "refer": {
-            "fileId": "hume3cc3f1k-maw1efpp-3vq6ihqyb3",
-            "filePath": "Assets\\BuildingConfigCSV\\test.csv",
+            "fileId": "o25t1nv06a-mbfyys7v-vpxjhhzh71b",
+            "filePath": "Assets\\CSV\\Building.csv",
             "_tag": {
               "type": "GFileRefer"
             },
             "fileType": "csv"
           },
-          "scriptName": "test",
+          "scriptName": "Building",
           "children": []
         },
         {
           "refer": {
-            "fileId": "2nznoo26o36-maw7kx9i-toibups06cr",
-            "filePath": "Assets\\BuildingConfigCSV\\ID1Forrest.csv",
+            "fileId": "bt20xpz0u1p-mbfyzec8-r0leyiu5xoc",
+            "filePath": "Assets\\CSV\\Item.csv",
             "_tag": {
               "type": "GFileRefer"
             },
             "fileType": "csv"
           },
-          "scriptName": "ID1Forrest",
+          "scriptName": "ItemCSV",
           "children": []
         }
       ]
@@ -279,4 +552,4 @@
   },
   "children": []
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

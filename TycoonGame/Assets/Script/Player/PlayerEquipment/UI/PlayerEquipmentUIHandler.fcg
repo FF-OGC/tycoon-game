@@ -1,0 +1,77 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+import "List.fcc" as List
+
+import "../PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+import "../../../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "../../PlayerInventory/PlayerInventory.fcg" as PlayerInventory
+
+graph PlayerEquipmentUIHandler {
+    //Executed when entity is created
+
+    UIEquipmentBar entity<CustomUI>
+
+    UIEquipmentBarItemList List<entity<Entity>>
+    UIEquipmentBarItemButtonList List<entity<UIWidgetButton>>
+    UIEquipmentBarItemLabelList List<entity<UIWidgetLabel>>
+
+
+    event OnAwake() {
+        UIEquipmentBarItemList = New(5,5)
+        UIEquipmentBarItemButtonList = New(5,5)
+        UIEquipmentBarItemLabelList = New(5,5)
+        WaitForMillisecond(5000)
+        init()
+    }
+
+    func init (){
+
+        if UIEquipmentBar == nil {
+            CreateCustomUI(out var createdUI, thisEntity<Player>,EResUI.EquipmentBarUI)
+            UIEquipmentBar = createdUI
+            createdUI<CustomUI>.IsVisible = true
+            var layout = GetWidgetFromCustomUI(thisEntity<Player>,UIEquipmentBar<CustomUI>,EResUIEquipmentBarUI.Layout)
+            UIEquipmentBarItemList = GetChildren(layout)
+            for i = 0, List.Length(UIEquipmentBarItemList), 1 {
+                UIEquipmentBarItemButtonList[i] = GetChildByIndex(UIEquipmentBarItemList[i],0) as entity<UIWidgetButton>
+                UIEquipmentBarItemLabelList[i] = GetChildByIndex(UIEquipmentBarItemList[i],1) as entity<UIWidgetLabel>
+            }
+            updateAllBar()
+        }
+    }
+
+    func updateAllBar (){
+        if UIEquipmentBar == nil {
+            init()
+        }
+        for i = 0, List.Length(UIEquipmentBarItemList), 1 {
+            updateBarUIAt(i)
+        }
+    }
+
+    func updateBarUIAt(index int){
+        if (thisEntity<PlayerEquipmentHandler>.equipmentItemID[index]) == -1 {
+            removeBarItemUIAt(index)
+        } else {
+            setBarItemUIAt(index)
+        }
+    }
+
+    func removeBarItemUIAt(index int ){
+        var button = UIEquipmentBarItemButtonList[index]
+        button<UIWidgetButton>.Alpha = 0.1
+        var label = UIEquipmentBarItemLabelList[index]
+        label<UIWidgetLabel>.Content = ""
+    }
+
+    func setBarItemUIAt(index int ){
+        var button = UIEquipmentBarItemButtonList[index]
+        button<UIWidgetButton>.Alpha = 1
+        var informationString = CSVReadingHandler.getItemNameByID(EResCSV.ItemCSV,thisEntity<PlayerEquipmentHandler>.equipmentItemID[index])
+        var label = UIEquipmentBarItemLabelList[index]
+        label<UIWidgetLabel>.Content = informationString
+    }
+
+
+}

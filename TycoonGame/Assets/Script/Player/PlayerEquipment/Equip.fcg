@@ -1,0 +1,29 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+import "../PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+import "../PlayerInventory/PlayerInventory.fcg" as PlayerInventory
+import "../../Item/ItemHandler.fcg" as ItemHandler
+import "../../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "Items.fcc" as Items
+
+graph Equip {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event OnTapped(player entity<Player>) {
+        // DispatchEvent(CREATE_ITEM,player, List<object>{})
+
+        var _btnParent = GetParent(thisEntity)
+        var _btnID = _btnParent<BtnEquip>.btnID
+        player<PlayerEquipmentHandler>.currentEquipIndex = _btnID
+        var _itemID = player<PlayerEquipmentHandler>.equipmentItemID[_btnID]
+        var _prefabEresKey = CSVReadingHandler.getItemPrefabByItemID(EResCSV.ItemCSV, _itemID)
+
+        var _itemSize = player<PlayerEquipmentHandler>.equipmentItemIDItemSize[_btnID]
+        var _itemMutation = player<PlayerEquipmentHandler>.equipmentItemIDItemMutation[_btnID]
+        DispatchEventWithPlatform(EQUIP_ITEM, player, PlatformType.Client, List<object>{_prefabEresKey,_itemSize,_itemMutation})
+    }
+}

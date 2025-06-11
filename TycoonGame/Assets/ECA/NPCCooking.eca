@@ -1,0 +1,105 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "e",
+        "id": "4jk/i.~r4P*;V2r=[RU|",
+        "x": 286,
+        "y": 142,
+        "extraState": {
+          "X": 138,
+          "L": [],
+          "O": [],
+          "T": "OnAwake",
+          "OT": "Entity"
+        },
+        "next": {
+          "block": {
+            "type": "a",
+            "id": "QwTEwKD$MqOdE:hJxRWe",
+            "extraState": {
+              "X": 31,
+              "L": [],
+              "O": [],
+              "T": "WaitForNextFrame",
+              "OT": null
+            },
+            "next": {
+              "block": {
+                "type": "a",
+                "id": "_g)^:ON9`U2RHy.zWcuq",
+                "extraState": {
+                  "X": 8001,
+                  "L": [
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "O": [
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "T": "PlayAnimationByController",
+                  "OT": null
+                },
+                "inputs": {
+                  "P1": {
+                    "shadow": {
+                      "type": "tys",
+                      "id": "`uxc.4p)=7/fnFp9;*:S",
+                      "extraState": "AnimationControllerAble"
+                    },
+                    "block": {
+                      "type": "ent",
+                      "id": "9i@/-rT+G:lR!xCc{L#M"
+                    }
+                  },
+                  "P2": {
+                    "shadow": {
+                      "type": "ipe",
+                      "id": "UENFc*hH+F@D8~stW|X?",
+                      "extraState": "AnimationControllerStates",
+                      "fields": {
+                        "I": "LookAround"
+                      }
+                    }
+                  },
+                  "P3": {
+                    "shadow": {
+                      "type": "ipf",
+                      "id": "jvOo.dN6_dxV!KZF~?lv",
+                      "fields": {
+                        "V": 1
+                      }
+                    }
+                  },
+                  "P4": {
+                    "shadow": {
+                      "type": "ipe",
+                      "id": "MX:Xe(nN|6rX_.b@^:(}",
+                      "extraState": "AnimationOverrideLoopType",
+                      "fields": {
+                        "I": "Loop"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "graphData": {
+    "ownerType": "Entity",
+    "componentTypes": "NPC&AvatarAble&AnimationControllerAble&Collider&ColliderShape",
+    "isStatic": false,
+    "platform": 2
+  }
+}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

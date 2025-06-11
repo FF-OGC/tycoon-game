@@ -1,0 +1,6 @@
+ID,Name,Output,Price,Prefab,CookingTime
+int,string,int,string,string,int
+1,Egg,2,100,Item1,5
+2,FriedEgg,0,200,Item2,0
+3,ChickenKit,4,500,Item3,10
+4,FriedChicken,0,1000,Item4,0

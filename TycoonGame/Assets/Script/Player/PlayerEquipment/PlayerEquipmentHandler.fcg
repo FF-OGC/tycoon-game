@@ -1,0 +1,76 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "List.fcc" as List
+
+import "./UI/PlayerEquipmentUIHandler.fcg" as PlayerEquipmentUIHandler
+import "../PlayerInventory/PlayerInventory.fcg" as PlayerInventory
+
+graph PlayerEquipmentHandler {
+    //Executed when entity is created
+    currentEquipIndex int
+
+    equipmentItemID List<int>
+    equipmentItemIDItemSize List<float>
+    equipmentItemIDItemMutation List<string>
+
+
+    event OnAwake() {
+        WaitForNextFrame()
+        equipmentItemID  = List.New(5,5)
+        equipmentItemIDItemSize = List.New(5,5) 
+        equipmentItemIDItemMutation = List.New(5,5)
+        for i = 0, 5, 1 {
+            equipmentItemID[i] = -1
+        }
+    }
+
+    func equipmentAddItem(itemID int, itemSize float, itemMutation string){
+        if List.Length(equipmentItemID) < 4{
+            Append(equipmentItemID, itemID) 
+            Append(equipmentItemIDItemSize, itemSize) 
+            Append(equipmentItemIDItemMutation, itemMutation) 
+        } else {
+            var tIndex = List.IndexOf(equipmentItemID, -1)
+            if tIndex != -1 {
+                equipmentItemID[tIndex] = itemID
+                equipmentItemIDItemSize[tIndex] = itemSize
+                equipmentItemIDItemMutation[tIndex] = itemMutation
+            } else {
+                LogInfo("Equipment is full")
+            }
+        }
+        thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
+    }
+
+    func checkSlotAvailable() bool{
+        var tIndex = List.IndexOf(equipmentItemID, -1)
+        if tIndex != -1 {
+            return true
+        }
+        return false
+    }
+
+    func equipmentSwaetItem(index int,itemID int, itemSize float, itemMutation string){
+        equipmentItemID[index] = itemID
+        equipmentItemIDItemSize[index] = itemSize
+        equipmentItemIDItemMutation[index] = itemMutation
+    }
+
+    func equipmentRemoveItem(index int){
+        equipmentItemID[index] = -1
+        equipmentItemIDItemSize[index] = 0
+        equipmentItemIDItemMutation[index] = nil
+        thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
+    }
+
+    func removeHoldingItem (){
+        equipmentItemID[currentEquipIndex] = -1
+        equipmentItemIDItemSize[currentEquipIndex] = 0
+        equipmentItemIDItemMutation[currentEquipIndex] = nil
+        thisEntity<PlayerEquipmentUIHandler>.updateAllBar()
+
+        currentEquipIndex = -1
+        DispatchEventWithPlatform(UNEQUIP_ITEM_CLIENT, thisEntity, PlatformType.Client, List<object>{})
+    
+    }
+}

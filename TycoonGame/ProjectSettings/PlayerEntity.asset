@@ -114,12 +114,84 @@
       "fileType": "ugcscript"
     },
     {
-      "fileId": "1ybz886zj-maz9lhlh-y2nl101e6p",
-      "filePath": "Assets\\ECA\\Player (3).eca",
+      "fileId": "4oh7xneqrv9-mb5z6053-kpuvty2kz8r",
+      "filePath": "Assets\\Script\\Player\\PlayerUI\\PlayerMoneyUPUI.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "fknei9vfbfs-mbg0p1qw-nozdzz3b23m",
+      "filePath": "Assets\\Script\\Script (1).fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "ybjey0n5loc-mbg782oh-zjw3egzmyfn",
+      "filePath": "Assets\\Script\\Player\\PlayerInventory\\PlayerInventory.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "lw52u4efza8-mbghvih6-p3epsg9087f",
+      "filePath": "Assets\\ECA\\Player.eca",
       "_tag": {
         "type": "GFileRefer"
       },
       "fileType": "eca"
+    },
+    {
+      "fileId": "cp6x8dfr39d-mbk8glwh-sncjak0dsnp",
+      "filePath": "Assets\\ECA\\New ECA.eca",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "eca"
+    },
+    {
+      "fileId": "dbb62uluyp4-mbknvofh-wij4ftp00k",
+      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\UI\\PlayerEquipmentUIHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "8jnkk5klzvf-mbkhy14j-1xm0tr2mfbp",
+      "filePath": "Assets\\Script\\Player\\PlayerInventory\\UI\\PlayerInventoryUIHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "mjnqslvc4ec-mbknwdge-t1axom48vxi",
+      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\PlayerEquipmentHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "thlk712kzis-mboim34t-b4u5k0mumoq",
+      "filePath": "Assets\\Script\\Script (2).fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
+    },
+    {
+      "fileId": "9afoc83yoto-mbol3bsl-rkmpqcnktz",
+      "filePath": "Assets\\Script\\Player\\PlayerEquipment\\PlayerCustomWeaponClient.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "avatarInfo": null,
@@ -352,4 +424,4 @@
   "modOpen": true,
   "showSwitch": false
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

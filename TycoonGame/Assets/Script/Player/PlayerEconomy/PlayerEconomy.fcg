@@ -8,25 +8,33 @@ import "../PlayerUI/PlayerMoneyUI.fcg" as PlayerMoneyUI
 graph Script {
     //Executed when entity is created
     playerMoney List<int> = List<int>{}
+    
 
     event OnAwake() {
-        playerMoney = List<int>{999}
+        WaitForNextFrame()
+        playerMoney = List<int>{100}
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
     }
 
-    func addAmount (amount int){
-        globalEntity<BigNumberHandler>.addNumber(playerMoney, List<int>{amount} )
-        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
+    func addAmount (amount List<int>){
+        playerMoney = BigNumberHandler.addNumber(playerMoney, amount )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
         LogInfo("_playerMoney" + playerMoney)
+        DispatchEvent(SHOW_MONEY_UP, thisEntity<Player>,List<object>{BigNumberHandler.ConvertListNumToString(amount)})
     }
 
-    func subtractAmount(amount int){
-        globalEntity<BigNumberHandler>.subtractNumber(playerMoney, List<int>{amount} )
-        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
+    func subtractAmount(amount List<int>){
+        playerMoney = BigNumberHandler.subtractNumber(playerMoney, amount )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
         LogInfo("_playerMoney" + playerMoney)
+        DispatchEvent(SHOW_MONEY_DOWN, thisEntity<Player>,List<object>{BigNumberHandler.ConvertListNumToString(amount)})
     }
 
     func multiplyAmount (amount float){
-        globalEntity<BigNumberHandler>.multiplierNumber(playerMoney, amount )
-        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney[0])
+        BigNumberHandler.multiplierNumber(playerMoney, amount )
+        thisEntity<PlayerMoneyUI>.UISetDisplayMoney(playerMoney)
     }
+
+    
+
 }

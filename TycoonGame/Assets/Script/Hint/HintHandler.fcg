@@ -19,12 +19,10 @@ static graph HintHandler {
    
 
     func showHintAt (x float, z float){
-        LogInfo("is init ?")
         if hintBlock == nil {
             hintBlock = EResSceneNewScene.Hint
         } 
         SetActive(hintBlock<Entity>, true)
-        LogInfo("hintBlock" + hintBlock)
 
         hintBlock<Hint>.SetHintTarget(x,z)
     }

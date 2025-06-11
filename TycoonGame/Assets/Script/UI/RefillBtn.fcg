@@ -1,0 +1,33 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+
+import "../Player/PlayerTriggerEventHandler.fcg" as PlayerTriggerEventHandler
+import "../Player/PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+import "../Building/CookEvent/BuildingCookEventHandler.fcg" as BuildingCookEventHandler
+
+graph RefillBtn {
+    //Executed when entity is created
+    event OnAwake() {
+        
+
+    }
+
+    event OnTapped(player entity<Player>) {
+        LogInfo("yes i do")
+        var triggerBuilding = player<PlayerTriggerEventHandler>.triggerEntity
+        var playerHoldingIndex = player<PlayerEquipmentHandler>.currentEquipIndex
+        var playerHoldingItemID = player<PlayerEquipmentHandler>.equipmentItemID[playerHoldingIndex]
+
+        if playerHoldingItemID >0  {
+            if triggerBuilding<BuildingCookEventHandler>.checkSlotAvailable() {
+                DispatchEvent(COOK, triggerBuilding, List<object>{playerHoldingItemID})
+                player<PlayerEquipmentHandler>.removeHoldingItem()
+            } else {
+                LogInfo("full slot")
+            }
+        } else {
+            DispatchEvent(SHOW_CUSTOMUI, player, List<object>{"NotHoldingUI"})
+        }
+    }
+}   

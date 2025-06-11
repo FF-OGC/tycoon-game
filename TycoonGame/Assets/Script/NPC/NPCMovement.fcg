@@ -1,0 +1,140 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Math.fcc" as Math
+import "Physics.fcc" as Physics
+import "Animation.fcc" as Animation
+import "Player.fcc" as Player
+import "Playable.fcc" as Playable
+import "PropertyFormula.fcc" as PropertyFormula
+import "Workflow.fcc" as Workflow
+
+graph NPCMovement {
+    //Executed when entity is created
+    currentTween entity<Tween>
+
+    func setTweenMovement(_currentTween entity<Tween>){
+        currentTween = _currentTween as entity<Tween>
+    }
+
+    func destroyTweenMovement(){
+        Destroy(currentTween)
+    }
+
+    func getDestination(x float, z float) Vector3{
+        var result = Vector3{x, 0, z} + thisEntity<Transform>.LocalPosition
+        return result
+    }
+
+    func getRotationAngle(x float, z float) float{
+        var result float
+        var upper = z
+        var lower = Sqrt((x*x) + (z * z))
+        if lower == 0 {
+            result =  0
+        } else {
+            result =  ACos(upper / lower)  
+        }
+
+        if x < 0 {
+            result = 360-result
+        }
+        return result
+    }
+
+    func getDistance (x1 float, z1 float, x2 float, z2 float ) float{
+        var result = Sqrt( (x2- x1)*(x2- x1) + (z2- z1)*(z2- z1)  )
+        return result
+    }
+
+
+    func getWaitTime(moveDistance float) int{
+        var TimeFor1Mile float = 260 / 1// Lower -> Run Faster, DONT CHANGE!!! ALREADY TESTED, NEARLY SAME SPEED AS PLAYER, 
+        return Round(moveDistance * TimeFor1Mile)
+        return 0 
+    }
+
+    func SetAnimationRun(){
+        PlayAnimation(thisEntity<AnimationControllerAttachable>,"Move_Forward",1,LoopType.Loop)
+    }
+
+    func SetAnimationIdle(){
+        PlayAnimation(thisEntity<AnimationControllerAttachable>,"Idle",1,LoopType.Loop)
+    }
+
+    func SetAnimationCrouch(){
+        PlayAnimation(thisEntity<AnimationControllerAttachable>,"Crouch",1,LoopType.Loop)
+    }
+    
+
+    async func move(x float, z float){
+        //Current pos
+        var currentPosition = thisEntity<Transform>.LocalPosition
+        var currentX = currentPosition.X
+        var currentZ = currentPosition.Z
+
+        //Destination pos
+        var destinationPosition =  getDestination(x,z)
+        var destinationX = destinationPosition.X
+        var destinationZ = destinationPosition.Z
+
+        //Calculate time to move base on Distance
+        var moveDistance = getDistance(currentX, currentZ, destinationX, destinationZ)
+        var waitTime int = getWaitTime(moveDistance)
+
+        //Calculate rotate angle
+        var rotationAngle = getRotationAngle(x,z)
+        var currentAngle = thisEntity<Transform>.Rotation
+
+        //Rotate
+        thisEntity<Transform>.Rotation = Vector3{0, rotationAngle, 0}
+
+        //Move
+        SetAnimationRun()   
+        var curve = CreateCurve(List<float> {0,0,1,1})
+        CreateTween(thisEntity,Transform.Position,currentPosition,destinationPosition,TweenStyle.Once,curve,waitTime,out var mtween,true)
+        setTweenMovement(mtween)
+        WaitForMillisecond(waitTime)
+        Destroy(mtween)
+
+        //Back to idle
+        SetAnimationIdle()
+    }
+
+    async func moveToPoint(x float, z float){
+        //Current pos
+
+        //Check if can go ?
+        var currentPosition = thisEntity<Transform>.Position
+        var currentX = currentPosition.X
+        var currentZ = currentPosition.Z
+
+        //Destination pos
+        var destinationPosition =  Vector3{x, -0.3, z}
+        var destinationX = x
+        var destinationZ = z
+
+        //Calculate wait time base on Distance
+        var moveDistance = getDistance(currentX, currentZ, destinationX, destinationZ)
+        var waitTime int = getWaitTime(moveDistance)
+
+        //Calculate rotate angle
+        var rotationAngle = getRotationAngle(x-currentX,z-currentZ)
+        var currentAngle = thisEntity<Transform>.Rotation
+
+        var curve = CreateCurve(List<float> {0,0,1,1})
+
+
+        thisEntity<Transform>.Rotation = Vector3{0, rotationAngle, 0}
+
+        
+        SetAnimationRun()   
+
+        CreateTween(thisEntity,Transform.Position,currentPosition,destinationPosition,TweenStyle.Once,curve,waitTime,out var mtween,true)
+        setTweenMovement(mtween)
+        WaitForMillisecond(waitTime)
+        Destroy(mtween)
+
+        SetAnimationIdle()
+    }
+
+}

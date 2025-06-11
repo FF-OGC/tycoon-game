@@ -1,0 +1,36 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+
+import "../Script/Player/PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+import "../Script/Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "./Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+
+graph SellBtnLogic {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event OnTapped(player entity<Player>) {
+        LogInfo("sell")
+        var playerHoldingIndex = player<PlayerEquipmentHandler>.currentEquipIndex
+        var playerHoldingItemID = player<PlayerEquipmentHandler>.equipmentItemID[playerHoldingIndex]
+        var playerHoldingItemSize = player<PlayerEquipmentHandler>.equipmentItemIDItemSize[playerHoldingIndex]
+
+        if playerHoldingItemID >0  {
+            var price = CSVReadingHandler.getItemPriceByItemID(EResCSV.ItemCSV,playerHoldingItemID)
+            player<PlayerEconomy>.addAmount(price)
+            player<PlayerEquipmentHandler>.removeHoldingItem()
+
+        } else {
+            DispatchEvent(SHOW_CUSTOMUI, player, List<object>{"NotHoldingUI"})
+        }
+
+    }
+
+    func sell (){   
+
+    }
+
+}

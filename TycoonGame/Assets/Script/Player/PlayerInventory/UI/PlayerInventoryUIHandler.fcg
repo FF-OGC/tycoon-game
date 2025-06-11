@@ -1,0 +1,84 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+
+import "../PlayerInventory.fcg" as PlayerInventory
+import "List.fcc" as List
+import "../../../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+
+graph PlayerInventoryUIHandler {
+    //Executed when entity is created
+    UIInventory entity<CustomUI>
+    UIInventoryItemList List<entity<Entity>> 
+    UIIventoryItemLabelList List<entity<UIWidgetLabel>>
+    
+    event OnAwake() {
+        // UIInventoryItemList = New(64,64)
+        // UIIventoryItemLabelList = New(64,64)
+        // WaitForMillisecond(8000)
+        // initUIInformation()
+    }
+
+    
+
+    func initUIInformation(){
+        if UIInventory == nil {
+            CreateCustomUI(out var createdUI , thisEntity<Player>,EResUI.Inventory)
+            UIInventory = createdUI
+            createdUI<CustomUI>.IsVisible = false
+        }
+        
+        if UIInventoryItemList[0] ==nil {
+            LogInfo("siuuuu")
+            
+            var parentWidget = GetWidgetFromCustomUI(thisEntity<Player>,UIInventory<CustomUI>,EResUIInventory.SuperLayout)
+            UIInventoryItemList = GetChildren(parentWidget)
+
+            for i = 0, List.Length(UIInventoryItemList), 1 {
+                UIIventoryItemLabelList[i] = GetChildByIndex(UIInventoryItemList[i],1) as entity<UIWidgetLabel>
+            }
+        }
+    }
+
+    func showUIInventory (){
+        if UIInventory == nil || UIInventoryItemList[0] ==nil{
+            initUIInformation()
+        } 
+
+        clearIventoryUIInformation()
+
+        var size = List.Length(thisEntity<PlayerInventory>.inventoryItemID)
+
+        for i = 0, size, 1 {
+            var item = UIInventoryItemList[i]
+            item<UIWidget>.Active = true
+        }
+        var inventoryItemID List<int> = List.Clone(thisEntity<PlayerInventory>.inventoryItemID) as List<int>
+        var inventoryItemSize List<float> = List.Clone(thisEntity<PlayerInventory>.inventoryItemID) as List<float>
+        var inventoryItemMutation List<string> = List.Clone(thisEntity<PlayerInventory>.inventoryItemID) as List<string>
+
+    
+        for i = 0, List.Length(inventoryItemID), 1 {
+            var informationString = CSVReadingHandler.getItemNameByID(EResCSV.ItemCSV,inventoryItemID[i])
+            var label = UIIventoryItemLabelList[i]
+            label<UIWidgetLabel>.Content= informationString
+        }
+
+        UIInventory<CustomUI>.IsVisible = true
+    }
+
+    func offUIInventory(){
+        UIInventory<CustomUI>.IsVisible = false
+    }
+
+    func clearIventoryUIInformation(){
+        for key, UIChild in UIInventoryItemList {
+            var cellDetail = GetChildren(UIChild)
+            UIChild<UIWidget>.Active = false
+        }
+
+        for key, value in UIIventoryItemLabelList {
+            value<UIWidgetLabel>.Content = ""
+        }
+    }
+}

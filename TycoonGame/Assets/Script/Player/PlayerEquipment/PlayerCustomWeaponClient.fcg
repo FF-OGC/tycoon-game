@@ -1,0 +1,54 @@
+import "Player.fcc" as Player
+import "Avatar.fcc" as Avatar
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Items.fcc" as Items
+import Res from "EditorGenLib.fcc"
+
+[platform_client]
+graph PlayerCustomWeaponClient {
+    _EquipedItem entity<Entity>
+    //Executed when entity is created
+
+    event EQUIP_ITEM(prefabEresKey object, itemSize object, itemMutation object) {
+        RemoveItem()
+        LogInfo("EQUIP_ITEM event")
+        var _item = createItemClient(prefabEresKey,itemSize, itemMutation, Vector3{0, 0, 0} )
+        EquipItemToBone(_item, "")
+    }
+
+    event UNEQUIP_ITEM_CLIENT() {
+        RemoveItem()
+    }
+
+
+
+
+    func EquipItemToBone(equipEntity entity<Entity>, bone string) {
+        // SetParentClient(GetSkeletonPartByName(thisEntity,bone), createdObject as entity<Transform>, false)
+        LogInfo("equipEntity" + equipEntity +" name" +equipEntity<Entity>.Name)
+        SetParentClient(GetSkeletonPartByName(thisEntity,"bone_LeftHand"), equipEntity as entity<Transform>, false)
+        LogInfo("test")
+        _EquipedItem = equipEntity
+    }
+
+    func createItemClient(prefabEresKey object, ItemSize object, ItemMutation object, Position Vector3) entity<Entity>{
+        LogInfo("CREATE_ITEM event")
+        var _itemSize = ItemSize as float
+        var _itemMutation = ItemMutation as string
+        var _position = Position
+        var _prefabEresKey = prefabEresKey
+        var _prefabID = Res.Prefab[_prefabEresKey as EResKeyPrefab]
+
+        CreateFromPrefab(out var createdEntity, _prefabID)
+        createdEntity<Transform>.Scale = Vector3{_itemSize, _itemSize, _itemSize}
+        createdEntity<Transform>.Position = _position
+        createdEntity<Transform>.Rotation = Vector3{210, 0, 0}
+        LogInfo("createdEntity" + createdEntity)
+        return createdEntity
+    }
+
+    func RemoveItem() {
+        Destroy(_EquipedItem)
+    }
+}

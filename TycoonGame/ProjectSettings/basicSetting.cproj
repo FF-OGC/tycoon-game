@@ -1,6 +1,6 @@
 {
-  "name": "TycoonGame",
-  "nameLocKey": "",
+  "name": "ToiDiBanGa",
+  "nameLocKey": "GAME_NAME",
   "description": "",
   "descriptionLocKey": "",
   "subTitleId": 22,
@@ -19,4 +19,4 @@
   "enable_loadArea": false,
   "enable_customNavmesh": false
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

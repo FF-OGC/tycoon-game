@@ -15,8 +15,28 @@
     {
       "id": "entityTag84254792",
       "label": "UnlockButton"
+    },
+    {
+      "id": "entityTag47975475",
+      "label": "Icon"
+    },
+    {
+      "id": "entityTag39862467",
+      "label": "Description"
+    },
+    {
+      "id": "entityTag56737446",
+      "label": "Amount"
+    },
+    {
+      "id": "entityTag26771906",
+      "label": "Price"
+    },
+    {
+      "id": "entityTag76859829",
+      "label": "Button"
     }
   ],
   "children": []
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

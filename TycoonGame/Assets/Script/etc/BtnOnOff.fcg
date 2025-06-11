@@ -1,0 +1,20 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+
+
+graph InventoryIngredientBtn {
+    //Executed when entity is created
+    event OnTapped(player entity<Player>) {
+        LogInfo("tapped")
+        LogInfo("thisEntity<BtnOnOff>.On" + thisEntity<BtnOnOff>.On)
+        LogInfo("thisEntity<BtnOnOff>.off" + thisEntity<BtnOnOff>.Off)
+
+        var _on = thisEntity<BtnOnOff>.On 
+        var _off = thisEntity<BtnOnOff>.Off 
+
+        _on<UIWidget>.Active = true
+        _off<UIWidget>.Active = false
+
+}
+}

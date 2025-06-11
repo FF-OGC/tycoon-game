@@ -1,0 +1,61 @@
+{
+  "fileId": "0w78zjbu32dg-mbowr612-2zsaym23kur",
+  "globalscale": 1,
+  "properties": {
+    "Common": ""
+  },
+  "subDynamicResources": {},
+  "version": "1.4.4",
+  "manifest": {
+    "Meshes": [
+      {
+        "Name": "base.~@FFFUB",
+        "MeshName": "base",
+        "Type": "common",
+        "OrgExtName": ".~@FFFUB"
+      }
+    ],
+    "BoneInfos": [],
+    "Anims": [],
+    "ManifestJSON": {
+      "FBXName": "chicken2",
+      "ImportSucceeded": true,
+      "MaterialCount": 1,
+      "MaterialDetail": [
+        {
+          "Index": 0,
+          "MaterialName": "Material.001"
+        }
+      ],
+      "MeshCount": 1,
+      "MeshDetail": [
+        {
+          "MeshName": "base",
+          "MaterialIndex": [
+            0
+          ],
+          "Transform": {
+            "Position": [
+              0.606006,
+              -0.385332,
+              -0.261152
+            ],
+            "Rotation": [
+              -90,
+              27.2441,
+              0
+            ],
+            "Scale": [
+              9.24555,
+              9.24555,
+              9.24555
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "subColliderLOD": {
+    "0w78zjbu32dg-mbowr612-2zsaym23kur-base.~@FFFUB": 0
+  }
+}

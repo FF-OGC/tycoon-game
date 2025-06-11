@@ -38,34 +38,85 @@
       "type": "Int",
       "info": [
         {
-          "label": "lv",
+          "label": "ID",
           "key": "E43750121",
           "value": 0,
           "type": "Int"
         },
         {
-          "label": "Value",
+          "label": "Name",
           "key": "E92886514",
           "value": 1,
           "type": "Int"
         },
         {
-          "label": "UpgradeCost",
+          "label": "UnlockCost",
           "key": "E13954139",
           "value": 2,
           "type": "Int"
         },
         {
-          "label": "Cooldown",
+          "label": "Input",
           "key": "E48223951",
           "value": 3,
           "type": "Int"
         },
         {
-          "label": "SpecialRequirement",
+          "label": "Output",
           "key": "E90137083",
           "value": 4,
           "type": "Int"
+        },
+        {
+          "label": "Cooldown",
+          "key": "E42923826",
+          "value": 5,
+          "type": "Int"
+        }
+      ],
+      "isCustom": true,
+      "isDirty": false
+    },
+    "CustomEnum57913019": {
+      "label": "ItemConfigEnum",
+      "key": "CustomEnum57913019",
+      "type": "Int",
+      "info": [
+        {
+          "label": "ID",
+          "key": "E22999968",
+          "type": "Int",
+          "value": 0
+        },
+        {
+          "label": "Name",
+          "key": "E32203068",
+          "type": "Int",
+          "value": 1
+        },
+        {
+          "label": "Output",
+          "key": "E75386974",
+          "value": 2,
+          "type": "Int"
+        },
+        {
+          "label": "Price",
+          "key": "E79506577",
+          "type": "Int",
+          "value": 3
+        },
+        {
+          "label": "Prefab",
+          "key": "E96208968",
+          "type": "Int",
+          "value": 4
+        },
+        {
+          "label": "CookingTime",
+          "key": "E61226782",
+          "type": "Int",
+          "value": 5
         }
       ],
       "isCustom": true,
@@ -74,8 +125,9 @@
   },
   "enumNameMap": {
     "BuildingTypeEnum": "CustomEnum75552261",
-    "BuildingConfigEnum": "CustomEnum50365264"
+    "BuildingConfigEnum": "CustomEnum50365264",
+    "ItemConfigEnum": "CustomEnum57913019"
   },
   "children": []
 }
-//"{FE:{"v":"1.12.3559061","c":{"FF":4701},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

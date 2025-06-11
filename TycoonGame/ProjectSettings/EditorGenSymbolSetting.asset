@@ -5,20 +5,8 @@
   "_entityId": "d18tdDBW",
   "GenSymbol": {
     "Components": {
-      "CustomComponent36346074": {
-        "label": "BuildingUnlock",
-        "props": {}
-      },
-      "CustomComponent14113027": {
-        "label": "SpecialEventAfterUnlocked",
-        "props": {}
-      },
-      "CustomComponent81469950": {
-        "label": "SpecialEventAfterUpgraded",
-        "props": {}
-      },
-      "CustomComponent78352977": {
-        "label": "SpecialEventAfterAvailable",
+      "CustomComponent81033965": {
+        "label": "BtnEquip",
         "props": {}
       }
     },
@@ -28,4 +16,4 @@
   },
   "children": []
 }
-//"{FE:{"v":"1.13.3684007","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}

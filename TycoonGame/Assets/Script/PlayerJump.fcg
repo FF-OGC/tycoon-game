@@ -1,0 +1,19 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Player.fcc" as Player
+
+import "../Script/Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "Hud.fcc" as Hud
+import "../Script/Player/PlayerInventory/UI/PlayerInventoryUIHandler.fcg" as PlayerInventoryUIHandler
+
+graph Script_1_ {
+    //Executed when entity is created
+    customUIEntity entity<CustomUI>
+    event OnAwake() {
+
+    }
+
+    event OnJump() {
+    }
+}
+
