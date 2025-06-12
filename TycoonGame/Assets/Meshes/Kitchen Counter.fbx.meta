@@ -1,5 +1,5 @@
 {
-  "fileId": "0w78zjbu32dg-mbowr612-2zsaym23kur",
+  "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf",
   "globalscale": 1,
   "properties": {
     "Common": ""
@@ -9,8 +9,8 @@
   "manifest": {
     "Meshes": [
       {
-        "Name": "base.~@FFFUB",
-        "MeshName": "base",
+        "Name": "Counter.~@FFFUB",
+        "MeshName": "Counter",
         "Type": "common",
         "OrgExtName": ".~@FFFUB"
       }
@@ -18,37 +18,37 @@
     "BoneInfos": [],
     "Anims": [],
     "ManifestJSON": {
-      "FBXName": "chicken2",
+      "FBXName": "Kitchen Counter",
       "ImportSucceeded": true,
       "MaterialCount": 1,
       "MaterialDetail": [
         {
           "Index": 0,
-          "MaterialName": "Material.001"
+          "MaterialName": "Kitchen Counter"
         }
       ],
       "MeshCount": 1,
       "MeshDetail": [
         {
-          "MeshName": "base",
+          "MeshName": "Counter",
           "MaterialIndex": [
             0
           ],
           "Transform": {
             "Position": [
-              0.606006,
-              -0.385332,
-              -0.261152
+              -0.00543338,
+              0,
+              0
             ],
             "Rotation": [
-              -90,
-              27.2441,
+              0,
+              0,
               0
             ],
             "Scale": [
-              9.24555,
-              9.24555,
-              9.24555
+              1,
+              1,
+              1
             ]
           }
         }
@@ -56,6 +56,6 @@
     }
   },
   "subColliderLOD": {
-    "0w78zjbu32dg-mbowr612-2zsaym23kur-base.~@FFFUB": 0
+    "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB": 0
   }
 }

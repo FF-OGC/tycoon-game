@@ -75,6 +75,5 @@ graph PlayerEquipmentHandler {
 
         currentEquipIndex = -1
         DispatchEventWithPlatform(UNEQUIP_ITEM_CLIENT, thisEntity, PlatformType.Client, List<object>{})
-    
     }
 }

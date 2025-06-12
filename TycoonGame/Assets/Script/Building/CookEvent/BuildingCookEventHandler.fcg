@@ -37,6 +37,7 @@ graph BuildingCookEventHandler {
     outputItemSizeList List<float>
     outputItemMutationList List<string>
 
+    cookingStallPosition Vector3
     currentCookingItemID int
     currentCookingSceneEntity entity
 
@@ -61,12 +62,13 @@ graph BuildingCookEventHandler {
             inputScenePostionList[i]  = tempt<Transform>.Position + Vector3{0, 0.5, 0}
         }
         
-
         outputScenePostionList = List.New(5,5)
         for i = 0, List.Length(outputChildrenList), 1 {
             var tempt = outputChildrenList[i]
             outputScenePostionList[i]  = tempt<Transform>.Position + Vector3{0, 0.5, 0}
         }
+
+        cookingStallPosition = thisEntity<BuildingHandler>.model<Transform>.Position + Vector3{0, 0.5, 0}
         
         inputSceneEntityList = List<entity>{}
         inputItemIDList = List<int>{}
@@ -75,12 +77,12 @@ graph BuildingCookEventHandler {
         outputItemIDList = List<int>{}
         outputItemSizeList = List<float>{}
         outputItemMutationList = List<string>{}
+        
 
     }
 
     
     event COOK(itemID object) {
-
         if owner == nil {
             owner = PlayerStaticInformation.playerHost
         }
@@ -94,15 +96,18 @@ graph BuildingCookEventHandler {
             while isCooking{
                 while List.Length(inputItemIDList) > 0 {
                     LogInfo("length + " +List.Length(inputItemIDList) )
-                    var cookItemID = popCookingQueue()
-                    var cookTimeCooldown = CSVReadingHandler.getItemCookingTimeByItemID(EResCSV.ItemCSV, cookItemID)
+                    var t = popCookingQueue()
+                    currentCookingSceneEntity<Transform>.Position = cookingStallPosition
+
+                    var cookTimeCooldown = CSVReadingHandler.getItemCookingTimeByItemID(EResCSV.ItemCSV, currentCookingItemID)
+
                     WaitForMillisecond(cookTimeCooldown * 1000)
-                    var cookItemOutputID = CSVReadingHandler.getOutputItemByItemID(EResCSV.ItemCSV,cookItemID)
+                    var cookItemOutputID = CSVReadingHandler.getOutputItemByItemID(EResCSV.ItemCSV,currentCookingItemID)
                     var randomSize = RandomFloat(0.5,10)
+
+                    Destroy(currentCookingSceneEntity)
+
                     addOutputQueue(cookItemOutputID,randomSize,"", owner)
-                    // _player<PlayerEquipmentHandler>.equipmentAddItem(cookItemOutputID,randomSize,"")
-                    LogInfo("Cook finish - give back : " +cookItemOutputID )
-                    DispatchEvent(SHOW_CUSTOMUI, owner, List<object>{"DoneCooking"})
                 }
                 isCooking = false
             }
@@ -127,7 +132,6 @@ graph BuildingCookEventHandler {
     }
 
     func popOutputQueue() {
-
         var outputItemID =  outputItemIDList[0]
         var outputItemSize = outputItemSizeList[0]
         var outputItemMutation = outputItemMutationList[0]
@@ -143,8 +147,7 @@ graph BuildingCookEventHandler {
                 RemoveAt(outputItemIDList,0)
                 RemoveAt(outputItemSizeList,0)
                 RemoveAt(outputItemMutationList,0)
-                var temp = outputSceneEntityList[0]
-                Destroy(temp)
+                Destroy(outputSceneEntityList[0])
                 RemoveAt(outputSceneEntityList,0)
                 matchSceneOutput()
             } else {
@@ -178,7 +181,6 @@ graph BuildingCookEventHandler {
             currentCookingSceneEntity = SceneEntityListClone[0]
         
             RemoveAt(inputItemIDList,0)
-            Destroy(inputSceneEntityList[0])
             RemoveAt(inputSceneEntityList,0)
             matchSceneInput ()
             return currentCookingItemID
