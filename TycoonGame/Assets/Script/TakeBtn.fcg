@@ -21,20 +21,20 @@ graph TakeBtn {
     event OnTapped(player entity<Player>) {
         // player<PlayerTriggerEventHandler>.triggerEntity
         var triggerBuilding = player<PlayerTriggerEventHandler>.triggerEntity
-        var outputItemID =  triggerBuilding<BuildingHandler>.outputItemIDList[0]
-        var outputItemSize = triggerBuilding<BuildingHandler>.outputItemSizeList[0]
-        var outputItemMutation = triggerBuilding<BuildingHandler>.outputItemMutationList[0]
+        var outputItemID =  triggerBuilding<BuildingCookEventHandler>.outputItemIDList[0]
+        var outputItemSize = triggerBuilding<BuildingCookEventHandler>.outputItemSizeList[0]
+        var outputItemMutation = triggerBuilding<BuildingCookEventHandler>.outputItemMutationList[0]
 
         if outputItemID != nil && outputItemID != -1 && outputItemID>0{
             if player<PlayerEquipmentHandler>.checkSlotAvailable(){
                 player<PlayerEquipmentHandler>.equipmentAddItem(outputItemID,outputItemSize,outputItemMutation)
     
-                RemoveAt(triggerBuilding<BuildingHandler>.outputItemIDList,0)
-                RemoveAt(triggerBuilding<BuildingHandler>.outputItemSizeList,0)
-                RemoveAt(triggerBuilding<BuildingHandler>.outputItemMutationList,0)
-                var temp = triggerBuilding<BuildingHandler>.outputSceneEntityList[0]
+                RemoveAt(triggerBuilding<BuildingCookEventHandler>.outputItemIDList,0)
+                RemoveAt(triggerBuilding<BuildingCookEventHandler>.outputItemSizeList,0)
+                RemoveAt(triggerBuilding<BuildingCookEventHandler>.outputItemMutationList,0)
+                var temp = triggerBuilding<BuildingCookEventHandler>.outputSceneEntityList[0]
                 Destroy(temp)
-                RemoveAt(triggerBuilding<BuildingHandler>.outputSceneEntityList,0)
+                RemoveAt(triggerBuilding<BuildingCookEventHandler>.outputSceneEntityList,0)
             }
     
         }

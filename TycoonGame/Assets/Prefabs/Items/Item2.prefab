@@ -33,7 +33,7 @@
       },
       "rotation": {
         "x": 0,
-        "y": 0,
+        "y": 90,
         "z": 0
       },
       "BTPath": [
@@ -58,7 +58,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 30,
+      "tempIndex": 17,
       "itemID": 223,
       "seParent": null,
       "ecaScripts": [
@@ -112,6 +112,6 @@
   "editorLockValue": false,
   "editorVisibleValue": true,
   "discriminator": "ISceneLike",
-  "_entityName": "Item4"
+  "_entityName": "Item2"
 }
 //"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

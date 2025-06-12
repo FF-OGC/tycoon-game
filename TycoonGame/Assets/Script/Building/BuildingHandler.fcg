@@ -10,6 +10,7 @@ import "../Building/GlobalBuildingManager.fcg" as GlobalBuildingManager
 import "../Economy/BigNumberHandler.fcg" as BigNumberHandler
 import "../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
 import "../Player/PlayerInventory/PlayerInventory.fcg" as PlayerInventory
+import "../Building/CookEvent/BuildingCookEventHandler.fcg" as BuildingCookEventHandler
 
 import "List.fcc" as List
 
@@ -23,10 +24,6 @@ graph BuildingHandler {
     unlockCost List<int>
     buildingType BuildingTypeEnum
 
-    inputID int
-    outputID int
-    cooldown int
-
     model entity
     valueDisplay entity
     unlockButton entity
@@ -38,23 +35,6 @@ graph BuildingHandler {
     buildingUnlockBuildingList List<entity> 
     
     cookingCount int
-    isCooking bool
-
-    inputParent entity
-    outputParent entity
-
-    inputChildrenList List<entity>
-    outputChildrenList List<entity>
-
-    inputSceneEntityList List<entity>
-    outputSceneEntityList List<entity>
-
-    inputItemIDList List<int>
-
-    outputItemIDList List<int>
-    outputItemSizeList List<float>
-    outputItemMutationList List<string>
-
     owner entity<Player>
 
     event OnAwake() {
@@ -75,31 +55,13 @@ graph BuildingHandler {
         refillButton = thisEntity<BuildingChildren>.RefillButton
         refillDisplay = thisEntity<BuildingChildren>.RefillButtonDisplayText
 
-        inputID = CSVReadingHandler.GetInputIDByBuildingID(EResCSV.Building,buildingID)
-        outputID = CSVReadingHandler.GetOutputIDByBuildingID(EResCSV.Building,buildingID)
-        cooldown = CSVReadingHandler.GetCooldownByBuildingID(EResCSV.Building,buildingID)
-
-        cookingCount = 0
-
-        inputParent = thisEntity<BuildingChildren>.Input
-        outputParent = thisEntity<BuildingChildren>.Output
-
-        inputChildrenList = List<entity>{}
-        outputChildrenList  = List<entity>{}
-        inputChildrenList = GetChildren(inputParent)
-        outputChildrenList = GetChildren(outputParent)
-        
-        inputSceneEntityList = List<entity>{}
-        outputSceneEntityList = List<entity>{}
-        outputItemIDList = List<int>{}
-        outputItemSizeList = List<float>{}
-        outputItemMutationList = List<string>{}
-    
+        cookingCount = 0    
 
         owner = PlayerStaticInformation.playerHost
 
         WaitForNextFrame()
         initDisplay()
+        thisEntity<BuildingCookEventHandler>.init()
         
         GlobalBuildingManager.BuildingList[buildingID] = thisEntity
         GlobalBuildingManager.BuildingStateList[buildingID] = buildingUnlockState 

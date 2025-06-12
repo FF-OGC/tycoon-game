@@ -15,9 +15,6 @@ graph Script_1_ {
     }
 
     event OnJump() {
-        var e1 = EResSceneFriedChicken.Shop
-        LogInfo("e1<BuildingHandler>.inputChildrenList" +e1<BuildingHandler>.inputChildrenList)
-        LogInfo("e1<BuildingHandler>.outputChildrenList" +e1<BuildingHandler>.outputChildrenList)
 
     }
 }
