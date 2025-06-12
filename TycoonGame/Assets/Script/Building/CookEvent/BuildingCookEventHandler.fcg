@@ -7,11 +7,12 @@ import "../../Global/CSVReadingHandler.fcg" as CSVReadingHandler
 import "../../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
 import "Items.fcc" as Items
 import "../../Player/PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+import "../../Player/PlayerTriggerEventHandler.fcg" as PlayerTriggerEventHandler
 import "Math.fcc" as Math
- 
-import "../../Item/ItemHandler.fcg" as ItemHandler
 
+import "../../Item/ItemHandler.fcg" as ItemHandler
 import "../BuildingHandler.fcg" as BuildingHandler
+
 
 
 
@@ -35,6 +36,11 @@ graph BuildingCookEventHandler {
     outputItemIDList List<int>
     outputItemSizeList List<float>
     outputItemMutationList List<string>
+
+    currentCookingItemID int
+    currentCookingSceneEntity entity
+
+    owner entity<Player>
 
     //Executed when entity is created
     event OnAwake() {
@@ -69,14 +75,20 @@ graph BuildingCookEventHandler {
         outputItemIDList = List<int>{}
         outputItemSizeList = List<float>{}
         outputItemMutationList = List<string>{}
+
     }
 
     
     event COOK(itemID object) {
-        var _player = PlayerStaticInformation.playerHost
-        DispatchEvent(SHOW_CUSTOMUI, _player, List<object>{"StartCooking"})
+
+        if owner == nil {
+            owner = PlayerStaticInformation.playerHost
+        }
+
+        DispatchEvent(SHOW_CUSTOMUI, owner, List<object>{"StartCooking"})
         LogInfo("event cook starting")
         addCookingQueue(itemID as int)
+
         if isCooking == false{
             isCooking = true
             while isCooking{
@@ -87,10 +99,10 @@ graph BuildingCookEventHandler {
                     WaitForMillisecond(cookTimeCooldown * 1000)
                     var cookItemOutputID = CSVReadingHandler.getOutputItemByItemID(EResCSV.ItemCSV,cookItemID)
                     var randomSize = RandomFloat(0.5,10)
-                    addOutputQueue(cookItemOutputID,randomSize,"", _player)
+                    addOutputQueue(cookItemOutputID,randomSize,"", owner)
                     // _player<PlayerEquipmentHandler>.equipmentAddItem(cookItemOutputID,randomSize,"")
                     LogInfo("Cook finish - give back : " +cookItemOutputID )
-                    DispatchEvent(SHOW_CUSTOMUI, _player, List<object>{"DoneCooking"})
+                    DispatchEvent(SHOW_CUSTOMUI, owner, List<object>{"DoneCooking"})
                 }
                 isCooking = false
             }
@@ -99,31 +111,52 @@ graph BuildingCookEventHandler {
 
 
     func addOutputQueue(itemID int, itemSize float, itemMutation string , player entity<Player>){
-        var outputItemIDList = outputItemIDList
-        var outputItemSizeList = outputItemSizeList
-        var outputItemMutationList = outputItemMutationList
+        if checkOutputSlotAvailable(){
+            Append(outputItemIDList, itemID) 
+            Append(outputItemSizeList, itemSize) 
+            Append(outputItemMutationList, itemMutation) 
 
-        var outputSceneEntityList =outputSceneEntityList
-    
-        Append(outputItemIDList, itemID) 
-        Append(outputItemSizeList, itemSize) 
-        Append(outputItemMutationList, itemMutation) 
-
-        var index = List.Length(outputItemIDList) 
-        if index >4 {
-            player<PlayerEquipmentHandler>.equipmentAddItem(itemID,itemSize,itemMutation)
-        } else {
-            var outputTableEntity = outputChildrenList[index-1]
+            var CurrentIndex = List.Length(outputItemIDList) 
+            var outputTableEntity = outputChildrenList[CurrentIndex-1]
             var outputPos = outputTableEntity<Transform>.Position + Vector3{0, 0.5, 0}
-            LogInfo("outputTableEntity<Transform>.Position" + outputTableEntity<Transform>.Position)
-            LogInfo("outputPos" +outputPos )
             Append(outputSceneEntityList, globalEntity<ItemHandler>.createItem(itemID, itemSize , itemMutation, outputPos ))
+        } else {
+            LogInfo("Output is full")
+            player<PlayerEquipmentHandler>.equipmentAddItem(itemID,itemSize,itemMutation)
         }
-        // globalEntity<ItemHandler>.createItem()
     }
 
+    func popOutputQueue() {
+
+        var outputItemID =  outputItemIDList[0]
+        var outputItemSize = outputItemSizeList[0]
+        var outputItemMutation = outputItemMutationList[0]
+
+    
+        if outputItemID != nil && outputItemID != -1 && outputItemID>0{
+            LogInfo("owner<PlayerEquipmentHandler>.checkSlotAvailable() " + owner<PlayerEquipmentHandler>.checkSlotAvailable() )
+            LogInfo("owner" + owner +"name " + owner<Entity>.Name)
+            
+            if owner<PlayerEquipmentHandler>.checkSlotAvailable() {
+                owner<PlayerEquipmentHandler>.equipmentAddItem(outputItemID,outputItemSize,outputItemMutation)
+    
+                RemoveAt(outputItemIDList,0)
+                RemoveAt(outputItemSizeList,0)
+                RemoveAt(outputItemMutationList,0)
+                var temp = outputSceneEntityList[0]
+                Destroy(temp)
+                RemoveAt(outputSceneEntityList,0)
+                matchSceneOutput()
+            } else {
+                LogInfo("full slot ")
+            }
+
+        }
+    }
+
+
     func addCookingQueue(itemID int){
-        if checkSlotAvailable(){
+        if checkInputSlotAvailable(){
             Append(inputItemIDList, itemID)
             var index = List.Length(inputItemIDList) as int
             var inputTableEntity = inputChildrenList[index-1]
@@ -138,39 +171,45 @@ graph BuildingCookEventHandler {
 
     func popCookingQueue () int{
         if List.Length(inputItemIDList) > 0 {
-            var queueClone = List.Clone(inputItemIDList) as List<int>
-            var _returnItem = queueClone[0] as int
+            var ItemIDListClone = List.Clone(inputItemIDList) as List<int>
+            currentCookingItemID = ItemIDListClone[0] as int
+
+            var SceneEntityListClone = List.Clone(inputSceneEntityList) as List<entity>
+            currentCookingSceneEntity = SceneEntityListClone[0]
+        
             RemoveAt(inputItemIDList,0)
             Destroy(inputSceneEntityList[0])
             RemoveAt(inputSceneEntityList,0)
-            LogInfo("inputSceneEntityList[0] after remove" + inputSceneEntityList[0])
             matchSceneInput ()
-            return _returnItem
+            return currentCookingItemID
         } else {
-            LogInfo("done cooking")
         }
     }
 
     func matchSceneInput (){
-        LogInfo("start matching")
-        LogInfo("List.Length(inputSceneEntityList)" +List.Length(inputSceneEntityList) )
-
         for i = 0, List.Length(inputSceneEntityList), 1 {
-        
-
             var SEntity = inputSceneEntityList[i]
-            LogInfo("SEntity" + SEntity)
-            LogInfo("inputScenePostionList[i]" + inputScenePostionList[i])
-
-
             SEntity<Transform>.Position = inputScenePostionList[i]    
-            LogInfo("done moving")        
-
         }
     }
 
-    func checkSlotAvailable() bool{
+    func matchSceneOutput (){
+        for i = 0, List.Length(outputSceneEntityList), 1 {
+            var SEntity = outputSceneEntityList[i]
+            SEntity<Transform>.Position = outputScenePostionList[i]    
+        }
+    }
+
+    func checkInputSlotAvailable() bool{
         if List.Length(inputItemIDList) < 5 {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    func checkOutputSlotAvailable() bool {
+        if List.Length(outputItemIDList) < 5 {
             return true
         } else {
             return false

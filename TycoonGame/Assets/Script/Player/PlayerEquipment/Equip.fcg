@@ -20,10 +20,14 @@ graph Equip {
         var _btnID = _btnParent<BtnEquip>.btnID
         player<PlayerEquipmentHandler>.currentEquipIndex = _btnID
         var _itemID = player<PlayerEquipmentHandler>.equipmentItemID[_btnID]
-        var _prefabEresKey = CSVReadingHandler.getItemPrefabByItemID(EResCSV.ItemCSV, _itemID)
-
-        var _itemSize = player<PlayerEquipmentHandler>.equipmentItemIDItemSize[_btnID]
-        var _itemMutation = player<PlayerEquipmentHandler>.equipmentItemIDItemMutation[_btnID]
-        DispatchEventWithPlatform(EQUIP_ITEM, player, PlatformType.Client, List<object>{_prefabEresKey,_itemSize,_itemMutation})
+        if _itemID != -1 {
+            var _prefabEresKey = CSVReadingHandler.getItemPrefabByItemID(EResCSV.ItemCSV, _itemID)
+            var _itemSize = player<PlayerEquipmentHandler>.equipmentItemIDItemSize[_btnID]
+            var _itemMutation = player<PlayerEquipmentHandler>.equipmentItemIDItemMutation[_btnID]
+            DispatchEventWithPlatform(EQUIP_ITEM, player, PlatformType.Client, List<object>{_prefabEresKey,_itemSize,_itemMutation})
+        } else {
+            DispatchEventWithPlatform(UNEQUIP_ITEM_CLIENT, player, PlatformType.Client, List<object>{})
+        }
+    
     }
 }

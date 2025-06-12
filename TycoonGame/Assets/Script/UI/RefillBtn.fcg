@@ -20,7 +20,7 @@ graph RefillBtn {
         var playerHoldingItemID = player<PlayerEquipmentHandler>.equipmentItemID[playerHoldingIndex]
 
         if playerHoldingItemID >0  {
-            if triggerBuilding<BuildingCookEventHandler>.checkSlotAvailable() {
+            if triggerBuilding<BuildingCookEventHandler>.checkInputSlotAvailable() {
                 DispatchEvent(COOK, triggerBuilding, List<object>{playerHoldingItemID})
                 player<PlayerEquipmentHandler>.removeHoldingItem()
             } else {

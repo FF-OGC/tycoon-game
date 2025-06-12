@@ -56,7 +56,6 @@ graph BuildingHandler {
         refillDisplay = thisEntity<BuildingChildren>.RefillButtonDisplayText
 
         cookingCount = 0    
-
         owner = PlayerStaticInformation.playerHost
 
         WaitForNextFrame()
@@ -66,7 +65,6 @@ graph BuildingHandler {
         GlobalBuildingManager.BuildingList[buildingID] = thisEntity
         GlobalBuildingManager.BuildingStateList[buildingID] = buildingUnlockState 
 
-        owner = PlayerStaticInformation.playerHost
 
         setActiveGameStart()
     }

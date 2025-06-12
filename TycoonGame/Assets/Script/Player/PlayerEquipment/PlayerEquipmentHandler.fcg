@@ -44,7 +44,10 @@ graph PlayerEquipmentHandler {
     }
 
     func checkSlotAvailable() bool{
+        LogInfo("equipmentItemID" + equipmentItemID) 
+
         var tIndex = List.IndexOf(equipmentItemID, -1)
+
         if tIndex != -1 {
             return true
         }
