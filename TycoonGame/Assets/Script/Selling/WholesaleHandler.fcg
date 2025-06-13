@@ -1,7 +1,7 @@
 import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 
-graph Script_1_ {
+graph WholesaleHandler {
     //Executed when entity is created
     event OnAwake() {
 

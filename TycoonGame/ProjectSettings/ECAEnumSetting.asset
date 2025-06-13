@@ -40,37 +40,43 @@
         {
           "label": "ID",
           "key": "E43750121",
-          "value": 0,
-          "type": "Int"
+          "type": "Int",
+          "value": 0
         },
         {
           "label": "Name",
           "key": "E92886514",
-          "value": 1,
-          "type": "Int"
+          "type": "Int",
+          "value": 1
         },
         {
-          "label": "UnlockCost",
+          "label": "Output",
           "key": "E13954139",
           "value": 2,
           "type": "Int"
         },
         {
-          "label": "Input",
-          "key": "E48223951",
+          "label": "Price",
+          "key": "E90137083",
           "value": 3,
           "type": "Int"
         },
         {
-          "label": "Output",
-          "key": "E90137083",
+          "label": "Prefab",
+          "key": "E42923826",
           "value": 4,
           "type": "Int"
         },
         {
-          "label": "Cooldown",
-          "key": "E42923826",
+          "label": "CookingTime",
+          "key": "E58236196",
           "value": 5,
+          "type": "Int"
+        },
+        {
+          "label": "Level",
+          "key": "E60107587",
+          "value": 6,
           "type": "Int"
         }
       ],
@@ -97,8 +103,8 @@
         {
           "label": "Output",
           "key": "E75386974",
-          "value": 2,
-          "type": "Int"
+          "type": "Int",
+          "value": 2
         },
         {
           "label": "Price",
@@ -117,6 +123,12 @@
           "key": "E61226782",
           "type": "Int",
           "value": 5
+        },
+        {
+          "label": "Level",
+          "key": "E41901569",
+          "value": 6,
+          "type": "Int"
         }
       ],
       "isCustom": true,

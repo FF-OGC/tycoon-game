@@ -1,0 +1,59 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "../Player/PlayerHandler.fcg" as PlayerHandler
+import "../Player/PlayerStaticInformation.fcg" as PlayerStaticInformation
+import "List.fcc" as List
+import "Math.fcc" as Math
+
+graph OrderHandler {
+    //Executed when entity is created
+    ORDER_MAX_SLOT = 10
+
+    orderItemIDList List<int>
+
+    possibleItemIDList List<int>
+    possibleItemLevel int
+
+    owner entity<Player>
+
+    event OnAwake() {
+        possibleItemLevel = -1 
+        orderItemIDList =  List<int>{}
+        possibleItemIDList = List<int>{}
+    }
+
+
+    func generatePossibleItemIDList (){
+        var _player = PlayerStaticInformation.playerHost
+        possibleItemIDList = List<int>{} 
+        possibleItemLevel = _player<PlayerHandler>.maxLevel
+        for i = 1, 10, 1 {
+            if CSVReadingHandler.getOutputItemByItemID(EResCSV.ItemCSV,i) == 0 && CSVReadingHandler.getLevelItemByItemID(EResCSV.ItemCSV,i) <= possibleItemLevel {
+                Append(possibleItemIDList, i)
+            } else if  CSVReadingHandler.getLevelItemByItemID(EResCSV.ItemCSV,i) > possibleItemLevel {
+                break
+            }
+        }
+    }
+
+    func addOrderList(){
+        if owner == nil {
+            owner = PlayerStaticInformation.playerHost
+        }
+        
+        if possibleItemLevel < owner<PlayerHandler>.maxLevel {
+            generatePossibleItemIDList()
+        }
+
+        var rand = RandomInt(0, List.Length(possibleItemIDList))
+        Append(orderItemIDList, possibleItemIDList[rand])
+    }
+
+    func fillOrderList(){
+        while List.Length(orderItemIDList) < ORDER_MAX_SLOT{
+            addOrderList()
+        }
+    }
+}

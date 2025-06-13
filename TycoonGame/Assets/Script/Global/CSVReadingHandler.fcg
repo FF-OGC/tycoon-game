@@ -38,17 +38,6 @@ static graph CSVReadingHandler {
         return result
     }
 
-
-    func GetInputIDByBuildingID(keyCSV CsvID, id int) int{
-        var _list = GetInformation(keyCSV as CsvID, 1, id )
-        if  _list[0] == nil {
-            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
-        }
-        
-        var _index = BuildingConfigEnum.Input as int
-        return _list[_index] as int
-    }
-
     func GetOutputIDByBuildingID(keyCSV CsvID, id int) int{
         var _list = GetInformation(keyCSV as CsvID, 1, id )
         if  _list[0] == nil {
@@ -60,17 +49,6 @@ static graph CSVReadingHandler {
     }
 
     
-    func GetCooldownByBuildingID(keyCSV CsvID, id int) int{
-        var _list = GetInformation(keyCSV as CsvID, 1, id )
-        if  _list[0] == nil {
-            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
-        }
-        
-        var _index = BuildingConfigEnum.Cooldown as int
-        return _list[_index] as int
-    }
-
-
     func getItemNameByID(keyCSV CsvID, id int) string{
         var _list = GetInformation(keyCSV as CsvID, 1, id )
         if  _list[0] == nil {
@@ -130,6 +108,17 @@ static graph CSVReadingHandler {
         }
         
         var _index = ItemConfigEnum.Output as int
+        var result = _list[_index] as int
+        return result
+    }
+
+    func getLevelItemByItemID(keyCSV CsvID, id int) int{
+        var _list = GetInformation(keyCSV as CsvID, 1, id )
+        if  _list[0] == nil {
+            _list = GetInformation(keyCSV as CsvID, 1, id-1 )
+        }
+        
+        var _index = ItemConfigEnum.Level as int
         var result = _list[_index] as int
         return result
     }

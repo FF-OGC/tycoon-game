@@ -1,6 +1,10 @@
-ID,Name,Output,Price,Prefab,CookingTime
-int,string,int,string,string,int
-1,Egg,2,100,Item1,5
-2,FriedEgg,0,200,Item2,0
-3,ChickenKit,4,500,Item3,10
-4,FriedChicken,0,1000,Item4,0
+ID,Name,Output,Price,Prefab,CookingTime,Level
+int,string,int,string,string,int,int
+1,Egg,2,100,Item1,5,0
+2,FriedEgg,0,200,Item2,0,0
+3,ChickenKit,4,500,Item3,10,0
+4,FriedChicken,0,1000,Item4,0,0
+5,Beef,6,5000,Item5,60,1
+6,BeefSteak,0,10000,Item6,0,1
+7,Fish,8,50000,Item7,120,2
+8,FriedFish,0,90000,Item8,0,2

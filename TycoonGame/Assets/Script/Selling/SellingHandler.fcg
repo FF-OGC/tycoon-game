@@ -1,11 +1,15 @@
 import "StdLibrary.fcc" as StdLib
 import "EditorGenLib.fcc" as EditorLib
 
-graph PlayerHandler {
-    maxLevel int
+graph SellingHandler {
     //Executed when entity is created
+
+    sellingItemIDList List<int>
+    sellingStallList List<entity>
     event OnAwake() {
-        maxLevel = 0 
 
     }
+
+    
+    
 }

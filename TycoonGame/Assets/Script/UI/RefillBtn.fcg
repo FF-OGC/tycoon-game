@@ -5,6 +5,7 @@ import "Hud.fcc" as Hud
 import "../Player/PlayerTriggerEventHandler.fcg" as PlayerTriggerEventHandler
 import "../Player/PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
 import "../Building/CookEvent/BuildingCookEventHandler.fcg" as BuildingCookEventHandler
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
 
 graph RefillBtn {
     //Executed when entity is created
@@ -19,13 +20,20 @@ graph RefillBtn {
         var playerHoldingIndex = player<PlayerEquipmentHandler>.currentEquipIndex
         var playerHoldingItemID = player<PlayerEquipmentHandler>.equipmentItemID[playerHoldingIndex]
 
-        if playerHoldingItemID >0  {
-            if triggerBuilding<BuildingCookEventHandler>.checkInputSlotAvailable() {
-                DispatchEvent(COOK, triggerBuilding, List<object>{playerHoldingItemID})
-                player<PlayerEquipmentHandler>.removeHoldingItem()
+        if playerHoldingItemID >0 {
+            var outputID = CSVReadingHandler.getOutputItemByItemID(EResCSV.ItemCSV, playerHoldingItemID)
+            if outputID != 0 {
+                if triggerBuilding<BuildingCookEventHandler>.checkInputSlotAvailable() {
+                    DispatchEvent(COOK, triggerBuilding, List<object>{playerHoldingItemID})
+                    player<PlayerEquipmentHandler>.removeHoldingItem()
+                } else {
+                    LogInfo("full slot")
+                }
             } else {
-                LogInfo("full slot")
+                LogInfo("Can't cook this")
+                DispatchEvent(SHOW_CUSTOMUI, player, List<object>{"AlreadyCookUI"})
             }
+
         } else {
             DispatchEvent(SHOW_CUSTOMUI, player, List<object>{"NotHoldingUI"})
         }

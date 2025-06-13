@@ -1,0 +1,42 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Hud.fcc" as Hud
+
+import "../Player/PlayerEquipment/PlayerEquipmentHandler.fcg" as PlayerEquipmentHandler
+import "../Global/CSVReadingHandler.fcg" as CSVReadingHandler
+import "../Player/PlayerEconomy/PlayerEconomy.fcg" as PlayerEconomy
+import "../Player/PlayerTriggerEventHandler.fcg" as PlayerTriggerEventHandler
+import "../ServeTrigger.fcg" as ServeTrigger
+
+graph SellBtnLogic {
+    //Executed when entity is created
+    event OnAwake() {
+
+    }
+
+    event OnTapped(player entity<Player>) {
+        LogInfo("serve")
+        var playerHoldingIndex = player<PlayerEquipmentHandler>.currentEquipIndex
+        var playerHoldingItemID = player<PlayerEquipmentHandler>.equipmentItemID[playerHoldingIndex]
+        var playerHoldingItemSize = player<PlayerEquipmentHandler>.equipmentItemIDItemSize[playerHoldingIndex]
+        var playerHoldingItemMutation = player<PlayerEquipmentHandler>.equipmentItemIDItemMutation[playerHoldingIndex]
+
+        var triggerBuilding = player<PlayerTriggerEventHandler>.triggerEntity
+
+
+        if playerHoldingItemID >0  {
+            triggerBuilding<ServeTrigger>.addServingItem(playerHoldingItemID, playerHoldingItemSize, playerHoldingItemMutation)
+
+            player<PlayerEquipmentHandler>.removeHoldingItem()
+
+        } else {
+            DispatchEvent(SHOW_CUSTOMUI, player, List<object>{"NotHoldingUI"})
+        }
+
+    }
+
+    func sell (){   
+
+    }
+
+}

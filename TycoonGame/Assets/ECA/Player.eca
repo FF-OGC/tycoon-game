@@ -1,4 +1,92 @@
 {
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "a",
+        "id": "a#~MBZ{$3]L2`[F`z8m0",
+        "x": 452,
+        "y": 170,
+        "extraState": {
+          "X": 443,
+          "L": [
+            5,
+            1,
+            2,
+            -1,
+            3,
+            4,
+            6
+          ],
+          "O": [
+            "",
+            "",
+            "",
+            "",
+            "o",
+            ""
+          ],
+          "T": "CreatePlayableTrajectory",
+          "OT": null
+        },
+        "fields": {
+          "P5": {
+            "name": "Created Entity",
+            "type": "PlayableTrajectory"
+          }
+        },
+        "inputs": {
+          "P1": {
+            "shadow": {
+              "type": "tys",
+              "id": "zNHe)r3lH/b5(vScg,B,",
+              "extraState": "Entity"
+            }
+          },
+          "P2": {
+            "shadow": {
+              "type": "ipv",
+              "id": "-_u)_t:lJK[oyv6=5^7,",
+              "fields": {
+                "V1": 0,
+                "V2": 0,
+                "V3": 0
+              }
+            }
+          },
+          "P3": {
+            "shadow": {
+              "type": "ipv",
+              "id": "6lu+$WAzs1/[4Zl{8x3-",
+              "fields": {
+                "V1": 0,
+                "V2": 0,
+                "V3": 0
+              }
+            }
+          },
+          "P4": {
+            "shadow": {
+              "type": "ipf",
+              "id": ",B1!a7LCG`3a[nhW4x6Q",
+              "fields": {
+                "V": 0
+              }
+            }
+          },
+          "P6": {
+            "shadow": {
+              "type": "ipb",
+              "id": "Wjh0]VBpy;.z,:$S3.db",
+              "fields": {
+                "V": "F"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "graphData": {
     "ownerType": "Entity",
     "componentTypes": "Player",

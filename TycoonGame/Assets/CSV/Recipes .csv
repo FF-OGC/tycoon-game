@@ -1,0 +1,4 @@
+ID,IngredientID,MealID,CookTime,,
+int,string,int,string,,
+1,1,2,5,,
+2,3,4,10,,

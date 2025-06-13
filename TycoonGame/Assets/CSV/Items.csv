@@ -1,0 +1,8 @@
+ID,Name,Type,Price,Prefab
+int,string,int,string,string
+1,Egg,0,100,Item1
+2,FriedEgg,1,200,Item2
+3,ChickenKit,0,500,Item3
+4,FriedChicken,1,1000,Item4
+5,Beef,0,2000,Item5
+6,BeefSteak,1,4000,Item6

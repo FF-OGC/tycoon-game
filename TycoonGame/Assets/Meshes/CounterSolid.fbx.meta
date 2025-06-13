@@ -1,0 +1,61 @@
+{
+  "fileId": "1ti33ft2vcl-m879jmaf-ws6upbciu",
+  "globalscale": 1,
+  "properties": {
+    "Common": ""
+  },
+  "subDynamicResources": {},
+  "version": "1.4.4",
+  "manifest": {
+    "Meshes": [
+      {
+        "Name": "Counter.003.~@FFFUB",
+        "MeshName": "Counter.003",
+        "Type": "common",
+        "OrgExtName": ".~@FFFUB"
+      }
+    ],
+    "BoneInfos": [],
+    "Anims": [],
+    "ManifestJSON": {
+      "FBXName": "Counter_solid",
+      "ImportSucceeded": true,
+      "MaterialCount": 1,
+      "MaterialDetail": [
+        {
+          "Index": 0,
+          "MaterialName": "Kitchen Counter"
+        }
+      ],
+      "MeshCount": 1,
+      "MeshDetail": [
+        {
+          "MeshName": "Counter.003",
+          "MaterialIndex": [
+            0
+          ],
+          "Transform": {
+            "Position": [
+              -0.00364256,
+              0,
+              0
+            ],
+            "Rotation": [
+              0,
+              0,
+              0
+            ],
+            "Scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "subColliderLOD": {
+    "1ti33ft2vcl-m879jmaf-ws6upbciu-Counter.003.~@FFFUB": 0
+  }
+}

@@ -247,6 +247,30 @@
           },
           "scriptName": "PlayerTakeBtn",
           "children": []
+        },
+        {
+          "refer": {
+            "fileId": "9lfmuvxfihr-mbuh8i0f-vr6h0i7oi3d",
+            "filePath": "Assets\\UI\\New Folder\\AlreadyCookUI.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "AlreadyCookUI",
+          "children": []
+        },
+        {
+          "refer": {
+            "fileId": "tpju24d0v3-mbukt8gf-13nrp5c3k1sk",
+            "filePath": "Assets\\UI\\Btn\\ServeBtn.ui",
+            "_tag": {
+              "type": "GFileRefer"
+            },
+            "fileType": "ui"
+          },
+          "scriptName": "ServeBtn",
+          "children": []
         }
       ]
     },

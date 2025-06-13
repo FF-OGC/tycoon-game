@@ -1,0 +1,68 @@
+import "StdLibrary.fcc" as StdLib
+import "EditorGenLib.fcc" as EditorLib
+import "Physics.fcc" as Physics
+import "Hud.fcc" as Hud
+import "Player.fcc" as Player
+import "List.fcc" as List
+
+import "../Script/Player/PlayerTriggerEventHandler.fcg" as PlayerTriggerEventHandler
+import "../Script/Item/ItemHandler.fcg" as ItemHandler
+
+graph ServeTrigger {
+    //Executed when entity is created
+    servingStallList List<entity>
+    servingStallPosList List<Vector3>
+
+    servingCreatedSceneEntityList List<entity>
+
+    servingIDList List<int>
+
+
+    serveBtn entity<CustomUI>
+
+    event OnAwake() {
+        servingCreatedSceneEntityList = List<entity>{}
+        servingIDList = List<int>{}
+    }
+    
+    func init(){
+        servingStallList = List<entity>{}
+        servingStallList = GetChildren(thisEntity<Serving>.serving)
+        servingStallPosList = List<Vector3>{}
+        for key, value in servingStallList {
+            Append(servingStallPosList, value<Transform>.Position + Vector3{0, 1, 0})
+        }
+    }
+
+    
+
+    event OnEntityEnter(target entity<Entity>) {
+        var _player = target as entity<Player>
+        _player<PlayerTriggerEventHandler>.setTriggerEntity(thisEntity)
+
+        //Set up UI 
+        if serveBtn == nil {
+            CreateCustomUI(out var sell, _player, EResUI.ServeBtn )
+            serveBtn = sell
+        }
+        SetDefaultUIStatus(_player<Player>,PlayerUISwitchType.Attack,CommonUISwitchValue.Close)
+        serveBtn<CustomUI>.IsVisible = true
+     }
+
+    event OnEntityExit(target entity<Entity>) {
+        var _player = target as entity<Player>
+        serveBtn<CustomUI>.IsVisible = false
+        SetDefaultUIStatus(_player<Player>,PlayerUISwitchType.Attack,CommonUISwitchValue.Show)
+    }
+
+    func addServingItem(itemID int , playerHoldingItemSize float, playerHoldingItemMutation string){
+        if servingStallList ==nil {
+            init()
+        }
+        Append(servingIDList,itemID )
+        var index = List.Length(servingIDList) - 1 
+        var pos = servingStallPosList[index]
+        Append(servingCreatedSceneEntityList , globalEntity<ItemHandler>.createItem(itemID, playerHoldingItemSize, playerHoldingItemMutation,pos, Vector3{0, 0, 0} ))
+    }
+
+}

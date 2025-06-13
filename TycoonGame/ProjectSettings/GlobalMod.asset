@@ -95,9 +95,17 @@
         "type": "GFileRefer"
       },
       "fileType": "ugcscript"
+    },
+    {
+      "fileId": "e34ug5lgmec-mbuiiq38-6ipdwae3tst",
+      "filePath": "Assets\\Script\\Selling\\OrderHandler.fcg",
+      "_tag": {
+        "type": "GFileRefer"
+      },
+      "fileType": "ugcscript"
     }
   ],
   "_entityName": "T_43_YU_WS_MODULE_GLOBAL",
   "showSwitch": false
 }
-//"{FE:{"v":"1.13.3696926","c":{"FF":4901},"s":100}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}
