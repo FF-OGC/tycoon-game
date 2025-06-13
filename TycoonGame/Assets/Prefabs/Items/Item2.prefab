@@ -33,7 +33,7 @@
       },
       "rotation": {
         "x": 0,
-        "y": 90,
+        "y": 0,
         "z": 0
       },
       "BTPath": [
@@ -58,7 +58,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 17,
+      "tempIndex": 21,
       "itemID": 223,
       "seParent": null,
       "ecaScripts": [

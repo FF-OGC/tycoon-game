@@ -42,6 +42,7 @@ graph BuildingHandler {
     }
 
     async func init (){
+        WaitForMillisecond(5000)
         WaitForNextFrame()
         buildingID = thisEntity<Building>.ID
         buildingUnlockState = thisEntity<Building>.State

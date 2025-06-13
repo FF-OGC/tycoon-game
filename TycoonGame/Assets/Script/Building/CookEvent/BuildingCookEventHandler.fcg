@@ -41,6 +41,8 @@ graph BuildingCookEventHandler {
     currentCookingItemID int
     currentCookingSceneEntity entity
 
+    stallRotation Vector3
+
     owner entity<Player>
 
     //Executed when entity is created
@@ -59,13 +61,13 @@ graph BuildingCookEventHandler {
         inputScenePostionList = List.New(5,5)
         for i = 0, List.Length(inputChildrenList), 1 {
             var tempt = inputChildrenList[i]
-            inputScenePostionList[i]  = tempt<Transform>.Position + Vector3{0, 0.5, 0}
+            inputScenePostionList[i]  = tempt<Transform>.Position + Vector3{0, 1, 0}
         }
         
         outputScenePostionList = List.New(5,5)
         for i = 0, List.Length(outputChildrenList), 1 {
             var tempt = outputChildrenList[i]
-            outputScenePostionList[i]  = tempt<Transform>.Position + Vector3{0, 0.5, 0}
+            outputScenePostionList[i]  = tempt<Transform>.Position + Vector3{0,1, 0}
         }
 
         cookingStallPosition = thisEntity<BuildingHandler>.model<Transform>.Position + Vector3{0, 0.5, 0}
@@ -78,7 +80,7 @@ graph BuildingCookEventHandler {
         outputItemSizeList = List<float>{}
         outputItemMutationList = List<string>{}
         
-
+        stallRotation = Vector3{0, 90, 0}
     }
 
     
@@ -89,14 +91,14 @@ graph BuildingCookEventHandler {
 
         DispatchEvent(SHOW_CUSTOMUI, owner, List<object>{"StartCooking"})
         LogInfo("event cook starting")
-        addCookingQueue(itemID as int)
+        addInputQueue(itemID as int)
 
         if isCooking == false{
             isCooking = true
             while isCooking{
                 while List.Length(inputItemIDList) > 0 {
                     LogInfo("length + " +List.Length(inputItemIDList) )
-                    var t = popCookingQueue()
+                    var t = popInputQueue()
                     currentCookingSceneEntity<Transform>.Position = cookingStallPosition
 
                     var cookTimeCooldown = CSVReadingHandler.getItemCookingTimeByItemID(EResCSV.ItemCSV, currentCookingItemID)
@@ -123,8 +125,8 @@ graph BuildingCookEventHandler {
 
             var CurrentIndex = List.Length(outputItemIDList) 
             var outputTableEntity = outputChildrenList[CurrentIndex-1]
-            var outputPos = outputTableEntity<Transform>.Position + Vector3{0, 0.5, 0}
-            Append(outputSceneEntityList, globalEntity<ItemHandler>.createItem(itemID, itemSize , itemMutation, outputPos ))
+            var outputPos = outputScenePostionList[CurrentIndex-1]
+            Append(outputSceneEntityList, globalEntity<ItemHandler>.createItem(itemID, itemSize , itemMutation, outputPos, stallRotation))
         } else {
             LogInfo("Output is full")
             player<PlayerEquipmentHandler>.equipmentAddItem(itemID,itemSize,itemMutation)
@@ -158,13 +160,13 @@ graph BuildingCookEventHandler {
     }
 
 
-    func addCookingQueue(itemID int){
+    func addInputQueue(itemID int){
         if checkInputSlotAvailable(){
             Append(inputItemIDList, itemID)
             var index = List.Length(inputItemIDList) as int
             var inputTableEntity = inputChildrenList[index-1]
-            var outputPos = inputTableEntity<Transform>.Position + Vector3{0, 0.5, 0}
-            Append(inputSceneEntityList, globalEntity<ItemHandler>.createItem(itemID, 1 , 0, outputPos ))
+            var outputPos = inputScenePostionList[index-1]
+            Append(inputSceneEntityList, globalEntity<ItemHandler>.createItem(itemID, 1 , 0, outputPos, stallRotation))
 
         } else {
             LogInfo("full waiting")
@@ -172,7 +174,7 @@ graph BuildingCookEventHandler {
     }
 
 
-    func popCookingQueue () int{
+    func popInputQueue () int{
         if List.Length(inputItemIDList) > 0 {
             var ItemIDListClone = List.Clone(inputItemIDList) as List<int>
             currentCookingItemID = ItemIDListClone[0] as int

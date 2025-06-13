@@ -1,0 +1,101 @@
+{
+  "_tag": {
+    "type": "ParticleSystem"
+  },
+  "_entityId": "hYxMzTb2",
+  "children": [],
+  "prefabVariant": null,
+  "activeValue": null,
+  "unlockedValue": null,
+  "editorLockValue": false,
+  "editorVisibleValue": true,
+  "Duration": 5,
+  "Loop": true,
+  "Lifetime": 5,
+  "LifetimeRandomness": 2,
+  "SimulationSpace": 0,
+  "SimulationSpeed": 1,
+  "MaxParticles": 100,
+  "RateOverTime": 10,
+  "StartSpeed": 5,
+  "StartSpeedRandomness": 0,
+  "Velocity": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "VelocityRandomness": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "Size": 1,
+  "SizeRandomness": 0,
+  "Angle": 0,
+  "AngleRandomness": 0,
+  "AngularVelocity": 0,
+  "AngularVelocityRandomness": 0,
+  "Acceleration": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "AccelerationRandomness": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "Damping": 0,
+  "DampingRandomness": 0,
+  "Color": {
+    "r": 255,
+    "g": 255,
+    "b": 255,
+    "a": 1
+  },
+  "GradientStart": {
+    "r": 255,
+    "g": 255,
+    "b": 255,
+    "a": 1
+  },
+  "GradientEnd": {
+    "r": 255,
+    "g": 0,
+    "b": 0,
+    "a": 1
+  },
+  "Shape": 4,
+  "Radius": 1,
+  "ConeAngle": 25,
+  "ShapePosition": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ShapeRotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ShapeScale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "Mode": 0,
+  "Texture": {
+    "fileId": "co8kkhwj3m-mbu7ipo0-w52fm59lwq",
+    "filePath": "Assets\\Sprite\\Meal\\Beef\\beef.png",
+    "_tag": {
+      "type": "GFileRefer"
+    },
+    "fileType": "texture"
+  },
+  "ShapeMesh": null,
+  "RenderMode": 0,
+  "RenderMesh": null,
+  "Material": null,
+  "RenderSortMode": 0
+}
+//"{FE:{"v":"1.13.3706949","c":{"FF":4901},"s":100}

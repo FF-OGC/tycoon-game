@@ -14,13 +14,14 @@ graph ItemHandler {
 
 
 
-    func createItem(ItemID object, ItemSize object, ItemMutation object, Position Vector3) entity<Entity>{
+    func createItem(ItemID object, ItemSize object, ItemMutation object, Position Vector3, Rotation Vector3) entity<Entity>{
 
         LogInfo("CREATE_ITEM event")
         var _itemID = ItemID as int
         var _itemSize = ItemSize as float
         var _itemMutation = ItemMutation as string
         var _position = Position
+        var _rotation = Rotation
         var _prefabEresKey = CSVReadingHandler.getItemPrefabByItemID(EResCSV.ItemCSV, _itemID)
         LogInfo("_prefabEresKey" + _prefabEresKey)
         LogInfo("Res.Prefab[_prefabEresKey as EResKeyPrefab]" + Res.Prefab[_prefabEresKey as EResKeyPrefab])
@@ -29,6 +30,8 @@ graph ItemHandler {
         CreateFromPrefab(out var createdEntity, _prefabID)
         createdEntity<Transform>.Scale = Vector3{_itemSize, _itemSize, _itemSize}
         createdEntity<Transform>.Position = _position
+        createdEntity<Transform>.Rotation = _rotation
+
 
         createdEntity<Item>.itemID = ItemID as int
         createdEntity<Item>.itemSize = ItemSize as float

@@ -167,8 +167,8 @@
               },
               "position": {
                 "x": 0,
-                "y": 1,
-                "z": 0
+                "y": 0.9999999403953552,
+                "z": -2.2910535335540771e-7
               },
               "scale": {
                 "x": 1,
@@ -177,7 +177,7 @@
               },
               "rotation": {
                 "x": 0,
-                "y": 0,
+                "y": 90,
                 "z": 0
               },
               "BTPath": [
@@ -202,7 +202,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 1,
+              "tempIndex": 23,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -222,7 +222,7 @@
                   "b": 255,
                   "a": 1
                 },
-                "IsBillboard": true,
+                "IsBillboard": false,
                 "fontStyleRef": {
                   "bold": true,
                   "italic": false,
@@ -238,8 +238,8 @@
                 "TextDisplay": "MONEY HERE",
                 "fontTypeRef": "UIFONT_LATIN"
               },
-              "editorLockValue": true,
-              "editorVisibleValue": false
+              "editorLockValue": false,
+              "editorVisibleValue": true
             },
             {
               "_tag": {
@@ -391,8 +391,8 @@
                 "fileType": "mesh"
               },
               "_entityName": "IdleUnlockButton",
-              "editorLockValue": true,
-              "editorVisibleValue": false
+              "editorLockValue": false,
+              "editorVisibleValue": true
             }
           ],
           "activeValue": {
@@ -480,8 +480,8 @@
           "propsData": {},
           "entityVersion": 3,
           "_entityName": "IdleUnlock",
-          "editorLockValue": true,
-          "editorVisibleValue": false
+          "editorLockValue": false,
+          "editorVisibleValue": true
         },
         {
           "_tag": {
@@ -504,7 +504,134 @@
                   },
                   "_entityId": "yx4mTZay",
                   "children": [],
-                  "prefabVariant": null,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "yx4mTZay": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  },
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -516,7 +643,7 @@
                   "position": {
                     "x": -0.21000003814697266,
                     "y": 0,
-                    "z": -1.8899998664855957
+                    "z": -1.8899991512298584
                   },
                   "scale": {
                     "x": 1,
@@ -525,7 +652,7 @@
                   },
                   "rotation": {
                     "x": 0,
-                    "y": -90,
+                    "y": 270,
                     "z": 0
                   },
                   "BTPath": [
@@ -571,7 +698,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -641,9 +768,8 @@
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "X5Uz7Kic",
+                  "_entityId": "dWZoTDSn",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -655,16 +781,16 @@
                   "position": {
                     "x": -0.21000003814697266,
                     "y": 0,
-                    "z": -0.8399996757507324
+                    "z": -0.8400001525878906
                   },
                   "scale": {
-                    "x": 1,
+                    "x": 1.0000004768371582,
                     "y": 1,
-                    "z": 1
+                    "z": 1.0000004768371582
                   },
                   "rotation": {
                     "x": 0,
-                    "y": -90,
+                    "y": 270,
                     "z": 0
                   },
                   "BTPath": [
@@ -710,7 +836,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -773,16 +899,143 @@
                   },
                   "_entityName": "InputQueue2",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "dWZoTDSn": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 },
                 {
                   "_tag": {
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "ogEcAupd",
+                  "_entityId": "IBe4aXno",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -794,16 +1047,16 @@
                   "position": {
                     "x": -0.21000003814697266,
                     "y": 0,
-                    "z": 0.21000051498413086
+                    "z": 0.21000003814697266
                   },
                   "scale": {
-                    "x": 1,
+                    "x": 1.0000004768371582,
                     "y": 1,
-                    "z": 1
+                    "z": 1.0000004768371582
                   },
                   "rotation": {
                     "x": 0,
-                    "y": -90,
+                    "y": 270,
                     "z": 0
                   },
                   "BTPath": [
@@ -849,7 +1102,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -912,16 +1165,143 @@
                   },
                   "_entityName": "InputQueue3",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "IBe4aXno": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 },
                 {
                   "_tag": {
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "eELp0Pag",
+                  "_entityId": "rLGy9uGX",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -933,7 +1313,7 @@
                   "position": {
                     "x": -0.21000003814697266,
                     "y": 0,
-                    "z": 1.2600007057189941
+                    "z": 1.260000228881836
                   },
                   "scale": {
                     "x": 1,
@@ -988,7 +1368,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -1051,16 +1431,143 @@
                   },
                   "_entityName": "InputQueue4",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "rLGy9uGX": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 },
                 {
                   "_tag": {
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "EVvR9M6P",
+                  "_entityId": "iI6Wm2aJ",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -1072,7 +1579,7 @@
                   "position": {
                     "x": 0.8400001525878906,
                     "y": 0,
-                    "z": 1.2599997520446777
+                    "z": 1.260000228881836
                   },
                   "scale": {
                     "x": 1,
@@ -1127,7 +1634,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -1190,7 +1697,135 @@
                   },
                   "_entityName": "InputQueue5",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "iI6Wm2aJ": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 }
               ],
               "prefabVariant": null,
@@ -1584,7 +2219,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 2,
+                  "tempIndex": 24,
                   "itemID": 95,
                   "seParent": null,
                   "ecaScripts": [
@@ -2532,7 +3167,7 @@
               "position": {
                 "x": 2.950533866882324,
                 "y": 0,
-                "z": -1.9053699970245361
+                "z": -1.9053702354431152
               },
               "scale": {
                 "x": 1,
@@ -2676,9 +3311,8 @@
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "4CG0iO5q",
+                  "_entityId": "5sqF2WE8",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -2690,7 +3324,7 @@
                   "position": {
                     "x": -0.8400001525878906,
                     "y": 0,
-                    "z": -1.2599992752075195
+                    "z": -1.260000228881836
                   },
                   "scale": {
                     "x": 1,
@@ -2745,7 +3379,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -2808,16 +3442,143 @@
                   },
                   "_entityName": "Output1",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "5sqF2WE8": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 },
                 {
                   "_tag": {
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "ZnalzFG3",
+                  "_entityId": "HTbXQBtd",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -2827,14 +3588,14 @@
                     "valueTag": "unlockedValue"
                   },
                   "position": {
-                    "x": 0.2101602554321289,
+                    "x": 0.21000003814697266,
                     "y": 0,
-                    "z": -1.2599992752075195
+                    "z": -1.260000228881836
                   },
                   "scale": {
-                    "x": 1,
+                    "x": 1.0000009536743164,
                     "y": 1,
-                    "z": 1
+                    "z": 1.0000009536743164
                   },
                   "rotation": {
                     "x": 0,
@@ -2884,7 +3645,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -2947,16 +3708,143 @@
                   },
                   "_entityName": "Output2",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "HTbXQBtd": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 },
                 {
                   "_tag": {
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "QqAj6SJU",
+                  "_entityId": "rZit01MB",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -2966,14 +3854,14 @@
                     "valueTag": "unlockedValue"
                   },
                   "position": {
-                    "x": 0.2101602554321289,
+                    "x": 0.21000003814697266,
                     "y": 0,
-                    "z": -0.20999908447265625
+                    "z": -0.21000099182128906
                   },
                   "scale": {
-                    "x": 1,
+                    "x": 1.0000009536743164,
                     "y": 1,
-                    "z": 1
+                    "z": 1.0000009536743164
                   },
                   "rotation": {
                     "x": 0,
@@ -3023,7 +3911,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -3086,16 +3974,143 @@
                   },
                   "_entityName": "Output3",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "rZit01MB": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 },
                 {
                   "_tag": {
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "4K6uKHD1",
+                  "_entityId": "v6Lsc9JF",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -3110,9 +4125,9 @@
                     "z": 0.8400001525878906
                   },
                   "scale": {
-                    "x": 1,
+                    "x": 1.0000009536743164,
                     "y": 1,
-                    "z": 1
+                    "z": 1.0000009536743164
                   },
                   "rotation": {
                     "x": 0,
@@ -3162,7 +4177,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -3225,16 +4240,143 @@
                   },
                   "_entityName": "Output4",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "v6Lsc9JF": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 },
                 {
                   "_tag": {
                     "type": "UGCSceneEntity",
                     "resourceId": ""
                   },
-                  "_entityId": "l6I1vEf4",
+                  "_entityId": "dDqzjAN6",
                   "children": [],
-                  "prefabVariant": null,
                   "activeValue": {
                     "selfValue": true,
                     "valueTag": "activeValue"
@@ -3246,12 +4388,12 @@
                   "position": {
                     "x": 0.21000003814697266,
                     "y": 0,
-                    "z": 1.890000343322754
+                    "z": 1.8899993896484375
                   },
                   "scale": {
-                    "x": 1,
+                    "x": 1.0000004768371582,
                     "y": 1,
-                    "z": 1
+                    "z": 1.0000004768371582
                   },
                   "rotation": {
                     "x": 0,
@@ -3301,7 +4443,7 @@
                       "meshUUID": null,
                       "position": {
                         "x": 0,
-                        "y": 0,
+                        "y": 0.5,
                         "z": 0
                       },
                       "size": {
@@ -3364,7 +4506,135 @@
                   },
                   "_entityName": "Output5",
                   "editorLockValue": false,
-                  "editorVisibleValue": true
+                  "editorVisibleValue": true,
+                  "prefabVariant": {
+                    "prefabFile": {
+                      "fileId": "6608cmr970e-mbu86p9w-pkpzf30e4ir",
+                      "filePath": "Assets\\Prefabs\\Counter\\Counter.prefab",
+                      "_tag": {
+                        "type": "GFileRefer"
+                      },
+                      "fileType": "Prefab"
+                    },
+                    "snapShots": {
+                      "dDqzjAN6": {
+                        "_entityId": "B6GobuMx",
+                        "activeValue": {
+                          "selfValue": true,
+                          "valueTag": "activeValue"
+                        },
+                        "unlockedValue": {
+                          "selfValue": true,
+                          "valueTag": "unlockedValue"
+                        },
+                        "scale": {
+                          "x": 1,
+                          "y": 1,
+                          "z": 1
+                        },
+                        "BTPath": [
+                          null
+                        ],
+                        "visible": true,
+                        "VisibilityLayer": 0,
+                        "modelOptimization": 0,
+                        "streamingLayer": "",
+                        "attributes": [
+                          2,
+                          4
+                        ],
+                        "isTrigger": false,
+                        "collidable": true,
+                        "physicalLayer": 0,
+                        "physicalMaterial": null,
+                        "aoiSetting": 0,
+                        "initialTypes": {},
+                        "componentList": [
+                          "MeshRender",
+                          "ColliderShape",
+                          "Collider"
+                        ],
+                        "_filters": [],
+                        "entityTagData": {
+                          "tagPointers": []
+                        },
+                        "materials": [
+                          {
+                            "fileId": "5szqruevkq3-mbtagvbe-2b7bor7yxe",
+                            "filePath": "Assets\\Material\\KitchenCounter.mat",
+                            "fileType": "material"
+                          }
+                        ],
+                        "colliders": [
+                          {
+                            "enable": true,
+                            "colliderType": "Box",
+                            "meshUUID": null,
+                            "position": {
+                              "x": 0,
+                              "y": 0.5,
+                              "z": 0
+                            },
+                            "size": {
+                              "x": 1,
+                              "y": 1,
+                              "z": 1
+                            },
+                            "rotation": {
+                              "x": 0,
+                              "y": 0,
+                              "z": 0
+                            },
+                            "isTrigger": false,
+                            "radius": 0.5,
+                            "height": 1,
+                            "physicalMaterialUUID": null,
+                            "isConvexIfMesh": false
+                          }
+                        ],
+                        "IsNPC": false,
+                        "Rigidbody": {
+                          "Type": 1,
+                          "Mass": 1,
+                          "CenterOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                          },
+                          "UseGravity": true,
+                          "Drag": 0.05,
+                          "AngularDrag": 0.05,
+                          "FreezePosX": false,
+                          "FreezeRotX": false,
+                          "FreezePosY": false,
+                          "FreezeRotY": false,
+                          "FreezePosZ": false,
+                          "FreezeRotZ": false
+                        },
+                        "isCreateAsEmpty": false,
+                        "ecaScripts": [],
+                        "ecaProps": {
+                          "CustomLevelObject": {},
+                          "LevelObject": {},
+                          "Transform": {},
+                          "Entity": {},
+                          "Visibility": {},
+                          "MeshRender": {},
+                          "ColliderShape": {},
+                          "Collider": {}
+                        },
+                        "propsData": {},
+                        "entityVersion": 3,
+                        "mesh": {
+                          "fileId": "6am4aeyp384-m879jng7-b3a22uml1xf-Counter.~@FFFUB",
+                          "filePath": "fab://Assets\\Meshes\\Kitchen Counter.fbx\\Counter.mesh",
+                          "fileType": "mesh"
+                        },
+                        "editorLockValue": false,
+                        "editorVisibleValue": true
+                      }
+                    }
+                  }
                 }
               ],
               "prefabVariant": null,
@@ -3379,9 +4649,9 @@
               "editorLockValue": false,
               "editorVisibleValue": true,
               "position": {
-                "x": 1.6130132675170898,
+                "x": 1.6129999160766602,
                 "y": 0,
-                "z": -2.2679998874664307
+                "z": -2.2679991722106934
               },
               "scale": {
                 "x": 1,
@@ -3465,7 +4735,7 @@
           "position": {
             "x": 4.760000228881836,
             "y": 0,
-            "z": 3.0819997787475586
+            "z": 3.955456256866455
           },
           "scale": {
             "x": 1,
@@ -3676,7 +4946,7 @@
             }
           },
           "PROP_77196415": {
-            "entityId": "ZpxbzArd",
+            "entityId": "0lnQP83S",
             "fileId": "2jwr1bg58v2-mb7gzz5l-k6wq1ksa0zs",
             "_tag": {
               "type": "EntityRefer"
@@ -5863,7 +7133,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 3,
+              "tempIndex": 25,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -6203,7 +7473,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 4,
+              "tempIndex": 26,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -6447,7 +7717,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 5,
+              "tempIndex": 27,
               "itemID": 342,
               "seParent": null,
               "ecaScripts": [
@@ -6621,7 +7891,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 6,
+                  "tempIndex": 28,
                   "itemID": 95,
                   "seParent": null,
                   "ecaScripts": [
@@ -6692,7 +7962,7 @@
                   "entityTagData": {
                     "tagPointers": []
                   },
-                  "tempIndex": 7,
+                  "tempIndex": 29,
                   "itemID": 223,
                   "seParent": null,
                   "ecaScripts": [
@@ -7638,7 +8908,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 8,
+              "tempIndex": 30,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [],
@@ -7828,7 +9098,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 9,
+              "tempIndex": 31,
               "itemID": 342,
               "seParent": null,
               "ecaScripts": [
@@ -11362,7 +12632,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 10,
+              "tempIndex": 32,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -11457,7 +12727,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 11,
+              "tempIndex": 33,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -11554,7 +12824,7 @@
               "entityTagData": {
                 "tagPointers": []
               },
-              "tempIndex": 12,
+              "tempIndex": 34,
               "itemID": 222,
               "seParent": null,
               "ecaScripts": [
@@ -11993,7 +13263,7 @@
           "entityTagData": {
             "tagPointers": []
           },
-          "tempIndex": 13,
+          "tempIndex": 35,
           "itemID": 164,
           "seParent": null,
           "ecaScripts": [
@@ -12150,7 +13420,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 14,
+      "tempIndex": 36,
       "itemID": 100,
       "seParent": null,
       "ecaScripts": [
@@ -12221,7 +13491,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 15,
+      "tempIndex": 37,
       "itemID": 100,
       "seParent": null,
       "ecaScripts": [
@@ -13087,7 +14357,7 @@
       "entityTagData": {
         "tagPointers": []
       },
-      "tempIndex": 16,
+      "tempIndex": 38,
       "itemID": 222,
       "seParent": null,
       "ecaScripts": [
@@ -14059,7 +15329,10 @@
         "selfValue": true,
         "valueTag": "activeValue"
       },
-      "unlockedValue": null,
+      "unlockedValue": {
+        "selfValue": true,
+        "valueTag": "unlockedValue"
+      },
       "editorLockValue": false,
       "editorVisibleValue": true,
       "position": {
@@ -14129,7 +15402,8 @@
         "LevelObject": {},
         "Transform": {},
         "Entity": {},
-        "Visibility": {}
+        "Visibility": {},
+        "MeshRender": {}
       },
       "propsData": {},
       "entityVersion": 3,

@@ -30,9 +30,7 @@ graph UpgradeButtonTrigger {
         SetDefaultUIStatus(_player<Player>,PlayerUISwitchType.Attack,CommonUISwitchValue.Close)
         CreateCustomUI(out var btnUI, _player, EResUI.PlayerRefillBtn )
         buttonUI = btnUI
-
         _player<PlayerTriggerEventHandler>.setTriggerEntity(GetParent(GetParent(thisEntity)))
-
      }
 
     event OnEntityExit(target entity<Entity>) {
